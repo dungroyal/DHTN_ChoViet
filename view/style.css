@@ -2028,10 +2028,10 @@ label {
 
 .footer-logo {
     margin-bottom: 20px;
+    width: 250px;
 }
 
-.footer-address>p,
-.footer-widget>p {
+.footer-address>p .footer-widget>p {
     color: #ddd;
     font-size: 14px;
     font-weight: 300;
@@ -2810,7 +2810,7 @@ ul.color-widget li:last-child {
 .single-left-widget .section-title ul.color-widget li a {
     color: #303030;
     display: block;
-    t font-size: 12px;
+    font-size: 12px;
     height: 20px;
     line-height: 19px;
     text-align: center;
