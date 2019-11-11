@@ -67,7 +67,7 @@
                                             </a>
                                         </div>
                                         <div class="product-content text-center">
-                                            <h3>ÁO Vest</h3>
+                                            <h3>GIẦY</h3>
                                             <h4><a href="#">Xem chi tiết</a></h4>
                                         </div>
                                     </div>
@@ -79,11 +79,11 @@
                                     <div class="single-product-item">
                                         <div class="single-product-img clearfix hover-effect">
                                             <a href="#">
-                                                <img class="primary-image" src="view/img/product/5.jpg" alt="">
+                                                <img class="primary-image" src="view/img/product/6.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="product-content text-center">
-                                            <h3>ÁO Vest</h3>
+                                            <h3>ÁO NỮ</h3>
                                             <h4><a href="#">Xem chi tiết</a></h4>
                                         </div>
                                     </div>
@@ -95,11 +95,11 @@
                                     <div class="single-product-item">
                                         <div class="single-product-img clearfix hover-effect">
                                             <a href="#">
-                                                <img class="primary-image" src="view/img/product/5.jpg" alt="">
+                                                <img class="primary-image" src="view/img/product/7.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="product-content text-center">
-                                            <h3>ÁO Vest</h3>
+                                            <h3>ÁO KHOÁT</h3>
                                             <h4><a href="#">Xem chi tiết</a></h4>
                                         </div>
                                     </div>
@@ -111,11 +111,11 @@
                                     <div class="single-product-item">
                                         <div class="single-product-img clearfix hover-effect">
                                             <a href="#">
-                                                <img class="primary-image" src="view/img/product/5.jpg" alt="">
+                                                <img class="primary-image" src="view/img/product/8.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="product-content text-center">
-                                            <h3>ÁO Vest</h3>
+                                            <h3>ÁO NAM</h3>
                                             <h4><a href="#">Xem chi tiết</a></h4>
                                         </div>
                                     </div>
@@ -127,12 +127,12 @@
                                     <div class="single-product-item">
                                         <div class="single-product-img clearfix hover-effect">
                                             <a href="#">
-                                                <img class="primary-image" src="view/img/product/5.jpg" alt="">
+                                                <img class="primary-image" src="view/img/product/9.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="product-content text-center">
                                             <h3>ÁO Vest</h3>
-                                            <h4><a href="#">Xem chi tiết</a></h4>
+                                            <h4><a href="#">TÚI</a></h4>
                                         </div>
                                     </div>
                                 </div>
