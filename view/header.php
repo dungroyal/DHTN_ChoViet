@@ -10,7 +10,7 @@
 
     <!-- favicon
 		============================================ -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="view/img/favicon.png">
 
     <!-- Google Fonts
 		============================================ -->
@@ -145,20 +145,16 @@
                 <div class="row">
                     <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
                         <div class="logo">
-                            <a href="index.html"><img src="view/img/logo/logo.png" alt="SHOPPPIE"></a>
+                            <a href="?act=home"><img src="view/img/logo/logo.png" alt="Logo Chợ Việt"></a>
                         </div>
                     </div>
                     <div class="col-lg-7 col-md-8 col-sm-6">
                         <div class="mainmenu">
                             <nav>
                                 <ul>
-                                    <li><a href="index.html">Trang chủ</a>
-                                        <ul class="submenu-mainmenu">
-                                            <li><a href="index.html">Home Version 1</a></li>
-                                            <li><a href="index-2.html">Home Version 2</a></li>
-                                        </ul>
+                                    <li><a href="?act=home">Trang chủ</a>
                                     </li>
-                                    <li><a href="shop-full-grid.html">Danh mục</a>
+                                    <li><a href="?act=product_detail">Danh mục</a>
                                         <div class="mega-menu">
                                             <span>
                                                     <a href="shop-grid-left-sidebar.html" class="title">men</a>
@@ -193,37 +189,11 @@
                                                 </span>
                                         </div>
                                     </li>
-                                    <li><a href="shop-full-grid.html">Accessories</a></li>
-                                    <li><a href="blog-full-view.html">Blog</a>
-                                        <ul class="submenu-mainmenu">
-                                            <li><a href="blog-full-view.html">Blog Full View</a></li>
-                                            <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-                                            <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
-                                            <li><a href="blog-details.html">Blog Details</a></li>
-                                        </ul>
+                                    <li><a href="?act=product">Cửa hàng</a>
                                     </li>
-                                    <li><a href="shop-full-grid.html">Shop</a>
-                                        <ul class="submenu-mainmenu">
-                                            <li><a href="shop-list-left-sidebar.html">Shop List Left Sidebar</a></li>
-                                            <li><a href="shop-list-right-sidebar.html">Shop List Right Sidebar</a></li>
-                                            <li><a href="shop-grid-left-sidebar.html">Shop Grid Left Sidebar</a></li>
-                                            <li><a href="shop-grid-right-sidebar.html">Shop Grid Right Sidebar</a></li>
-                                            <li><a href="shop-full-grid.html">Shop None Sidebar</a></li>
-                                            <li><a href="product-details-fullwidth.html">Product Details Fullwidth</a></li>
-                                            <li><a href="product-details-left-sidebar.html">Product Details Left Sidebar</a></li>
-                                            <li><a href="product-details-right-sidebar.html">Product Details Right Sidebar</a></li>
-                                        </ul>
+                                    <li><a href="?act=about">Thông tin</a>
                                     </li>
-                                    <li><a href="about-us.html">Pages</a>
-                                        <ul class="submenu-mainmenu">
-                                            <li><a href="about-us.html">About Us</a></li>
-                                            <li><a href="cart.html">Cart</a></li>
-                                            <li><a href="checkout.html">Checkout</a></li>
-                                            <li><a href="wishlist.html">Wishlist</a></li>
-                                            <li><a href="404.html">404 Page</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="contact.html">Liên hệ</a></li>
+                                    <li><a href="?act=contact">Liên hệ</a></li>
                                 </ul>
                             </nav>
                         </div>
