@@ -26,7 +26,9 @@
                     </div> 
                     <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="about-us-img">
-                            <img src="view/img/about/about.jpg" alt="">
+                        <img src="view/img/logo/logo.png" alt="" style="
+    width: 73%;
+">
                         </div>
                     </div>   
                 </div>

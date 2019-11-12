@@ -21,22 +21,22 @@
                             <div class="product-thumb">
                                 <ul class="p-details-slider" id="gallery_01">
                                     <li>
-                                        <a class="elevatezoom-gallery" href="#" data-image="view/img/product-details/1.jpg" data-zoom-image="view/img/product-details/1.jpg"><img src="view/img/product-details/1.jpg" alt=""></a>
+                                        <a class="elevatezoom-gallery" href="#" data-image="view/img/product/pc1.jpg" data-zoom-image="view/img/product/pc1.jpg"><img src="view/img/product/pc1.jpg" alt=""></a>
                                     </li>
                                     <li>
-                                        <a class="elevatezoom-gallery" href="#" data-image="view/img/product-details/2.jpg" data-zoom-image="view/img/product-details/2.jpg"><img src="view/img/product-details/2.jpg" alt=""></a>
+                                        <a class="elevatezoom-gallery" href="#" data-image="view/img/product/pc2.jpg" data-zoom-image="view/img/product/pc2.jpg"><img src="view/img/product/pc2.jpg" alt=""></a>
                                     </li>
                                     <li>
-                                        <a class="elevatezoom-gallery" href="#" data-image="view/img/product-details/3.jpg" data-zoom-image="view/img/product-details/3.jpg"><img src="view/img/product-details/3.jpg" alt=""></a>
+                                        <a class="elevatezoom-gallery" href="#" data-image="view/img/product/pc3.jpg" data-zoom-image="view/img/product/pc3.jpg"><img src="view/img/product/pc3.jpg" alt=""></a>
                                     </li>
                                     <li>
-                                        <a class="elevatezoom-gallery" href="#" data-image="view/img/product-details/4.jpg" data-zoom-image="view/img/product-details/4.jpg"><img src="view/img/product-details/4.jpg" alt=""></a>
+                                        <a class="elevatezoom-gallery" href="#" data-image="view/img/product/pc4.jpg" data-zoom-image="view/img/product/pc4.jpg"><img src="view/img/product/pc4.jpg" alt=""></a>
                                     </li>
                                 </ul>
                             </div>
                             <div id="img-1" class="zoomWrapper single-zoom">
                                 <a href="#">
-                                    <img id="zoom1" src="view/img/product-details/1.jpg" data-zoom-image="view/img/product-details/1.jpg" alt="big-1">
+                                    <img id="zoom1" src="view/img/product/pc1.jpg" data-zoom-image="view/img/product/pc1.jpg" alt="big-1">
                                 </a>
                             </div>
                         </div>
