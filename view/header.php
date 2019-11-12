@@ -75,7 +75,7 @@
                                 <ul>
                                     <li><a href="#">Freeship cho đơn hàng trên 99k</a>
                                     </li>
-                                    <li><a href="#">Kênh nhà bán</a>
+                                    <li><a href="?act=dangkithanhvien.php">Kênh nhà bán</a>
                                     </li>
                                 </ul>
                             </div>

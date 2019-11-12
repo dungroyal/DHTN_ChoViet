@@ -32,10 +32,16 @@
                 include"view/about.php";
                 break;
 
+            case 'dangkithanhvien':
+                include"view/dangkithanhvien.php";
+                break;
+
 
             default:
                 include"view/home.php";
                 break;
+
+            
         }
     }else{
             include"view/home.php";
