@@ -87,7 +87,7 @@
                                 <ul>
                                     <li class="account"><a href="#">Tài khoản</a>
                                         <ul class="submenu-mainmenu">
-                                            <li><a href="cart.html">my bag</a></li>
+                                            <li><a href="?act=cart.php">my bag</a></li>
                                             <li><a href="checkout.html">checkout</a></li>
                                             <li><a href="wishlist.html">wishlist</a></li>
                                         </ul>
@@ -101,7 +101,7 @@
                                         </ul>
                                     </li>
                                     <li class="cart" id="cart-padding">
-                                        <a href="cart.html"><img src="view/img/icon/cart.png" alt="cart">
+                                        <a href="?act=cart.php"><img src="view/img/icon/cart.png" alt="cart">
                                             <p>2</p>
                                         </a>
                                         <ul class="submenu-mainmenu">

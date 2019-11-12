@@ -23,7 +23,10 @@
                 include"view/contact.php";
                 break;
 
-               
+            case 'cart':
+                include"view/cart.php";
+                break;
+
 
             case 'about':
                 include"view/about.php";
