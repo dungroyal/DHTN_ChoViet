@@ -5,12 +5,12 @@
     <div class="banner-area home-two clearfix">
         <div class="banner-left-img hidden-xs">
             <a href="#" class="border-hover">
-                <img src="view/img/banner/6.jpg" alt="">
+                <img src="view/img/home/poster1.jpg" alt="">
             </a>
         </div>
         <div class="banner-rightside">
             <div class="single-banner-small small-one">
-                <a href="#" class="border-hover"><img alt="" src="view/img/banner/3.jpg"></a>
+                <a href="#" class="border-hover"><img alt="" src="view/img/home/thucung.jpg"></a>
                 <div class="timer-banner-text">
                     <h2>latest<br> backpack</h2>
                     <a class="view-more hidden-sm" href="#">view more</a>
@@ -18,27 +18,29 @@
                 <p>backpack</p>
             </div>
             <div class="single-banner right">
-                <a href="#" class="border-hover"><img src="view/img/banner/2.jpg" alt=""></a>
+                <a href="#" class="border-hover"><img src="view/img/home/giaydep.jpg" alt=""></a>
                 <div class="single-banner-text">
                     <h3><a href="#">50%<br>
-                            OFF Men<br> 
+                            OFF Woman<br> 
                             Collection</a></h3>
                     <a href="shop-full-grid.html" class="shop-button hidden-xs hidden-sm">shop now</a>
                 </div>
             </div>
             <div class="single-banner left">
-                <a href="#" class="border-hover"><img src="view/img/banner/1.jpg" alt=""></a>
+                <a href="#" class="border-hover"><img src="view/img/home/quanao.jpg" alt=""></a>
                 <div class="single-banner-text">
-                    <h3><a href="#">60% OFF<br>
+                    <h3 style="padding-left: 19px;
+    padding-top: 23px;
+}"><a style="color: #C1B2FF" >60% OFF<br>
                             Woman<br> 
                             Collection</a></h3>
                     <a href="shop-full-grid.html" class="shop-button hidden-xs hidden-sm">shop now</a>
                 </div>
             </div>
             <div class="single-banner-small small-two">
-                <a href="#" class="border-hover"><img alt="" src="view/img/banner/5.jpg"></a>
+                <a href="#" class="border-hover"><img alt="" src="view/img/home/dienthoai.jpg"></a>
                 <div class="timer-banner-text">
-                    <h2>latest<br> sunglass</h2>
+                    <h2>phone<br> sunglass</h2>
                     <a class="view-more hidden-sm" href="#">view more</a>
                 </div>
                 <p>women's sunglass</p>
