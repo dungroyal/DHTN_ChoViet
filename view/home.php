@@ -43,7 +43,7 @@
                     <h2>phone<br> sunglass</h2>
                     <a class="view-more hidden-sm" href="#">view more</a>
                 </div>
-                <p>women's sunglass</p>
+                <p>phone sunglass</p>
             </div>
         </div>
     </div>
@@ -168,7 +168,7 @@
     <!-- banner start -->
     <div class="banner-area clearfix">
         <div class="single-banner left">
-            <a href="#" class="border-hover"><img src="view/img/banner/1.jpg" alt=""></a>
+            <a href="#" class="border-hover"><img src="view/img/home/aonam.jpg" alt=""></a>
             <div class="single-banner-text">
                 <h3><a href="#">60% OFF<br>
                     Woman<br> 
@@ -177,11 +177,11 @@
             </div>
         </div>
         <div class="single-banner right">
-            <a href="#" class="border-hover"><img src="view/img/banner/2.jpg" alt=""></a>
-            <div class="single-banner-text">
-                <h3><a href="#">50%<br>
-                    OFF Men<br> 
-                    Collection</a></h3>
+            <a href="#" class="border-hover"><img src="view/img/home/aonu.jpg" alt=""></a>
+            <div class="single-banner-text" style="
+    padding-top: 120px;
+">
+               
                 <a href="shop-full-grid.html" class="shop-button hidden-sm hidden-xs">shop now</a>
             </div>
         </div>
