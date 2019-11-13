@@ -43,9 +43,9 @@
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div class="product-detail shop-product-text">
-                            <h4><a href="#">Full sleev women T-shirt</a></h4>
+                            <h4><a href="#">8Pack Supernova - Intel Core i9 7980XE @ 4.6GHz DDR4 Extreme Overclocked PC</a></h4>
                             <div class="price-rating-container">    
-                                <div class="price-box"><span>$20.99</span> <del>($25.99)</del></div>
+                                <div class="price-box"><span>14.000.000 VNĐ</span> <del>(15.500.000 VNĐ)</del></div>
                                 <div class="rating-right">
                                     <div class="star-content">
                                         <i class="fa fa-star"></i>
@@ -56,21 +56,23 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="availability">AVAILABILITY: <span> In stock</span></div>
-                            <h5 class="overview">overview:</h5>
-                            <p class="product-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor indunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            <div class="availability">Tình trang: <span>Còn hàng</span></div>
+                            <h5 class="overview">Tổng quan:</h5>
+                            <p class="product-desc">8Pack, máy ép xung cực đoan xếp hạng số 1 thế giới ** xin giới thiệu với bạn loạt máy tính hiệu năng cực cao mới của anh ấy. 
+                                Hợp tác chặt chẽ với hầu hết các nhà sản xuất bo mạch chủ và bộ nhớ hàng đầu thế giới để giúp cải thiện hiệu suất sản phẩm của họ, 8Pack sử dụng chuyên môn của mình để đẩy giới hạn hiệu suất lên mức thiên văn.
+                                 Bây giờ anh ấy mang chuyên môn này đến Overclockers UK để phát triển và xây dựng các PC hiệu năng cao nhất hành tinh!
                             </p>
                             <div class="size-categories">
-                                <h5 class="size">Size:</h5>
+                                <h5 class="size">Màu:</h5>
                                 <ul>
-                                    <li><a href="#">S</a></li>
-                                    <li><a href="#">M</a></li>
-                                    <li><a href="#">L</a></li>
-                                    <li><a href="#">XL</a></li>
+                                    <li><a href="#">Đen</a></li>
+                                    <li><a href="#">Xanh đen</a></li>
+                                    <li><a href="#">Trắng xanh</a></li>
+                                    <li><a href="#">Đỏ đen</a></li>
                                 </ul> 
                             </div>
                             <div class="color">   
-                                <h5 class="color">color:</h5>
+                                <h5 class="color">Màu:</h5>
                                 <div class="color-cat">
                                     <select class="category-items " name="category">
                                         <option>Select a color</option>
@@ -90,7 +92,7 @@
                                     <div class="inc qtybutton">+</div>
                                     <span class="clearfix"></span>
                                 </div>
-                                <a href="cart.html" class="cart-btn"><span>Add to Bag</span></a>
+                                <a href="cart.html" class="cart-btn"><span>Thêm vào giỏ hàng</span></a>
                                 <a href="wishlist.html"><i class="fa fa-heart-o"></i></a>
                                 <a href="#"><i class="fa fa-refresh"></i></a>
                             </div>
@@ -111,21 +113,28 @@
                             <div class="product-description-tab">
                                 <div class="description-tab-menu">
                                     <ul class="clearfix" role="tablist">
-                                        <li role="presentation" class="active"><a href="#description" aria-controls="description" role="tab" data-toggle="tab">Description</a></li>
-                                        <li role="presentation"><a href="#specification" aria-controls="specification" role="tab" data-toggle="tab">information</a></li>
-                                        <li role="presentation"><a href="#review" aria-controls="review" role="tab" data-toggle="tab">Reviews</a></li>
+                                        <li role="presentation" class="active"><a href="#description" aria-controls="description" role="tab" data-toggle="tab">Miêu tả</a></li>
+                       
+                                        <li role="presentation"><a href="#review" aria-controls="review" role="tab" data-toggle="tab">Đánh giá</a></li>
                                     </ul>
                                 </div>
                                 <div class="tab-content">
                                     <div role="tabpanel" class="tab-pane active" id="description">
-                                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-
-                                       <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                      
                                        <ul>
-                                           <li><i class="fa fa-circle"></i>Lorem ipsum dolor sit amet, consectetur product.</li>
-                                           <li><i class="fa fa-circle"></i>Duis aute irure dolor in reprehenderit in voluptate velit esse</li>
-                                           <li><i class="fa fa-circle"></i>Excepteur sinted occaecat cupidatat non proident products</li>
-                                           <li><i class="fa fa-circle"></i>voluptate velit esse cillum</li>
+                                           <li><i class="fa fa-circle"></i>Intel Core i9 7980XE Hyperthreaded Eighteen,
+                                            Bộ xử lý cực ba mươi sáu luồng với khả năng ép xung ổn định tối đa có thể (Tối thiểu 4,6 GHz) với Waterblock CPU EK.</li>
+                                           <li><i class="fa fa-circle"></i>Bo mạch chủ Asus Rampage VI Extreme Edition X299</li>
+                                           <li><i class="fa fa-circle"></i>Bộ nhớ bốn kênh DDR4 3200 MHz 128 GB</li>
+                                           <li><i class="fa fa-circle"></i>2 x Thẻ đồ họa Nvidia RTX 2080Ti 11GB GDDR6 được cấu 
+                                           hình trong SLI 3 chiều được trang bị khóa nước EK Full Cover và được ép xung để ép xung ổn định tối đa</li>
+                                           <li><i class="fa fa-circle"></i>1x Samsung 970 PRO Polaris 1TB M.2 2280 PCI-e 3.0 x4 NVMe Solid State Drive 1 x 512GB Samsung 
+                                           860 Pro Solid State Drive dưới dạng trò chơi phụ / ổ đĩa ứng dụng 1 x 1TB Samsung 860 Pro Solid State </li>
+                                           <li><i class="fa fa-circle"></i>Lian Li D888WX Khung nhôm đầy đủ - Đen</li>
+                                           <li><i class="fa fa-circle"></i>Cấu hình Watercooling Dual Loop tùy chỉnh</li>
+                                           <li><i class="fa fa-circle"></i>Bảo hành thu thập và trả hàng 3 năm - Vương quốc Anh</li>
+                                           <li><i class="fa fa-circle"></i>838mm x 675mm x 286mm</li>
+                                          
                                        </ul>
                                     </div>
                                     <div role="tabpanel" class="tab-pane" id="specification">
@@ -133,11 +142,13 @@
                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex consectetur minima quod officiis magni, aspernatur. Ea consectetur ab in, consequatur alias, quo sit. Optio vitae cupiditate, consectetur veritatis cumque odio magnam voluptates voluptas eligendi, minima tenetur voluptatum dolor autem, doloribus expedita obcaecati.</p>
                                     </div>
                                     <div role="tabpanel" class="tab-pane" id="review">
-                                        <p>Similique animi consequatur pariatur voluptas tempore, dolores obcaecati dolorum quia odit harum. Quos nemo, minima totam quidem ipsum labore.</p>
-                                        <ul>
-                                            <li> <i class="fa fa-circle"></i> Minus placeat eligendi neque doloribus sed ratione repellendus a illo similique, sint quisquam perferendis eum nam nihil dolor fugit blanditiis, explicabo, recusandae hic qui exercitationem aspernatur excepturi voluptate unde. </li>
-                                            <li> <i class="fa fa-circle"></i> Quaerat magnam, perferendis, sapiente doloremque error omnis esse in saepe quos eveniet quasi ex fugit eligendi consectetur nobis amet. </li>
-                                        </ul>
+                                        <p>- Được xây dựng bằng tay Công cụ xây dựng chính được xếp hạng hàng đầu của OcUK và được điều chỉnh bởi Bộ ép xung số 1 thế giới.
+- Mỗi hệ thống 8Pack được đánh số và ký tên riêng.
+- Màu sắc tùy chỉnh và thông số kỹ thuật linh hoạt mà bạn có thể thảo luận với 8Pack trước khi đặt hàng.
+- Hỗ trợ hậu mãi chuyên dụng từ 8Pack mình.
+- Hai người chuyên giao hàng và lắp đặt.
+- Một PC hiệu năng cực kỳ đáng tin cậy cho những người yêu cầu tốt nhất tuyệt đối!</p>
+                                       
                                     </div>
                                 </div>
                             </div>

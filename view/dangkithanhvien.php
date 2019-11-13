@@ -17,16 +17,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <link href="//fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
 <!-- /fonts -->
 <!-- css -->
-<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/style.css" rel='stylesheet' type='text/css' media="all" />
+<link href="view/cssDK/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
+<link href="view/cssDK/css/style.css" rel='stylesheet' type='text/css' media="all" />
 <!-- /css -->
 </head>
 <body>
-<h1 class="w3ls">Đăng kí thành viên</h1>
+<h1 class="w3ls">Đăng Kí Thành Viên</h1>
 <div class="content-w3ls">
 	<div class="content-agile1">
-		<h2 class="agileits1">Chợ Việt</h2>
-		<p class="agileits2">Hãy là 1 thành viên tích cực của CHợ Việt </p>
+		<h2 class="agileits1">CHợ Việt</h2>
+		<p class="agileits2">Hãy là 1 thành viên tích cực cửa Chợ Việ<table></table></p>
 	</div>
 	<div class="content-agile2">
 		<form action="#" method="post">
@@ -46,7 +46,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<input type="password" class="lock" name="confirm-password" placeholder="Confirm Password" id="password2" required="">
 			</div>			
 			
-			<input type="submit" class="register" value="Đăng kí">
+			<input type="submit" class="register" value="Register">
 		</form>
 		<script type="text/javascript">
 			window.onload = function () {
@@ -63,7 +63,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					//empty string means no validation error
 			}
 		</script>
-		<p class="wthree w3l">Đăng ký nhanh với hồ sơ xã hội yêu thích của bạn</p>
+		<p class="wthree w3l">Fast Signup With Your Favourite Social Profile</p>
 		<ul class="social-agileinfo wthree2">
 			<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 			<li><a href="#"><i class="fa fa-youtube"></i></a></li>
