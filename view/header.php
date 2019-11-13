@@ -92,13 +92,8 @@
                                             <li><a href="wishlist.html">wishlist</a></li>
                                         </ul>
                                     </li>
-                                    <li class="login"><a href="#">Đăng nhập</a>
-                                        <ul class="submenu-mainmenu">
-                                            <li><a href="#">login or register</a></li>
-                                            <li class="login-button"><a href="#">login</a></li>
-                                            <li><a href="#">or</a></li>
-                                            <li class="creat-button"><a href="#">creat account</a></li>
-                                        </ul>
+                                    <li class="login"><a href="?act=login">Đăng nhập</a>
+                                       
                                     </li>
                                     <li class="cart" id="cart-padding">
                                         <a href="?act=cart.php"><img src="view/img/icon/cart.png" alt="cart">
