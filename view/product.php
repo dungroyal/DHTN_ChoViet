@@ -21,49 +21,49 @@
                             <div class="section-title">
                                 <h4>Danh mục</h4>
                                 <ul>
-                                    <li><a href="#" class="show-submenu">Women<i class="fa fa-angle-down"></i></a>
+                                    <li><a href="#" class="show-submenu">Thiết bị điện tử<i class="fa fa-angle-down"></i></a>
                                         <ul class="submenu">
-                                            <li><a href="#">casual print</a></li>
-                                            <li><a href="#">lora dress</a></li>
+                                            <li><a href="#">Điện thoại</a></li>
+                                            <li><a href="#">Máy tính</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#" class="show-submenu">men<i class="fa fa-angle-down"></i></a>
+                                    <li><a href="#" class="show-submenu">Quần áo<i class="fa fa-angle-down"></i></a>
                                         <ul class="submenu">
-                                            <li><a href="#">Coat</a></li>
-                                            <li><a href="#">Shirt</a></li>
+                                            <li><a href="#">Đồ nam</a></li>
+                                            <li><a href="#">Đồ nữ</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#" class="show-submenu">Kid<i class="fa fa-angle-down"></i></a>
+                                    <li><a href="#" class="show-submenu">Thú cưng<i class="fa fa-angle-down"></i></a>
                                         <ul class="submenu">
-                                            <li><a href="#">flowral print</a></li>
-                                            <li><a href="#">lora dress</a></li>
+                                            <li><a href="#">PET Việt</a></li>
+                                            <li><a href="#">PET ngoại</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#" class="show-submenu">Jewellery<i class="fa fa-angle-down"></i></a>
+                                    <li><a href="#" class="show-submenu">Giày dép<i class="fa fa-angle-down"></i></a>
                                         <ul class="submenu">
-                                            <li><a href="#">Traditional</a></li>
-                                            <li><a href="#">Classy</a></li>
+                                            <li><a href="#">Giày dép nam</a></li>
+                                            <li><a href="#">Giày dép nữ</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#" class="show-submenu">Glasses<i class="fa fa-angle-down"></i></a>
-                                        <ul class="submenu">
-                                            <li><a href="#">casual</a></li>
-                                            <li><a href="#">branded</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#" class="show-submenu">Bags<i class="fa fa-angle-down"></i></a>
+                                    <li><a href="#" class="show-submenu">Phụ kiện<i class="fa fa-angle-down"></i></a>
                                         <ul class="submenu">
                                             <li><a href="#">casual</a></li>
                                             <li><a href="#">branded</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#" class="show-submenu">Accessories<i class="fa fa-angle-down"></i></a>
+                                    <li><a href="#" class="show-submenu">Làm đẹp<i class="fa fa-angle-down"></i></a>
                                         <ul class="submenu">
                                             <li><a href="#">casual</a></li>
                                             <li><a href="#">branded</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#" class="show-submenu">Trends<i class="fa fa-angle-down"></i></a>
+                                    <li><a href="#" class="show-submenu">Nhu cầu cá nhân<i class="fa fa-angle-down"></i></a>
+                                        <ul class="submenu">
+                                            <li><a href="#">casual</a></li>
+                                            <li><a href="#">branded</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#" class="show-submenu">Ẩm thực<i class="fa fa-angle-down"></i></a>
                                         <ul class="submenu">
                                             <li><a href="#">casual</a></li>
                                             <li><a href="#">classy</a></li>
@@ -102,12 +102,12 @@
                             <div class="section-title">
                                 <h4>filter by color</h4>
                                 <ul class="color-widget">
-                                    <li class="active"><span class="black"></span><a href="#">black</a></li>
-                                    <li><span class="white"></span><a href="#">white</a></li>
-                                    <li><span class="red"></span><a href="#">red</a></li>
-                                    <li><span class="blue"></span><a href="#">blue</a></li>
-                                    <li><span class="pink"></span><a href="#">pink</a></li>
-                                    <li><span class="yellow"></span><a href="#">yellow</a></li>
+                                    <li class="active"><span class="black"></span><a href="#">Đen</a></li>
+                                    <li><span class="white"></span><a href="#">Trắng</a></li>
+                                    <li><span class="red"></span><a href="#">Đỏ</a></li>
+                                    <li><span class="blue"></span><a href="#">Xanh</a></li>
+                                    <li><span class="pink"></span><a href="#">Hồng</a></li>
+                                    <li><span class="yellow"></span><a href="#">Vàng</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -292,88 +292,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <div class="single-product">
-                                        <div class="single-product-item">
-                                            <div class="single-product-img clearfix hover-effect">
-                                                <a href="#">
-                                                    <img class="primary-image" src="view/img/product/10.jpg" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="single-product-info clearfix">
-                                                <div class="pro-price">
-                                                    <span class="new-price">$25.99</span>
-                                                </div>
-                                                <div class="new-sale">
-                                                    <span>new</span>
-                                                </div>
-                                            </div>
-                                            <div class="product-content text-center">
-                                                <h3>Full sleev women shirt</h3>
-                                                <h4><a href="#">view details</a></h4>
-                                            </div>
-                                            <div class="product-action">
-                                                <ul>
-                                                    <li><a href="#" data-toggle="tooltip" title="Compage"><i class="fa fa-refresh"></i></a></li>
-                                                    <li class="add-bag"><a href="#" data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
-                                                    <li><a href="#" data-toggle="tooltip" title="Like it!"><i class="fa fa-heart"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <div class="single-product">
-                                        <div class="single-product-item">
-                                            <div class="single-product-img clearfix hover-effect">
-                                                <a href="#">
-                                                    <img class="primary-image" src="view/img/product/8.jpg" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="single-product-info clearfix">
-                                                <div class="pro-price">
-                                                    <span class="new-price">$25.99</span>
-                                                </div>
-                                                <div class="new-sale">
-                                                    <span>new</span>
-                                                </div>
-                                            </div>
-                                            <div class="product-content text-center">
-                                                <h3>Full sleev women shirt</h3>
-                                                <h4><a href="#">view details</a></h4>
-                                            </div>
-                                            <div class="product-action">
-                                                <ul>
-                                                    <li><a href="#" data-toggle="tooltip" title="Compage"><i class="fa fa-refresh"></i></a></li>
-                                                    <li class="add-bag"><a href="#" data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
-                                                    <li><a href="#" data-toggle="tooltip" title="Like it!"><i class="fa fa-heart"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <div class="single-product">
-                                        <div class="single-product-item">
-                                            <div class="single-product-img clearfix hover-effect">
-                                                <a href="#">
-                                                    <img class="primary-image" src="view/img/product/13.jpg" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="product-content text-center">
-                                                <h3>Full sleev women shirt</h3>
-                                                <h4><a href="#">view details</a></h4>
-                                            </div>
-                                            <div class="product-action">
-                                                <ul>
-                                                    <li><a href="#" data-toggle="tooltip" title="Compage"><i class="fa fa-refresh"></i></a></li>
-                                                    <li class="add-bag"><a href="#" data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
-                                                    <li><a href="#" data-toggle="tooltip" title="Like it!"><i class="fa fa-heart"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                              
+                               
+                              
                                 <div class="col-md-4 col-sm-4 col-xs-12">
                                     <div class="single-product">
                                         <div class="single-product-item">
@@ -404,36 +325,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <div class="single-product">
-                                        <div class="single-product-item">
-                                            <div class="single-product-img clearfix hover-effect">
-                                                <a href="#">
-                                                    <img class="primary-image" src="view/img/product/11.jpg" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="single-product-info clearfix">
-                                                <div class="pro-price">
-                                                    <span class="new-price">$25.99</span>
-                                                </div>
-                                                <div class="new-sale">
-                                                    <span>new</span>
-                                                </div>
-                                            </div>
-                                            <div class="product-content text-center">
-                                                <h3>Full sleev women shirt</h3>
-                                                <h4><a href="#">view details</a></h4>
-                                            </div>
-                                            <div class="product-action">
-                                                <ul>
-                                                    <li><a href="#" data-toggle="tooltip" title="Compage"><i class="fa fa-refresh"></i></a></li>
-                                                    <li class="add-bag"><a href="#" data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
-                                                    <li><a href="#" data-toggle="tooltip" title="Like it!"><i class="fa fa-heart"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                               
                                 <div class="col-md-4 col-sm-4 col-xs-12">
                                     <div class="single-product">
                                         <div class="single-product-item">
