@@ -156,18 +156,29 @@
                         <div class="col-md-3 hidden-sm col-xs-12">
                         <div class="single-left-widget">
                             <div class="section-title">
-                                <h4>Nhà Bán hàng</h4>
-                                <ul>
-                                    <li><a href="#">Avatar</i></a></li>
-                                    <li><a href="#">Tên</i></a></li>
-                                    <li><a href="#">Địa chỉ</i></a></li>
-
-                                    <div class="single-left-widget without-background hidden-sm hidden-md">
-                                <div class="section-title">
-                                        <a href="#" class="shop-now">Ghé thăm gian hàng</a>
+                                <h4>thông tin Nhà Bán hàng</h4>
+                                <div class="c-supplier-side">
+                                    <div class="b-grid">
+                                        <div class="b-grid__img">
+                                        <img src="uploads/5c9483dad3d979bcaccd21ed24b4d5b4.png" alt="img"></div>
+                                        <div class="b-grid__content">
+                                                <div class="b-grid__row">
+                                                    <span class="b-grid__title">
+                                                    <span class="icon-mall">
+                                                    </span>Sunhouse Việt Nam</span>
+                                            </div>
+                                            <div class="b-grid__row">
+                                                <ul>
+                                                    <li><label>Đánh giá:</label><span>100</span></li>
+                                                    <li><label>Số sản phẩm:</label><span>175</span></li>
+                                                    <li><label>Ngày tham gia:</label><span>27/04/2019</span></li>
+                                                    <li><label>Tỉnh/TP:</label><span>Quảng nam</span></li>
+                                            </ul>
+                                            </div>
+                                        <div class="b-grid__row"><a class="btn btn-secondary btn-sm" href="#">Xem shop</a></div>
+                                        </div>
+                                    </div>
                                 </div>
-                        </div>
-                                </ul>
                             </div>
                         </div>
                         </div>

@@ -1,499 +1,6 @@
-/*-----------------------------------------------------------------------------------
-
-    Template Name: Shopppie Ecommerce Responsive Bootstrap Template
-    Template URI: http://bootexperts.com
-    Description: This is html5 template
-    Author: BootExperts
-    Author URI: http://bootexperts.com
-    Version: 1.0
-
------------------------------------------------------------------------------------
-    
-    CSS INDEX
+/*   CSS INDEX
     ===================
-	/*--A Design by W3layouts 
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
---*/
-
-/*--- reset code ---*/
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
-	margin:0;
-	padding:0;
-	border:0;
-	font-size:100%;
-	font:inherit;
-	vertical-align:baseline;
-}
-article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-ol,ul {
-	list-style:none;
-	margin:0px;
-	padding:0px;
-}
-blockquote,q {
-	quotes:none;
-}
-blockquote:before,blockquote:after,q:before,q:after {
-	content:'';
-	content:none;
-}
-table {
-	border-collapse:collapse;
-	border-spacing:0;
-}
-
-/* start editing from here */
-a {
-	text-decoration:none;
-}
-.txt-rt {
-	text-align:right;
-}/* text align right */
-.txt-lt {
-	text-align:left;
-}/* text align left */
-.txt-center {
-	text-align:center;
-/*-- W3Layouts --*/	
-}/* text align center */
-.float-rt {
-	float:right;
-}/* float right */
-.float-lt {
-	float:left;
-}/* float left */
-.clear {
-	clear:both;
-}/* clear float */
-.pos-relative {
-	position:relative;
-}/* Position Relative */
-.pos-absolute {
-	position:absolute;
-}/* Position Absolute */
-.vertical-base {	
-	vertical-align:baseline;
-}/* vertical align baseline */
-.vertical-top {	
-	vertical-align:top;
-}/* vertical align top */
-nav.vertical ul li {	
-	display:block;
-}/* vertical menu */
-nav.horizontal ul li {	
-	display: inline-block;
-}/* horizontal menu */
-img {
-	max-width:100%;
-}
-
-/*--- end reset code ---*/
-
-body {
-	background:url(../images/banner.jpg) no-repeat;
-	background-attachment:fixed;
-	background-position:center;
-	background-size:cover;
-	-webkit-background-size:cover;
-	-moz-background-size:cover;
-	-o-background-size:cover;
-	font-family: 'Raleway', sans-serif;
-	font-weight:300;
-}
-h1.w3ls {
-	font-size:50px;
-	color:#fff;
-	padding:40px 0;
-	text-align:center;
-	/*-- w3layouts --*/ 
-	text-transform:uppercase;
-}
-.content-w3ls {
-	background-color:#202123;
-	width:70%;
-	margin:0 auto 50px;
-	padding:0;
-}
-.content-w3ls .content-agile1 {
-    width: 50%;
-    float: left;
-    background: url(../images/content.jpg) no-repeat;
-    background-position: center;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -ms-background-size: cover;
-    height: 555px;
-}
-h2.agileits1 {
-    font-size: 40px;
-    font-weight: normal;
-    color: #fff;
-    text-align: Center;
-    padding: 200px 0 15px;
-    text-transform: uppercase;
-	font-family: 'Monoton', cursive;
-}
-p.agileits2 {
-    font-size: 15px;
-    font-weight: normal;
-    color: #fff;
-    text-align: center;
-    text-transform: capitalize;
-}
-.content-w3ls .content-agile2 {
-	width: 50%;
-    float: left;
-    padding: 25px 0 0;
-}
-input#firstname,input#email,input#password1,input#password2 {
-	width:300px;
-	height:50px;
-	padding:0 15px;
-	color:#fff;
-	font-size:17px;
-	font-weight:200;
-	background-color:transparent;
-	/*-- w3layouts --*/ 
-	border-bottom:5px solid #fff;
-	border-top-color:transparent;
-	border-left-color:transparent;
-	border-right-color:transparent;
-	font-family: 'Raleway', sans-serif;
-	margin:0 auto 20px;
-	display:block;
-	outline:none;
-}
-input#firstname:focus,input#email:focus,input#password1:focus,input#password2:focus,input#firstname:hover,input#email:hover,input#password1:hover,input#password2:hover {
-	color:#fff;
-	border-bottom:5px solid #3970b0;
-}
-input::-webkit-input-placeholder {
-color: #fff !important;
-} 
-input:-moz-placeholder { /* Firefox 18- */
-color: #fff !important;  
-} 
-input::-moz-placeholder {  /* Firefox 19+ */
-color: #fff !important;  
-} 
-input:-ms-input-placeholder {  
-color: #fff !important;  
-}
-input:hover::-webkit-input-placeholder {
-color: #3970b0 !important;
-} 
-input:hover:-moz-placeholder { /* Firefox 18- */
-color:	#3970b0 !important;  
-} 
-input:hover::-moz-placeholder {  /* Firefox 19+ */
-color: #3970b0 !important;  
-} 
-input:hover:-ms-input-placeholder {  
-color: #3970b0 !important;  
-}
-input.register {
-    width: 335px;
-    margin: 30px auto;
-    display: block;
-    height: 50px;
-    text-align: center;
-    font-size: 17px;
-    font-weight: normal;
-    color: #fff;
-    background-color:#3970b0;
-    border-color: transparent;
-	font-family: 'Raleway', sans-serif;
-	/*-- w3ls --*/
-	transition:all 0.5s ease-in-out;
-	-webkit-transition:all 0.5s ease-in-out;
-	-moz-transition:all 0.5s ease-in-out;
-	-o-transition:all 0.5s ease-in-out;
-	-ms-transition:all 0.5s ease-in-out;
-	cursor:pointer;
-}
-input.register:hover {
-	color: #fff;
-    background-color:#3970b0;
-}
-p.wthree {
-    font-size: 16px;
-    font-weight: normal;
-    color: #fff;
-    text-align: center;
-    text-transform: capitalize;
-    padding-bottom: 20px;
-}
-ul.social-agileinfo {
-    text-align: center;
-}
-ul.social-agileinfo li {
-	display:inline-block;
-	margin:0;
-}
-ul.social-agileinfo li a i.fa {
-	width:40px;
-	height:40px;
-	border:1px solid #fff;
-	text-align:center;
-	line-height:40px;
-	color:#fff;
-}
-ul.social-agileinfo li a i.fa.fa-facebook:hover {
-	background-color:#3b5998;
-	color:#fff;
-	border-color:#3b5998;
-}
-ul.social-agileinfo li a i.fa.fa-twitter:hover {
-	background-color:#1da1f2;
-	color:#fff;
-	border-color:#1da1f2;
-}
-ul.social-agileinfo li a i.fa.fa-youtube:hover {
-	background-color:#cd201f;
-	color:#fff;
-	border-color:#cd201f;
-}
-ul.social-agileinfo li a i.fa.fa-google-plus:hover {
-	/*-- w3ls --*/
-	background-color:#dd4b39;
-	color:#fff;
-	border-color:#dd4b39;
-}
-ul.social-agileinfo li a i.fa:hover {
-    -webkit-animation: spin 2s linear infinite;
-	animation: spin 2s linear infinite;
-	-moz-animation: spin 2s linear infinite;
-	-o-animation: spin 2s linear infinite;
-	-ms-animation: spin 2s linear infinite;
-}
-
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-p.copyright {
-    font-size: 16px;
-    text-align: center;
-    color: #dadada;
-    line-height: 30px;
-    padding: 20px 10px;
-}
-p.copyright a {
-	color:#f15f22;
-}
-p.copyright a:hover {
-	color:#36b051;
-}
-
-/*-- responsive design --*/
-@media (max-width:1600px) {
-	h2.agileits1 {
-	padding: 225px 0 15px;	
-	}
-}
-
-@media (max-width: 1366px) {
-h2.agileits1 {
-    padding: 235px 0 15px;
-}
-}
-
-@media (max-width: 1080px) {
-	/*-- agileits --*/
-h1.w3ls {
-    font-size: 40px;
-}
-.content-w3ls {
-	width:80%;
-	margin: 0 auto 40px;
-}
-p.agileits2 {
-    font-size: 14px;
-}
-p.copyright {
-    font-size: 14px;
-}
-p.wthree {
-    font-size: 14px;
-}
-input#firstname, input#email, input#password1, input#password2 {
-	font-size:15px;
-}
-}
-
-@media (max-width: 1024px) {
-h1.w3ls {
-	padding: 30px 0;
-	font-size:35px;
-}
-}
-
-@media (max-width: 991px) {
-h2.agileits1 {
-    padding: 230px 0 15px;
-}
-.content-w3ls {
-    width: 90%;
-}
-}
-
-@media (max-width: 800px) {
-input#firstname, input#email, input#password1, input#password2 {
-    width: 260px;
-}
-input.register {
-    width: 295px;
-}
-p.agileits2 {
-    font-size: 14px;
-    line-height: 30px;
-    padding: 0 10px;
-}
-/*-- agileits --*/
-}
-
-@media (max-width: 768px) {
-h2.agileits1 {
-    padding: 210px 0 15px;
-}
-}
-
-@media (max-width: 736px) {
-.content-w3ls .content-agile1 {
-    width: 100%;
-	height:250px;
-}
-h2.agileits1 {
-    padding: 75px 0 15px;
-}
-.content-w3ls .content-agile2 {
-    width: 100%;
-    padding: 25px 0 30px;
-}
-.content-w3ls {
-    width: 65%;
-}
-}
-
-@media (max-width: 600px) {
-h2.agileits1 {
-    padding: 65px 0 10px;
-}
-}
-
-@media (max-width: 568px) {
-.content-w3ls {
-    width: 70%;
-}
-}
-
-@media (max-width: 480px) {
-h2.agileits1 {
-    font-size: 35px;
-}
-}
-
-@media (max-width: 414px) {
-h1.w3ls {
-    padding: 25px 0;
-    font-size: 30px;
-}
-.content-w3ls {
-	/*-- agileinfo --*/
-    width: 85%;
-	margin: 0 auto 10px;
-}
-}
-
-@media (max-width: 384px) {
-input#firstname, input#email, input#password1, input#password2 {
-    width: 230px;
-	height: 40px;
-}
-input.register {
-    width: 260px;
-	height:45px;
-}
-p.wthree {
-    font-size: 14px;
-    padding: 0 15px 20px;
-    line-height: 30px;
-}
-}
-
-@media (max-width: 375px) {
-h1.w3ls {
-    padding: 25px 0;
-    font-size: 27px;
-}
-h2.agileits1 {
-    font-size: 25px;
-	padding: 43px 0 10px;
-}
-.content-w3ls .content-agile1 {
-    width: 100%;
-    height: 200px;
-}
-}
-
-@media (max-width: 320px) {
-h1.w3ls {
-    padding: 25px 0;
-    font-size: 24px;
-}
-.content-w3ls .content-agile1 {
-    width: 100%;
-    height: 180px;
-}
-h2.agileits1 {
-    font-size: 22px;
-    padding: 37px 0 10px;
-}
-/*-- agileinfo --*/
-p.agileits2 {
-    font-size: 13px;
-}
-input#firstname, input#email, input#password1, input#password2 {
-    width: 195px;
-    height: 40px;
-	font-size: 14px;
-}
-.content-w3ls {
-    width: 90%;
-    margin: 0 auto;
-}
-input.register {
-    width: 230px;
-    height: 40px;
-	font-size:15px;
-}
-p.wthree {
-    font-size: 13px;
-    padding: 0 15px 15px;
-}
-p.copyright {
-    font-size: 13px;
-}
-}
-
-
-
-
-
-
-/*-- /responsive design --*/
+	
     1.0.0 Theme Default CSS (body, link color, section etc)
         1.0.1  Webfont CSS
         1.1.0  Home One CSS
@@ -519,16 +26,23 @@ p.copyright {
     10.0.0 Checkout CSS
     11.0.0 About CSS
     12.0.0 404 CSS
-    13.0.0 Mobile Menu
+    13.0.0 Mobile Menu 
 
 -----------------------------------------------------------------------------------*/
 
 
-/*----------------------------------------*/
-
-
 /*  1.0.0  Theme default CSS
 /*----------------------------------------*/
+
+@font-face {
+    font-family: CoreSansGS;
+    src: url('../fonts/upload-font/CoreSansGS-45Regular.woff');
+}
+
+@font-face {
+    font-family: CoreSansGS-Italic;
+    src: url('../fonts/upload-font/CoreSansGS-45RegularItalic.woff');
+}
 
 html,
 body {}
@@ -643,63 +157,7 @@ ul {
 /*----------------------------------------*/
 
 body {
-    font-family: 'Futura Futuris';
-}
-
-@font-face {
-    font-family: 'Futura Futuris';
-    src: url('fonts/webfonts/FuturaFuturis-BoldItalic.eot');
-    src: url('fonts/webfonts/FuturaFuturis-BoldItalic.eot?#iefix') format('embedded-opentype'), url('fonts/webfonts/FuturaFuturis-BoldItalic.woff2') format('woff2'), url('fonts/webfonts/FuturaFuturis-BoldItalic.woff') format('woff'), url('fonts/webfonts/FuturaFuturis-BoldItalic.ttf') format('truetype'), url('fonts/webfonts/FuturaFuturis-BoldItalic.svg#FuturaFuturis-BoldItalic') format('svg');
-    font-weight: bold;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Futura Futuris';
-    src: url('fonts/webfonts/FuturaFuturis-Medium.eot');
-    src: url('fonts/webfonts/FuturaFuturis-Medium.eot?#iefix') format('embedded-opentype'), url('fonts/webfonts/FuturaFuturis-Medium.woff2') format('woff2'), url('fonts/webfonts/FuturaFuturis-Medium.woff') format('woff'), url('fonts/webfonts/FuturaFuturis-Medium.ttf') format('truetype'), url('fonts/webfonts/FuturaFuturis-Medium.svg#FuturaFuturis-Medium') format('svg');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Futura Futuris';
-    src: url('fonts/webfonts/FuturaFuturis-Condensed.eot');
-    src: url('fonts/webfonts/FuturaFuturis-Condensed.eot?#iefix') format('embedded-opentype'), url('fonts/webfonts/FuturaFuturis-Condensed.woff2') format('woff2'), url('fonts/webfonts/FuturaFuturis-Condensed.woff') format('woff'), url('fonts/webfonts/FuturaFuturis-Condensed.ttf') format('truetype'), url('fonts/webfonts/FuturaFuturis-Condensed.svg#FuturaFuturis-Condensed') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Futura Futuris';
-    src: url('fonts/webfonts/FuturaFuturis-MediumItalic.eot');
-    src: url('fonts/webfonts/FuturaFuturis-MediumItalic.eot?#iefix') format('embedded-opentype'), url('fonts/webfonts/FuturaFuturis-MediumItalic.woff2') format('woff2'), url('fonts/webfonts/FuturaFuturis-MediumItalic.woff') format('woff'), url('fonts/webfonts/FuturaFuturis-MediumItalic.ttf') format('truetype'), url('fonts/webfonts/FuturaFuturis-MediumItalic.svg#FuturaFuturis-MediumItalic') format('svg');
-    font-weight: 500;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Futura Futuris';
-    src: url('fonts/webfonts/FuturaFuturis-Black.eot');
-    src: url('fonts/webfonts/FuturaFuturis-Black.eot?#iefix') format('embedded-opentype'), url('fonts/webfonts/FuturaFuturis-Black.woff2') format('woff2'), url('fonts/webfonts/FuturaFuturis-Black.woff') format('woff'), url('fonts/webfonts/FuturaFuturis-Black.ttf') format('truetype'), url('fonts/webfonts/FuturaFuturis-Black.svg#FuturaFuturis-Black') format('svg');
-    font-weight: 900;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Futura Futuris';
-    src: url('fonts/webfonts/FuturaFuturis-Light.eot');
-    src: url('fonts/webfonts/FuturaFuturis-Light.eot?#iefix') format('embedded-opentype'), url('fonts/webfonts/FuturaFuturis-Light.woff2') format('woff2'), url('fonts/webfonts/FuturaFuturis-Light.woff') format('woff'), url('fonts/webfonts/FuturaFuturis-Light.ttf') format('truetype'), url('fonts/webfonts/FuturaFuturis-Light.svg#FuturaFuturis-Light') format('svg');
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Futura Futuris';
-    src: url('fonts/webfonts/FuturaFuturis-Bold.eot');
-    src: url('fonts/webfonts/FuturaFuturis-Bold.eot?#iefix') format('embedded-opentype'), url('fonts/webfonts/FuturaFuturis-Bold.woff2') format('woff2'), url('fonts/webfonts/FuturaFuturis-Bold.woff') format('woff'), url('fonts/webfonts/FuturaFuturis-Bold.ttf') format('truetype'), url('fonts/webfonts/FuturaFuturis-Bold.svg#FuturaFuturis-Bold') format('svg');
-    font-weight: bold;
-    font-style: normal;
+    font-family: CoreSansGS;
 }
 
 
@@ -711,6 +169,7 @@ body {
 
 .header-top-area {
     background: #262626;
+    height: 41px;
 }
 
 .account-cart {
@@ -726,6 +185,7 @@ body {
     -webkit-transition: all 0.5s ease 0s;
     -o-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s;
+    height: 40px;
 }
 
 .language-usd>ul>li a,
@@ -752,21 +212,21 @@ ul li.login ul li:hover a {
     color: #ffffff;
     display: block;
     font-size: 12px;
-    line-height: 20px;
+    font-weight: 600;
+    line-height: 0px;
     text-transform: uppercase;
-    font-weight: 500;
 }
 
 ul.submenu-mainmenu li.single-cart-item .cart-info>a {
     font-size: 12px;
     color: #606060;
-    font-family: 'Lato', sans-serif;
+    font-weight: 400;
 }
 
 ul.submenu-mainmenu li.single-cart-item .cart-info>span {
     color: #303030;
-    font-family: "Lato", sans-serif;
     font-size: 12px;
+    font-weight: 400;
 }
 
 li.single-cart-item a.trash i {
@@ -784,7 +244,7 @@ li.single-cart-item a.trash i {
     padding: 12px 0;
     position: absolute;
     text-align: left;
-    top: 61px;
+    top: 42px;
     transform: rotateX(90deg);
     transform-origin: center top 0;
     transition: all 0.6s ease 0s;
@@ -792,7 +252,6 @@ li.single-cart-item a.trash i {
     width: 220px;
     z-index: -99;
     border: 1px solid #ADADAD;
-    font-family: 'Futura Futuris';
     font-weight: 500;
 }
 
@@ -814,7 +273,7 @@ li.single-cart-item a.trash i {
 
 .mainmenu ul li ul.submenu-mainmenu {
     padding: 12px 0;
-    top: 125px;
+    top: 92px;
 }
 
 .mainmenu ul>li>ul.submenu-mainmenu>li {
@@ -855,7 +314,6 @@ li.single-cart-item a.trash i {
     color: #303030 !important;
     font-size: 12px;
     text-transform: uppercase;
-    font-family: 'Futura Futuris';
     font-weight: 500;
     -webkit-transition: all 0.5s ease 0s;
     -o-transition: all 0.5s ease 0s;
@@ -893,17 +351,17 @@ li.single-cart-item a.trash i {
 .cart p {
     background: #f05a66 none repeat scroll 0 0;
     border-radius: 50%;
-    height: 20px;
-    line-height: 18px;
+    height: 15px;
+    line-height: 15px;
     position: absolute;
-    right: 13px;
+    right: -7px;
     text-align: center;
     top: 10px;
-    width: 20px;
+    width: 15px;
 }
 
 .add-bag>a {
-    font-weight: 500;
+    font-weight: 400;
     text-transform: uppercase;
 }
 
@@ -923,8 +381,8 @@ li.single-cart-item a.trash i {
 .account-cart>ul>li>ul.submenu-mainmenu>li>a {
     color: #1e1e1e !important;
     display: block;
-    font-family: 'Futura Futuris' font-size: 12px;
-    padding: 6px 16px;
+    font-size: 12px;
+    padding: 10px 16px;
     -webkit-transition: all 0.5s ease 0s;
     -o-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s;
@@ -1020,10 +478,11 @@ span.cart-info a:hover {
 
 .main-header-area {
     border-bottom: 1px solid #E8E8E8;
+    height: 90px;
 }
 
 .logo {
-    padding: 40px 0px;
+    padding: 22px 0px;
 }
 
 .mainmenu {
@@ -1040,14 +499,14 @@ span.cart-info a:hover {
 .mainmenu ul li {
     display: inline-block;
     position: relative;
-    padding: 52px 18px;
+    padding: 35px 18px;
 }
 
 .mainmenu ul>li::before,
 .description-tab-menu ul li::before,
 .mega-menu span a.title:before {
     background: #f05a66 none repeat scroll 0 0;
-    bottom: 49px;
+    bottom: 35px;
     content: "";
     height: 1px;
     left: 7px;
@@ -1063,7 +522,7 @@ span.cart-info a:hover {
 .description-tab-menu ul li::after,
 .mega-menu span a.title:after {
     background: #f05a66 none repeat scroll 0 0;
-    bottom: 46px;
+    bottom: 33px;
     content: "";
     height: 0px;
     left: 10px;
@@ -1124,7 +583,7 @@ span.cart-info a:hover {
 
 .mainmenu ul li a {
     color: #1e1e1e;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -1179,16 +638,16 @@ span.cart-info a:hover {
 
 .search-box {
     display: inline-block;
-    padding: 45px 0;
+    padding: 28px 0;
     float: right;
 }
 
 .search-box form {
     border: 1px solid #909090;
     height: 35px;
-    position: relative;
-    width: 155px;
     overflow: hidden;
+    position: relative;
+    width: 254px;
 }
 
 .search-box button {
@@ -1212,8 +671,8 @@ span.cart-info a:hover {
 }
 
 .search-box input[type="text"] {
-    font-family: "Lato", sans-serif;
     font-size: 14px;
+    font-weight: 400;
     padding: 6px 0 6px 10px;
     width: 100%;
 }
@@ -1228,9 +687,8 @@ span.cart-info a:hover {
 
 .mega-menu span a.title {
     color: #303030 !important;
-    font-family: 'Futura Futuris';
-    font-weight: bold;
     font-size: 12px;
+    font-weight: 600;
     margin-bottom: 15px;
     position: relative;
     text-transform: uppercase;
@@ -1258,7 +716,7 @@ span.cart-info a:hover {
     position: absolute;
     right: auto;
     text-align: left;
-    top: 125px;
+    top: 92px;
     transform: rotateX(90deg);
     transform-origin: center top 0;
     transition: all 0.6s ease 0s;
@@ -1322,32 +780,37 @@ span.cart-info a:hover {
 /*  1.2.0  Slider CSS
 /*----------------------------------------*/
 
-.slider-content h4 {
-    color: #303030;
-    font-family: 'Futura Futuris';
-    font-size: 18px;
-    margin: 0;
-    text-transform: uppercase;
+.slider-content h3 {
+    color: #fff;
+    font-size: 40px;
     font-weight: 300;
-    line-height: 28px;
+    letter-spacing: 1.5px;
+    line-height: normal;
+    margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
-.slider-content h1.title {
-    color: #444;
-    font-family: 'Futura Futuris';
-    font-size: 62px;
-    margin-bottom: 25px;
-    line-height: 53px;
+.slider-content h2.title {
+    color: #fff;
+    display: block;
+    font-family: "Playfair Display", serif;
+    font-size: 80px;
+    font-weight: 700;
+    margin-bottom: 0;
     text-transform: uppercase;
-    font-weight: bold;
+}
+
+.slider-content h3.ti7 {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
 }
 
 .nivo_text {
-    left: 48%;
+    margin-top: 9.5%;
     text-align: center;
-    top: 38%;
-    height: auto;
-    position: absolute;
 }
 
 .nivo_text .slider-img {
@@ -1369,16 +832,16 @@ span.cart-info a:hover {
 .slider-button {
     border-bottom: none;
     color: #fff;
-    font-size: 14px;
+    font-size: 12px;
     padding: 8px 20px;
     text-transform: uppercase;
     display: block;
     background: #303030;
-    font-family: 'Montserrat', sans-serif;
     letter-spacing: 2px;
     -webkit-transition: all 0.5s ease 0s;
     -o-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s;
+    font-weight: 600;
 }
 
 .slider-button:hover {
@@ -1475,7 +938,6 @@ span.cart-info a:hover {
 
 .service-info h2 {
     color: #303030;
-    font-family: 'Futura Futuris';
     font-size: 18px;
     text-transform: uppercase;
     font-weight: 500;
@@ -1489,9 +951,9 @@ span.cart-info a:hover {
 }
 
 .service-info p {
-    font-size: 14px;
     color: #606060;
-    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
     margin: 0;
 }
 
@@ -1508,6 +970,7 @@ span.cart-info a:hover {
 
 .banner-area {
     position: relative;
+    padding: 2px 0px;
 }
 
 .banner-area>a {
@@ -1585,9 +1048,9 @@ span.cart-info a:hover {
 }
 
 .single-banner-text h3 a {
-    font-size: 28px;
     color: #606060;
-    font-weight: 500;
+    font-size: 28px;
+    font-weight: 600;
     letter-spacing: 3px;
 }
 
@@ -1622,13 +1085,13 @@ a.shop-button {
 
 .section-title h2 {
     color: #bebebe;
-    font-family: "Futura Futuris";
     font-size: 48px;
     font-weight: bold;
     margin-bottom: 5px;
     margin-top: 89px;
     text-align: center;
     text-transform: uppercase;
+    font-weight: 600;
 }
 
 .popular-area .section-title h2 {
@@ -1654,12 +1117,21 @@ a.shop-button {
     text-transform: uppercase;
 }
 
-.wish-icon-hover.text-center>h3,
+.wish-icon-hover.text-center>h3 {
+    color: #606060;
+    font-size: 21px;
+    font-weight: 500;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-transform: capitalize;
+}
+
 .product-content.text-center>h3 {
     color: #606060;
     font-size: 21px;
+    font-weight: 500;
     left: 0;
-    position: absolute;
     right: 0;
     text-transform: capitalize;
 }
@@ -1678,15 +1150,30 @@ a.shop-button {
     float: right;
 }
 
-.wish-icon-hover h4 a,
-.product-content h4 a {
+.wish-icon-hover h4 a {
     color: #f05a66;
     font-size: 14px;
+    font-weight: 600;
     left: 0;
+    margin-top: 35px;
     position: absolute;
     right: 0;
     text-transform: uppercase;
-    margin-top: 35px;
+}
+
+.product-content h4 a {
+    color: #f05a66;
+    font-size: 14px;
+    font-weight: 600;
+    left: 0;
+    margin-top: 0px;
+    position: absolute;
+    right: 0;
+    text-transform: uppercase;
+}
+
+.product-content.text-center>h4 {
+    margin-bottom: 0;
 }
 
 .single-product-img.clearfix.hover-effect>a {
@@ -1748,20 +1235,18 @@ a.shop-button {
 }
 
 .big-one .timer-banner-text h2 {
-    font-family: 'Futura Futuris';
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .timer-banner-text a.view-more {
     border: 1px solid #ffffff;
     color: #ffffff;
-    font-family: "Futura Futuris";
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 2px;
+    margin-right: 5px;
     padding: 7px 20px;
     transition: all 0.5s ease 0s;
-    margin-right: 5px;
 }
 
 .single-banner-small:hover .timer-banner-text a.view-more {
@@ -1778,7 +1263,6 @@ a.shop-button {
     right: 18px;
     position: absolute;
     margin: 0;
-    font-family: 'Futura Futuris';
     font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -1810,7 +1294,6 @@ a.shop-button {
 }
 
 .timer .timer-grid span {
-    font-family: 'Futura Futuris';
     text-align: center;
     font-size: 18px;
     color: #fff;
@@ -1873,7 +1356,6 @@ span.counting {
 .timer-grid>div {
     display: inline-block;
     font-size: 14px;
-    font-family: 'Futura Futuris';
     color: #e23e57;
     background: #E23E57;
     height: 55px;
@@ -1946,8 +1428,9 @@ span.counting {
 .tendy-tab-menu ul li a {
     color: #a6a6a6 !important;
     font-size: 14px;
-    text-transform: uppercase;
+    font-weight: 600;
     letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
 .section-tab-menu ul li:hover a,
@@ -2191,7 +1674,7 @@ span.counting {
     overflow: hidden;
     padding-bottom: 8px;
     width: 450px;
-    font-family: 'Lato', sans-serif;
+    font-weight: 400;
 }
 
 .newsletter-box form button {
@@ -2201,13 +1684,17 @@ span.counting {
     font-size: 14px;
     line-height: 21px;
     padding: 8px 20px;
-    font-family: 'Futura Futuris';
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: 3px;
     text-transform: uppercase;
     -webkit-transition: all 0.5s ease 0s;
     -o-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s;
+}
+
+.home-two .newsletter-wrapper {
+    width: 59%;
+    margin: auto
 }
 
 .newsletter-box form button:hover {
@@ -2219,7 +1706,7 @@ span.counting {
 label {
     color: #ffffff;
     font-size: 12px;
-    font-family: 'Lato', sans-serif;
+    font-weight: 400;
     margin-bottom: 100px;
 }
 
@@ -2279,10 +1766,10 @@ label {
 }
 
 .date-comment h4 {
-    float: left;
     color: #303030;
+    float: left;
     font-size: 18px;
-    font-family: 'Lato', sans-serif;
+    font-weight: 300;
 }
 
 .date-comment {
@@ -2294,14 +1781,13 @@ label {
 .date-comment h5 {
     color: #606060;
     font-size: 14px;
-    font-family: 'Lato', sans-serif;
+    font-weight: 400;
 }
 
 .blog-content h4 a {
     font-size: 18px;
     color: #303030;
-    font-family: 'Lato', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     -webkit-transition: all 0.5s ease 0s;
     -o-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s;
@@ -2322,8 +1808,8 @@ label {
 .continue-reading>a {
     font-size: 14px;
     color: #606060;
-    font-family: 'Lato', sans-serif;
     line-height: 24px;
+    font-weight: 300;
 }
 
 .continue-reading>a {
@@ -2332,6 +1818,7 @@ label {
     -webkit-transition: all 0.5s ease 0s;
     -o-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s;
+    font-weight: 600;
 }
 
 .blog-icon {
@@ -2386,9 +1873,8 @@ label {
     text-transform: uppercase;
     font-size: 20px;
     color: #282828;
-    font-family: 'Futura Futuris';
     display: block;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .single-client>a {
@@ -2412,13 +1898,13 @@ label {
 
 .footer-widget h5 {
     color: #fff;
-    font-family: 'Futura Futuris';
-    font-weight: bold;
     font-size: 18px;
+    font-weight: bold;
     line-height: 30px;
     margin-bottom: 15px;
     position: relative;
     text-transform: uppercase;
+    font-weight: 600;
 }
 
 .footer-widget h5::before {
@@ -2464,7 +1950,6 @@ label {
     margin: 0px;
     font-size: 12px;
     color: #ddd;
-    font-family: 'Futura Futuris';
     line-height: 20px;
 }
 
@@ -2490,8 +1975,7 @@ label {
     color: #ddd;
     font-size: 14px;
     line-height: 25px;
-    font-family: 'Futura Futuris';
-    font-weight: 500;
+    font-weight: 300;
     -webkit-transition: all 0.5s ease 0s;
     -o-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s;
@@ -2519,11 +2003,11 @@ label {
 }
 
 .copyright p {
-    font-size: 13px;
     color: #ddd;
-    font-family: 'Lato', sans-serif;
+    font-size: 13px;
     margin: 0;
-    padding: 10px 0px;
+    padding: 10px 0;
+    font-weight: 300;
 }
 
 .copyright p span a {
@@ -2540,14 +2024,13 @@ label {
 
 .footer-logo {
     margin-bottom: 20px;
+    width: 250px;
 }
 
-.footer-address>p,
-.footer-widget>p {
+.footer-address>p .footer-widget>p {
     color: #ddd;
     font-size: 14px;
-    font-family: 'Futura Futuris';
-    font-weight: 500;
+    font-weight: 300;
 }
 
 .footer-address>p:first-child {
@@ -2658,7 +2141,6 @@ ul.social-icon li i:hover {
 .home-two .single-banner-small.small-one>p {
     bottom: 10px;
     color: #ffffff;
-    font-family: "Futura Futuris";
     font-size: 12px;
     font-weight: 500;
     letter-spacing: 2px;
@@ -2671,7 +2153,7 @@ ul.social-icon li i:hover {
 .banner-timer-area .slider-button {
     bottom: 35px;
     display: inline-block;
-    left: 330px;
+    left: 49%;
     position: absolute;
 }
 
@@ -2684,7 +2166,6 @@ ul.social-icon li i:hover {
     width: 50%;
     background: #303030;
     margin: 0;
-    text-align: center;
 }
 
 .newsletter-area .section-title h2 {
@@ -2698,19 +2179,26 @@ ul.social-icon li i:hover {
     text-align: left;
 }
 
+.subscribing .checkbox-title>input:focus {
+    outline: 0
+}
+
 .newsletter-box .subscribing label input {
     position: relative;
     top: 2px;
 }
 
 .newsletter-area .section-title p {
-    font-size: 14px;
-    text-transform: uppercase;
     color: #fff;
-    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
 }
 
-.newsletter-area.home-two .section-title,
+.home-two .newsletter-area .section-title p {
+    text-align: left;
+}
+
 .home-two .newsletter-box form input {
     display: inline-block;
     text-align: left;
@@ -2718,7 +2206,6 @@ ul.social-icon li i:hover {
 
 .home-two .newsletter-box form input {
     margin: 0;
-    width: 370px;
     border-bottom: 1px solid #909090;
 }
 
@@ -2730,16 +2217,13 @@ ul.social-icon li i:hover {
 .home-two label {
     color: #909090;
     margin-bottom: 60px;
+    text-align: left;
 }
 
 .home-two .newsletter-box form button {
     float: left;
-    margin-left: 152px;
     margin-top: 30px;
-}
-
-.home-two .newsletter-box .subscribing {
-    margin-left: 25px;
+    overflow: hidden;
 }
 
 
@@ -2832,7 +2316,6 @@ ul.social-icon li i:hover {
 .filter-by h4 {
     color: #303030;
     display: inline-block;
-    font-family: "Futura Futuris";
     font-size: 14px;
     margin-right: 10px;
     font-weight: 500;
@@ -2893,7 +2376,6 @@ ul.social-icon li i:hover {
     -moz-appearance: button;
     text-transform: uppercase;
     font-weight: 500;
-    font-family: "Futura Futuris";
     letter-spacing: 2px;
 }
 
@@ -2923,7 +2405,6 @@ ul.social-icon li i:hover {
     display: inline-block;
     font-size: 14px;
     color: #282828;
-    font-family: 'Futura Futuris';
 }
 
 .page-menu ul li.li-page {
@@ -2932,7 +2413,6 @@ ul.social-icon li i:hover {
 
 .page-menu ul li a {
     color: #a6a6a6;
-    font-family: 'Futura Futuris';
     font-weight: bold;
     border: 1px solid #A6A6A6;
     margin-right: 5px;
@@ -3015,7 +2495,7 @@ ul.social-icon li i:hover {
 .single-left-widget.without-background {
     background: none;
     border: none;
-    padding: inherit;
+    padding: 0;
 }
 
 .single-left-widget.without-background .section-title h4 {
@@ -3029,9 +2509,8 @@ ul.social-icon li i:hover {
 
 .single-left-widget .section-title h4 {
     display: block;
-    font-family: "Futura Futuris";
-    font-size: 12px;
-    font-weight: bold;
+    font-size: 13px;
+    font-weight: 600;
     letter-spacing: 2px;
     padding-bottom: 10px;
     position: relative;
@@ -3061,12 +2540,11 @@ ul.social-icon li i:hover {
 
 .single-left-widget .section-title ul li a {
     color: #606060;
-    font-family: "Futura Futuris";
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 300;
+    letter-spacing: 2px;
     text-transform: uppercase;
     transition: all 0.5s ease 0s;
-    letter-spacing: 2px;
 }
 
 .single-left-widget .section-title ul>li:hover>a,
@@ -3186,9 +2664,8 @@ ul.social-icon li i:hover {
     border: medium none;
     display: inline-block;
     float: left;
-    font-family: "Futura Futuris";
     font-size: 12px;
-    font-weight: bold;
+    font-weight: 600;
     margin-left: 10px;
     width: 70px;
 }
@@ -3196,7 +2673,6 @@ ul.social-icon li i:hover {
 .price-filter label {
     color: #606060;
     float: left;
-    font-family: 'Futura Futuris';
     font-weight: 500;
     text-transform: uppercase;
     font-size: 12px;
@@ -3222,7 +2698,6 @@ ul.size-widget {
 
 ul.size-widget li {
     float: left;
-    font-family: 'Futura Futuris';
     font-weight: 400;
     border-right: 1px solid #ddd;
 }
@@ -3241,7 +2716,6 @@ ul.size-widget li:last-child {
     font-size: 14px;
     text-align: center;
     padding: 12px 19.5px !important;
-    font-family: 'Futura Futuris';
     font-weight: 500;
 }
 
@@ -3332,7 +2806,7 @@ ul.color-widget li:last-child {
 .single-left-widget .section-title ul.color-widget li a {
     color: #303030;
     display: block;
-    t font-size: 12px;
+    font-size: 12px;
     height: 20px;
     line-height: 19px;
     text-align: center;
@@ -3356,7 +2830,6 @@ ul.color-widget li:last-child {
     font-weight: 500;
     margin-bottom: 16px;
     display: block;
-    font-family: 'Futura Futuris';
     -webkit-transition: all 0.5s ease 0s;
     -o-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s;
@@ -3390,15 +2863,14 @@ ul.color-widget li:last-child {
 .price-box>span {
     color: #303030;
     font-size: 18px;
+    font-weight: 700;
     margin-right: 10px;
-    font-family: 'Futura Futuris';
 }
 
 .price-box del {
     color: #909090;
     font-size: 14px;
-    font-weight: 500;
-    font-family: 'Futura Futuris';
+    font-weight: 600;
 }
 
 .price-rating-container {
@@ -3531,8 +3003,7 @@ ul.color-widget li:last-child {
 .product-desc {
     color: #606060;
     font-size: 14px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 24px;
     margin-bottom: 25px;
 }
@@ -3714,7 +3185,6 @@ ul.color-widget li:last-child {
     border: 1px solid #ddd;
     font-size: 14px;
     color: #909090;
-    font-family: 'Futura Futuris';
     font-weight: 500;
     padding: 6px 0px;
 }
@@ -3742,10 +3212,10 @@ ul.color-widget li:last-child {
 }
 
 .size-categories ul li a {
-    display: block;
     color: #303030;
+    display: block;
     font-size: 14px;
-    font-family: 'Futura Futuris';
+    font-weight: 500;
 }
 
 .size-quantity {
@@ -3826,9 +3296,8 @@ ul.color-widget li:last-child {
 .description-tab-menu ul li a {
     color: #909090;
     display: block;
-    font-family: "Futura Futuris";
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 2px;
     padding-right: 45px;
     text-transform: uppercase;
@@ -3845,7 +3314,6 @@ ul.color-widget li:last-child {
 .tab-content ul li {
     color: #666;
     font-size: 14px;
-    font-family: 'Lato', sans-serif;
     font-weight: 400;
     line-height: 24px;
 }
@@ -3920,7 +3388,6 @@ ul.color-widget li:last-child {
 
 .widget-color h4.follow {
     color: #252525;
-    font-family: 'Futura Futuris';
     font-size: 15px;
     display: inline-block;
     margin-right: 10px;
@@ -4162,7 +3629,6 @@ ul.color-widget li:last-child {
     transition-property: height;
     width: 100%;
     z-index: 9999;
-    font-family: 'Futura Futuris';
 }
 
 .product-details-area.left-sidebar #quantity-wanted-p {
@@ -4352,8 +3818,7 @@ option {
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-family: 'Futura Futuris';
-    font-weight: 500;
+    font-weight: 300;
     -webkit-transition: all 0.5s ease 0s;
     -o-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s;
@@ -4428,7 +3893,6 @@ option {
     color: #303030;
     line-height: 27px;
     margin-right: 5px;
-    font-family: 'Futura Futuris';
     font-weight: 500;
 }
 
@@ -4453,14 +3917,12 @@ option {
 p.name strong {
     color: #303030;
     font-size: 18px;
-    font-family: 'Open Sans', sans-serif;
     font-weight: 600;
 }
 
 p.comment_time {
     color: #606060;
     display: inline-block;
-    font-family: "Lato", sans-serif;
     font-size: 13px;
     font-style: italic;
     font-weight: 400;
@@ -4483,9 +3945,8 @@ p.comment_time {
 
 .comment_text>p {
     color: #606060;
-    font-family: "Lato", sans-serif;
     font-size: 13px;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 22px;
 }
 
@@ -4502,8 +3963,7 @@ p.comment_time {
     top: 15px;
     right: 25px;
     padding: 2px 10px;
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     -webkit-transition: all 0.5s ease 0s;
     -o-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s;
@@ -4530,9 +3990,8 @@ ul.children_comment {
 .left_comment>p,
 .leave_comment p {
     color: #909090;
-    font-family: "Lato", sans-serif;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 300;
     margin-bottom: -25px;
 }
 
@@ -4561,8 +4020,7 @@ textarea {
     margin-top: 10px;
     padding: 10px 25px;
     text-transform: uppercase;
-    font-family: 'Futura Futuris';
-    font-weight: 500;
+    font-weight: 400;
     -webkit-transition: all 0.5s ease 0s;
     -o-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s;
@@ -4624,11 +4082,11 @@ textarea {
     border-style: none none solid;
     border-width: medium medium 1px;
     color: #606060 !important;
-    font-family: "Lato", sans-serif;
     margin-right: 40px;
     overflow: hidden;
     padding-bottom: 8px;
     width: 450px;
+    font-weight: 300;
 }
 
 .contact-area .newsletter-box form button {
@@ -4707,8 +4165,7 @@ a.continue-shopping,
     color: #fff;
     background: #303030;
     text-transform: uppercase;
-    font-family: 'Futura Futuris';
-    font-weight: 500;
+    font-weight: 300;
     padding: 10px 30px;
     display: inline-block;
     border: none;
@@ -4734,10 +4191,9 @@ thead {
 .cart_list thead th {
     color: #303030;
     font-size: 14px;
-    font-family: 'Futura Futuris';
     font-weight: 500;
     letter-spacing: 1px;
-    padding: 15px 0px;
+    padding: 15px 0;
     text-align: center;
     text-transform: uppercase;
 }
@@ -4747,7 +4203,6 @@ thead {
     font-size: 14px;
     text-transform: uppercase;
     font-weight: 500;
-    font-family: 'Futura Futuris';
     -webkit-transition: all 0.5s ease 0s;
     -o-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s;
@@ -4761,8 +4216,7 @@ th.add-cart>a {
     font-size: 14px;
     background: #303030;
     color: #fff;
-    font-weight: 500;
-    font-family: 'Futura Futuris';
+    font-weight: 300;
     padding: 5px 15px;
     text-transform: uppercase;
     text-align: center;
@@ -4783,10 +4237,10 @@ th.add-cart>a:hover {
 td.product_des h3 a {
     font-size: 14px;
     color: #606060;
-    font-family: 'Lato', sans-serif;
     -webkit-transition: all 0.5s ease 0s;
     -o-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s;
+    font-weight: 500;
 }
 
 td.product_des h3 a:hover {
@@ -4819,21 +4273,12 @@ td.product_des h3 a:hover {
 .u_price,
 .p_value {
     color: #3e3f3f;
-    font-family: "Lato", sans-serif;
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .p_value {
     color: #c43b68;
-}
-
-.u_price,
-.p_value {
-    color: #3e3f3f;
-    font-family: "Lato", sans-serif;
-    font-size: 14px;
-    font-weight: 300;
 }
 
 .other-cart-info {
@@ -4959,7 +4404,6 @@ td.product_des h3 a:hover {
     border-bottom: 0 none;
     color: #ffffff;
     display: block;
-    font-family: 'Futura Futuris';
     font-weight: 500;
     padding: 10px 0 10px 30px;
     position: relative;
@@ -5008,9 +4452,8 @@ td.product_des h3 a:hover {
 .single-checkout.right h3.login-title,
 .single-checkout h3.login-title {
     color: #303030;
-    font-family: "Lato", sans-serif;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 300;
     margin-bottom: 35px;
     text-transform: uppercase;
 }
@@ -5022,9 +4465,8 @@ td.product_des h3 a:hover {
 .single-checkout p.heading-p,
 .single-checkout p.fast-check {
     color: #606060;
-    font-family: "Lato", sans-serif;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 300;
     margin-bottom: 5px;
 }
 
@@ -5055,10 +4497,9 @@ td.product_des h3 a:hover {
 .single-checkout.right p {
     color: #303030;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 300;
     margin-top: 15px;
     margin-bottom: 5px;
-    font-family: 'Lato', sans-serif;
 }
 
 .single-checkout.right p {
@@ -5086,8 +4527,7 @@ button.button {
     height: 38px;
     padding: 9px 30px;
     text-decoration: none;
-    font-family: 'Futura Futuris';
-    font-weight: 500;
+    font-weight: 300;
     text-transform: uppercase;
     -webkit-transition: all 0.5s ease 0s;
     -o-transition: all 0.5s ease 0s;
@@ -5202,9 +4642,8 @@ button.button:hover {
 
 .checkout-area .login-form p {
     color: #303030;
-    font-family: "Lato", sans-serif;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 24px;
     margin-bottom: 0;
     margin-top: 15px;
@@ -5285,9 +4724,8 @@ textarea {
 
 .single-pay-info>p {
     color: #303030;
-    font-family: "Lato", sans-serif;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 500;
     margin-bottom: 8px;
     margin-top: 15px;
 }
@@ -5360,9 +4798,8 @@ textarea {
 
 .checkout-table thead th {
     color: #303030;
-    font-family: "Lato", sans-serif;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 300;
     text-transform: uppercase;
 }
 
@@ -5393,9 +4830,9 @@ textarea {
     color: #f05a66;
     margin-top: 5px;
     display: block;
-    font-family: "Lato", sans-serif;
     font-size: 14px;
     cursor: pointer;
+    font-weight: 300;
 }
 
 .checkout-table tbody tr,
@@ -5413,8 +4850,7 @@ tfoot td,
 .p-total label span {
     color: #606060;
     font-size: 14px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .checkout-table .button.floatright {
@@ -5448,7 +4884,7 @@ tfoot td,
 
 .p-name-total,
 tfoot td {
-    font-weight: 700;
+    font-weight: 300;
 }
 
 .checkout-buttons p {
@@ -5490,7 +4926,7 @@ tfoot td {
 .about-us-area:after {
     position: absolute;
     right: 0;
-    top: 0;
+    top: -1px;
     content: "";
     background: #fff;
     height: 100%;
@@ -5517,15 +4953,14 @@ tfoot td {
 }
 
 .section-heading h3 {
-    position: relative;
     color: #303030;
     font-size: 18px;
     font-weight: 500;
-    font-family: 'Futura Futuris';
-    text-transform: uppercase;
     letter-spacing: 2px;
-    margin-left: 10px;
     margin-bottom: 30px;
+    margin-left: 10px;
+    position: relative;
+    text-transform: uppercase;
 }
 
 .section-heading h3:after {
@@ -5540,10 +4975,9 @@ tfoot td {
 }
 
 .about-us-text {
-    font-size: 14px;
     color: #909090;
-    font-family: 'Lato', sans-serif;
-    font-weight: 500;
+    font-size: 14px;
+    font-weight: 300;
     line-height: 25px;
 }
 
@@ -5605,13 +5039,12 @@ tfoot td {
 }
 
 .single-member-info h3 {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 3px;
     color: #303030;
     font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 3px;
     margin-bottom: 5px;
+    text-transform: uppercase;
 }
 
 .single-member-info h4 {
@@ -5670,11 +5103,10 @@ tfoot td {
     border: 1px solid #F05A66;
 }
 
-.section-title span {
+.section-title span a {
     font-size: 13px;
     color: #606060;
-    font-family: 'Lato', sans-serif;
-    font-weight: 500;
+    font-weight: 300;
     border: 1px solid #ddd;
     padding: 5px 10px;
     margin-right: 5px;
@@ -5686,16 +5118,16 @@ tfoot td {
     transition: all 0.5s ease 0s;
 }
 
-.section-title span:nth-child(4) {
+.section-title span:nth-child(4) a {
     margin-right: 0px;
 }
 
-.section-title span:nth-child(8),
-.section-title span:nth-child(7) {
+.section-title span:nth-child(8) a,
+.section-title span:nth-child(7) a {
     margin-bottom: 0px;
 }
 
-.section-title span:hover {
+.section-title span a:hover {
     color: #fff;
     background: #000;
 }
@@ -5737,13 +5169,18 @@ tfoot td {
 .blog-sidebar .section-title ul li .post-info>a {
     font-size: 13px;
     letter-spacing: 0;
-    font-family: 'Lato', sans-serif;
     font-weight: 400;
     text-transform: capitalize;
+    -webkit-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+}
+
+.blog-sidebar .section-title ul li .post-info>a:hover {
+    color: #F05A66;
 }
 
 .blog-sidebar .post-info>span {
-    font-family: 'Lato', sans-serif;
     border: none;
     padding: inherit;
     margin: inherit;
@@ -5785,19 +5222,17 @@ tfoot td {
 }
 
 .error-content h2 {
-    font-size: 48px;
     color: #fff;
-    font-family: 'Futura Futuris';
-    font-weight: 500;
+    font-size: 48px;
+    font-weight: 700;
     letter-spacing: 3px;
-    text-transform: uppercase;
     line-height: 60px;
+    text-transform: uppercase;
 }
 
 .error-content p {
-    font-size: 21px;
     color: #fff;
-    font-family: 'Futura Futuris';
+    font-size: 21px;
     font-weight: 500;
     line-height: 28px;
 }
@@ -5925,4 +5360,138 @@ tfoot td {
     top: 15px;
     transform: scale(0);
     transition: all 500ms ease 0s;
+}
+
+.slider-wrap {
+    position: relative;
+    height: 60vh;
+}
+
+.slider-wrap::before {
+    background: #000 none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+}
+
+.nivo-caption {
+    z-index: 99;
+}
+
+.preview-2 .nivo-directionNav a {
+    z-index: 99;
+}
+
+#cart-padding a {
+    padding: 9px 5px;
+}
+
+
+/* Css store*/
+
+.c-supplier-side {
+    padding: 2px;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.c-supplier-side .b-grid .b-grid__img {
+    float: none;
+    display: flex;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+}
+
+.c-supplier-side .b-grid .b-grid__img img {
+    width: auto;
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.c-supplier-side .b-grid .b-grid__content {
+    margin-left: 0;
+}
+
+.c-supplier-side .b-grid .b-grid__row {
+    text-align: center;
+}
+
+.c-supplier-side .b-grid .b-grid__title {
+    font-size: 18px;
+}
+
+.b-grid .b-grid__title {
+    font-weight: bold;
+    margin-right: 3px;
+}
+
+.b-grid .b-grid__row {
+    margin-bottom: 5px;
+}
+
+.c-supplier-side .b-grid .b-grid__title .icon-mall {
+    margin-right: 4px;
+    vertical-align: middle;
+    margin-top: -6px;
+}
+
+.icon-mall {
+    background-image: url(../images/mall.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background-size: 100% 100%;
+}
+
+.c-supplier-side .b-grid .b-grid__row ul li span {
+    color: #999;
+    margin-left: 4px;
+}
+
+.b-grid__row ul li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.b-grid__row ul li label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.btn-secondary {
+    background-color: #ffb718;
+    border-color: #ffb718;
+    color: #fff;
+}
+
+.c-supplier-side .b-grid .b-grid__title .icon-mall {
+    margin-right: 4px;
+    vertical-align: middle;
+    margin-top: -6px;
 }

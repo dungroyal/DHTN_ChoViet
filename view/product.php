@@ -19,6 +19,35 @@
                     <div class="shop-left-sidebar">
                         <div class="single-left-widget">
                             <div class="section-title">
+                                <h4>Thông tin Nhà bán hàng</h4>
+                                <div class="c-supplier-side">
+                                    <div class="b-grid">
+                                        <div class="b-grid__img">
+                                        <img src="uploads/Adidas-logo.jpg" alt="img"></div>
+                                        <div class="b-grid__content">
+                                                <div class="b-grid__row">
+                                                <span class="b-grid__title">
+                                                    <span class="icon-mall"></span>
+                                                    Adidas Việt Nam </span>
+                                            </div>
+                                            <div class="b-grid__row">
+                                                <ul>
+                                                    <li><label>Đánh giá:</label><span>100</span></li>
+                                                    <li><label>Số sản phẩm:</label><span>175</span></li>
+                                                    <li><label>Ngày tham gia:</label><span>27/04/2019</span></li>
+                                                    <li><label>Tỉnh/TP:</label><span>Quảng nam</span></li>
+                                            </ul>
+                                            </div>
+                                        <div class="b-grid__row"><a class="btn btn-secondary btn-sm" href="#">Xem shop</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="single-left-widget">
+                            <div class="section-title">
                                 <h4>Danh mục</h4>
                                 <ul>
                                     <li><a href="#" class="show-submenu">Thiết bị điện tử<i class="fa fa-angle-down"></i></a>

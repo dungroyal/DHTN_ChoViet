@@ -48,7 +48,7 @@
 
     <!-- style CSS
 		============================================ -->
-    <link rel="stylesheet" href="view/style.css">
+    <link rel="stylesheet" href="view/css/style.css">
 
     <!-- responsive CSS
 		============================================ -->
