@@ -5495,3 +5495,138 @@ tfoot td {
     vertical-align: middle;
     margin-top: -6px;
 }
+
+
+/* Product utuem*/
+
+.c-product-item {
+    position: relative;
+    z-index: 1;
+    margin-top: 30px;
+}
+
+.c-product-item__shadow {
+    background: #333333;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 100%;
+    border: 1px solid #fff;
+}
+
+.c-product-item__thumb {
+    position: relative;
+    z-index: 1;
+    padding-top: 100%;
+    margin-bottom: 7px;
+}
+
+.c-tag-sale {
+    background-image: url(../images/tag-sale.webp);
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 47px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    padding-top: 3px;
+    color: #ffb718;
+}
+
+.c-product-item .c-tag-sale {
+    left: 5px;
+    z-index: 5;
+}
+
+.c-tag-sale b {
+    display: block;
+    font-size: 9px;
+    color: #fff;
+}
+
+.c-tag-true {
+    background-image: url(../images/tem-chung-nhan.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    z-index: 4;
+    bottom: -70px;
+    right: 4px;
+    width: 55px;
+    height: 55px;
+    background-size: 100% auto;
+}
+
+.c-product-item__thumb a {
+    display: block;
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.c-product-item__thumb img {
+    width: auto !important;
+    height: auto;
+    display: inline !important;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.c-product-item__content {
+    padding: 0 4px 4px;
+}
+
+.c-product-item__row {
+    margin-bottom: 5px;
+}
+
+.c-product-item .c-product-item__title {
+    text-decoration: none;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+    font-size: 12px;
+}
+
+.c-product-item__row:last-child {
+    margin-bottom: 0 !important;
+}
+
+.c-product-item__price {
+    color: #e5101d;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.c-product-item__price sup {
+    position: relative;
+    font-size: 75%;
+    line-height: 0;
+    vertical-align: baseline;
+}
+
+.c-product-item__oldprice {
+    margin-left: 5px;
+    color: #999;
+    text-decoration: line-through;
+    font-weight: 400;
+    font-size: 12px;
+}

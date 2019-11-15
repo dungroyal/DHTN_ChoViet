@@ -201,36 +201,29 @@
                     <div class="tab-content">
                         <div id="grid" class="tab-pane active" role="tabpanel">
                             <div class="row">
+                                
                                 <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <div class="single-product">
-                                        <div class="single-product-item">
-                                            <div class="single-product-img clearfix hover-effect">
-                                                <a href="#">
-                                                    <img class="primary-image" src="view/img/product/1.jpg" alt="">
-                                                </a>
+                                    <div class="c-product-item">
+                                        <div class="c-product-item__shadow">
+                                            <div class="c-product-item__thumb">
+                                                <span class="c-tag-sale"><b>Giảm</b>26%</span>
+                                                <span class="c-tag-true"></span> <a href="/pin-sac-du-phong-5000mah-aukey-pbxn5-mau-xanh-cong-nghe-aipower-thong-minh-cong-usbc-15w-hang-phan-phoi-chinh-hang-p19987.html"><img src="https://image.voso.vn/users/vosoimage/images/0ffb7f2e6d874fc2f386931654aa61ad?t%5B0%5D=maxSize%3Awidth%3D255&amp;t%5B1%5D=compress%3Alevel%3D100&amp;accessToken=ec064784633d7bd306012f78241faf0e3365dc0b55e4a00ee3dd44368dcb5089" alt="Pin Sạc Dự Phòng 5000mAh Aukey PB-XN5 ( Màu xanh ) Công Nghệ AiPower Thông Minh Cổng USB-C 15W - Hàng Phân Phối Chính Hãng"></a>
                                             </div>
-                                            <div class="single-product-info clearfix">
-                                                <div class="pro-price">
-                                                    <span class="new-price">$25.99</span>
-                                                </div>
-                                                <div class="new-sale">
-                                                    <span>new</span>
-                                                </div>
+                                        <div class="c-product-item__content">
+                                            <div class="c-product-item__row">
+                                                <a class="c-product-item__title" href="/pin-sac-du-phong-5000mah-aukey-pbxn5-mau-xanh-cong-nghe-aipower-thong-minh-cong-usbc-15w-hang-phan-phoi-chinh-hang-p19987.html">
+                                            
+                                            Pin Sạc Dự Phòng 5000mAh Aukey PB-XN5 ( Màu xanh ) Công Nghệ AiPower Thông Minh Cổng USB-C 15W - Hàng Phân Phối Chính Hãng</a>
                                             </div>
-                                            <div class="product-content text-center">
-                                                <h3>Full sleev women shirt</h3>
-                                                <h4><a href="#">view details</a></h4>
+                                            <div class="c-product-item__row">
+                                                <span class="c-product-item__price">290,000<sup>đ</sup></span>
+                                                <span class="c-product-item__oldprice">390,000<sup>đ</sup></span>
                                             </div>
-                                            <div class="product-action">
-                                                <ul>
-                                                    <li><a href="#" data-toggle="tooltip" title="Compage"><i class="fa fa-refresh"></i></a></li>
-                                                    <li class="add-bag"><a href="#" data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
-                                                    <li><a href="#" data-toggle="tooltip" title="Like it!"><i class="fa fa-heart"></i></a></li>
-                                                </ul>
-                                            </div>
+                                        </div>
                                         </div>
                                     </div>
                                 </div>
+                                
                                 <div class="col-md-4 col-sm-4 col-xs-12">
                                     <div class="single-product">
                                         <div class="single-product-item">
