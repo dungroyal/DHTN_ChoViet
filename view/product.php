@@ -17,31 +17,41 @@
             <div class="row">
                 <div class="col-md-3 col-sm-12 col-xs-12">
                     <div class="shop-left-sidebar">
+
                         <div class="single-left-widget">
                             <div class="section-title">
                                 <h4>Thông tin Nhà bán hàng</h4>
-                                <div class="c-supplier-side">
-                                    <div class="b-grid">
-                                        <div class="b-grid__img">
-                                        <img src="uploads/Adidas-logo.jpg" alt="img"></div>
-                                        <div class="b-grid__content">
-                                                <div class="b-grid__row">
-                                                <span class="b-grid__title">
-                                                    <span class="icon-mall"></span>
-                                                    Adidas Việt Nam </span>
+                                <?php
+                                    $store_id=store_by_id();
+                                    foreach ($store_id as $store) {
+                                        echo'
+                                        <div class="c-supplier-side">
+                                            <div class="b-grid">
+                                                <div class="b-grid__img">
+                                                <img src="uploads/'.$store['image'].'" alt="img"></div>
+                                                <div class="b-grid__content">
+                                                        <div class="b-grid__row">
+                                                        <span class="b-grid__title">
+                                                            <span class="icon-mall"></span>
+                                                            '.$store['name'].' </span>
+                                                    </div>
+                                                    <div class="b-grid__row">
+                                                        <ul>
+                                                            <li><label>Đánh giá:</label><span>100</span></li>
+                                                            <li><label>Số sản phẩm:</label><span>175</span></li>
+                                                            <li><label>Ngày tham gia:</label><span>'.$store['date'].'</span></li>
+                                                            <li><label>Tỉnh/TP:</label><span>'.$store['diachi'].'</span></li>
+                                                    </ul>
+                                                    </div>
+                                                <div class="b-grid__row"><a class="btn btn-secondary btn-sm" href="#">Xem shop</a></div>
+                                                </div>
                                             </div>
-                                            <div class="b-grid__row">
-                                                <ul>
-                                                    <li><label>Đánh giá:</label><span>100</span></li>
-                                                    <li><label>Số sản phẩm:</label><span>175</span></li>
-                                                    <li><label>Ngày tham gia:</label><span>27/04/2019</span></li>
-                                                    <li><label>Tỉnh/TP:</label><span>Quảng nam</span></li>
-                                            </ul>
-                                            </div>
-                                        <div class="b-grid__row"><a class="btn btn-secondary btn-sm" href="#">Xem shop</a></div>
                                         </div>
-                                    </div>
-                                </div>
+                                        ';
+                                    }
+                                
+                                ?>
+                                
                             </div>
                         </div>
 
@@ -115,47 +125,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="single-left-widget padding-none">
-                            <div class="section-title">
-                                <h4>filter by size</h4>
-                                <ul class="size-widget">
-                                    <li><a href="#">XS</a></li>
-                                    <li><a href="#">S</a></li>
-                                    <li><a href="#">M</a></li>
-                                    <li><a href="#">L</a></li>
-                                    <li><a href="#">XL</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="single-left-widget">
-                            <div class="section-title">
-                                <h4>filter by color</h4>
-                                <ul class="color-widget">
-                                    <li class="active"><span class="black"></span><a href="#">Đen</a></li>
-                                    <li><span class="white"></span><a href="#">Trắng</a></li>
-                                    <li><span class="red"></span><a href="#">Đỏ</a></li>
-                                    <li><span class="blue"></span><a href="#">Xanh</a></li>
-                                    <li><span class="pink"></span><a href="#">Hồng</a></li>
-                                    <li><span class="yellow"></span><a href="#">Vàng</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="single-left-widget">
-                            <div class="section-title">
-                                <h4>filter by brands</h4>
-                                <ul>
-                                    <li><a href="#">rayban</a></li>
-                                    <li><a href="#">denim</a></li>
-                                    <li><a href="#">polo</a></li>
-                                    <li><a href="#">adiddas</a></li>
-                                    <li><a href="#">nike</a></li>
-                                    <li><a href="#">yellow</a></li>
-                                    <li><a href="#">arong</a></li>
-                                    <li><a href="#">gucci</a></li>
-                                    <li><a href="#">cats eye</a></li>
-                                </ul>
-                            </div>
-                        </div>
                         <div class="single-left-widget without-background hidden-sm hidden-md">
                             <div class="section-title">
                                 <h4>hot deals</h4>
@@ -203,63 +172,11 @@
                             <div class="row">
                                 
                                 <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <div class="c-product-item">
-                                        <div class="c-product-item__shadow">
-                                            <div class="c-product-item__thumb">
-                                                <span class="c-tag-sale"><b>Giảm</b>26%</span>
-                                                <span class="c-tag-true"></span> <a href="/pin-sac-du-phong-5000mah-aukey-pbxn5-mau-xanh-cong-nghe-aipower-thong-minh-cong-usbc-15w-hang-phan-phoi-chinh-hang-p19987.html"><img src="https://image.voso.vn/users/vosoimage/images/0ffb7f2e6d874fc2f386931654aa61ad?t%5B0%5D=maxSize%3Awidth%3D255&amp;t%5B1%5D=compress%3Alevel%3D100&amp;accessToken=ec064784633d7bd306012f78241faf0e3365dc0b55e4a00ee3dd44368dcb5089" alt="Pin Sạc Dự Phòng 5000mAh Aukey PB-XN5 ( Màu xanh ) Công Nghệ AiPower Thông Minh Cổng USB-C 15W - Hàng Phân Phối Chính Hãng"></a>
-                                            </div>
-                                        <div class="c-product-item__content">
-                                            <div class="c-product-item__row">
-                                                <a class="c-product-item__title" href="/pin-sac-du-phong-5000mah-aukey-pbxn5-mau-xanh-cong-nghe-aipower-thong-minh-cong-usbc-15w-hang-phan-phoi-chinh-hang-p19987.html">
-                                            
-                                            Pin Sạc Dự Phòng 5000mAh Aukey PB-XN5 ( Màu xanh ) Công Nghệ AiPower Thông Minh Cổng USB-C 15W - Hàng Phân Phối Chính Hãng</a>
-                                            </div>
-                                            <div class="c-product-item__row">
-                                                <span class="c-product-item__price">290,000<sup>đ</sup></span>
-                                                <span class="c-product-item__oldprice">390,000<sup>đ</sup></span>
-                                            </div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="col-md-4 col-sm-4 col-xs-12">
                                     <div class="single-product">
                                         <div class="single-product-item">
                                             <div class="single-product-img clearfix hover-effect">
                                                 <a href="#">
                                                     <img class="primary-image" src="view/img/product/3.jpg" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="single-product-info clearfix">
-                                                <div class="pro-price">
-                                                    <span class="new-price">$25.99</span>
-                                                </div>
-                                                <div class="new-sale">
-                                                    <span>new</span>
-                                                </div>
-                                            </div>
-                                            <div class="product-content text-center">
-                                                <h3>Full sleev women shirt</h3>
-                                                <h4><a href="#">view details</a></h4>
-                                            </div>
-                                            <div class="product-action">
-                                                <ul>
-                                                    <li><a href="#" data-toggle="tooltip" title="Compage"><i class="fa fa-refresh"></i></a></li>
-                                                    <li class="add-bag"><a href="#" data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
-                                                    <li><a href="#" data-toggle="tooltip" title="Like it!"><i class="fa fa-heart"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <div class="single-product">
-                                        <div class="single-product-item">
-                                            <div class="single-product-img clearfix hover-effect">
-                                                <a href="#">
-                                                    <img class="primary-image" src="view/img/product/4.jpg" alt="">
                                                 </a>
                                             </div>
                                             <div class="single-product-info clearfix">
@@ -746,49 +663,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="shop-item-filter bottom">
-                                <div class="col-lg-4 col-md-3 col-sm-4 col-xs-12">
-                                    <div class="shop-tab clearfix">
-                                        <!-- Nav tabs -->
-                                        <ul role="tablist">
-                                            <li role="presentation" class="active"><a data-toggle="tab" role="tab" aria-controls="grid" class="grid-view" href="#grid"><i class="fa fa-th"></i></a></li>
-                                            <li role="presentation"><a data-toggle="tab" role="tab" aria-controls="list" class="list-view" href="#list"><i class="fa fa-th-list"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-5 col-sm-4 hidden-xs">
-                                    <div class="filter-by text-center">
-                                        <h4>Short by: </h4>
-                                        <form action="#">
-                                            <div class="select-filter">
-                                                <select>
-                                                      <option value="color">Position</option>
-                                                      <option value="name">Name</option>
-                                                      <option value="brand">Brand</option>
-                                                    </select>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-4 hidden-xs">
-                                    <div class="filter-by right">
-                                        <h4>Show: </h4>
-                                        <form action="#">
-                                            <div class="select-filter">
-                                                <select>
-                                                      <option value="10">12</option>
-                                                      <option value="20">16</option>
-                                                      <option value="30">20</option>
-                                                    </select>
-                                            </div>
-                                        </form>
                                     </div>
                                 </div>
                             </div>
