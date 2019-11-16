@@ -22,8 +22,7 @@
                             <div class="section-title">
                                 <h4>Thông tin Nhà bán hàng</h4>
                                 <?php
-                                    $store_id=store_by_id();
-                                    foreach ($store_id as $store) {
+                                    foreach ($store_by_id as $store) {
                                         echo'
                                         <div class="c-supplier-side">
                                             <div class="b-grid">
@@ -39,11 +38,10 @@
                                                         <ul>
                                                             <li><label>Đánh giá:</label><span>100</span></li>
                                                             <li><label>Số sản phẩm:</label><span>175</span></li>
-                                                            <li><label>Ngày tham gia:</label><span>'.$store['date'].'</span></li>
+                                                            <li><label>Ngày tham gia:</label><span>'.$store['Date'].'</span></li>
                                                             <li><label>Tỉnh/TP:</label><span>'.$store['diachi'].'</span></li>
                                                     </ul>
                                                     </div>
-                                                <div class="b-grid__row"><a class="btn btn-secondary btn-sm" href="#">Xem shop</a></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -60,54 +58,13 @@
                             <div class="section-title">
                                 <h4>Danh mục</h4>
                                 <ul>
-                                    <li><a href="#" class="show-submenu">Thiết bị điện tử<i class="fa fa-angle-down"></i></a>
-                                        <ul class="submenu">
-                                            <li><a href="#">Điện thoại</a></li>
-                                            <li><a href="#">Máy tính</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#" class="show-submenu">Quần áo<i class="fa fa-angle-down"></i></a>
-                                        <ul class="submenu">
-                                            <li><a href="#">Đồ nam</a></li>
-                                            <li><a href="#">Đồ nữ</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#" class="show-submenu">Thú cưng<i class="fa fa-angle-down"></i></a>
-                                        <ul class="submenu">
-                                            <li><a href="#">PET Việt</a></li>
-                                            <li><a href="#">PET ngoại</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#" class="show-submenu">Giày dép<i class="fa fa-angle-down"></i></a>
-                                        <ul class="submenu">
-                                            <li><a href="#">Giày dép nam</a></li>
-                                            <li><a href="#">Giày dép nữ</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#" class="show-submenu">Phụ kiện<i class="fa fa-angle-down"></i></a>
-                                        <ul class="submenu">
-                                            <li><a href="#">casual</a></li>
-                                            <li><a href="#">branded</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#" class="show-submenu">Làm đẹp<i class="fa fa-angle-down"></i></a>
-                                        <ul class="submenu">
-                                            <li><a href="#">casual</a></li>
-                                            <li><a href="#">branded</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#" class="show-submenu">Nhu cầu cá nhân<i class="fa fa-angle-down"></i></a>
-                                        <ul class="submenu">
-                                            <li><a href="#">casual</a></li>
-                                            <li><a href="#">branded</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#" class="show-submenu">Ẩm thực<i class="fa fa-angle-down"></i></a>
-                                        <ul class="submenu">
-                                            <li><a href="#">casual</a></li>
-                                            <li><a href="#">classy</a></li>
-                                        </ul>
-                                    </li>
+                                    <?php
+                                        foreach ($store_by_store as $store) {
+                                            echo'
+                                                <li><a href="?act=product&idStore='.$store['idStore'].'&idCatalog='.$store['id'].'">'.$store['name'].'</a></li>
+                                            ';
+                                        }
+                                    ?>
                                 </ul>
                             </div>
                         </div>

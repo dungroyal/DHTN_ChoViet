@@ -10,9 +10,17 @@
         return $kq;
     }
 
-    function store_by_id(){
-        $sql="SELECT * from store WHERE id=1";
+    function store_by_id($id){
+        $sql="SELECT * from store WHERE id=".$id;
+        $kq=pdo_query($sql);
+        return $kq;
+    }
+
+    function GET_idStore($idCatalog){
+        $sql="SELECT * from catalog WHERE id=".$idCatalog;
         $kq=pdo_query_one($sql);
         return $kq;
     }
+
+    
 ?>

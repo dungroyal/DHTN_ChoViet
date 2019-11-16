@@ -21,31 +21,22 @@
                             <div class="product-thumb">
                                 <ul class="p-details-slider" id="gallery_01">
                                     <li>
-                                        <a class="elevatezoom-gallery" href="#" data-image="view/img/product/pc1.jpg" data-zoom-image="view/img/product/pc1.jpg"><img src="view/img/product/pc1.jpg" alt=""></a>
-                                    </li>
-                                    <li>
-                                        <a class="elevatezoom-gallery" href="#" data-image="view/img/product/pc2.jpg" data-zoom-image="view/img/product/pc2.jpg"><img src="view/img/product/pc2.jpg" alt=""></a>
-                                    </li>
-                                    <li>
-                                        <a class="elevatezoom-gallery" href="#" data-image="view/img/product/pc3.jpg" data-zoom-image="view/img/product/pc3.jpg"><img src="view/img/product/pc3.jpg" alt=""></a>
-                                    </li>
-                                    <li>
-                                        <a class="elevatezoom-gallery" href="#" data-image="view/img/product/pc4.jpg" data-zoom-image="view/img/product/pc4.jpg"><img src="view/img/product/pc4.jpg" alt=""></a>
+                                        <a class="elevatezoom-gallery" href="#" data-image="uploads/<?=$product_detail_by_id['image'];?>" data-zoom-image="uploads/<?=$product_detail_by_id['image'];?>"><img src="uploads/<?=$product_detail_by_id['image'];?>" alt=""></a>
                                     </li>
                                 </ul>
                             </div>
                             <div id="img-1" class="zoomWrapper single-zoom">
                                 <a href="#">
-                                    <img id="zoom1" src="view/img/product/pc1.jpg" data-zoom-image="view/img/product/pc1.jpg" alt="big-1">
+                                    <img id="zoom1" src="uploads/<?=$product_detail_by_id['image'];?>" data-zoom-image="uploads/<?=$product_detail_by_id['image'];?>" alt="big-1">
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div class="product-detail shop-product-text">
-                            <h4><a href="#">8Pack Supernova - Intel Core i9 7980XE @ 4.6GHz DDR4 Extreme Overclocked PC</a></h4>
+                            <h4><a href="#"><?=$product_detail_by_id['name'];?></a></h4>
                             <div class="price-rating-container">    
-                                <div class="price-box"><span>14.000.000 VNĐ</span> <del>(15.500.000 VNĐ)</del></div>
+                                <div class="price-box"><span><?=$product_detail_by_id['price'];?></span> <del>(15.500.000 VNĐ)</del></div>
                                 <div class="rating-right">
                                     <div class="star-content">
                                         <i class="fa fa-star"></i>
@@ -58,10 +49,7 @@
                             </div>
                             <div class="availability">Tình trang: <span>Còn hàng</span></div>
                             <h5 class="overview">Tổng quan:</h5>
-                            <p class="product-desc">8Pack, máy ép xung cực đoan xếp hạng số 1 thế giới ** xin giới thiệu với bạn loạt máy tính hiệu năng cực cao mới của anh ấy. 
-                                Hợp tác chặt chẽ với hầu hết các nhà sản xuất bo mạch chủ và bộ nhớ hàng đầu thế giới để giúp cải thiện hiệu suất sản phẩm của họ, 8Pack sử dụng chuyên môn của mình để đẩy giới hạn hiệu suất lên mức thiên văn.
-                                 Bây giờ anh ấy mang chuyên môn này đến Overclockers UK để phát triển và xây dựng các PC hiệu năng cao nhất hành tinh!
-                            </p>
+                            <p class="product-desc"><?=$product_detail_by_id['descripsion'];?></p>
                             <div class="size-categories">
                                 <h5 class="size">Màu:</h5>
                                 <ul>
@@ -157,28 +145,35 @@
                         <div class="single-left-widget">
                             <div class="section-title">
                                 <h4>thông tin Nhà Bán hàng</h4>
-                                <div class="c-supplier-side">
-                                    <div class="b-grid">
-                                        <div class="b-grid__img">
-                                        <img src="uploads/5c9483dad3d979bcaccd21ed24b4d5b4.png" alt="img"></div>
-                                        <div class="b-grid__content">
-                                                <div class="b-grid__row">
-                                                    <span class="b-grid__title">
-                                                    <span class="icon-mall">
-                                                    </span>Sunhouse Việt Nam</span>
+                                <?php
+                                    foreach ($store_by_id as $store) {
+                                        echo'
+                                        <div class="c-supplier-side">
+                                            <div class="b-grid">
+                                                <div class="b-grid__img">
+                                                <img src="uploads/'.$store['image'].'" alt="img"></div>
+                                                <div class="b-grid__content">
+                                                        <div class="b-grid__row">
+                                                        <span class="b-grid__title">
+                                                            <span class="icon-mall"></span>
+                                                            '.$store['name'].' </span>
+                                                    </div>
+                                                    <div class="b-grid__row">
+                                                        <ul>
+                                                            <li><label>Đánh giá:</label><span>100</span></li>
+                                                            <li><label>Số sản phẩm:</label><span>175</span></li>
+                                                            <li><label>Ngày tham gia:</label><span>'.$store['Date'].'</span></li>
+                                                            <li><label>Tỉnh/TP:</label><span>'.$store['diachi'].'</span></li>
+                                                    </ul>
+                                                    </div>
+                                                <div class="b-grid__row"><a class="btn btn-secondary btn-sm" href="?act=product&idStore='.$GET_idStore['idStore'].'">Xem shop</a></div>
+                                                </div>
                                             </div>
-                                            <div class="b-grid__row">
-                                                <ul>
-                                                    <li><label>Đánh giá:</label><span>100</span></li>
-                                                    <li><label>Số sản phẩm:</label><span>175</span></li>
-                                                    <li><label>Ngày tham gia:</label><span>27/04/2019</span></li>
-                                                    <li><label>Tỉnh/TP:</label><span>Quảng nam</span></li>
-                                            </ul>
-                                            </div>
-                                        <div class="b-grid__row"><a class="btn btn-secondary btn-sm" href="#">Xem shop</a></div>
                                         </div>
-                                    </div>
-                                </div>
+                                        ';
+                                    }
+                                
+                                ?>
                             </div>
                         </div>
                         </div>

@@ -3,6 +3,12 @@
     session_start();
     include "model/pdo.php";
     include "model/store.php";
+    include "model/product.php";
+    include "model/catalog.php";
+
+    $productlist=productlist();
+    
+
 
 
     include"view/header.php";
@@ -15,10 +21,34 @@
                 break;
 
             case 'product':
+                if (isset($_GET['idStore']) && $_GET['idStore']) {
+                    $idStore=$_GET['idStore'];
+                }
+
+                if (isset($_GET['idCatalog']) && $_GET['idCatalog']) {
+                    $idCatalog=$_GET['idCatalog'];
+                }
+
+
+                $store_by_id= store_by_id($idStore);
+
+                $store_by_store=catalog_by_store($idStore);
+
+                //$productlist_by_store=productlist_by_store($idCatalog);
+
                 include"view/product.php";
                 break;
 
             case 'product_detail':
+                if (isset($_GET['idProduct']) && $_GET['idProduct']) {
+                    $idProduct=$_GET['idProduct'];
+                }
+                $product_detail_by_id=product_detail_by_id($idProduct);
+
+                $GET_idStore=GET_idStore($product_detail_by_id['idCatalog']);
+
+                $store_by_id= store_by_id($GET_idStore['idStore']);
+
                 include"view/product_detail.php";
                 break;
 

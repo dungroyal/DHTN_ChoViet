@@ -1,12 +1,12 @@
 <?php
     function productlist(){
-        $sql="SELECT * from product order by id DESC";
+        $sql="SELECT * from product order by id desc";
         $kq=pdo_query($sql);
         return $kq;
     }
 
     function showproduct($type,$gioihan){
-        $sql = "SELECT * FROM product WHERE 1";
+        $sql = "SELECT * FROM product WHERE 3";
         //Type =1 là sản phẩm ""HOT""
         if($type==1){
             $sql.=" AND hot=1";
@@ -17,6 +17,14 @@
         }else {
           $sql.=" ORDER BY id DESC LIMIT ".$gioihan;
         }
+        $kq=pdo_query($sql);
+        return $kq;
+    }
+
+    function productlist_by_store($idcat=16){
+        $sql="SELECT * FROM product WHERE 1";
+        $sql.=" AND idCatalog=".$idcat;
+        $sql.=" ORDER BY id DESC  LIMIT 0,5";
         $kq=pdo_query($sql);
         return $kq;
     }

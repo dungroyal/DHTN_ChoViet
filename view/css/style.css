@@ -2541,7 +2541,7 @@ ul.social-icon li i:hover {
 .single-left-widget .section-title ul li a {
     color: #606060;
     font-size: 12px;
-    font-weight: 300;
+    font-weight: bold;
     letter-spacing: 2px;
     text-transform: uppercase;
     transition: all 0.5s ease 0s;

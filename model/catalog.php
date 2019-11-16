@@ -11,8 +11,8 @@
         return $kq;
     }
 
-    function catalog_by_id($id){
-        $sql="SELECT * from catalog where idCatalog=".$id;
+    function catalog_by_store($id){
+        $sql="SELECT * from catalog where idStore=".$id;
         $kq=pdo_query($sql);
         return $kq;
     }
