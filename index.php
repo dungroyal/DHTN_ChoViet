@@ -7,11 +7,9 @@
     include "model/catalog.php";
 
     $productlist=productlist();
-    $cataloglist=cataloglist();
+    $cataloglist=cataloglist(); 
+
     
-
-
-
     include"view/header.php";
 
     if (isset($_GET['act'])) {
@@ -25,6 +23,9 @@
                 if (isset($_GET['idStore']) && $_GET['idStore']) {
                     $idStore=$_GET['idStore'];
                     $store_by_id= store_by_id($idStore);
+                    $catalog_by_store=catalog_by_store($idStore);
+                    $GET_catalog_one=GET_catalog_one($idStore);
+                    $productlist_by_catalog=productlist_by_catalog($GET_catalog_one['id']);
                 }
                 
                 if (isset($_GET['idCatalog']) && $_GET['idCatalog']) {
@@ -32,10 +33,7 @@
                 }
 
 
-                $showproduct=productlist_by_id();
-                $catalog_by_store=catalog_by_store($idStore);
-                $GET_catalog_one=GET_catalog_one($idStore);                
-                $productlist_by_catalog=productlist_by_catalog($GET_catalog_one['id']);
+                $showproduct=productlist_by_id();         
                 include"view/product.php";
                 break;
 
@@ -46,7 +44,7 @@
                 $product_detail_by_id=product_detail_by_id($idProduct);
                 $GET_idStore=GET_idStore($product_detail_by_id['idCatalog']);
                 $info_store= store_by_id( $GET_idStore['idStore']);
-                
+
                 include"view/product_detail.php";
                 break;
 

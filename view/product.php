@@ -140,39 +140,76 @@
                             <div class="row">
 
                             <?php
-                                foreach ($productlist_by_catalog as $pro) {
-                                    echo'
-                                    <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <div class="single-product">
-                                        <div class="single-product-item">
-                                            <div class="single-product-img clearfix hover-effect">
-                                                <a href="#">
-                                                    <img class="primary-image" src="uploads/'.$pro['image'].'" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="single-product-info clearfix">
-                                                <div class="pro-price">
-                                                    <span class="new-price">$'.$pro['price'].'</span>
+                                 if (isset($_GET['idStore']) && $_GET['idStore']) {
+                                        foreach ($productlist_by_catalog as $pro) {
+                                            echo'
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                            <div class="single-product">
+                                                <div class="single-product-item">
+                                                    <div class="single-product-img clearfix hover-effect">
+                                                        <a href="#">
+                                                            <img class="primary-image" src="uploads/'.$pro['image'].'" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="single-product-info clearfix">
+                                                        <div class="pro-price">
+                                                            <span class="new-price">$'.$pro['price'].'</span>
+                                                        </div>
+                                                        <div class="new-sale">
+                                                            <span>new</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content text-center">
+                                                        <h3>'.$pro['name'].'</h3>
+                                                        <h4><a href="?act=product_detail&idProduct='.$pro['id'].'">view details</a></h4>
+                                                    </div>
+                                                    <div class="product-action">
+                                                        <ul>
+                                                            <li><a href="#" data-toggle="tooltip" title="Compage"><i class="fa fa-refresh"></i></a></li>
+                                                            <li class="add-bag"><a href="#" data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
+                                                            <li><a href="#" data-toggle="tooltip" title="Like it!"><i class="fa fa-heart"></i></a></li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
-                                                <div class="new-sale">
-                                                    <span>new</span>
+                                            </div>
+                                        </div>
+                                            ';
+                                        }
+                                }else{
+                                    foreach ($productlist as $pro) {
+                                        echo'
+                                        <div class="col-md-4 col-sm-4 col-xs-12">
+                                        <div class="single-product">
+                                            <div class="single-product-item">
+                                                <div class="single-product-img clearfix hover-effect">
+                                                    <a href="#">
+                                                        <img class="primary-image" src="uploads/'.$pro['image'].'" alt="">
+                                                    </a>
                                                 </div>
-                                            </div>
-                                            <div class="product-content text-center">
-                                                <h3>'.$pro['name'].'</h3>
-                                                <h4><a href="?act=product_detail&idProduct='.$pro['id'].'">view details</a></h4>
-                                            </div>
-                                            <div class="product-action">
-                                                <ul>
-                                                    <li><a href="#" data-toggle="tooltip" title="Compage"><i class="fa fa-refresh"></i></a></li>
-                                                    <li class="add-bag"><a href="#" data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
-                                                    <li><a href="#" data-toggle="tooltip" title="Like it!"><i class="fa fa-heart"></i></a></li>
-                                                </ul>
+                                                <div class="single-product-info clearfix">
+                                                    <div class="pro-price">
+                                                        <span class="new-price">$'.$pro['price'].'</span>
+                                                    </div>
+                                                    <div class="new-sale">
+                                                        <span>new</span>
+                                                    </div>
+                                                </div>
+                                                <div class="product-content text-center">
+                                                    <h3>'.$pro['name'].'</h3>
+                                                    <h4><a href="?act=product_detail&idProduct='.$pro['id'].'">view details</a></h4>
+                                                </div>
+                                                <div class="product-action">
+                                                    <ul>
+                                                        <li><a href="#" data-toggle="tooltip" title="Compage"><i class="fa fa-refresh"></i></a></li>
+                                                        <li class="add-bag"><a href="#" data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
+                                                        <li><a href="#" data-toggle="tooltip" title="Like it!"><i class="fa fa-heart"></i></a></li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                    ';
+                                        ';
+                                    }
                                 }
                             ?> 
                             </div>
