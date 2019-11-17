@@ -75,7 +75,11 @@
                                 <ul>
                                     <li><a href="#">Freeship cho đơn hàng trên 99k</a>
                                     </li>
-                                    <li><a href="?act=dangkithanhvien">Kênh nhà bán</a>
+                                    <li><a href="#">Kênh nhà bán</a>
+                                        <ul class="submenu-mainmenu">
+                                                <li><a href="login">Đăng nhập</a></li>
+                                                <li><a href="?act=dangkithanhvien">Đăng ký</a></li>
+                                            </ul>
                                     </li>
                                 </ul>
                             </div>
@@ -149,7 +153,7 @@
                                 <ul>
                                     <li><a href="?act=home">Trang chủ</a>
                                     </li>
-                                    <li><a href="?act=product_detail">Danh mục</a>
+                                    <li><a href="#">Danh mục</a>
                                         <div class="mega-menu">
                                             <span>
                                                     <a href="shop-grid-left-sidebar.html" class="title">men</a>

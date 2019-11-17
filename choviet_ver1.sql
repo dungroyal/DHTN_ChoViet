@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 11, 2019 at 05:46 PM
+-- Generation Time: Nov 17, 2019 at 06:49 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -29,10 +29,10 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `banner` (
-  `id` int(100) NOT NULL,
-  `content` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `image` varchar(200) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `id` int(11) NOT NULL,
+  `name` varchar(200) NOT NULL,
+  `image` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -57,9 +57,17 @@ CREATE TABLE `cart` (
 CREATE TABLE `catalog` (
   `id` int(3) NOT NULL,
   `name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `image` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `image` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `idStore` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `catalog`
+--
+
+INSERT INTO `catalog` (`id`, `name`, `image`, `idStore`) VALUES
+(16, 'Tivi', '', 1),
+(17, 'Điện máy', NULL, 2);
 
 -- --------------------------------------------------------
 
@@ -89,8 +97,7 @@ CREATE TABLE `order` (
   `id` int(100) NOT NULL,
   `idUsers` int(100) NOT NULL,
   `total` double(10,0) NOT NULL,
-  `date` date NOT NULL,
-  `idStore` int(100) NOT NULL
+  `date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -108,9 +115,16 @@ CREATE TABLE `product` (
   `view` int(11) NOT NULL DEFAULT 1000,
   `descripsion` varchar(100) COLLATE utf8_unicode_ci DEFAULT 'Sản phẩm thịnh hành năm 2019',
   `hot` tinyint(2) NOT NULL DEFAULT 0,
-  `idCatalog` int(100) NOT NULL,
-  `idStore` int(100) NOT NULL
+  `idCatalog` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `product`
+--
+
+INSERT INTO `product` (`id`, `name`, `price`, `soluong`, `image`, `view`, `descripsion`, `hot`, `idCatalog`) VALUES
+(124, 'Smart Tivi Samsung 4K 55 inch UA55NU7090', 590000, 0, 'vn-uhd-nu7400-ua55nu7400kxxv-frontblack-97614381.webp', 1000, 'Sản phẩm thịnh hành năm 2019', 0, 16),
+(125, 'Tủ lạnh Panasonic NR-BV288XSVN - 255 Lít Cấp đông ', 0, 100, '29047_19657_tu-lanh-panasonic-nr-bv288xsvn-255l.jpg', 1000, 'Sản phẩm thịnh hành năm 2019', 0, 17);
 
 -- --------------------------------------------------------
 
@@ -119,11 +133,22 @@ CREATE TABLE `product` (
 --
 
 CREATE TABLE `store` (
-  `id` int(100) NOT NULL,
-  `name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `image` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
-  `diachi` varchar(200) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `usernam` varchar(100) DEFAULT NULL,
+  `password` varchar(100) DEFAULT NULL,
+  `image` varchar(255) NOT NULL,
+  `diachi` varchar(200) NOT NULL,
+  `Date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `store`
+--
+
+INSERT INTO `store` (`id`, `name`, `usernam`, `password`, `image`, `diachi`, `Date`) VALUES
+(1, 'Adidas Việt Nam', NULL, '', 'Adidas-logo.jpg', 'TP. Hồ Chí Minh', '2019-11-17'),
+(2, 'Asanzo Việt Nam', NULL, NULL, 'asanzo.jpg', 'TP. Hồ Chí Minh', '2019-11-19');
 
 -- --------------------------------------------------------
 
@@ -188,16 +213,14 @@ ALTER TABLE `comment`
 --
 ALTER TABLE `order`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_order_users` (`idUsers`),
-  ADD KEY `fk_order_store` (`idStore`);
+  ADD KEY `fk_order_users` (`idUsers`);
 
 --
 -- Indexes for table `product`
 --
 ALTER TABLE `product`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_product_catalog` (`idCatalog`),
-  ADD KEY `fk_product_store` (`idStore`);
+  ADD KEY `fk_product_catalog` (`idCatalog`);
 
 --
 -- Indexes for table `store`
@@ -219,7 +242,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `banner`
 --
 ALTER TABLE `banner`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `cart`
@@ -231,7 +254,7 @@ ALTER TABLE `cart`
 -- AUTO_INCREMENT for table `catalog`
 --
 ALTER TABLE `catalog`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `comment`
@@ -249,13 +272,13 @@ ALTER TABLE `order`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=124;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=126;
 
 --
 -- AUTO_INCREMENT for table `store`
 --
 ALTER TABLE `store`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -279,7 +302,7 @@ ALTER TABLE `cart`
 -- Constraints for table `catalog`
 --
 ALTER TABLE `catalog`
-  ADD CONSTRAINT `fk_catalog_store` FOREIGN KEY (`idStore`) REFERENCES `store` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `fk_catalog_store` FOREIGN KEY (`idStore`) REFERENCES `store` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `comment`
@@ -292,15 +315,13 @@ ALTER TABLE `comment`
 -- Constraints for table `order`
 --
 ALTER TABLE `order`
-  ADD CONSTRAINT `fk_order_store` FOREIGN KEY (`idStore`) REFERENCES `store` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_order_users` FOREIGN KEY (`idUsers`) REFERENCES `users` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `product`
 --
 ALTER TABLE `product`
-  ADD CONSTRAINT `fk_product_catalog` FOREIGN KEY (`idCatalog`) REFERENCES `catalog` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_product_store` FOREIGN KEY (`idStore`) REFERENCES `store` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `fk_product_catalog` FOREIGN KEY (`idCatalog`) REFERENCES `catalog` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

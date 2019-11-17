@@ -18,40 +18,42 @@
                 <div class="col-md-3 col-sm-12 col-xs-12">
                     <div class="shop-left-sidebar">
 
-                        <div class="single-left-widget">
-                            <div class="section-title">
-                                <h4>Thông tin Nhà bán hàng</h4>
                                 <?php
+                                 if (isset($_GET['idStore']) && $_GET['idStore']) {                                     
                                     foreach ($store_by_id as $store) {
                                         echo'
-                                        <div class="c-supplier-side">
-                                            <div class="b-grid">
-                                                <div class="b-grid__img">
-                                                <img src="uploads/'.$store['image'].'" alt="img"></div>
-                                                <div class="b-grid__content">
-                                                        <div class="b-grid__row">
-                                                        <span class="b-grid__title">
-                                                            <span class="icon-mall"></span>
-                                                            '.$store['name'].' </span>
-                                                    </div>
-                                                    <div class="b-grid__row">
-                                                        <ul>
-                                                            <li><label>Đánh giá:</label><span>100</span></li>
-                                                            <li><label>Số sản phẩm:</label><span>175</span></li>
-                                                            <li><label>Ngày tham gia:</label><span>'.$store['Date'].'</span></li>
-                                                            <li><label>Tỉnh/TP:</label><span>'.$store['diachi'].'</span></li>
-                                                    </ul>
+                                        <div class="single-left-widget">
+                                        <div class="section-title">
+                                            <h4>Thông tin Nhà bán hàng</h4>
+                                                <div class="c-supplier-side">
+                                                    <div class="b-grid">
+                                                        <div class="b-grid__img">
+                                                            <img src="uploads/'.$store['image'].'" alt="img"></div>
+                                                        <div class="b-grid__content">
+                                                                <div class="b-grid__row">
+                                                                <span class="b-grid__title">
+                                                                    <span class="icon-mall"></span>
+                                                                    '.$store['name'].' </span>
+                                                            </div>
+                                                            <div class="b-grid__row">
+                                                                <ul>
+                                                                    <li><label>Đánh giá:</label><span>100</span></li>
+                                                                    <li><label>Số sản phẩm:</label><span>175</span></li>
+                                                                    <li><label>Ngày tham gia:</label><span>'.$store['Date'].'</span></li>
+                                                                    <li><label>Tỉnh/TP:</label><span>'.$store['diachi'].'</span></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         ';
                                     }
-                                
-                                ?>
-                                
-                            </div>
-                        </div>
+                                } else {
+                                    echo'';
+                                }
+                                 ?>
 
                         
                         <div class="single-left-widget">
@@ -59,11 +61,20 @@
                                 <h4>Danh mục</h4>
                                 <ul>
                                     <?php
-                                        foreach ($store_by_store as $store) {
+                                    
+                                 if (isset($_GET['idStore']) && $_GET['idStore']) {     
+                                        foreach ($catalog_by_store as $store) {
                                             echo'
                                                 <li><a href="?act=product&idStore='.$store['idStore'].'&idCatalog='.$store['id'].'">'.$store['name'].'</a></li>
                                             ';
                                         }
+                                    }else{
+                                        foreach ($cataloglist as $store) {
+                                            echo'
+                                                <li><a href="#">'.$store['name'].'</a></li>
+                                            ';
+                                        }
+                                    }
                                     ?>
                                 </ul>
                             </div>
@@ -127,26 +138,29 @@
                     <div class="tab-content">
                         <div id="grid" class="tab-pane active" role="tabpanel">
                             <div class="row">
-                                
-                                <div class="col-md-4 col-sm-4 col-xs-12">
+
+                            <?php
+                                foreach ($productlist_by_catalog as $pro) {
+                                    echo'
+                                    <div class="col-md-4 col-sm-4 col-xs-12">
                                     <div class="single-product">
                                         <div class="single-product-item">
                                             <div class="single-product-img clearfix hover-effect">
                                                 <a href="#">
-                                                    <img class="primary-image" src="view/img/product/3.jpg" alt="">
+                                                    <img class="primary-image" src="uploads/'.$pro['image'].'" alt="">
                                                 </a>
                                             </div>
                                             <div class="single-product-info clearfix">
                                                 <div class="pro-price">
-                                                    <span class="new-price">$25.99</span>
+                                                    <span class="new-price">$'.$pro['price'].'</span>
                                                 </div>
                                                 <div class="new-sale">
                                                     <span>new</span>
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev women shirt</h3>
-                                                <h4><a href="#">view details</a></h4>
+                                                <h3>'.$pro['name'].'</h3>
+                                                <h4><a href="?act=product_detail&idProduct='.$pro['id'].'">view details</a></h4>
                                             </div>
                                             <div class="product-action">
                                                 <ul>
@@ -158,160 +172,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <div class="single-product">
-                                        <div class="single-product-item">
-                                            <div class="single-product-img clearfix hover-effect">
-                                                <a href="#">
-                                                    <img class="primary-image" src="view/img/product/7.jpg" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="single-product-info clearfix">
-                                                <div class="pro-price">
-                                                    <span class="new-price">$25.99</span>
-                                                </div>
-                                                <div class="new-sale">
-                                                    <span>new</span>
-                                                </div>
-                                            </div>
-                                            <div class="product-content text-center">
-                                                <h3>Full sleev women shirt</h3>
-                                                <h4><a href="#">view details</a></h4>
-                                            </div>
-                                            <div class="product-action">
-                                                <ul>
-                                                    <li><a href="#" data-toggle="tooltip" title="Compage"><i class="fa fa-refresh"></i></a></li>
-                                                    <li class="add-bag"><a href="#" data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
-                                                    <li><a href="#" data-toggle="tooltip" title="Like it!"><i class="fa fa-heart"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                              
-                               
-                              
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <div class="single-product">
-                                        <div class="single-product-item">
-                                            <div class="single-product-img clearfix hover-effect">
-                                                <a href="#">
-                                                    <img class="primary-image" src="view/img/product/9.jpg" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="single-product-info clearfix">
-                                                <div class="pro-price">
-                                                    <span class="new-price">$25.99</span>
-                                                </div>
-                                                <div class="new-sale">
-                                                    <span>new</span>
-                                                </div>
-                                            </div>
-                                            <div class="product-content text-center">
-                                                <h3>Full sleev women shirt</h3>
-                                                <h4><a href="#">view details</a></h4>
-                                            </div>
-                                            <div class="product-action">
-                                                <ul>
-                                                    <li><a href="#" data-toggle="tooltip" title="Compage"><i class="fa fa-refresh"></i></a></li>
-                                                    <li class="add-bag"><a href="#" data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
-                                                    <li><a href="#" data-toggle="tooltip" title="Like it!"><i class="fa fa-heart"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                               
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <div class="single-product">
-                                        <div class="single-product-item">
-                                            <div class="single-product-img clearfix hover-effect">
-                                                <a href="#">
-                                                    <img class="primary-image" src="view/img/product/2.jpg" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="single-product-info clearfix">
-                                                <div class="pro-price">
-                                                    <span class="new-price">$25.99</span>
-                                                </div>
-                                                <div class="new-sale">
-                                                    <span>new</span>
-                                                </div>
-                                            </div>
-                                            <div class="product-content text-center">
-                                                <h3>Full sleev women shirt</h3>
-                                                <h4><a href="#">view details</a></h4>
-                                            </div>
-                                            <div class="product-action">
-                                                <ul>
-                                                    <li><a href="#" data-toggle="tooltip" title="Compage"><i class="fa fa-refresh"></i></a></li>
-                                                    <li class="add-bag"><a href="#" data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
-                                                    <li><a href="#" data-toggle="tooltip" title="Like it!"><i class="fa fa-heart"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <div class="single-product">
-                                        <div class="single-product-item">
-                                            <div class="single-product-img clearfix hover-effect">
-                                                <a href="#">
-                                                    <img class="primary-image" src="view/img/product/3.jpg" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="single-product-info clearfix">
-                                                <div class="pro-price">
-                                                    <span class="new-price">$25.99</span>
-                                                </div>
-                                                <div class="new-sale">
-                                                    <span>new</span>
-                                                </div>
-                                            </div>
-                                            <div class="product-content text-center">
-                                                <h3>Full sleev women shirt</h3>
-                                                <h4><a href="#">view details</a></h4>
-                                            </div>
-                                            <div class="product-action">
-                                                <ul>
-                                                    <li><a href="#" data-toggle="tooltip" title="Compage"><i class="fa fa-refresh"></i></a></li>
-                                                    <li class="add-bag"><a href="#" data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
-                                                    <li><a href="#" data-toggle="tooltip" title="Like it!"><i class="fa fa-heart"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <div class="single-product">
-                                        <div class="single-product-item">
-                                            <div class="single-product-img clearfix hover-effect">
-                                                <a href="#">
-                                                    <img class="primary-image" src="view/img/product/6.jpg" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="single-product-info clearfix">
-                                                <div class="pro-price">
-                                                    <span class="new-price">$25.99</span>
-                                                </div>
-                                                <div class="new-sale">
-                                                    <span>new</span>
-                                                </div>
-                                            </div>
-                                            <div class="product-content text-center">
-                                                <h3>Full sleev women shirt</h3>
-                                                <h4><a href="#">view details</a></h4>
-                                            </div>
-                                            <div class="product-action">
-                                                <ul>
-                                                    <li><a href="#" data-toggle="tooltip" title="Compage"><i class="fa fa-refresh"></i></a></li>
-                                                    <li class="add-bag"><a href="#" data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
-                                                    <li><a href="#" data-toggle="tooltip" title="Like it!"><i class="fa fa-heart"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                    ';
+                                }
+                            ?> 
                             </div>
                         </div>
                         <div id="list" class="tab-pane" role="tabpanel">

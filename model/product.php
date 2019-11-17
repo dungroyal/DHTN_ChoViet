@@ -21,7 +21,7 @@
         return $kq;
     }
 
-    function productlist_by_store($idcat=16){
+    function productlist_by_catalog($idcat=2){
         $sql="SELECT * FROM product WHERE 1";
         $sql.=" AND idCatalog=".$idcat;
         $sql.=" ORDER BY id DESC  LIMIT 0,5";
@@ -30,23 +30,15 @@
     }
 
 
-    function productlist_by_id($idcat=0,$keyword,$page){
-        global $soluong;
-
-        $page=$page-1;
-        $from=$page*$soluong;
-        $to=$soluong;
-            
-
+    function productlist_by_id($idcat=0){
         $sql="SELECT * FROM product WHERE 1";
+
         if ($idcat>0) {
             $sql.=" AND idCatalog=".$idcat;
         }
-        if ($keyword!=""){ 
-            $sql.=" AND LCASE(name) LIKE '%".strtolower($keyword)."%'";
-        }
+
         $sql.=" ORDER BY id DESC";
-        $sql.=" limit ".$from.",".$to;
+        $sql.=" limit 8";
 
         $kq=pdo_query($sql);
         return $kq;

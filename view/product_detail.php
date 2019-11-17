@@ -146,7 +146,7 @@
                             <div class="section-title">
                                 <h4>thông tin Nhà Bán hàng</h4>
                                 <?php
-                                    foreach ($store_by_id as $store) {
+                                    foreach ($info_store as $store) {
                                         echo'
                                         <div class="c-supplier-side">
                                             <div class="b-grid">
