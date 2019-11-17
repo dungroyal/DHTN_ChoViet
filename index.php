@@ -33,29 +33,20 @@
 
 
                 $showproduct=productlist_by_id();
-
                 $catalog_by_store=catalog_by_store($idStore);
-
-                $GET_catalog_one=GET_catalog_one($idStore);
-                
+                $GET_catalog_one=GET_catalog_one($idStore);                
                 $productlist_by_catalog=productlist_by_catalog($GET_catalog_one['id']);
-
                 include"view/product.php";
                 break;
-
-
-
 
             case 'product_detail':
                 if (isset($_GET['idProduct']) && $_GET['idProduct']) {
                     $idProduct=$_GET['idProduct'];
                 }
-                
-
                 $product_detail_by_id=product_detail_by_id($idProduct);
                 $GET_idStore=GET_idStore($product_detail_by_id['idCatalog']);
                 $info_store= store_by_id( $GET_idStore['idStore']);
-
+                
                 include"view/product_detail.php";
                 break;
 
