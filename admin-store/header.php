@@ -8,16 +8,16 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <title>Quản lý cửa hàng</title>
-	<link rel="icon" type="../view/image/png" href="../view/img/favicon.png"/>
+	<link rel="icon" type="view/image/png" href="view/img/favicon.png"/>
 
   <!-- Custom fonts for this template-->
-  <link href="../view/style-admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="view/style-admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
   <!-- Page level plugin CSS-->
-  <link href="../view/style-admin/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+  <link href="view/style-admin/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="../view/style-admin/css/sb-admin.css" rel="stylesheet">
+  <link href="view/style-admin/css/sb-admin.css" rel="stylesheet">
 
 </head>
 
@@ -82,7 +82,13 @@
   <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="sidebar navbar-nav">         
+    <ul class="sidebar navbar-nav">      
+    <li class="nav-item active">
+          <a class="nav-link" href="?act=home">
+              <i class="fas fa-fw fa-tachometer-alt"></i>
+              <span>Dashboard</span>
+          </a>
+      </li>
     <li class="nav-item active">
         <a class="nav-link" href="#">
         <i class="fas fa-cogs"></i>&ensp;

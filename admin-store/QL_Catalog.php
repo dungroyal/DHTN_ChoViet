@@ -85,7 +85,7 @@
 
                     <tbody>
                       <?php
-                      foreach ($cataloglist as $cat) {
+                      foreach ($cataloglist_by_store as $cat) {
                         echo '
                     <tr>
                     <td>' . $cat['id'] . '</td>

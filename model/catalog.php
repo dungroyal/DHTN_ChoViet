@@ -22,4 +22,15 @@
         $kq=pdo_query_one($sql);
         return $kq;
     }
+
+    /** Model Admin Store */
+
+    function cataloglist_by_store(){
+        $sql="SELECT * FROM catalog Where idStore= 1";
+        $sql.=" order by id ASC";
+        $kq=pdo_query($sql);
+        return $kq;
+    }
+
+
 ?>
