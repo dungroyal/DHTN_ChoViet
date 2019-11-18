@@ -23,18 +23,16 @@
                     <h3><a href="#">50%<br>
                             OFF Woman<br> 
                             Collection</a></h3>
-                    <a href="shop-full-grid.html" class="shop-button hidden-xs hidden-sm">shop now</a>
+                    <a href="#" class="shop-button hidden-xs hidden-sm">shop now</a>
                 </div>
             </div>
             <div class="single-banner left">
                 <a href="#" class="border-hover"><img src="view/img/home/quanao.jpg" alt=""></a>
                 <div class="single-banner-text">
-                    <h3 style="padding-left: 19px;
-    padding-top: 23px;
-}"><a style="color: #C1B2FF" >60% OFF<br>
+                    <h3 style="padding-left: 19px;padding-top: 23px;}"><a style="color: #C1B2FF" >60% OFF<br>
                             Woman<br> 
                             Collection</a></h3>
-                    <a href="shop-full-grid.html" class="shop-button hidden-xs hidden-sm">shop now</a>
+                    <a href="#" class="shop-button hidden-xs hidden-sm">shop now</a>
                 </div>
             </div>
             <div class="single-banner-small small-two">
