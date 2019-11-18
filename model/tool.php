@@ -20,6 +20,11 @@ function catalog_insert($name,$image){
     pdo_execute($sql, $name,$image);
 }
 
+function catalog_store_insert($name,$image,$idStore){
+    $sql = "INSERT INTO catalog(name,image,idStore) VALUES(?,?,?)";
+    pdo_execute($sql, $name,$image,$idStore);
+}
+
 function user_insert($name,$email,$noidung,$danhgia_bl,$idproduct){
     $sql = "INSERT INTO comment(name,email,noidung,danhgia,idProduct) VALUES(?,?,?,?,?)";
     pdo_execute($sql, $name,$email,$noidung,$danhgia_bl,$idproduct);

@@ -1,7 +1,7 @@
 <?php
 	session_start();
-	include "../model/user.php";
-	include "../model/pdo.php";
+	include "model/user.php";
+	include "model/pdo.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,20 +10,20 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
-	<link rel="icon" type="../view/style-login/image/png" href="../view/img/favicon.png"/>
+	<link rel="icon" type="view/style-login/image/png" href="view/img/favicon.png"/>
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="../view/style-login/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="view/style-login/vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="../view/style-login/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="view/style-login/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="../view/style-login/vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="view/style-login/vendor/animate/animate.css">
 <!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="../view/style-login/vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="view/style-login/vendor/css-hamburgers/hamburgers.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="../view/style-login/vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="view/style-login/vendor/select2/select2.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="../view/style-login/css/util.css">
-	<link rel="stylesheet" type="text/css" href="../view/style-login/css/main.css">
+	<link rel="stylesheet" type="text/css" href="view/style-login/css/util.css">
+	<link rel="stylesheet" type="text/css" href="view/style-login/css/main.css">
 <!--===============================================================================================-->
 </head>
 <body>
@@ -32,14 +32,14 @@
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
-					<img src="../view/img/favicon.png" alt="IMG">
+					<img src="view/img/logo/logo.png" alt="IMG">
 				</div>
 
 
 
 				<form class="login100-form validate-form" action="login.php" method="post">
 					<span class="login100-form-title">
-						Quản trị Chợ Việt
+						ADMIN CHO VIET
 					</span>
 
 					<div class="wrap-input100 validate-input" >
@@ -78,13 +78,20 @@
 								$_SESSION['nameuser'] = $name_user;
 								$_SESSION['iduseradmin'] = $id_user;
 								$_SESSION['iduserguest'] = $id_user;
-								header('Location: ../admin.php');
+								header('Location: admin.php');
+							}
+
+							if (($id_user > 0) && ($lever==2)) {
+								$_SESSION['nameuser'] = $name_user;
+								$_SESSION['iduseradmin'] = $id_user;
+								$_SESSION['iduserguest'] = $id_user;
+								header('Location: admin-store.php');
 							}
 
 							if (($id_user > 0) && ($lever==0)) {
 								$_SESSION['nameuser'] = $name_user;
 								$_SESSION['iduserguest'] = $id_user;
-								header('Location: ../index.php');
+								header('Location: index.php');
 							}else{
 								echo '<div class="text-center p-t-12">
 										<span class="txt1" style=" color=red;color: red;font-weight: bold;">

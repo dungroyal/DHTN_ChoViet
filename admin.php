@@ -108,7 +108,7 @@
 				unset($_SESSION['nameuser']);
 				unset($_SESSION['iduseradmin']);
 				unset($_SESSION['iduserguest']);
-				header('location: admin.php');
+				header('location: index.php');
 				break;
 				
         default:

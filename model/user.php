@@ -15,4 +15,10 @@
         $kq=pdo_query_one($sql);
         return $kq;
     }
+
+    function info_store_admin($iduser){
+        $sql="SELECT * from store WHERE idUser=".$iduser;
+        $kq=pdo_query_one($sql);
+        return $kq;
+    }
 ?>

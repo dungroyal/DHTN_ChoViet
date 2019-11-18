@@ -6,14 +6,18 @@
     include "model/catalog.php";
     include "model/product.php";
 	include "model/user.php";
-	
-    $cataloglist_by_store=cataloglist_by_store();
-	$producttlist=productlist();
 
     if (!isset($_SESSION['iduseradmin'])) {
         header('location:login.php');
 	}
-	
+
+	$info_store_admin=info_store_admin($_SESSION['iduseradmin']);
+
+	$idStore=$info_store_admin['id'];
+
+	$cataloglist_by_store=cataloglist_by_store($idStore);
+	$producttlist=productlist();
+
 	include "admin-store/header.php";
 	
 		if (isset($_GET['act'])) {
@@ -28,8 +32,8 @@
 							$target_file ="uploads/". $image2;
 							move_uploaded_file($_FILES['image']['tmp_name'], $target_file);}
 
-						catalog_insert($name,$image2);
-						header('location: admin.php?act=QL_Catalog'); 
+							catalog_store_insert($name,$image2,$idStore);
+						header('location: admin-store.php?act=QL_Catalog'); 
 					}
 					
 					if (isset($_POST['update_catalog']) && $_POST['update_catalog']) {
@@ -42,13 +46,13 @@
 							move_uploaded_file($_FILES['image']['tmp_name'], $target_file);}
 
 						catalog_update($name2,$image2,$id1);
-						header('location: admin.php?act=QL_Catalog');
+						header('location: admin-store.php?act=QL_Catalog');
 					}
 
 			if (isset($_GET['del']) && ($_GET['del']==1) ) {
                 $id=$_GET['id'];
                 catalog_delete($id);
-                header('location: admin.php?act=QL_Catalog');
+                header('location: admin-store.php?act=QL_Catalog');
             }
             include "admin-store/QL_Catalog.php";
 			break;		
@@ -65,7 +69,7 @@
 					$target_file ="uploads/". $image1;
 					move_uploaded_file($_FILES['image']['tmp_name'], $target_file);}
 				product_insert($name,$price,$soluong,$image1,$hot,$idcatalog);
-				header('location: admin.php?act=QL_Product'); 
+				header('location: admin-store.php?act=QL_Product'); 
 				}
 				
             if (isset($_POST['update_product']) && $_POST['update_product']) {
@@ -81,13 +85,13 @@
 				move_uploaded_file($_FILES['image']['tmp_name'], $target_file);
 			}
 				product_update($name1,$price1,$soluong1,$image1,$hot1,$idcatalog1,$id1);
-				header('location: admin.php?act=QL_Product');
+				header('location: admin-store.php?act=QL_Product');
 			}
 			
             if (isset($_GET['del']) && ($_GET['del']==1) ) {
                 $id=$_GET['id'];
                 product_delete($id);
-                header('location: admin.php?act=QL_Product');
+                header('location: admin-store.php?act=QL_Product');
             }
 				include "admin-store/QL_Product.php";
 				break;
@@ -101,11 +105,15 @@
 				include "admin-store/QL_Cart.php";
 				break;
 
+		case 'QL_Store':
+				include "admin-store/QL_Store.php";
+				break;
+
 		case 'logout_admin':
 				unset($_SESSION['nameuser']);
 				unset($_SESSION['iduseradmin']);
 				unset($_SESSION['iduserguest']);
-				header('location: admin.php');
+				header('location: admin-store.php');
 				break;
 				
         default:

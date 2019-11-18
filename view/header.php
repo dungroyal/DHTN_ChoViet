@@ -77,7 +77,7 @@
                                     </li>
                                     <li><a href="#">Kênh nhà bán</a>
                                         <ul class="submenu-mainmenu">
-                                                <li><a href="login">Đăng nhập</a></li>
+                                                <li><a href="admin-store.php">Đăng nhập</a></li>
                                                 <li><a href="?act=dangkithanhvien">Đăng ký</a></li>
                                             </ul>
                                     </li>
