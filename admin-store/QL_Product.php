@@ -147,7 +147,7 @@ if (isset($_GET['edi']) && ($_GET['edi'] == 1)) {
                           <select name="idcatalog" class="custom-select tm-select-accounts" id="category">
                             <option selected>Chọn danh mục ...</option>
                               <?php
-                                  foreach ($cataloglist as $cat) {
+                                  foreach ($cataloglist_by_store as $cat) {
                                     echo'<option value="'.$cat['id'].'">'.$cat['name'].'</option>';
                                   }
                               ?>
