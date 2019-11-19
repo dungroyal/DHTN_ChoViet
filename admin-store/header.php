@@ -69,15 +69,10 @@
                   </div>                    
                     ';
                 }
-            ?>
-          
-          
+            ?> 
       </li>
-
     </ul>
-
-  </nav>
-  
+  </nav> 
 
   <div id="wrapper">
 

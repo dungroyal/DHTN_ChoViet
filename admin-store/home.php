@@ -4,7 +4,7 @@
                     <li class="breadcrumb-item">
                         <a href="#">Chào mừng trở lại</a>
                     </li>
-                    <li class="breadcrumb-item active">Tên cửa hàng</li>
+                    <li class="breadcrumb-item active"><?=$info_store_admin['name'];?></li>
                 </ol>
 
                 <!-- Icon Cards-->
@@ -33,7 +33,7 @@
                                 </div>
                                 <div class="mr-5">2 Danh mục!</div>
                             </div>
-                            <a class="card-footer text-white clearfix small z-1" href="#">
+                            <a class="card-footer text-white clearfix small z-1" href="?act=QL_Catalog">
                                 <span class="float-left">Chi tiết</span>
                                 <span class="float-right">
                   <i class="fas fa-angle-right"></i>
@@ -65,7 +65,7 @@
                                 </div>
                                 <div class="mr-5">13 Sản phẩm!</div>
                             </div>
-                            <a class="card-footer text-white clearfix small z-1" href="#">
+                            <a class="card-footer text-white clearfix small z-1" href="?act=QL_Catalog">
                                 <span class="float-left">Chi tiết</span>
                                 <span class="float-right">
                   <i class="fas fa-angle-right"></i>
