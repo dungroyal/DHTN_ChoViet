@@ -21,31 +21,22 @@
                             <div class="product-thumb">
                                 <ul class="p-details-slider" id="gallery_01">
                                     <li>
-                                        <a class="elevatezoom-gallery" href="#" data-image="view/img/product-details/1.jpg" data-zoom-image="view/img/product-details/1.jpg"><img src="view/img/product-details/1.jpg" alt=""></a>
-                                    </li>
-                                    <li>
-                                        <a class="elevatezoom-gallery" href="#" data-image="view/img/product-details/2.jpg" data-zoom-image="view/img/product-details/2.jpg"><img src="view/img/product-details/2.jpg" alt=""></a>
-                                    </li>
-                                    <li>
-                                        <a class="elevatezoom-gallery" href="#" data-image="view/img/product-details/3.jpg" data-zoom-image="view/img/product-details/3.jpg"><img src="view/img/product-details/3.jpg" alt=""></a>
-                                    </li>
-                                    <li>
-                                        <a class="elevatezoom-gallery" href="#" data-image="view/img/product-details/4.jpg" data-zoom-image="view/img/product-details/4.jpg"><img src="view/img/product-details/4.jpg" alt=""></a>
+                                        <a class="elevatezoom-gallery" href="#" data-image="uploads/<?=$product_detail_by_id['image'];?>" data-zoom-image="uploads/<?=$product_detail_by_id['image'];?>"><img src="uploads/<?=$product_detail_by_id['image'];?>" alt=""></a>
                                     </li>
                                 </ul>
                             </div>
                             <div id="img-1" class="zoomWrapper single-zoom">
                                 <a href="#">
-                                    <img id="zoom1" src="view/img/product-details/1.jpg" data-zoom-image="view/img/product-details/1.jpg" alt="big-1">
+                                    <img id="zoom1" src="uploads/<?=$product_detail_by_id['image'];?>" data-zoom-image="uploads/<?=$product_detail_by_id['image'];?>" alt="big-1">
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div class="product-detail shop-product-text">
-                            <h4><a href="#">Full sleev women T-shirt</a></h4>
+                            <h4><a href="#"><?=$product_detail_by_id['name'];?></a></h4>
                             <div class="price-rating-container">    
-                                <div class="price-box"><span>$20.99</span> <del>($25.99)</del></div>
+                                <div class="price-box"><span><?=$product_detail_by_id['price'];?></span> <del>(15.500.000 VNĐ)</del></div>
                                 <div class="rating-right">
                                     <div class="star-content">
                                         <i class="fa fa-star"></i>
@@ -56,21 +47,20 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="availability">AVAILABILITY: <span> In stock</span></div>
-                            <h5 class="overview">overview:</h5>
-                            <p class="product-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor indunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            </p>
+                            <div class="availability">Tình trang: <span>Còn hàng</span></div>
+                            <h5 class="overview">Tổng quan:</h5>
+                            <p class="product-desc"><?=$product_detail_by_id['descripsion'];?></p>
                             <div class="size-categories">
-                                <h5 class="size">Size:</h5>
+                                <h5 class="size">Màu:</h5>
                                 <ul>
-                                    <li><a href="#">S</a></li>
-                                    <li><a href="#">M</a></li>
-                                    <li><a href="#">L</a></li>
-                                    <li><a href="#">XL</a></li>
+                                    <li><a href="#">Đen</a></li>
+                                    <li><a href="#">Xanh đen</a></li>
+                                    <li><a href="#">Trắng xanh</a></li>
+                                    <li><a href="#">Đỏ đen</a></li>
                                 </ul> 
                             </div>
                             <div class="color">   
-                                <h5 class="color">color:</h5>
+                                <h5 class="color">Màu:</h5>
                                 <div class="color-cat">
                                     <select class="category-items " name="category">
                                         <option>Select a color</option>
@@ -90,7 +80,7 @@
                                     <div class="inc qtybutton">+</div>
                                     <span class="clearfix"></span>
                                 </div>
-                                <a href="cart.html" class="cart-btn"><span>Add to Bag</span></a>
+                                <a href="cart.html" class="cart-btn"><span>Thêm vào giỏ hàng</span></a>
                                 <a href="wishlist.html"><i class="fa fa-heart-o"></i></a>
                                 <a href="#"><i class="fa fa-refresh"></i></a>
                             </div>
@@ -111,21 +101,28 @@
                             <div class="product-description-tab">
                                 <div class="description-tab-menu">
                                     <ul class="clearfix" role="tablist">
-                                        <li role="presentation" class="active"><a href="#description" aria-controls="description" role="tab" data-toggle="tab">Description</a></li>
-                                        <li role="presentation"><a href="#specification" aria-controls="specification" role="tab" data-toggle="tab">information</a></li>
-                                        <li role="presentation"><a href="#review" aria-controls="review" role="tab" data-toggle="tab">Reviews</a></li>
+                                        <li role="presentation" class="active"><a href="#description" aria-controls="description" role="tab" data-toggle="tab">Miêu tả</a></li>
+                       
+                                        <li role="presentation"><a href="#review" aria-controls="review" role="tab" data-toggle="tab">Đánh giá</a></li>
                                     </ul>
                                 </div>
                                 <div class="tab-content">
                                     <div role="tabpanel" class="tab-pane active" id="description">
-                                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-
-                                       <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                      
                                        <ul>
-                                           <li><i class="fa fa-circle"></i>Lorem ipsum dolor sit amet, consectetur product.</li>
-                                           <li><i class="fa fa-circle"></i>Duis aute irure dolor in reprehenderit in voluptate velit esse</li>
-                                           <li><i class="fa fa-circle"></i>Excepteur sinted occaecat cupidatat non proident products</li>
-                                           <li><i class="fa fa-circle"></i>voluptate velit esse cillum</li>
+                                           <li><i class="fa fa-circle"></i>Intel Core i9 7980XE Hyperthreaded Eighteen,
+                                            Bộ xử lý cực ba mươi sáu luồng với khả năng ép xung ổn định tối đa có thể (Tối thiểu 4,6 GHz) với Waterblock CPU EK.</li>
+                                           <li><i class="fa fa-circle"></i>Bo mạch chủ Asus Rampage VI Extreme Edition X299</li>
+                                           <li><i class="fa fa-circle"></i>Bộ nhớ bốn kênh DDR4 3200 MHz 128 GB</li>
+                                           <li><i class="fa fa-circle"></i>2 x Thẻ đồ họa Nvidia RTX 2080Ti 11GB GDDR6 được cấu 
+                                           hình trong SLI 3 chiều được trang bị khóa nước EK Full Cover và được ép xung để ép xung ổn định tối đa</li>
+                                           <li><i class="fa fa-circle"></i>1x Samsung 970 PRO Polaris 1TB M.2 2280 PCI-e 3.0 x4 NVMe Solid State Drive 1 x 512GB Samsung 
+                                           860 Pro Solid State Drive dưới dạng trò chơi phụ / ổ đĩa ứng dụng 1 x 1TB Samsung 860 Pro Solid State </li>
+                                           <li><i class="fa fa-circle"></i>Lian Li D888WX Khung nhôm đầy đủ - Đen</li>
+                                           <li><i class="fa fa-circle"></i>Cấu hình Watercooling Dual Loop tùy chỉnh</li>
+                                           <li><i class="fa fa-circle"></i>Bảo hành thu thập và trả hàng 3 năm - Vương quốc Anh</li>
+                                           <li><i class="fa fa-circle"></i>838mm x 675mm x 286mm</li>
+                                          
                                        </ul>
                                     </div>
                                     <div role="tabpanel" class="tab-pane" id="specification">
@@ -133,11 +130,13 @@
                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex consectetur minima quod officiis magni, aspernatur. Ea consectetur ab in, consequatur alias, quo sit. Optio vitae cupiditate, consectetur veritatis cumque odio magnam voluptates voluptas eligendi, minima tenetur voluptatum dolor autem, doloribus expedita obcaecati.</p>
                                     </div>
                                     <div role="tabpanel" class="tab-pane" id="review">
-                                        <p>Similique animi consequatur pariatur voluptas tempore, dolores obcaecati dolorum quia odit harum. Quos nemo, minima totam quidem ipsum labore.</p>
-                                        <ul>
-                                            <li> <i class="fa fa-circle"></i> Minus placeat eligendi neque doloribus sed ratione repellendus a illo similique, sint quisquam perferendis eum nam nihil dolor fugit blanditiis, explicabo, recusandae hic qui exercitationem aspernatur excepturi voluptate unde. </li>
-                                            <li> <i class="fa fa-circle"></i> Quaerat magnam, perferendis, sapiente doloremque error omnis esse in saepe quos eveniet quasi ex fugit eligendi consectetur nobis amet. </li>
-                                        </ul>
+                                        <p>- Được xây dựng bằng tay Công cụ xây dựng chính được xếp hạng hàng đầu của OcUK và được điều chỉnh bởi Bộ ép xung số 1 thế giới.
+- Mỗi hệ thống 8Pack được đánh số và ký tên riêng.
+- Màu sắc tùy chỉnh và thông số kỹ thuật linh hoạt mà bạn có thể thảo luận với 8Pack trước khi đặt hàng.
+- Hỗ trợ hậu mãi chuyên dụng từ 8Pack mình.
+- Hai người chuyên giao hàng và lắp đặt.
+- Một PC hiệu năng cực kỳ đáng tin cậy cho những người yêu cầu tốt nhất tuyệt đối!</p>
+                                       
                                     </div>
                                 </div>
                             </div>
@@ -145,18 +144,36 @@
                         <div class="col-md-3 hidden-sm col-xs-12">
                         <div class="single-left-widget">
                             <div class="section-title">
-                                <h4>Nhà Bán hàng</h4>
-                                <ul>
-                                    <li><a href="#">Avatar</i></a></li>
-                                    <li><a href="#">Tên</i></a></li>
-                                    <li><a href="#">Địa chỉ</i></a></li>
-
-                                    <div class="single-left-widget without-background hidden-sm hidden-md">
-                                <div class="section-title">
-                                        <a href="#" class="shop-now">Ghé thăm gian hàng</a>
-                                </div>
-                        </div>
-                                </ul>
+                                <h4>thông tin Nhà Bán hàng</h4>
+                                <?php
+                                    foreach ($info_store as $store) {
+                                        echo'
+                                        <div class="c-supplier-side">
+                                            <div class="b-grid">
+                                                <div class="b-grid__img">
+                                                <img src="uploads/'.$store['image'].'" alt="img"></div>
+                                                <div class="b-grid__content">
+                                                        <div class="b-grid__row">
+                                                        <span class="b-grid__title">
+                                                            <span class="icon-mall"></span>
+                                                            '.$store['name'].' </span>
+                                                    </div>
+                                                    <div class="b-grid__row">
+                                                        <ul>
+                                                            <li><label>Đánh giá:</label><span>100</span></li>
+                                                            <li><label>Số sản phẩm:</label><span>175</span></li>
+                                                            <li><label>Ngày tham gia:</label><span>'.$store['Date'].'</span></li>
+                                                            <li><label>Tỉnh/TP:</label><span>'.$store['diachi'].'</span></li>
+                                                    </ul>
+                                                    </div>
+                                                <div class="b-grid__row"><a class="btn btn-secondary btn-sm" href="?act=product&idStore='.$GET_idStore['idStore'].'">Xem shop</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        ';
+                                    }
+                                
+                                ?>
                             </div>
                         </div>
                         </div>

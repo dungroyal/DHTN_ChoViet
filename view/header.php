@@ -48,7 +48,7 @@
 
     <!-- style CSS
 		============================================ -->
-    <link rel="stylesheet" href="view/style.css">
+    <link rel="stylesheet" href="view/css/style.css">
 
     <!-- responsive CSS
 		============================================ -->
@@ -76,6 +76,10 @@
                                     <li><a href="#">Freeship cho đơn hàng trên 99k</a>
                                     </li>
                                     <li><a href="#">Kênh nhà bán</a>
+                                        <ul class="submenu-mainmenu">
+                                                <li><a href="admin-store.php">Đăng nhập</a></li>
+                                                <li><a href="?act=dangkithanhvien">Đăng ký</a></li>
+                                            </ul>
                                     </li>
                                 </ul>
                             </div>
@@ -92,13 +96,8 @@
                                             <li><a href="wishlist.html">wishlist</a></li>
                                         </ul>
                                     </li>
-                                    <li class="login"><a href="#">Đăng nhập</a>
-                                        <ul class="submenu-mainmenu">
-                                            <li><a href="#">login or register</a></li>
-                                            <li class="login-button"><a href="#">login</a></li>
-                                            <li><a href="#">or</a></li>
-                                            <li class="creat-button"><a href="#">creat account</a></li>
-                                        </ul>
+                                    <li class="login"><a href="?act=login">Đăng nhập</a>
+                                       
                                     </li>
                                     <li class="cart" id="cart-padding">
                                         <a href="?act=cart.php"><img src="view/img/icon/cart.png" alt="cart">
@@ -154,7 +153,7 @@
                                 <ul>
                                     <li><a href="?act=home">Trang chủ</a>
                                     </li>
-                                    <li><a href="?act=product_detail">Danh mục</a>
+                                    <li><a href="#">Danh mục</a>
                                         <div class="mega-menu">
                                             <span>
                                                     <a href="shop-grid-left-sidebar.html" class="title">men</a>
