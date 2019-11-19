@@ -45,20 +45,26 @@
                                 <div class="contact-form">
                                     <div class="leave-a-comment">
                                         <div class="leave_comment"> 
-                                            <form action="mail.php" method="post">
+                                            <form method="post" action="model/sendmailcontact.php">
                                                 <div class="name_email_form clearfix">
                                                     <div class="left_comment">
                                                         <p>Name</p>
-                                                        <input type="text">
+                                                        <input type="text" name="name">
                                                     </div>
                                                     <div class="left_comment">
                                                         <p>E-mail </p>
-                                                        <input type="email">
+                                                        <input type="email" name="email">
                                                     </div>
-                                                </div>    
-                                                <p>Message </p>
-                                                <textarea id="message" rows="2" cols="114"></textarea>
-                                                <input type="submit" value="send">
+                                                    <div class="left_comment">
+                                                        <p>Tiêu Đề  </p>
+                                                        <input type="text" name="topic">
+                                                    </div>
+                                                    
+                                                        <p>Message  </p>
+                                                        <textarea name="message" rows="2" cols="114"></textarea>
+                                                        <input name="btn_submit" type="submit">
+                                                    
+                                                        </div>
                                             </form>
                                         </div>
                                     </div>

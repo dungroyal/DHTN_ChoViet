@@ -5,6 +5,7 @@
     include "model/store.php";
     include "model/product.php";
     include "model/catalog.php";
+    
 
     $productlist=productlist();
     $cataloglist=cataloglist(); 
