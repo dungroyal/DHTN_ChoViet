@@ -91,7 +91,7 @@
                                 <ul>
                                     <li class="account"><a href="#">Tài khoản</a>
                                         <ul class="submenu-mainmenu">
-                                            <li><a href="?act=cart.php">Tạo tài khoản</a></li>
+                                            <li><a href="?act=dangkithanhvien">Tạo tài khoản</a></li>
                                             <li><a href="checkout.html">checkout</a></li>
                                             <li><a href="wishlist.html">wishlist</a></li>
                                         </ul>
