@@ -100,7 +100,7 @@
                                        
                                     </li>
                                     <li class="cart" id="cart-padding">
-                                        <a href="?act=cart.php"><img src="view/img/icon/cart.png" alt="cart">
+                                        <a href="?act=cart"><img src="view/img/icon/cart.png" alt="cart">
                                             <p>2</p>
                                         </a>
                                         <ul class="submenu-mainmenu">
