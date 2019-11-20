@@ -156,36 +156,42 @@
                                     <li><a href="#">Danh mục</a>
                                         <div class="mega-menu">
                                             <span>
-                                                    <a href="shop-grid-left-sidebar.html" class="title">men</a>
-                                                    <a href="#">blazers</a>
-                                                    <a href="#">jackets</a>
-                                                    <a href="#">Colletions</a>
-                                                    <a href="#">T-shirts</a>
-                                                    <a href="#">Jeens pant's</a>
-                                                    <a href="#">Sport shoes</a>
+                                                    <a href="shop-grid-left-sidebar.html" class="title">Thời trang nam</a>
+                                                    <a href="#">Đồ nam</a>
+                                                    <a href="#">Đồ nữ</a>
+                                                    <a href="#">Đồ baby</a>
+                                                    <a href="#">Phụ kiện thời trang</a>
+                                                    <a href="#">Phong cách mới</a>
+                                                    <a href="#">Thời trang thời thượng</a>
                                                 </span>
                                             <span>
-                                                    <a href="shop-grid-left-sidebar.html" class="title">women</a>
-                                                    <a href="#">cocktail</a>
-                                                    <a href="#">sunglass</a>
-                                                    <a href="#">evening</a>
-                                                    <a href="#">footwear</a>
-                                                    <a href="#">bootees bags</a>
-                                                    <a href="#">furniture</a>
+                                                    <a href="shop-grid-left-sidebar.html" class="title">Mẹ & bé</a>
+                                                    <a href="#">Nhà cửa-đời sống</a>
+                                                    <a href="#">Giày dép nữ</a>
+                                                    <a href="#">Sức khỏe-sắc đẹp</a>
+                                                    <a href="#">Bách hóa online</a>
+                                                    <a href="#">Thời trang trẻ em</a>
+                                                    <a href="#">Giặt giũ-chăm sóc nhà cửa</a>
+                                                    <a href="#">Đồ chơi</a>
                                                 </span>
                                             <span>
-                                                    <a href="shop-grid-left-sidebar.html" class="title">accessories</a>
-                                                    <a href="#">gagets</a>
-                                                    <a href="#">laptop</a>
-                                                    <a href="#">mobile</a>
-                                                    <a href="#">lifestyle</a>
-                                                    <a href="#">Jeens pant's</a>
-                                                    <a href="#">Sport items</a>
+                                                    <a href="shop-grid-left-sidebar.html" class="title">Thiết bị điện tử</a>
+                                                    <a href="#">Laptop</a>
+                                                    <a href="#">Điện thoại</a>
+                                                    <a href="#">Phụ kiện máy tính-điện thoại</a>
+                                                    <a href="#">Thể thao du lịch</a>
+                                                    <a href="#">Ô tô & xe máy</a>
+                                                   
                                                 </span>
-                                            <span>
-                                                    <img src="view/img/menu/1.jpg" alt="">
-                                                    <img src="view/img/menu/2.jpg" alt="">
+                                                <span>
+                                                    <a href="shop-grid-left-sidebar.html" class="title">Thú cưng</a>
+                                                    <a href="#">Thú cưng</a>
+                                                    <a href="#">Chăm sóc thú cưng</a>
+                                                    <a href="#">Đồ chơi cho thú cưng</a>
+                                                    <a href="#">Thuốc cho thú cưng</a>
+                                                   
                                                 </span>
+
                                         </div>
                                     </li>
                                     <li><a href="?act=product">Cửa hàng</a>
