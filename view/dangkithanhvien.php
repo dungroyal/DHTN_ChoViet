@@ -30,19 +30,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</div>
 	<div class="content-agile2">
 		<form action="#" method="post">
-			<div class="form-control w3layouts"> 
+			<div class="trox"> 
 				<input type="text" id="firstname" name="firstname" placeholder="First Name" title="Please enter your First Name" required="">
 			</div>
 
-			<div class="form-control w3layouts">	
+			<div class="trox">	
 				<input type="email" id="email" name="email" placeholder="mail@example.com" title="Please enter a valid email" required="">
 			</div>
 
-			<div class="form-control agileinfo">	
+			<div class="trox">	
 				<input type="password" class="lock" name="password" placeholder="Password" id="password1" required="">
 			</div>	
 
-			<div class="form-control agileinfo">	
+			<div class="trox">	
 				<input type="password" class="lock" name="confirm-password" placeholder="Confirm Password" id="password2" required="">
 			</div>			
 			

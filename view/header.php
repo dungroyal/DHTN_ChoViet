@@ -91,12 +91,12 @@
                                 <ul>
                                     <li class="account"><a href="#">Tài khoản</a>
                                         <ul class="submenu-mainmenu">
-                                            <li><a href="?act=cart.php">my bag</a></li>
+                                            <li><a href="?act=cart.php">Tạo tài khoản</a></li>
                                             <li><a href="checkout.html">checkout</a></li>
                                             <li><a href="wishlist.html">wishlist</a></li>
                                         </ul>
                                     </li>
-                                    <li class="login"><a href="?act=login">Đăng nhập</a>
+                                  
                                        
                                     </li>
                                     <li class="cart" id="cart-padding">
