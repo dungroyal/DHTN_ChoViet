@@ -43,8 +43,8 @@
                     $idProduct=$_GET['idProduct'];
                 }
                 $product_detail_by_id=product_detail_by_id($idProduct);
-                $GET_idStore=GET_idStore($product_detail_by_id['idCatalog']);
-                $info_store= store_by_id( $GET_idStore['idStore']);
+                //$GET_idStore=GET_idStore($product_detail_by_id['idCatalogStore']);
+                //$info_store= store_by_id( $GET_idStore['idStore']);
 
                 include"view/product_detail.php";
                 break;

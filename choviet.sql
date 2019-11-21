@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 19, 2019 at 02:52 AM
+-- Generation Time: Nov 21, 2019 at 02:19 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -57,9 +57,16 @@ CREATE TABLE `cart` (
 CREATE TABLE `catalog` (
   `id` int(3) NOT NULL,
   `name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `image` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `idStore` int(100) NOT NULL
+  `image` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `catalog`
+--
+
+INSERT INTO `catalog` (`id`, `name`, `image`) VALUES
+(40, 'Điện tử & Điện gia dụng', NULL),
+(41, 'Thiết bị điện tử', NULL);
 
 -- --------------------------------------------------------
 
@@ -73,6 +80,13 @@ CREATE TABLE `catalog_store` (
   `idStore` int(100) NOT NULL,
   `idCatalog` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `catalog_store`
+--
+
+INSERT INTO `catalog_store` (`id`, `name`, `idStore`, `idCatalog`) VALUES
+(5, 'Điện tử & Điện gia dụng', 6, 40);
 
 -- --------------------------------------------------------
 
@@ -120,7 +134,7 @@ CREATE TABLE `product` (
   `view` int(11) NOT NULL DEFAULT 1000,
   `descripsion` varchar(100) COLLATE utf8_unicode_ci DEFAULT 'Sản phẩm thịnh hành năm 2019',
   `hot` tinyint(2) NOT NULL DEFAULT 0,
-  `idCatalogStore` int(100) NOT NULL,
+  `idCatalog` int(100) NOT NULL,
   `idStore` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -139,6 +153,15 @@ CREATE TABLE `store` (
   `idUser` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `store`
+--
+
+INSERT INTO `store` (`id`, `name`, `image`, `diachi`, `Date`, `idUser`) VALUES
+(6, 'Asanzo Officall', 'asanzo.jpg', 'TP. Hồ Chí Minh', '2019-11-19', 9),
+(7, 'Samsung Việt Nam', 'samsung.jpg', 'TP. Hà Nội', '2019-11-19', 10),
+(8, 'Adidas Việt Nam', 'Adidas-logo.jpg', 'TP. Hà Nội', '2019-11-19', 11);
+
 -- --------------------------------------------------------
 
 --
@@ -153,6 +176,16 @@ CREATE TABLE `users` (
   `image` varchar(100) COLLATE utf8_unicode_ci DEFAULT 'avatar_user.png',
   `lever` varchar(10) COLLATE utf8_unicode_ci NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `pass`, `email`, `image`, `lever`) VALUES
+(9, 'asanzo', 'asanzo', 'asanzo2019@gmail.com', 'avatar_user.png', '2'),
+(10, 'samsung', 'samsung', 'samsung2019@gmail.com', 'avatar_user.png', '2'),
+(11, 'adidas', 'adidas', 'adidas2019@gmail.com', 'avatar_user.png', '2'),
+(12, 'admin', 'admin', 'admin2019@gmail.com', 'avatar_user.png', '1');
 
 --
 -- Indexes for dumped tables
@@ -207,7 +240,7 @@ ALTER TABLE `order`
 --
 ALTER TABLE `product`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_product_catalog` (`idCatalogStore`),
+  ADD KEY `fk_product_catalog` (`idCatalog`),
   ADD KEY `fk_product_store` (`idStore`);
 
 --
@@ -243,13 +276,13 @@ ALTER TABLE `cart`
 -- AUTO_INCREMENT for table `catalog`
 --
 ALTER TABLE `catalog`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `catalog_store`
 --
 ALTER TABLE `catalog_store`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `comment`
@@ -267,19 +300,19 @@ ALTER TABLE `order`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=134;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=136;
 
 --
 -- AUTO_INCREMENT for table `store`
 --
 ALTER TABLE `store`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Constraints for dumped tables
@@ -317,7 +350,7 @@ ALTER TABLE `order`
 -- Constraints for table `product`
 --
 ALTER TABLE `product`
-  ADD CONSTRAINT `fk_product_catalogstore` FOREIGN KEY (`idCatalogStore`) REFERENCES `catalog_store` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_product_catalog` FOREIGN KEY (`idCatalog`) REFERENCES `catalog` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_product_store` FOREIGN KEY (`idStore`) REFERENCES `store` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
