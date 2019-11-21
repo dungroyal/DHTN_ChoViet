@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 21, 2019 at 02:19 AM
+-- Generation Time: Nov 21, 2019 at 03:28 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -66,7 +66,28 @@ CREATE TABLE `catalog` (
 
 INSERT INTO `catalog` (`id`, `name`, `image`) VALUES
 (40, 'Điện tử & Điện gia dụng', NULL),
-(41, 'Thiết bị điện tử', NULL);
+(41, 'Thiết bị điện tử', NULL),
+(42, 'Thời trang Nam', NULL),
+(43, 'Thời trang Nữ', NULL),
+(44, 'Điện thoại & Phụ kiện', NULL),
+(45, 'Mẹ và bé', NULL),
+(47, 'Máy tính & Laptop', NULL),
+(48, 'Sức khoẻ và sắc đẹp', NULL),
+(49, 'Máy ảnh & Máy quay phim', NULL),
+(50, 'Giầy dép Nam', NULL),
+(51, 'Giầy dép Nữ', NULL),
+(52, 'Đồng Hồ', NULL),
+(53, 'Túi ví', NULL),
+(54, 'Phụ kiện thời trang', NULL),
+(55, 'Thiết bị điện gia dụng', NULL),
+(56, 'Thể thao & Du lịch', NULL),
+(57, 'Ô tô & Xe máy & Xe đạp', NULL),
+(58, 'Thời trang trẻ em', NULL),
+(59, 'Nhà sách Online', NULL),
+(61, 'Nhà cửa & Đời sống', NULL),
+(62, 'Sản phẩm khác', NULL),
+(63, 'Phụ kiện điện tử', NULL),
+(64, 'Tivi & Thiết bị điện gia dụng', NULL);
 
 -- --------------------------------------------------------
 
@@ -86,7 +107,8 @@ CREATE TABLE `catalog_store` (
 --
 
 INSERT INTO `catalog_store` (`id`, `name`, `idStore`, `idCatalog`) VALUES
-(5, 'Điện tử & Điện gia dụng', 6, 40);
+(6, 'Thiết bị điện gia dụng', 7, 55),
+(7, 'Điện thoại & Phụ kiện', 7, 44);
 
 -- --------------------------------------------------------
 
@@ -129,7 +151,7 @@ CREATE TABLE `product` (
   `id` int(100) NOT NULL,
   `name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `price` double(10,0) NOT NULL DEFAULT 0,
-  `soluong` int(10) NOT NULL,
+  `soluong` int(100) NOT NULL DEFAULT 100,
   `image` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `view` int(11) NOT NULL DEFAULT 1000,
   `descripsion` varchar(100) COLLATE utf8_unicode_ci DEFAULT 'Sản phẩm thịnh hành năm 2019',
@@ -137,6 +159,14 @@ CREATE TABLE `product` (
   `idCatalog` int(100) NOT NULL,
   `idStore` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `product`
+--
+
+INSERT INTO `product` (`id`, `name`, `price`, `soluong`, `image`, `view`, `descripsion`, `hot`, `idCatalog`, `idStore`) VALUES
+(136, 'Smart Tivi Samsung 4K 55 inch UA55NU7090', 100000, 100, 'vn-uhd-ru7300-ua55ru7300kxxv-lperspectiveblack-150456403.webp', 1000, 'Sản phẩm thịnh hành năm 2019', 0, 55, 7),
+(137, 'Smart Tivi Samsung 4K 55 inch UA55NU7090', 100000, 100, '1.jpg', 1000, 'Sản phẩm thịnh hành năm 2019', 0, 44, 7);
 
 -- --------------------------------------------------------
 
@@ -276,13 +306,13 @@ ALTER TABLE `cart`
 -- AUTO_INCREMENT for table `catalog`
 --
 ALTER TABLE `catalog`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT for table `catalog_store`
 --
 ALTER TABLE `catalog_store`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `comment`
@@ -300,7 +330,7 @@ ALTER TABLE `order`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=136;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=138;
 
 --
 -- AUTO_INCREMENT for table `store`

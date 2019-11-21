@@ -18,7 +18,7 @@
     }
 
     function GET_idStore($idCatalog){
-        $sql="SELECT * from catalog WHERE id=".$idCatalog;
+        $sql="SELECT * from catalog_store WHERE idCatalog=".$idCatalog;
         $kq=pdo_query_one($sql);
         return $kq;
     }

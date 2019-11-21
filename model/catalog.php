@@ -12,13 +12,13 @@
     }
 
     function catalog_by_store($id=0){
-        $sql="SELECT * from catalog where idStore=".$id;
+        $sql="SELECT * from catalog_store where idStore=".$id;
         $kq=pdo_query($sql);
         return $kq;
     }
 
     function GET_catalog_one($id=0){
-        $sql="SELECT * from catalog where idStore=".$id;
+        $sql="SELECT * from catalog_store where idStore=".$id;
         $kq=pdo_query_one($sql);
         return $kq;
     }
