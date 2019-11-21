@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 19, 2019 at 02:52 AM
+-- Generation Time: Nov 21, 2019 at 03:28 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -57,9 +57,37 @@ CREATE TABLE `cart` (
 CREATE TABLE `catalog` (
   `id` int(3) NOT NULL,
   `name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `image` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `idStore` int(100) NOT NULL
+  `image` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `catalog`
+--
+
+INSERT INTO `catalog` (`id`, `name`, `image`) VALUES
+(40, 'Điện tử & Điện gia dụng', NULL),
+(41, 'Thiết bị điện tử', NULL),
+(42, 'Thời trang Nam', NULL),
+(43, 'Thời trang Nữ', NULL),
+(44, 'Điện thoại & Phụ kiện', NULL),
+(45, 'Mẹ và bé', NULL),
+(47, 'Máy tính & Laptop', NULL),
+(48, 'Sức khoẻ và sắc đẹp', NULL),
+(49, 'Máy ảnh & Máy quay phim', NULL),
+(50, 'Giầy dép Nam', NULL),
+(51, 'Giầy dép Nữ', NULL),
+(52, 'Đồng Hồ', NULL),
+(53, 'Túi ví', NULL),
+(54, 'Phụ kiện thời trang', NULL),
+(55, 'Thiết bị điện gia dụng', NULL),
+(56, 'Thể thao & Du lịch', NULL),
+(57, 'Ô tô & Xe máy & Xe đạp', NULL),
+(58, 'Thời trang trẻ em', NULL),
+(59, 'Nhà sách Online', NULL),
+(61, 'Nhà cửa & Đời sống', NULL),
+(62, 'Sản phẩm khác', NULL),
+(63, 'Phụ kiện điện tử', NULL),
+(64, 'Tivi & Thiết bị điện gia dụng', NULL);
 
 -- --------------------------------------------------------
 
@@ -73,6 +101,14 @@ CREATE TABLE `catalog_store` (
   `idStore` int(100) NOT NULL,
   `idCatalog` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `catalog_store`
+--
+
+INSERT INTO `catalog_store` (`id`, `name`, `idStore`, `idCatalog`) VALUES
+(6, 'Thiết bị điện gia dụng', 7, 55),
+(7, 'Điện thoại & Phụ kiện', 7, 44);
 
 -- --------------------------------------------------------
 
@@ -115,14 +151,22 @@ CREATE TABLE `product` (
   `id` int(100) NOT NULL,
   `name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `price` double(10,0) NOT NULL DEFAULT 0,
-  `soluong` int(10) NOT NULL,
+  `soluong` int(100) NOT NULL DEFAULT 100,
   `image` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `view` int(11) NOT NULL DEFAULT 1000,
   `descripsion` varchar(100) COLLATE utf8_unicode_ci DEFAULT 'Sản phẩm thịnh hành năm 2019',
   `hot` tinyint(2) NOT NULL DEFAULT 0,
-  `idCatalogStore` int(100) NOT NULL,
+  `idCatalog` int(100) NOT NULL,
   `idStore` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `product`
+--
+
+INSERT INTO `product` (`id`, `name`, `price`, `soluong`, `image`, `view`, `descripsion`, `hot`, `idCatalog`, `idStore`) VALUES
+(136, 'Smart Tivi Samsung 4K 55 inch UA55NU7090', 100000, 100, 'vn-uhd-ru7300-ua55ru7300kxxv-lperspectiveblack-150456403.webp', 1000, 'Sản phẩm thịnh hành năm 2019', 0, 55, 7),
+(137, 'Smart Tivi Samsung 4K 55 inch UA55NU7090', 100000, 100, '1.jpg', 1000, 'Sản phẩm thịnh hành năm 2019', 0, 44, 7);
 
 -- --------------------------------------------------------
 
@@ -139,6 +183,15 @@ CREATE TABLE `store` (
   `idUser` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `store`
+--
+
+INSERT INTO `store` (`id`, `name`, `image`, `diachi`, `Date`, `idUser`) VALUES
+(6, 'Asanzo Officall', 'asanzo.jpg', 'TP. Hồ Chí Minh', '2019-11-19', 9),
+(7, 'Samsung Việt Nam', 'samsung.jpg', 'TP. Hà Nội', '2019-11-19', 10),
+(8, 'Adidas Việt Nam', 'Adidas-logo.jpg', 'TP. Hà Nội', '2019-11-19', 11);
+
 -- --------------------------------------------------------
 
 --
@@ -153,6 +206,16 @@ CREATE TABLE `users` (
   `image` varchar(100) COLLATE utf8_unicode_ci DEFAULT 'avatar_user.png',
   `lever` varchar(10) COLLATE utf8_unicode_ci NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `pass`, `email`, `image`, `lever`) VALUES
+(9, 'asanzo', 'asanzo', 'asanzo2019@gmail.com', 'avatar_user.png', '2'),
+(10, 'samsung', 'samsung', 'samsung2019@gmail.com', 'avatar_user.png', '2'),
+(11, 'adidas', 'adidas', 'adidas2019@gmail.com', 'avatar_user.png', '2'),
+(12, 'admin', 'admin', 'admin2019@gmail.com', 'avatar_user.png', '1');
 
 --
 -- Indexes for dumped tables
@@ -207,7 +270,7 @@ ALTER TABLE `order`
 --
 ALTER TABLE `product`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_product_catalog` (`idCatalogStore`),
+  ADD KEY `fk_product_catalog` (`idCatalog`),
   ADD KEY `fk_product_store` (`idStore`);
 
 --
@@ -243,13 +306,13 @@ ALTER TABLE `cart`
 -- AUTO_INCREMENT for table `catalog`
 --
 ALTER TABLE `catalog`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT for table `catalog_store`
 --
 ALTER TABLE `catalog_store`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `comment`
@@ -267,19 +330,19 @@ ALTER TABLE `order`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=134;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=138;
 
 --
 -- AUTO_INCREMENT for table `store`
 --
 ALTER TABLE `store`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Constraints for dumped tables
@@ -317,7 +380,7 @@ ALTER TABLE `order`
 -- Constraints for table `product`
 --
 ALTER TABLE `product`
-  ADD CONSTRAINT `fk_product_catalogstore` FOREIGN KEY (`idCatalogStore`) REFERENCES `catalog_store` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_product_catalog` FOREIGN KEY (`idCatalog`) REFERENCES `catalog` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_product_store` FOREIGN KEY (`idStore`) REFERENCES `store` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
