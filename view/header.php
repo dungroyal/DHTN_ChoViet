@@ -106,7 +106,7 @@
                                         <ul class="submenu-mainmenu">
                                             <li class="single-cart-item clearfix">
                                                 <span class="cart-img">
-                                                        <a href="?act=cart.php"><img src="view/img/menu/3.jpg" alt=""></a>
+                                                        <a href="?act=cart"><img src="view/img/menu/3.jpg" alt=""></a>
                                                     </span>
                                                 <span class="cart-info">
                                                         <a href="#">Lorem Ipsam...</a>
