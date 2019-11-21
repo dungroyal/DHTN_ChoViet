@@ -1,78 +1,80 @@
-<!--A Design by W3layouts 
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-<!doctype html>
-<html>
-<head>
-<title>Official Signup Form Flat Responsive widget Template :: w3layouts</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Official Signup Form Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- fonts -->
-<link href="//fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-<link href="//fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
-<!-- /fonts -->
-<!-- css -->
-<link href="view/cssDK/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
-<link href="view/cssDK/css/style.css" rel='stylesheet' type='text/css' media="all" />
-<!-- /css -->
-</head>
-<body>
-<h1 class="w3ls">Đăng Kí Thành Viên</h1>
-<div class="content-w3ls">
-	<div class="content-agile1">
-		<h2 class="agileits1">CHợ Việt</h2>
-		<p class="agileits2">Hãy là 1 thành viên tích cực cửa Chợ Việ<table></table></p>
-	</div>
-	<div class="content-agile2">
-		<form action="#" method="post">
-			<div class="trox"> 
-				<input type="text" id="firstname" name="firstname" placeholder="First Name" title="Please enter your First Name" required="">
-			</div>
-
-			<div class="trox">	
-				<input type="email" id="email" name="email" placeholder="mail@example.com" title="Please enter a valid email" required="">
-			</div>
-
-			<div class="trox">	
-				<input type="password" class="lock" name="password" placeholder="Password" id="password1" required="">
-			</div>	
-
-			<div class="trox">	
-				<input type="password" class="lock" name="confirm-password" placeholder="Confirm Password" id="password2" required="">
-			</div>			
-			
-			<input type="submit" class="register" value="Register">
-		</form>
-		<script type="text/javascript">
-			window.onload = function () {
-				document.getElementById("password1").onchange = validatePassword;
-				document.getElementById("password2").onchange = validatePassword;
-			}
-			function validatePassword(){
-				var pass2=document.getElementById("password2").value;
-				var pass1=document.getElementById("password1").value;
-				if(pass1!=pass2)
-					document.getElementById("password2").setCustomValidity("Passwords Don't Match");
-				else
-					document.getElementById("password2").setCustomValidity('');	 
-					//empty string means no validation error
-			}
-		</script>
-		<p class="wthree w3l">Fast Signup With Your Favourite Social Profile</p>
-		<ul class="social-agileinfo wthree2">
-			<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-			<li><a href="#"><i class="fa fa-youtube"></i></a></li>
-			<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-			<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-		</ul>
-	</div>
-	<div class="clear"></div>
-</div>
-<p class="copyright w3l">© 2017 Official Signup Form. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank">W3layouts</a></p>
-</body>
-</html>
+<body id="body">
+	  <form action="xulydangky.php" method="post" enctype="multipart/form-data">
+	    <div id="nen">
+	      <div id="img">
+	        <img src="img-login1.png" widht="900" height="200"/></em>
+	        <em>
+	      </div>
+	      <div id="dk">
+        <div id="nd">
+	          <table width="900px">
+	            <tr>
+	              <div class="tt">
+	                <td widht="200"><label for="nn">Họ Tên (<span style="kihieu">*</span>)</label></td>
+	                <td width="400" ><input type="text" name="hoten" class="input1"/>
+	              </div>
+	              </td>
+	        </div>
+	        </tr>
+	        <tr>
+	        <div class="tt">
+	        <td widht="200"><label for="nn">Tên Đăng Nhập (<span style="kihieu">*</span>) </label></td>
+	        <td width="400" ><input type="text" name="tdn" class="input1"/></div>
+	        <!--<p class="xacnhanten">Ten dang nhap da ton ta.</p>-->
+	        </td>	      </div>
+	      </tr>
+	      <tr>
+	      <div class="tt">
+	      <td widht="200"><label for="nn">Mật Khẩu (<span style="kihieu">*</span>) </label></td>
+	      <td width="400" ><input type="password" name="mk" class="input1"/></div></td>
+	    </div>
+	    </tr>
+	    <tr>
+	    <div class="tt">
+	    <td width="200" ><label for="nn">Xác nhận mật khẩu (<span style="kihieu">*</span>)</label></td>
+	    <td width="400" ><input type="password" name="xnmk" class="input1"/></div>
+	    <!-- <p class="xacnhanten">Ten dang nhap da ton ta.</p>-->
+	    </td>
+	    </div>
+	    </tr>
+	    <tr>
+	    <div class="tt">	    <td width="200" ><label for="nn">Giới Tính: </label></td>
+	    <td width="400" ><span style="font-size:20px;color:#000;margin-left:36px;padding:5px 5px;"><input type="radio" name="gioitinh" value="1" checked="checked"/>Nam
+	    <input type="radio" name="gioitinh" value="0" />Nu</span>
+	    </td>
+	    </div>
+	    </tr>
+	    <tr>	    <div class="tt">
+	    <td width="200" ><label for="nn">Email: </label></td>
+	    <td width="400" ><input type="text" name="email" class="input1"/></td>
+	    </div>	    </tr>
+	    <tr>
+	    <div class="tt">
+	    <td width="200" ><label for="nn">Địa Chỉ </label></td>	    <td width="400" ><textarea name="diachi" style="font-size: 20px; color: rgb(0, 0, 0); margin-left: 38px; padding: 5px; width: 250px; height: 54px;font-family: serif"></textarea></td>
+	    </div>
+	    </tr>
+	    <tr>
+	    <div class="tt">
+	    <td width="200" ><label for="nn">Thông Tin Điều Khoản</label></td>
+	    <td width="400" ><div id="hide">
+	    <input type="button" value="Hide" class="hide" style="font-size:15px;color:#000;margin-left:36px;padding:2px 0px;"/>
+	    <input type="button" value="Show" class="show" style="font-size:15px;color:#000;padding:2px 0px;"/>
+	    </div>
+	    <div id="tt-dkhoan">
+	    <input type="button" id="dieukhoan" value="Đọc điêu khoản" style="font-size:15px;color:#000;margin-left:36px;padding:2px 2px;"/></br>
+	    </div>
+	    <span style="font-size:20px;color:#000;margin-left:36px;padding:5px 5px;"><input type="checkbox" value="xacnhan_dk" name="xacnhan_dieukhoan" />Tôi chấp nhận điều khoản.</span>
+	    </td>	    </div>
+74	    </tr>
+	    <tr>
+76	    <div class="tt">
+77	    <td colspan="2" align="center"><input type="submit" name="xn" class="nut" value="Đăng Ký">
+78	    <input type="reset" name="huy" class="nut" value="Hủy"/></td>
+79	    </div>
+80	    </tr>
+81	    </table>
+82	    </div>
+83	    </div><!--ket thuc dk-->
+84	    </div><!---ket thuc nen-->
+85	  </form>
+86	</body>

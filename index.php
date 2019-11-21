@@ -70,6 +70,10 @@
                 include"view/login.php";
                 break;
 
+            case 'loginuser ':
+                include"view/loginuser.php";
+                break;
+
             default:
                 include"view/home.php";
                 break;
