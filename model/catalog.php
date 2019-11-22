@@ -26,7 +26,7 @@
     /** Model Admin Store */
 
     function cataloglist_by_store($idStore){
-        $sql="SELECT * FROM catalog Where idStore= ".$idStore;
+        $sql="SELECT * FROM catalog_store Where idStore= ".$idStore;
         $sql.=" order by id ASC";
         $kq=pdo_query($sql);
         return $kq;

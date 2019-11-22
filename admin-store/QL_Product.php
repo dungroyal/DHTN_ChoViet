@@ -69,8 +69,8 @@ if (isset($_GET['edi']) && ($_GET['edi'] == 1)) {
                           <select name="idcatalog" class="custom-select tm-select-accounts" id="category">
                             <option selected>Chọn danh mục ...</option>
                               <?php
-                                  foreach ($cataloglist as $cat) {
-                                    echo'<option value="'.$cat['id'].'">'.$cat['name'].'</option>';
+                                  foreach ($cataloglist_by_store as $cat) {
+                                    echo'<option value="'.$cat['idCatalog'].'">'.$cat['name'].'</option>';
                                   }
                               ?>
                         </select>
@@ -148,7 +148,7 @@ if (isset($_GET['edi']) && ($_GET['edi'] == 1)) {
                             <option selected>Chọn danh mục ...</option>
                               <?php
                                   foreach ($cataloglist_by_store as $cat) {
-                                    echo'<option value="'.$cat['id'].'">'.$cat['name'].'</option>';
+                                    echo'<option value="'.$cat['idCatalog'].'">'.$cat['name'].'</option>';
                                   }
                               ?>
                         </select>
@@ -191,7 +191,7 @@ if (isset($_GET['edi']) && ($_GET['edi'] == 1)) {
             <tbody>
 
               <?php
-              foreach ($producttlist as $pro) {
+              foreach ($producttlist_by_store as $pro) {
                 $name_catalog = get_catalog_name($pro['idCatalog']);
                 echo '
                     <tr>

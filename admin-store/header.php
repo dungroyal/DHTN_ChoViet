@@ -61,11 +61,11 @@
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
         <?php
-                if (isset($_SESSION['nameuser'])) {
-                    echo'<a class="dropdown-item" href="#"><strong>'.$_SESSION['nameuser'].'</strong></a>
-                    <a class="dropdown-item" href="#">Cài đặt</a>
+                if (isset($_SESSION['iduserstore'])) {
+                    echo'<a class="dropdown-item" href="#"><strong>'.$info_store_admin['name'].'</strong></a>
+                    <a class="dropdown-item" href="?act=QL_Store">Cài đặt</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="?act=logout_admin"  data-target="#logoutModal">Đăng xuất</a>
+                    <a class="dropdown-item" href="?act=logout_admin">Đăng xuất</a>
                   </div>                    
                     ';
                 }

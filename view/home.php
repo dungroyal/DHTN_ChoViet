@@ -214,7 +214,7 @@
                                             <div class="single-product-item">
                                                 <div class="single-product-img clearfix hover-effect">
                                                     <a href="?act=product_detail&idProduct='.$pro['id'].'">
-                                                        <img class="primary-image" src="uploads/'.$pro['image'].'" alt="">
+                                                        <img class="format-image primary-image " src="uploads/'.$pro['image'].'" alt="">
                                                     </a>
                                                 </div>
                                                 <div class="single-product-info clearfix">
@@ -224,7 +224,7 @@
                                                 </div>
                                                 <div class="product-content text-center">
                                                     <h3>'.$pro['name'].'</h3>
-                                                    <h4><a href="?act=product_detail&idProduct='.$pro['id'].'">view details</a></h4>
+                                                    <h4><a href="?act=product_detail&idProduct='.$pro['id'].'">Xem chi tiết</a></h4>
                                                 </div>
                                                 <div class="product-action">
                                                     <ul>

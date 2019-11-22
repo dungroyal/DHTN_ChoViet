@@ -26,7 +26,7 @@
                     $store_by_id= store_by_id($idStore);
 
                     $catalog_by_store=catalog_by_store($idStore);
-                    $productlist_by_catalog=productlist_by_catalog(1);
+                    $productlist_by_store=productlist_by_store($idStore);
                 }
                 
                 if (isset($_GET['idCatalog']) && $_GET['idCatalog']) {

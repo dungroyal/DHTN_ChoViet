@@ -49,13 +49,27 @@
                 <!-- Default form register -->
                 <form class="text-center border border-light p-3" action="?act=QL_Catalog" method="post" enctype="multipart/form-data">
                   <div class="form-row mb-4" >
+
+                  <div class="form-group mb-3">
+                          <select name="idcatalog" class="custom-select tm-select-accounts" id="category">
+                            <option selected>Chọn danh mục ...</option>
+                              <?php
+                                  foreach ($cataloglist as $cat) {
+                                    echo'<option value="'.$cat['id'].'">'.$cat['name'].'</option>';
+                                  }
+                              ?>
+                        </select>
+                      </div>
+
                     <div class="col">
                       <!-- First name -->
-                      <input type="text" id="defaultRegisterFormFirstName" name="name" class="form-control" placeholder="Tên danh mục">
+                      <input type="text" id="defaultRegisterFormFirstName" name="name" class="form-control" placeholder="Viết lại tên danh mục" required>
                     </div>
 
+                   
+
                     <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
-                        <input id="fileInput" type="file" name="image"/>
+                        <input id="fileInput" type="file" required name="image"/>
                     </div>
                     <!-- Sign up button -->
                     <input class="btn btn-info my-1 btn-block" type="submit" name="add_catalog" value="Thêm danh mục">
