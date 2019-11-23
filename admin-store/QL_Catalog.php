@@ -10,9 +10,9 @@
         <?php          
         if(isset($_GET['edit']) && ($_GET['edit'] == 1)){
           $id = $_GET['id'];
-          $catalogone = catalog_one($id);
-          
-          echo 'Test:'.$catalogone['id'];
+          $Get_id_Catalog=Get_id_Catalog($id);
+          $catalogone = catalog_one($Get_id_Catalog['idCatalog']);
+
           ?>
           <div class="card mb-3">
               <div class="card-header">
@@ -27,7 +27,7 @@
                     <div class="col">
                       <input type="hidden" name="id" value="<?=$catalogone['id']?>">
                       <!-- First name -->
-                      <input type="text" id="defaultRegisterFormFirstName" name="name" class="form-control" placeholder="<?=$catalogone['name'];?>">
+                      <input type="text" id="defaultRegisterFormFirstName" name="name" class="form-control" value="<?=$catalogone['name'];?>" placeholder="<?=$catalogone['name'];?>">
                     </div>
                     
                     <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">

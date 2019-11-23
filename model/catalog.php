@@ -32,5 +32,12 @@
         return $kq;
     }
 
+    function Get_id_Catalog($id=0){
+        $sql="SELECT * from catalog_store where id=".$id;
+        $kq=pdo_query_one($sql);
+        return $kq;
+    }
+    
+
 
 ?>
