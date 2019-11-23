@@ -141,7 +141,7 @@
 
                             <?php
                                  if (isset($_GET['idStore']) && $_GET['idStore']) {
-                                        foreach ($productlist_by_catalog as $pro) {
+                                        foreach ($productlist_by_store as $pro) {
                                             echo'
                                             <div class="col-md-4 col-sm-4 col-xs-12">
                                             <div class="single-product">

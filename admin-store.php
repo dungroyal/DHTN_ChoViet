@@ -7,16 +7,15 @@
     include "model/product.php";
 	include "model/user.php";
 
-    if (!isset($_SESSION['iduseradmin'])) {
+    if (!isset($_SESSION['iduserstore'])) {
         header('location:login.php');
 	}
 
-	$info_store_admin=info_store_admin($_SESSION['iduseradmin']);
-
+    $cataloglist=cataloglist(); 
+	$info_store_admin=info_store_admin($_SESSION['iduserstore']);
 	$idStore=$info_store_admin['id'];
-
 	$cataloglist_by_store=cataloglist_by_store($idStore);
-	$producttlist=productlist();
+	$producttlist_by_store=productlist_by_store($idStore);
 
 	include "admin-store/header.php";
 	
@@ -26,13 +25,14 @@
 				case 'QL_Catalog':
 					if (isset($_POST['add_catalog']) && $_POST['add_catalog']) {
 						$name=$_POST['name'];
+						$idcatalog=$_POST['idcatalog'];
 
 						if ($_FILES['image']['name']!="") {         
 							$image2= basename($_FILES['image']['name']);
 							$target_file ="uploads/". $image2;
 							move_uploaded_file($_FILES['image']['tmp_name'], $target_file);}
 
-							catalog_store_insert($name,$image2,$idStore);
+							catalog_store_insert($name,$image2,$idStore,$idcatalog);
 						header('location: admin-store.php?act=QL_Catalog'); 
 					}
 					
@@ -68,7 +68,7 @@
 					$image1= basename($_FILES['image']['name']);
 					$target_file ="uploads/". $image1;
 					move_uploaded_file($_FILES['image']['tmp_name'], $target_file);}
-				product_insert($name,$price,$soluong,$image1,$hot,$idcatalog);
+				product_insert($name,$price,$soluong,$image1,$hot,$idcatalog,$idStore);
 				header('location: admin-store.php?act=QL_Product'); 
 				}
 				
@@ -111,7 +111,7 @@
 
 		case 'logout_admin':
 				unset($_SESSION['nameuser']);
-				unset($_SESSION['iduseradmin']);
+				unset($_SESSION['iduserstore']);
 				unset($_SESSION['iduserguest']);
 				header('location: admin-store.php');
 				break;

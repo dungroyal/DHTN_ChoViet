@@ -21,10 +21,10 @@
         return $kq;
     }
 
-    function productlist_by_catalog($idcat=2){
+    function productlist_by_store($idStore=0){
         $sql="SELECT * FROM product WHERE 1";
-        $sql.=" AND idCatalog=".$idcat;
-        $sql.=" ORDER BY id DESC  LIMIT 0,5";
+        $sql.=" AND idStore=".$idStore;
+        $sql.=" ORDER BY id DESC  LIMIT 0,6";
         $kq=pdo_query($sql);
         return $kq;
     }

@@ -7,7 +7,7 @@
                     <div class="row">
                         <div class="col-md-12 text-left">
                             <ul class="breadcrumb">
-                                <li><a href="index.html">Home</a><span> - </span></li>
+                                <li><a href="index.php">Home</a><span> - </span></li>
                                 <li class="active">contact</li>
                             </ul>
                         </div>

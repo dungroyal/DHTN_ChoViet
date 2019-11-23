@@ -10,9 +10,9 @@ require_once 'pdo.php';
  * @throws PDOException lỗi thêm mới
  */
 
-function product_insert($name,$price,$soluong,$image,$hot,$idCatalog){
-    $sql = "INSERT INTO product(name,price,soluong,image,hot,idCatalog) VALUES(?,?,?,?,?,?)";
-    pdo_execute($sql, $name,$price,$soluong,$image,$hot,$idCatalog);
+function product_insert($name,$price,$soluong,$image,$hot,$idCatalog,$idStore){
+    $sql = "INSERT INTO product(name,price,soluong,image,hot,idCatalog,idStore) VALUES(?,?,?,?,?,?,?)";
+    pdo_execute($sql, $name,$price,$soluong,$image,$hot,$idCatalog,$idStore);
 }
 
 function catalog_insert($name,$image){
@@ -20,9 +20,9 @@ function catalog_insert($name,$image){
     pdo_execute($sql, $name,$image);
 }
 
-function catalog_store_insert($name,$image,$idStore){
-    $sql = "INSERT INTO catalog(name,image,idStore) VALUES(?,?,?)";
-    pdo_execute($sql, $name,$image,$idStore);
+function catalog_store_insert($name,$image,$idStore,$idCatalog){
+    $sql = "INSERT INTO catalog_store(name,image,idStore,idCatalog) VALUES(?,?,?,?)";
+    pdo_execute($sql, $name,$image,$idStore,$idCatalog);
 }
 
 function user_insert($name,$email,$noidung,$danhgia_bl,$idproduct){

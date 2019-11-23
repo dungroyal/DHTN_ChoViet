@@ -36,9 +36,9 @@ function sendMail($title, $content, $nTo, $mTo,$diachicc=''){
 }
 
 function sendMailAttachment($title, $content, $nTo, $mTo,$diachicc='',$file,$filename){
-	$nFrom = 'Freetuts.net';
-	$mFrom = 'baothong119@gmail.com';	//dia chi email cua ban 
-	$mPass = 'baothong';		//mat khau email cua ban
+	$nFrom = 'Choviet.xyz';
+	$mFrom = 'lenhathao3112@gmail.com';	//dia chi email cua ban 
+	$mPass = 'Haocm123';		//mat khau email cua ban
 	$mail             = new PHPMailer();
 	$body             = $content;
 	$mail->IsSMTP(); 
@@ -63,7 +63,7 @@ function sendMailAttachment($title, $content, $nTo, $mTo,$diachicc='',$file,$fil
 	$mail->MsgHTML($body);
 	$address = $mTo;
 	$mail->AddAddress($address, $nTo);
-	$mail->AddReplyTo('info@freetuts.net', 'Freetuts.net');
+	$mail->AddReplyTo('info@freetuts.xyz', 'Choviet.xyz');
 	$mail->AddAttachment($file,$filename);
 	if(!$mail->Send()) {
 		return 0;
