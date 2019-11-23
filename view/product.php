@@ -137,9 +137,9 @@
                                             <div class="col-md-4 col-sm-4 col-xs-12">
                                             <div class="single-product">
                                                 <div class="single-product-item">
-                                                    <div class="single-product-img clearfix hover-effect">
+                                                    <div class="single-product-img clearfix hover-effect" style=" width: 100%; height: 305px;object-fit: contain;">
                                                         <a href="#">
-                                                            <img class="primary-image" src="uploads/'.$pro['image'].'" alt="">
+                                                            <img class="primary-image" src="uploads/'.$pro['image'].'" alt="" style=" padding: 20px;">
                                                         </a>
                                                     </div>
                                                     <div class="single-product-info clearfix">

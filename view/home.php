@@ -48,119 +48,18 @@
     <!-- banner end -->
 
     <!-- popular start -->
-    <div class="popular-area home-two">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="section-title">
-                        <h2 style="margin-top: 30px;">DANH MỤC SẢN PHẨM</h2>
-                    </div>
-                    <div class="clearfix"></div>
-                    <div class="trend_content row">
-                        <div class="trend-item-slider">
-                            <div class="col-xs-12">
-                                <div class="single-product">
-                                    <div class="single-product-item">
-                                        <div class="single-product-img clearfix hover-effect">
-                                            <a href="#">
-                                                <img class="primary-image" src="view/img/product/5.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h3>GIẦY</h3>
-                                            <h4><a href="#">Xem chi tiết</a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-xs-12">
-                                <div class="single-product">
-                                    <div class="single-product-item">
-                                        <div class="single-product-img clearfix hover-effect">
-                                            <a href="#">
-                                                <img class="primary-image" src="view/img/product/6.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h3>ÁO NỮ</h3>
-                                            <h4><a href="#">Xem chi tiết</a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-xs-12">
-                                <div class="single-product">
-                                    <div class="single-product-item">
-                                        <div class="single-product-img clearfix hover-effect">
-                                            <a href="#">
-                                                <img class="primary-image" src="view/img/product/7.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h3>ÁO KHOÁT</h3>
-                                            <h4><a href="#">Xem chi tiết</a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-xs-12">
-                                <div class="single-product">
-                                    <div class="single-product-item">
-                                        <div class="single-product-img clearfix hover-effect">
-                                            <a href="#">
-                                                <img class="primary-image" src="view/img/product/8.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h3>ÁO NAM</h3>
-                                            <h4><a href="#">Xem chi tiết</a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-xs-12">
-                                <div class="single-product">
-                                    <div class="single-product-item">
-                                        <div class="single-product-img clearfix hover-effect">
-                                            <a href="#">
-                                                <img class="primary-image" src="view/img/product/9.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h3>ÁO Vest</h3>
-                                            <h4><a href="#">TÚI</a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
 
-                            <div class="col-xs-12">
-                                <div class="single-product">
-                                    <div class="single-product-item">
-                                        <div class="single-product-img clearfix hover-effect">
-                                            <a href="#">
-                                                <img class="primary-image" src="view/img/product/5.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h3>ÁO Vest</h3>
-                                            <h4><a href="#">Xem chi tiết</a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
+
+
+
+
+
+
+
+
+
+
     <!-- popular end -->
 
     <!-- banner start -->
@@ -212,9 +111,9 @@
                                         <div class="col-xs-12 col-width">
                                         <div class="single-product">
                                             <div class="single-product-item">
-                                                <div class="single-product-img clearfix hover-effect">
+                                                <div class="single-product-img clearfix hover-effect" style=" width: 100%; height: 305px;object-fit: contain;">
                                                     <a href="?act=product_detail&idProduct='.$pro['id'].'">
-                                                        <img class="format-image primary-image " src="uploads/'.$pro['image'].'" alt="">
+                                                        <img class="format-image primary-image "  src="uploads/'.$pro['image'].'" alt="">
                                                     </a>
                                                 </div>
                                                 <div class="single-product-info clearfix">
@@ -239,9 +138,6 @@
                                         ';
                                     }
                                 ?>
-
-                                    
-
                                 </div>
                             </div>
                             <div id="men" role="tabpanel" class="section-tab-item">
@@ -251,7 +147,7 @@
                                             <div class="single-product-item">
                                                 <div class="single-product-img clearfix hover-effect">
                                                     <a href="#">
-                                                        <img class="primary-image" src="view/img/product/2.jpg" alt="">
+                                                        <img class="primary-image"  src="view/img/product/2.jpg" alt="">
                                                     </a>
                                                 </div>
                                                 <div class="single-product-info clearfix">

@@ -44,9 +44,6 @@
     src: url('../fonts/upload-font/CoreSansGS-45RegularItalic.woff');
 }
 
-html,
-body {}
-
 .container {
     width: 1200px;
 }
@@ -5658,6 +5655,7 @@ tfoot td {
 }
 
 
+<<<<<<< HEAD
 
 
 
@@ -5744,3 +5742,6 @@ tfoot td {
     color: #ffc107;
 }
 
+=======
+/* Catalog list Home*/
+>>>>>>> abed3aa1b677a9da781bee9c1cde4d4adf53586e
