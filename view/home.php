@@ -111,9 +111,9 @@
                                         <div class="col-xs-12 col-width">
                                         <div class="single-product">
                                             <div class="single-product-item">
-                                                <div class="single-product-img clearfix hover-effect">
+                                                <div class="single-product-img clearfix hover-effect" style=" width: 100%; height: 305px;object-fit: contain;">
                                                     <a href="?act=product_detail&idProduct='.$pro['id'].'">
-                                                        <img class="format-image primary-image " src="uploads/'.$pro['image'].'" alt="">
+                                                        <img class="format-image primary-image "  src="uploads/'.$pro['image'].'" alt="">
                                                     </a>
                                                 </div>
                                                 <div class="single-product-info clearfix">
@@ -147,7 +147,7 @@
                                             <div class="single-product-item">
                                                 <div class="single-product-img clearfix hover-effect">
                                                     <a href="#">
-                                                        <img class="primary-image" src="view/img/product/2.jpg" alt="">
+                                                        <img class="primary-image"  src="view/img/product/2.jpg" alt="">
                                                     </a>
                                                 </div>
                                                 <div class="single-product-info clearfix">
