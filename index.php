@@ -73,7 +73,7 @@
                 include"view/login.php";
                 break;
 
-            case 'loginuser ':
+            case 'loginuser':
                 include"view/loginuser.php";
                 break;
 
