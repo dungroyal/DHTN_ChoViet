@@ -92,7 +92,8 @@
                                     <li class="account"><a href="#">Tài khoản</a>
                                         <ul class="submenu-mainmenu">
                                             <li><a href="?act=dangkithanhvien">Tạo tài khoản</a></li>
-                                            <li><a href="?act=loginuser">login</a></li>
+                                            <li><a href="?act=loginuser
+                                            ">login</a></li>
                                             <li><a href="wishlist.html">wishlist</a></li>
                                         </ul>
                                     </li>
