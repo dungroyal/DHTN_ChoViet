@@ -60,23 +60,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
     <!-- popular end -->
 
     <!-- banner start -->
@@ -155,9 +138,6 @@
                                         ';
                                     }
                                 ?>
-
-                                    
-
                                 </div>
                             </div>
                             <div id="men" role="tabpanel" class="section-tab-item">
