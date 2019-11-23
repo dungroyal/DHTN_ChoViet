@@ -34,8 +34,6 @@
 /*  1.0.0  Theme default CSS
 /*----------------------------------------*/
 
-
-
 @font-face {
     font-family: CoreSansGS;
     src: url('../fonts/upload-font/CoreSansGS-45Regular.woff');
@@ -5633,30 +5631,31 @@ tfoot td {
     font-size: 12px;
 }
 
-
-
-
-
-
-.signup-form-dangki{
+.signup-form-dangki {
     background-color: #ececec;
     width: 95%;
     margin: 50px auto;
     padding-left: 20px;
     padding-bottom: 10px;
 }
-.signup-form-header-dangki{
+
+.signup-form-header-dangki {
     font-size: 50px;
     padding-bottom: 10px;
-    
 }
-.checkin-dangki{
+
+.checkin-dangki {
     font-size: 20px;
     padding-bottom: 25px;
 }
-.checkin-dangki>input{
+
+.checkin-dangki>input {
     width: 400px;
 }
-.checkin-dangki>{
+
+.checkin-dangki> {
     width: 400px;
 }
+
+
+/* Catalog list Home*/
