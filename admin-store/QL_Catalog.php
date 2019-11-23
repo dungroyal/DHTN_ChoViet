@@ -11,6 +11,8 @@
         if(isset($_GET['edit']) && ($_GET['edit'] == 1)){
           $id = $_GET['id'];
           $catalogone = catalog_one($id);
+          
+          echo 'Test:'.$catalogone['id'];
           ?>
           <div class="card mb-3">
               <div class="card-header">
@@ -90,7 +92,7 @@
                   <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                       <tr>
-                        <th>ID Catalog</th>
+                        <th>ID</th>
                         <th>Tên danh mục</th>
                         <th>Hình ảnh</th>
                         <th>Action</th>
