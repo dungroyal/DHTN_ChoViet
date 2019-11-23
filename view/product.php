@@ -93,15 +93,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="single-left-widget without-background hidden-sm hidden-md">
-                            <div class="section-title">
-                                <h4>hot deals</h4>
-                                <div class="widget-banner">
-                                    <a href="#"><img src="view/img/banner/8.jpg" alt=""></a>
-                                    <a href="shop-full-grid.html" class="shop-now">shop now</a>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="col-md-9 col-sm-12 col-xs-12">

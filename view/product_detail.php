@@ -107,12 +107,13 @@
                                     </ul>
                                 </div>
                                 <div class="tab-content">
-                                    <div role="tabpanel" class="tab-pane active" id="description">
-                                      
+                                    <div role="tabpanel" class="tab-pane active" id="description">                                    
+                                    <li><?=$product_detail_by_id['descripsion'];?></li>
+                                      <!--
                                        <ul>
                                            <li><i class="fa fa-circle"></i>Intel Core i9 7980XE Hyperthreaded Eighteen,
                                             Bộ xử lý cực ba mươi sáu luồng với khả năng ép xung ổn định tối đa có thể (Tối thiểu 4,6 GHz) với Waterblock CPU EK.</li>
-                                           <li><i class="fa fa-circle"></i>Bo mạch chủ Asus Rampage VI Extreme Edition X299</li>
+                                           
                                            <li><i class="fa fa-circle"></i>Bộ nhớ bốn kênh DDR4 3200 MHz 128 GB</li>
                                            <li><i class="fa fa-circle"></i>2 x Thẻ đồ họa Nvidia RTX 2080Ti 11GB GDDR6 được cấu 
                                            hình trong SLI 3 chiều được trang bị khóa nước EK Full Cover và được ép xung để ép xung ổn định tối đa</li>
@@ -124,6 +125,7 @@
                                            <li><i class="fa fa-circle"></i>838mm x 675mm x 286mm</li>
                                           
                                        </ul>
+                                       -->
                                     </div>
                                     <div role="tabpanel" class="tab-pane" id="specification">
                                         <p>Veniam quasi voluptatem facere nesciunt laborum, quibusdam amet totam fugit, blanditiis doloribus alias eveniet dolore pariatur dolores aliquid!</p>
@@ -131,11 +133,11 @@
                                     </div>
                                     <div role="tabpanel" class="tab-pane" id="review">
                                         <p>- Được xây dựng bằng tay Công cụ xây dựng chính được xếp hạng hàng đầu của OcUK và được điều chỉnh bởi Bộ ép xung số 1 thế giới.
-- Mỗi hệ thống 8Pack được đánh số và ký tên riêng.
-- Màu sắc tùy chỉnh và thông số kỹ thuật linh hoạt mà bạn có thể thảo luận với 8Pack trước khi đặt hàng.
-- Hỗ trợ hậu mãi chuyên dụng từ 8Pack mình.
-- Hai người chuyên giao hàng và lắp đặt.
-- Một PC hiệu năng cực kỳ đáng tin cậy cho những người yêu cầu tốt nhất tuyệt đối!</p>
+                                            - Mỗi hệ thống 8Pack được đánh số và ký tên riêng.
+                                            - Màu sắc tùy chỉnh và thông số kỹ thuật linh hoạt mà bạn có thể thảo luận với 8Pack trước khi đặt hàng.
+                                            - Hỗ trợ hậu mãi chuyên dụng từ 8Pack mình.
+                                            - Hai người chuyên giao hàng và lắp đặt.
+                                            - Một PC hiệu năng cực kỳ đáng tin cậy cho những người yêu cầu tốt nhất tuyệt đối!</p>
                                        
                                     </div>
                                 </div>
