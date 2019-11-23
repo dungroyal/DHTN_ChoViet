@@ -177,7 +177,7 @@ span.price {
         <label>
           <input type="checkbox" checked="checked" name="sameadr"> Địa chỉ giao hàng giống như thanh toán
         </label>
-        <input type="submit" name="btn_submit" value="THANH TOÁN" class="btn">
+        <input type="submit" name="btn_submit" value="THANH TOÁN" class="btn" href="view/sendcart.html">
       </form>
     </div>
   </div>

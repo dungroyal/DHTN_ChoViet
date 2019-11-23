@@ -5,15 +5,8 @@
 	include "functions.php"; 
 	
 	$title = $_POST['topic'];
-	$content = $_POST['address'];
-	$content = $_POST['city'];
-	$content = $_POST['state'];
-	$content = $_POST['cardname'];
-	$content = $_POST['cardnumber'];
-	$content = $_POST['expmonth'];
-	$content = $_POST['expyear'];
-	$content = $_POST['cvv'];
-	$content = $_POST['sameadr'];
+	$content = $_POST['address'] && $_POST['city'] && $_POST['state'] && $_POST['cardname']
+	&& $_POST['cardnumber'] && $_POST['expmonth'] && $_POST['expyear'] && $_POST['cvv'] && $_POST['sameadr'];
 	$nTo = $_POST['name'];
 	$mTo = $_POST['email'];
 	$diachi = 'lenhathao3112@gmail.com';
