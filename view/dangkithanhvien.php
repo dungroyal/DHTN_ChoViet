@@ -33,12 +33,12 @@
                 <div class="checkin-dangki">
                     <div>Mật khẩu (&#42;):</div>
                    
-                    <input type="password"  />
+                    <input type="pass"  />
                 </div>
                 <div class="checkin-dangki">
                     <div>Nhập lại mật khẩu (&#42;):</div>
                     
-                    <input type="password" />
+                    <input type="pass"  />
                 </div>
                 <div class="signup-form-button">
                     <button>Đăng kí</button>
