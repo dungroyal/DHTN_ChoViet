@@ -165,47 +165,9 @@
                                 //Có cả Id Store và ID Catalog
                                 elseif ((isset($_GET['idStore']) && $_GET['idStore'])&&(isset($_GET['idCatalog']) && $_GET['idCatalog'])) {
                                     $productlist_by_id_and_idStore=productlist_by_id_and_idStore($_GET['idStore'],$_GET['idCatalog']);
-                                    foreach ($productlist_by_id_and_idStore as $pro) {
-                                        echo'
-                                        <div class="col-md-4 col-sm-4 col-xs-12">
-                                        <div class="single-product">
-                                            <div class="single-product-item">
-                                                <div class="single-product-img clearfix hover-effect" style=" width: 100%; height: 305px;object-fit: contain;">
-                                                    <a href="#">
-                                                        <img class="primary-image" src="uploads/'.$pro['image'].'" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="single-product-info clearfix">
-                                                    <div class="pro-price">
-                                                        <span class="new-price">$'.$pro['price'].'</span>
-                                                    </div>
-                                                    <div class="new-sale">
-                                                        <span>new</span>
-                                                    </div>
-                                                </div>
-                                                <div class="product-content text-center">
-                                                    <h3>'.$pro['name'].'</h3>
-                                                    <h4><a href="?act=product_detail&idProduct='.$pro['id'].'">view details</a></h4>
-                                                </div>
-                                                <div class="product-action">
-                                                    <ul>
-                                                        <li><a href="#" data-toggle="tooltip" title="Compage"><i class="fa fa-refresh"></i></a></li>
-                                                        <li class="add-bag"><a href="#" data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
-                                                        <li><a href="#" data-toggle="tooltip" title="Like it!"><i class="fa fa-heart"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                        ';
-                                    }
-
-                                }
-
-                                //Có cả ID Catalog không có Id Store
-                                elseif ((!isset($_GET['idStore']))&&(isset($_GET['idCatalog']) && $_GET['idCatalog'])) {
-                                    $Product_by_idCat_in_Product=productlist_by_id($_GET['idCatalog']);
-                                        foreach ($Product_by_idCat_in_Product as $pro) {
+                                    $SL_Product=count($productlist_by_id_and_idStore);
+                                    if ($SL_Product>0) {
+                                        foreach ($productlist_by_id_and_idStore as $pro) {
                                             echo'
                                             <div class="col-md-4 col-sm-4 col-xs-12">
                                             <div class="single-product">
@@ -239,6 +201,56 @@
                                         </div>
                                             ';
                                         }
+                                    }
+                                    else {
+                                        echo'<h5 class="thong_bao_product"><i>Hiện chưa có sản phẩm</i></h5>';
+                                    }
+
+                                }
+
+                                //Có cả ID Catalog không có Id Store
+                                elseif ((!isset($_GET['idStore']))&&(isset($_GET['idCatalog']) && $_GET['idCatalog'])) {
+                                    $Product_by_idCat_in_Product=productlist_by_id($_GET['idCatalog']);
+                                    $SL_Product=count($Product_by_idCat_in_Product);
+                                    if ($SL_Product>0) {
+                                        foreach ($Product_by_idCat_in_Product as $pro) {
+                                            echo'
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                            <div class="single-product">
+                                                <div class="single-product-item">
+                                                    <div class="single-product-img clearfix hover-effect" style=" width: 100%; height: 305px;object-fit: contain;">
+                                                        <a href="#">
+                                                            <img class="primary-image" src="uploads/'.$pro['image'].'" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="single-product-info clearfix">
+                                                        <div class="pro-price">
+                                                            <span class="new-price">$'.$pro['price'].'</span>
+                                                        </div>
+                                                        <div class="new-sale">
+                                                            <span>new</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content text-center">
+                                                        <h3>'.$pro['name'].'</h3>
+                                                        <h4><a href="?act=product_detail&idProduct='.$pro['id'].'">view details</a></h4>
+                                                    </div>
+                                                    <div class="product-action">
+                                                        <ul>
+                                                            <li><a href="#" data-toggle="tooltip" title="Compage"><i class="fa fa-refresh"></i></a></li>
+                                                            <li class="add-bag"><a href="#" data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
+                                                            <li><a href="#" data-toggle="tooltip" title="Like it!"><i class="fa fa-heart"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                            ';
+                                        }                                        
+                                    }
+                                    else {
+                                        echo'<h5 class="thong_bao_product"><i>Hiện chưa có sản phẩm</i></h5>';
+                                    }
                                 }
                                 else {
                                     foreach ($productlist as $pro) {
