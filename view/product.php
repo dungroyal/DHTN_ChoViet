@@ -6,7 +6,7 @@
                     <ul class="breadcrumb">
                         <li><a href="index.html">Home</a><span> - </span></li>
                         <li><a href="shop.html">Danh Mục</a><span> - </span></li>
-                        <li class="active">shop grid with left sidebar</li>
+                        <li class="active">Cửa hàng</li>
                     </ul>
                 </div>
             </div>
@@ -65,13 +65,13 @@
                                  if (isset($_GET['idStore']) && $_GET['idStore']) {     
                                         foreach ($catalog_by_store as $store) {
                                             echo'
-                                                <li><a href="?act=product&idStore='.$store['idStore'].'&idCatalog='.$store['id'].'">'.$store['name'].'</a></li>
+                                                <li><a href="?act=product&idStore='.$store['idStore'].'&idCatalog='.$store['idCatalog'].'">'.$store['name'].'</a></li>
                                             ';
                                         }
                                     }else{
                                         foreach ($cataloglist as $store) {
                                             echo'
-                                                <li><a href="#">'.$store['name'].'</a></li>
+                                                <li><a href="?act=product&idCatalog='.$store['id'].'">'.$store['name'].'</a></li>
                                             ';
                                         }
                                     }
@@ -97,33 +97,26 @@
                 </div>
                 <div class="col-md-9 col-sm-12 col-xs-12">
                     <div class="shop-item-filter">
-                        <div class="col-lg-4 col-md-3 col-sm-4 col-xs-12">
-                            <div class="shop-tab clearfix">
-                                <!-- Nav tabs -->
-                                <ul role="tablist">
-                                    <li role="presentation" class="active"><a data-toggle="tab" role="tab" aria-controls="grid" class="grid-view" href="#grid"><i class="fa fa-th"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-5 col-sm-4 hidden-xs">
                             <div class="filter-by text-center">
-                                <h3>Tên danh mục</h3>
+                                <?php                                
+                                     if ((isset($_GET['idStore']) && $_GET['idStore'])&&(!isset($_GET['idCatalog']))) {
+                                        foreach ($store_by_id as $store) {
+                                            echo'                                            
+                                                <h2 style="margin: 0px;">Tất cả sản phẩm của<strong> '.$store['name'].'</strong></h2>
+                                            ';
+                                        }
+                                     }elseif (isset($_GET['idCatalog']) && $_GET['idCatalog']) {
+                                         $name_namecatalog_in_product=get_catalog_name($_GET['idCatalog']);
+                                         echo'                                            
+                                                <h2 style="margin: 0px;">'.$name_namecatalog_in_product['name'].'</strong></h2>
+                                            ';
+                                     }else {
+                                         echo'<h2 style="margin: 0px;">Tất cả sản phẩm</h2>';
+                                     }
+                                
+                                
+                                ?>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-4 hidden-xs">
-                            <div class="filter-by right">
-                                <h4>Show: </h4>
-                                <form action="#">
-                                    <div class="select-filter">
-                                        <select>
-                                              <option value="10">12</option>
-                                              <option value="20">16</option>
-                                              <option value="30">20</option>
-                                            </select>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
                     </div>
                     <div class="clearfix"></div>
                     <div class="tab-content">
@@ -131,7 +124,8 @@
                             <div class="row">
 
                             <?php
-                                 if (isset($_GET['idStore']) && $_GET['idStore']) {
+                                //Có cả ID Store không có Id Catalog
+                                 if ((isset($_GET['idStore']) && $_GET['idStore'])&&(!isset($_GET['idCatalog']))) {
                                         foreach ($productlist_by_store as $pro) {
                                             echo'
                                             <div class="col-md-4 col-sm-4 col-xs-12">
@@ -139,7 +133,7 @@
                                                 <div class="single-product-item">
                                                     <div class="single-product-img clearfix hover-effect" style=" width: 100%; height: 305px;object-fit: contain;">
                                                         <a href="#">
-                                                            <img class="primary-image" src="uploads/'.$pro['image'].'" alt="" style=" padding: 20px;">
+                                                            <img class="primary-image" src="uploads/'.$pro['image'].'" alt="">
                                                         </a>
                                                     </div>
                                                     <div class="single-product-info clearfix">
@@ -166,13 +160,93 @@
                                         </div>
                                             ';
                                         }
-                                }else{
+                                }
+                                
+                                //Có cả Id Store và ID Catalog
+                                elseif ((isset($_GET['idStore']) && $_GET['idStore'])&&(isset($_GET['idCatalog']) && $_GET['idCatalog'])) {
+                                    $productlist_by_id_and_idStore=productlist_by_id_and_idStore($_GET['idStore'],$_GET['idCatalog']);
+                                    foreach ($productlist_by_id_and_idStore as $pro) {
+                                        echo'
+                                        <div class="col-md-4 col-sm-4 col-xs-12">
+                                        <div class="single-product">
+                                            <div class="single-product-item">
+                                                <div class="single-product-img clearfix hover-effect" style=" width: 100%; height: 305px;object-fit: contain;">
+                                                    <a href="#">
+                                                        <img class="primary-image" src="uploads/'.$pro['image'].'" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="single-product-info clearfix">
+                                                    <div class="pro-price">
+                                                        <span class="new-price">$'.$pro['price'].'</span>
+                                                    </div>
+                                                    <div class="new-sale">
+                                                        <span>new</span>
+                                                    </div>
+                                                </div>
+                                                <div class="product-content text-center">
+                                                    <h3>'.$pro['name'].'</h3>
+                                                    <h4><a href="?act=product_detail&idProduct='.$pro['id'].'">view details</a></h4>
+                                                </div>
+                                                <div class="product-action">
+                                                    <ul>
+                                                        <li><a href="#" data-toggle="tooltip" title="Compage"><i class="fa fa-refresh"></i></a></li>
+                                                        <li class="add-bag"><a href="#" data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
+                                                        <li><a href="#" data-toggle="tooltip" title="Like it!"><i class="fa fa-heart"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                        ';
+                                    }
+
+                                }
+
+                                //Có cả ID Catalog không có Id Store
+                                elseif ((!isset($_GET['idStore']))&&(isset($_GET['idCatalog']) && $_GET['idCatalog'])) {
+                                    $Product_by_idCat_in_Product=productlist_by_id($_GET['idCatalog']);
+                                        foreach ($Product_by_idCat_in_Product as $pro) {
+                                            echo'
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                            <div class="single-product">
+                                                <div class="single-product-item">
+                                                    <div class="single-product-img clearfix hover-effect" style=" width: 100%; height: 305px;object-fit: contain;">
+                                                        <a href="#">
+                                                            <img class="primary-image" src="uploads/'.$pro['image'].'" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="single-product-info clearfix">
+                                                        <div class="pro-price">
+                                                            <span class="new-price">$'.$pro['price'].'</span>
+                                                        </div>
+                                                        <div class="new-sale">
+                                                            <span>new</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content text-center">
+                                                        <h3>'.$pro['name'].'</h3>
+                                                        <h4><a href="?act=product_detail&idProduct='.$pro['id'].'">view details</a></h4>
+                                                    </div>
+                                                    <div class="product-action">
+                                                        <ul>
+                                                            <li><a href="#" data-toggle="tooltip" title="Compage"><i class="fa fa-refresh"></i></a></li>
+                                                            <li class="add-bag"><a href="#" data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
+                                                            <li><a href="#" data-toggle="tooltip" title="Like it!"><i class="fa fa-heart"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                            ';
+                                        }
+                                }
+                                else {
                                     foreach ($productlist as $pro) {
                                         echo'
                                         <div class="col-md-4 col-sm-4 col-xs-12">
                                         <div class="single-product">
                                             <div class="single-product-item">
-                                                <div class="single-product-img clearfix hover-effect">
+                                                <div class="single-product-img clearfix hover-effect "style=" width: 100%; height: 305px;object-fit: contain;">
                                                     <a href="#">
                                                         <img class="primary-image" src="uploads/'.$pro['image'].'" alt="">
                                                     </a>

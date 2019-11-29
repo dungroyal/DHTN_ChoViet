@@ -44,6 +44,19 @@
         return $kq;
     }
 
+    function productlist_by_id_and_idStore($idStore=0,$idcat=0){
+        $sql="SELECT * FROM product WHERE 1";
+            $sql.=" AND idCatalog=".$idcat;
+            $sql.=" AND idStore=".$idStore;
+
+        $sql.=" ORDER BY id DESC";
+        $sql.=" limit 8";
+
+        $kq=pdo_query($sql);
+        return $kq;
+    }
+
+
     function product_detail_by_id($id){
         $sql="SELECT * from product where id=".$id;
         $kq=pdo_query_one($sql);
