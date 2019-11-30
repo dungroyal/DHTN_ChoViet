@@ -2,7 +2,7 @@
 	//goi thu vien
 	include('class.smtp.php');
 	include "class.phpmailer.php"; 
-	include "functions.php"; 
+	include "functions2.php"; 
 	
 	$title = $_POST['topic'];
 	$content = $_POST['message'];

@@ -32,6 +32,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="form-newsletter-area"> 
                 <div class="container">         
                     <div class="row adjust-padding">
@@ -48,12 +49,16 @@
                                             <form method="post" action="model/sendmailcontact.php">
                                                 <div class="name_email_form clearfix">
                                                     <div class="left_comment">
-                                                        <p>Name</p>
+                                                        <p>Họ và tên</p>
                                                         <input type="text" name="name">
                                                     </div>
                                                     <div class="left_comment">
                                                         <p>E-mail </p>
                                                         <input type="email" name="email">
+                                                    </div>
+                                                    <div class="left_comment">
+                                                        <p>Số điện thoại </p>
+                                                        <input type="mes" name="phone">
                                                     </div>
                                                     <div class="left_comment">
                                                         <p>Tiêu Đề  </p>
