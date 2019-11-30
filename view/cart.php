@@ -120,7 +120,7 @@ span.price {
 <div class="row">
   <div class="col-75">
     <div class="container">
-      <form method="post" action="model/sendmailcact.php">
+      <form method="post" action="model/sendmailcart.php">
       
         <div class="row">
           <div class="col-50">
@@ -177,7 +177,7 @@ span.price {
         <label>
           <input type="checkbox" checked="checked" name="sameadr"> Địa chỉ giao hàng giống như thanh toán
         </label>
-        <input type="submit" name="btn_submit" value="THANH TOÁN" class="btn" href="view/sendcart.html">
+        <input type="submit" name="btn_submit" value="THANH TOÁN" class="btn">
       </form>
     </div>
   </div>
