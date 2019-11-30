@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 21, 2019 at 03:28 AM
+-- Generation Time: Nov 30, 2019 at 02:15 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -68,7 +68,7 @@ INSERT INTO `catalog` (`id`, `name`, `image`) VALUES
 (40, 'Điện tử & Điện gia dụng', NULL),
 (41, 'Thiết bị điện tử', NULL),
 (42, 'Thời trang Nam', NULL),
-(43, 'Thời trang Nữ', NULL),
+(43, 'Thời trang Nữ', '40S600T2.jpg'),
 (44, 'Điện thoại & Phụ kiện', NULL),
 (45, 'Mẹ và bé', NULL),
 (47, 'Máy tính & Laptop', NULL),
@@ -98,6 +98,7 @@ INSERT INTO `catalog` (`id`, `name`, `image`) VALUES
 CREATE TABLE `catalog_store` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
+  `image` varchar(255) NOT NULL,
   `idStore` int(100) NOT NULL,
   `idCatalog` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -106,9 +107,14 @@ CREATE TABLE `catalog_store` (
 -- Dumping data for table `catalog_store`
 --
 
-INSERT INTO `catalog_store` (`id`, `name`, `idStore`, `idCatalog`) VALUES
-(6, 'Thiết bị điện gia dụng', 7, 55),
-(7, 'Điện thoại & Phụ kiện', 7, 44);
+INSERT INTO `catalog_store` (`id`, `name`, `image`, `idStore`, `idCatalog`) VALUES
+(6, 'Thiết bị điện gia dụng', '', 7, 55),
+(7, 'Điện thoại & Phụ kiện', '', 7, 44),
+(8, 'Thời trang Nam', '', 8, 42),
+(9, 'Thời trang Nữ', '', 8, 43),
+(10, 'Phụ kiện điện tử', '10f3ad61996327e0aa5d8e27700ecd6e.jpg', 7, 63),
+(11, 'Tivi & Thiết bị điện gia dụng', 'samsung.jpg', 7, 64),
+(12, 'Giầy dép Nam', 'img_3061_master.png', 8, 50);
 
 -- --------------------------------------------------------
 
@@ -165,8 +171,12 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id`, `name`, `price`, `soluong`, `image`, `view`, `descripsion`, `hot`, `idCatalog`, `idStore`) VALUES
-(136, 'Smart Tivi Samsung 4K 55 inch UA55NU7090', 100000, 100, 'vn-uhd-ru7300-ua55ru7300kxxv-lperspectiveblack-150456403.webp', 1000, 'Sản phẩm thịnh hành năm 2019', 0, 55, 7),
-(137, 'Smart Tivi Samsung 4K 55 inch UA55NU7090', 100000, 100, '1.jpg', 1000, 'Sản phẩm thịnh hành năm 2019', 0, 44, 7);
+(136, 'Smart Tivi Samsung 4K 55 inch UA55NU7090', 100000, 100, '40S600T2.jpg', 1000, 'Sản phẩm thịnh hành năm 2019', 1, 64, 7),
+(138, 'Quần thun Nam Adidas F2031', 100000, 100, '6ecf6ba2f2694c388b5ba83a00d14b09_9366.webp', 1000, 'Sản phẩm thịnh hành năm 2019', 0, 42, 8),
+(142, 'Smart TV', 150, 100, 'img_3061_master.png', 1000, 'Sản phẩm thịnh hành năm 2019', 1, 63, 7),
+(143, 'Áo khoát Adidas ACE ', 150000, 200, 'Mau.jpg', 1000, 'Sản phẩm thịnh hành năm 2019', 1, 42, 8),
+(144, 'Áo khoát Adidas nữ cao cấp màu kem', 1500000, 100, '724211f7c0ef4082b97baa2b007d79ae_9366.webp', 1000, 'Sản phẩm thịnh hành năm 2019', 0, 43, 8),
+(145, 'Giầy Adidas Ace cao cấp trắng đen Nam ACE12165', 3000000, 100, 'MG_5424.jpg', 1000, 'Sản phẩm thịnh hành năm 2019', 0, 50, 8);
 
 -- --------------------------------------------------------
 
@@ -312,7 +322,7 @@ ALTER TABLE `catalog`
 -- AUTO_INCREMENT for table `catalog_store`
 --
 ALTER TABLE `catalog_store`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `comment`
@@ -330,7 +340,7 @@ ALTER TABLE `order`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=138;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=146;
 
 --
 -- AUTO_INCREMENT for table `store`

@@ -19,7 +19,8 @@
                     <div class="shop-left-sidebar">
 
                                 <?php
-                                 if (isset($_GET['idStore']) && $_GET['idStore']) {                                     
+                                 if (isset($_GET['idStore']) && $_GET['idStore']) {                                   
+                                    $SL_Product=count($productlist_by_store);                       
                                     foreach ($store_by_id as $store) {
                                         echo'
                                         <div class="single-left-widget">
@@ -38,7 +39,7 @@
                                                             <div class="b-grid__row">
                                                                 <ul>
                                                                     <li><label>Đánh giá:</label><span>100</span></li>
-                                                                    <li><label>Số sản phẩm:</label><span>175</span></li>
+                                                                    <li><label>Số sản phẩm:</label><span>'.$SL_Product.'</span></li>
                                                                     <li><label>Ngày tham gia:</label><span>'.$store['Date'].'</span></li>
                                                                     <li><label>Tỉnh/TP:</label><span>'.$store['diachi'].'</span></li>
                                                                 </ul>

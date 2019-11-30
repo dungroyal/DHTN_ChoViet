@@ -154,7 +154,25 @@
                                     </li>
                                     <li><a href="#">Danh mục</a>
                                         <div class="mega-menu">
-                                            <span>
+                                            <?php
+                                                $SL_Catalog=count($cataloglist);   
+
+                                                for ($i=0; $i < 23; $i++) { 
+                                                    foreach ($cataloglist as $cat) {
+                                                        echo'<a href="#">'.$cat['name'].'</a>';
+                                                    }
+
+                                                    if ($i==3) {
+                                                        echo'eeeeee';
+                                                    }
+
+                                                    $i+=1;
+                                                }
+
+
+                                            ?>
+
+                                                
                                                     <a href="shop-grid-left-sidebar.html" class="title">Thời trang nam</a>
                                                     <a href="#">Đồ nam</a>
                                                     <a href="#">Đồ nữ</a>
@@ -163,6 +181,7 @@
                                                     <a href="#">Phong cách mới</a>
                                                     <a href="#">Thời trang thời thượng</a>
                                                 </span>
+
                                             <span>
                                                     <a href="shop-grid-left-sidebar.html" class="title">Mẹ & bé</a>
                                                     <a href="#">Nhà cửa-đời sống</a>
@@ -188,7 +207,6 @@
                                                     <a href="#">Chăm sóc thú cưng</a>
                                                     <a href="#">Đồ chơi cho thú cưng</a>
                                                     <a href="#">Thuốc cho thú cưng</a>
-                                                   
                                                 </span>
 
                                         </div>
