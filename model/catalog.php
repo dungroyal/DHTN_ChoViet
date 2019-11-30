@@ -37,6 +37,15 @@
         $kq=pdo_query_one($sql);
         return $kq;
     }
+
+    function cataloglist_header($dau,$cuoi){
+        $sql="SELECT * FROM catalog ";
+        $sql.=" order by id ASC";
+        $sql.=" limit ".$dau;
+        $sql.=" ,".$cuoi;
+        $kq=pdo_query($sql);
+        return $kq;
+    }
     
 
 
