@@ -19,7 +19,8 @@
 			}
 			
 			body {
-				margin: 0;
+				margin: 0px auto;
+				width: 80%;
 			}
 			
 			header {
@@ -66,6 +67,7 @@
 	
 	<body>
 		<header>
+			<img src="http://choviet.xyz/images/4.png" alt="Logo" style="width:300px;text-align: center; margin: 0px auto;">
 			<h1>Chào quý khách</h4>
 				<p>Chợ Việt gửi đến khách hàng hóa đơn từ bên shop, Quý khách vui lòng kiểm tra hóa đơn điện tử bên dưới phần chi tiết đơn hàng.</p>
 		</header>
@@ -83,11 +85,11 @@
 				<p name="city">Hồ Chí Minh</p>
 				<p name="state">Việt Nam</p>
 			</div>
-			<h4>Xuất hóa đơn điện tử từ Chợ Việt </h2>
+			<h3>Xuất hóa đơn điện tử từ Chợ Việt </h3>
 		</div>
 		<div class="bang">
 			<h2 style="color:blue;">Chi tiết đơn hàng</h2>
-			<table style="width:800px;display: table;
+			<table style="width:80%;display: table;
 				border-collapse: separate;
 				border-spacing: 0px;
 				border-color: gray;
@@ -99,7 +101,7 @@
 					<th>Giảm giá</th>
 					<th>Tổng tạm tính</th>
 				</tr>
-				<tr style="height: 70px;width: 800px;">
+				<tr style="height:70px;width: 80%;">
 					<td>IP 11 Pro Max 256 GB</td>
 					<td>30.000.000 VNĐ</td>
 					<td>1</td>
@@ -143,6 +145,10 @@
 				</tr>
 			</table>
 		</div>
+		<h3>Thông tin chi tiết: </h2>
+			<a href="?act=product_detail"></a>
+			<h3>Mua tiếp: </h2>
+				<a href="?act=product"></a>
 	</body>
 	
 	</html>';
