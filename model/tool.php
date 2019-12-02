@@ -141,6 +141,12 @@ function catalog_delete($id){
     }
 }
 
+function info_user($iduser){
+    $sql="SELECT * from users WHERE id=".$iduser;
+    $kq=pdo_query_one($sql);
+    return $kq;
+}
+
 /************************************************* Truy vấn *****************************************/
 
 
@@ -169,6 +175,8 @@ function loai_select_by_id($ma_loai){
     $sql = "SELECT * FROM loai WHERE ma_loai=?";
     return pdo_query_one($sql, $ma_loai);
 }
+
+
 
 
 /******************************************************************************************/

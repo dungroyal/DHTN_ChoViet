@@ -89,12 +89,28 @@
                         <div class="header-top-right">
                             <div class="account-cart">
                                 <ul>
-                                    <li class="account"><a href="?act=loginuser">Tài khoản</a>
-                                        <ul class="submenu-mainmenu">
-                                            <li><a href="?act=dangkithanhvien">Tạo tài khoản</a></li>
-                                            <li><a href="?act=loginuser">login</a></li>
-                                        </ul>
-                                    </li>
+
+                                    <?php
+                                        if (isset($_SESSION['iduserguest'])) {
+                                            $info_user=info_user($_SESSION['iduserguest']);
+                                            echo'
+                                                <li class="account"><a href="#">'.$info_user['name'].'</a>
+                                                    <ul class="submenu-mainmenu">
+                                                        <li><a href="?act=logout_user">Đăng xuất</a></li>
+                                                    </ul>
+                                                </li>
+                                            ';                                            
+                                        }else {
+                                            echo'
+                                                <li class="account"><a href="#">Tài khoản</a>
+                                                    <ul class="submenu-mainmenu">
+                                                        <li><a href="?act=loginuser">Đăng nhập</a></li>
+                                                        <li><a href="?act=dangkitaikhoan">Đăng kí</a></li>
+                                                    </ul>
+                                                </li>
+                                            ';
+                                        }
+                                    ?>
                                   
                                        
                                     </li>

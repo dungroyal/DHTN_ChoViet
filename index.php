@@ -5,6 +5,7 @@
     include "model/store.php";
     include "model/product.php";
     include "model/catalog.php";
+    include "model/tool.php";
     
 
     $productlist=productlist();
@@ -68,6 +69,11 @@
             case 'dangkithanhvien':
                 include"view/dangkithanhvien.php";
                 break;
+
+            case 'dangkitaikhoan':
+                include"view/dang-ki-user.php";
+                break;
+    
                
             case 'login':
                 include"view/login.php";
@@ -76,6 +82,13 @@
             case 'loginuser':
                 include"view/loginuser.php";
                 break;
+
+            case 'logout_user':
+				unset($_SESSION['nameuser']);
+				unset($_SESSION['iduserstore']);
+				unset($_SESSION['iduserguest']);
+				header('location: index.php');
+				break;
 
             default:
                 include"view/home.php";
