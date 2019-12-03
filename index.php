@@ -2,6 +2,7 @@
     ob_start();
     session_start();
     include "model/pdo.php";
+    include "model/user.php";
     include "model/store.php";
     include "model/product.php";
     include "model/catalog.php";

@@ -1,8 +1,4 @@
 <?php
-    function check_user($user,$pass){
-        $sql="SELECT * FROM users WHERE name=? AND pass=?";
-        return pdo_query_one($sql, $user,$pass);
-    }
     
 
     function storelist(){
