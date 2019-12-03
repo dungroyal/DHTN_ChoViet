@@ -12,6 +12,6 @@
 	//test gui mail
 	$mail = sendMail($title, $content, $nTo, $mTo,$diachicc='');
 	if($mail==1)
-	echo 'Thành công mời vào email xem kết quả.';
-	else echo 'Có lỗi!';
+	$erro = 'Thành công mời vào email xem kết quả.';
+	else $erro = 'Có lỗi!';
 ?>

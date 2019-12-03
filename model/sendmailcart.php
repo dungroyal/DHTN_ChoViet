@@ -158,6 +158,6 @@
 	//test gui mail
 	$mail = sendMail($title, $content, $nTo, $mTo,$diachicc='');
 	if($mail==1)
-	echo 'Bạn đã thanh toán thành công mời vào email xem đơn hàng của bạn.';
-	else echo 'Có lỗi!';
+	$erro = 'Bạn đã thanh toán thành công mời vào email xem đơn hàng của bạn.';
+	else $erro = 'Có lỗi!';
 ?>

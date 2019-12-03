@@ -120,7 +120,7 @@ span.price {
 <div class="row">
   <div class="col-75">
     <div class="container">
-      <form method="post" action="model/sendmailcart.php">
+      <form method="post">
       
         <div class="row">
           <div class="col-50">
@@ -179,6 +179,11 @@ span.price {
         </label>
         <input type="submit" name="btn_submit" value="THANH TOÁN" class="btn">
       </form>
+      <?php
+      if(isset($erro)){
+        echo $erro;
+      }
+      ?>
     </div>
   </div>
   <div class="col-25">
