@@ -89,12 +89,28 @@
                         <div class="header-top-right">
                             <div class="account-cart">
                                 <ul>
-                                    <li class="account"><a href="?act=loginuser">Tài khoản</a>
-                                        <ul class="submenu-mainmenu">
-                                            <li><a href="?act=dangkithanhvien">Tạo tài khoản</a></li>
-                                            <li><a href="?act=loginuser">login</a></li>
-                                        </ul>
-                                    </li>
+
+                                    <?php
+                                        if (isset($_SESSION['iduserguest'])) {
+                                            $info_user=info_user($_SESSION['iduserguest']);
+                                            echo'
+                                                <li class="account"><a href="#">'.$info_user['name'].'</a>
+                                                    <ul class="submenu-mainmenu">
+                                                        <li><a href="?act=logout_user">Đăng xuất</a></li>
+                                                    </ul>
+                                                </li>
+                                            ';                                            
+                                        }else {
+                                            echo'
+                                                <li class="account"><a href="#">Tài khoản</a>
+                                                    <ul class="submenu-mainmenu">
+                                                        <li><a href="?act=loginuser">Đăng nhập</a></li>
+                                                        <li><a href="?act=dangkitaikhoan">Đăng kí</a></li>
+                                                    </ul>
+                                                </li>
+                                            ';
+                                        }
+                                    ?>
                                   
                                        
                                     </li>
@@ -154,60 +170,42 @@
                                     </li>
                                     <li><a href="#">Danh mục</a>
                                         <div class="mega-menu">
-                                            <?php
-                                                $SL_Catalog=count($cataloglist);   
-
-                                                for ($i=0; $i < 23; $i++) { 
-                                                    foreach ($cataloglist as $cat) {
-                                                        echo'<a href="#">'.$cat['name'].'</a>';
+                                            <span>
+                                                <?php
+                                                    $cataloglist_0_7=cataloglist_header(0,7);
+                                                    foreach ($cataloglist_0_7 as $cat) {                                                        
+                                                            echo'<a href="?act=product&idCatalog='.$cat['id'].'">'.$cat['name'].'</a>';
                                                     }
-
-                                                    if ($i==3) {
-                                                        echo'eeeeee';
-                                                    }
-
-                                                    $i+=1;
-                                                }
-
-
-                                            ?>
-
-                                                
-                                                    <a href="shop-grid-left-sidebar.html" class="title">Thời trang nam</a>
-                                                    <a href="#">Đồ nam</a>
-                                                    <a href="#">Đồ nữ</a>
-                                                    <a href="#">Đồ baby</a>
-                                                    <a href="#">Phụ kiện thời trang</a>
-                                                    <a href="#">Phong cách mới</a>
-                                                    <a href="#">Thời trang thời thượng</a>
-                                                </span>
+                                                ?>
+                                            </span>
 
                                             <span>
-                                                    <a href="shop-grid-left-sidebar.html" class="title">Mẹ & bé</a>
-                                                    <a href="#">Nhà cửa-đời sống</a>
-                                                    <a href="#">Giày dép nữ</a>
-                                                    <a href="#">Sức khỏe-sắc đẹp</a>
-                                                    <a href="#">Bách hóa online</a>
-                                                    <a href="#">Thời trang trẻ em</a>
-                                                    <a href="#">Giặt giũ-chăm sóc nhà cửa</a>
-                                                    <a href="#">Đồ chơi</a>
-                                                </span>
+                                                <?php
+                                                    $cataloglist_8_15=cataloglist_header(7,7);
+                                                    foreach ($cataloglist_8_15 as $cat) {                                                        
+                                                            echo'<a href="?act=product&idCatalog='.$cat['id'].'">'.$cat['name'].'</a>';
+                                                    }
+                                                ?>
+                                            </span>
+
                                             <span>
-                                                    <a href="shop-grid-left-sidebar.html" class="title">Thiết bị điện tử</a>
-                                                    <a href="#">Laptop</a>
-                                                    <a href="#">Điện thoại</a>
-                                                    <a href="#">Phụ kiện máy tính-điện thoại</a>
-                                                    <a href="#">Thể thao du lịch</a>
-                                                    <a href="#">Ô tô & xe máy</a>
-                                                   
-                                                </span>
-                                                <span>
-                                                    <a href="shop-grid-left-sidebar.html" class="title">Thú cưng</a>
-                                                    <a href="#">Thú cưng</a>
-                                                    <a href="#">Chăm sóc thú cưng</a>
-                                                    <a href="#">Đồ chơi cho thú cưng</a>
-                                                    <a href="#">Thuốc cho thú cưng</a>
-                                                </span>
+                                                <?php
+                                                    $cataloglist_8_15=cataloglist_header(14,7);
+                                                    foreach ($cataloglist_8_15 as $cat) {                                                        
+                                                            echo'<a href="?act=product&idCatalog='.$cat['id'].'">'.$cat['name'].'</a>';
+                                                    }
+                                                ?>
+                                            </span>
+
+                                            <span>
+                                                <?php
+                                                    $cataloglist_8_15=cataloglist_header(21,7);
+                                                    foreach ($cataloglist_8_15 as $cat) {                                                        
+                                                            echo'<a href="?act=product&idCatalog='.$cat['id'].'">'.$cat['name'].'</a>';
+                                                    }
+                                                ?>
+                                            </span>
+
 
                                         </div>
                                     </li>

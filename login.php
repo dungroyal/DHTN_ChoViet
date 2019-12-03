@@ -77,14 +77,12 @@
 							if (($id_user > 0) && ($lever==1)) {
 								$_SESSION['nameuser'] = $name_user;
 								$_SESSION['iduseradmin'] = $id_user;
-								$_SESSION['iduserguest'] = $id_user;
 								header('Location: admin.php');
 							}
 
 							if (($id_user > 0) && ($lever==2)) {
 								$_SESSION['nameuser'] = $name_user;
 								$_SESSION['iduserstore'] = $id_user;
-								$_SESSION['iduserguest'] = $id_user;
 								header('Location: admin-store.php');
 							}
 

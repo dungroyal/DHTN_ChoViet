@@ -731,7 +731,7 @@ span.cart-info a:hover {
 }
 
 .mainmenu ul li .mega-menu span {
-    width: 21%;
+    width: 33%;
 }
 
 .mainmenu ul li .mega-menu span:last-child {
@@ -5629,21 +5629,39 @@ tfoot td {
 }
 
 .signup-form-dangki {
-    background-color: #ececec;
+    background-color: white;
     width: 95%;
-    margin: 50px auto;
-    padding-left: 20px;
+    margin: 15px auto;
+    padding-left: 100px;
     padding-bottom: 10px;
 }
 
+#submitbtn{
+    padding: 10px;
+    margin-left: 8px;
+    margin-top: 8px;
+    border: 1px solid black;
+    border-radius: 3px;
+    background: wheat;
+    font-weight: bold;
+}
+
+#submitbtn:hover{
+    border: 1px solid black;
+    font-weight: bold;
+    box-shadow: 2px 2px 1px #2e6b30;
+    background: black;
+    color: white;
+    transition: all .5s;
+}
 .signup-form-header-dangki {
-    font-size: 50px;
-    padding-bottom: 10px;
+    font-size: 20px;
+    padding: 10px;
 }
 
 .checkin-dangki {
-    font-size: 20px;
-    padding-bottom: 25px;
+    font-size: 16px;
+    padding: 10px;
 }
 
 .checkin-dangki>input {
@@ -5654,23 +5672,27 @@ tfoot td {
     width: 400px;
 }
 
-.pp {
-    background-color: #efefef96;
-    min-height: 510px;
-}
+.checkin-dangki {
+    display: block;
+    padding: 7px 8px;
+    margin-bottom: 7px;
+  }
+ .checkin-dangki:hover {
+    background: #f1f7fa;
+  }
 
-.loginbox1 {
+
+
+.loginbox1 {    
     min-height: 400px;
-    width: 320px;
+    width: 500px;
     background-color: #000c;
     color: #fff;
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
     box-sizing: border-box;
-    padding: 70px 30px;
-    margin: 25px 0px;
+    padding: 40px 30px;
+    margin: 60px auto;    
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px #000c;
 }
 
 .avatar1 {
@@ -5719,7 +5741,7 @@ input[type="password"] {
     color: #fff;
     font-size: 18px;
     border-radius: 20px;
-    animation: all reverse 2s;
+    transition: all .5s;
 }
 
 .loginbox1 input[type="submit"]:hover {
@@ -5730,8 +5752,8 @@ input[type="password"] {
 
 .loginbox1 a {
     text-decoration: none;
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 14px;
+    line-height: 25px;
     color: darkgray;
 }
 
