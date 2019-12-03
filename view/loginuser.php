@@ -2,11 +2,10 @@
   <h1>Đăng nhập Chợ Việt</h1>
   <form action="index.php?act=loginuser" method="post">
     <p>Tên đăng nhập:</p>
-    <input type="text" name="user" placeholder="Enter Username">
+    <input type="text" name="user" placeholder="Enter Username" autocomplete="no" required>
     <p>Mật khẩu:</p>
-    <input type="password" name="pasword" placeholder="Enter Password">   
-    
-    <input type="submit" name="dang_nhap_user" value="Đăng nhập">  
+    <input type="password" name="pasword" placeholder="Enter Password" required>   
+
 
     <?php
         if (isset($_POST['dang_nhap_user']) && $_POST['dang_nhap_user']) {
@@ -21,12 +20,12 @@
           if (($id_user > 0) && ($lever==0)) {
             $_SESSION['iduserguest'] = $id_user;
             header('Location: index.php');
+          }else{
+            echo'<span class="thongbao-dangnhap">Sai Tên đăng nhập hoặc mật khẩu</span> <br>';
           }
-
-        }else{
-          echo'<a href="#"><strong> Sai Tên đăng nhập hoặc mật khẩu</strong></a><br>';
         }
-    ?>
+    ?>    
+    <input type="submit" name="dang_nhap_user" value="Đăng nhập">  
 
 
     <a href="#">Quên mật khẩu!</a><br>

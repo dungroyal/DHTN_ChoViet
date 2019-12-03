@@ -5742,6 +5742,7 @@ input[type="password"] {
     font-size: 18px;
     border-radius: 20px;
     transition: all .5s;
+    margin-top: 10px;
 }
 
 .loginbox1 input[type="submit"]:hover {
@@ -5764,4 +5765,12 @@ input[type="password"] {
 .thong_bao_product {
     margin-top: 20px;
     text-align: center;
+}
+
+.thongbao-dangnhap{
+    margin: 0px auto;
+    color: yellow;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 85px;
 }
