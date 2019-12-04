@@ -1,106 +1,5 @@
 <style>
-body {
-  font-family: Arial;
-  font-size: 17px;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.row {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-  margin: 0 -16px; 
-}
-
-.col-25 {
-  -ms-flex: 25%; /* IE10 */
-  flex: 25%;
-}
-
-.col-50 {
-  -ms-flex: 50%; /* IE10 */
-  flex: 50%;
-}
-
-.col-75 {
-  -ms-flex: 75%; /* IE10 */
-  flex: 75%;
-}
-
-.col-25,
-.col-50,
-.col-75 {
-  padding: 0 16px;
-}
-
-.container {
-  background-color: #000000;
-  
-  border: 1px solid lightgrey;
-  border-radius: 3px;
-}
-
-input[type=text] {
-  width: 100%;
-  margin-bottom: 20px;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-
-label {
-  margin-bottom: 10px;
-  display: block;
-}
-
-.icon-container {
-  margin-bottom: 20px;
-  padding: 7px 0;
-  font-size: 24px;
-}
-
-.btn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px;
-  margin: 10px 0;
-  border: none;
-  width: 100%;
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 17px;
-}
-
-.btn:hover {
-  background-color: #45a049;
-}
-
-a {
-  color: #2196F3;
-}
-
-hr {
-  border: 1px solid lightgrey;
-}
-
-span.price {
-  float: right;
-  color: grey;
-}
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
-@media (max-width: 800px) {
-  .row {
-    flex-direction: column-reverse;
-  }
-  .col-25 {
-    margin-bottom: 20px;
-  }
-}
+    
 </style>
 <!-- breadcrumb start -->
 <div class="breadcrumb-area">
@@ -117,85 +16,95 @@ span.price {
 </div>
 <!-- breadcrumb end -->
 <!-- cart start -->
-<div class="row">
-  <div class="col-75">
-    <div class="container">
+
+<h1>Shopping Cart</h1>
+ 
+<div class="shopping-cart">
+ 
+  <div class="column-labels">
+    <label class="product-image">Image</label>
+    <label class="product-details">Product</label>
+    <label class="product-price">Price</label>
+    <label class="product-quantity">Quantity</label>
+    <label class="product-removal">Remove</label>
+    <label class="product-line-price">Total</label>
+  </div>
+ 
+  <div class="product">
+    <div class="product-image">
+      <img src="images/nike.jpg">
+    </div>
+    <div class="product-details">
+      <div class="product-title">Nike Flex Form TR Women's Sneaker</div>
+      <p class="product-description"> It has a lightweight, breathable mesh upper with forefoot cables for a locked-down fit.</p>
+    </div>
+    <div class="product-price">12.99</div>
+    <div class="product-quantity">
+      <input type="number" value="2" min="1">
+    </div>
+    <div class="product-removal">
+      <button class="remove-product">
+        Remove
+      </button>
+    </div>
+    <div class="product-line-price">25.98</div>
+  </div>
+ 
+  <div class="product">
+    <div class="product-image">
+      <img src="images/adidas.jpg">
+    </div>
+    <div class="product-details">
+      <div class="product-title">ULTRABOOST UNCAGED SHOES</div>
+      <p class="product-description">Born from running culture, these men's shoes deliver the freedom of a cage-free design</p>
+    </div>
+    <div class="product-price">45.99</div>
+    <div class="product-quantity">
+      <input type="number" value="1" min="1">
+    </div>
+    <div class="product-removal">
+      <button class="remove-product">
+        Remove
+      </button>
+    </div>
+    <div class="product-line-price">45.99</div>
+  </div>
+ 
+  <div class="totals">
+    <div class="totals-item">
+      <label>Subtotal</label>
+      <div class="totals-value" id="cart-subtotal">71.97</div>
+    </div>
+    <div class="totals-item">
+      <label>Tax (5%)</label>
+      <div class="totals-value" id="cart-tax">3.60</div>
+    </div>
+    <div class="totals-item">
+      <label>Shipping</label>
+      <div class="totals-value" id="cart-shipping">15.00</div>
+    </div>
+    <div class="totals-item totals-item-total">
+      <label>Grand Total</label>
+      <div class="totals-value" id="cart-total">90.57</div>
+    </div>
+  </div>
+       
+  <div class="carhao">
       <form method="post">
-      
-        <div class="row">
-          <div class="col-50">
-            <h3 style="color:white">Billing Address</h3>
-            <label for="fname"><i class="fa fa-user"></i> Họ và tên</label>
-            <input type="text"  name="name" placeholder="Lê Nhật Hào">
-            <label for="email"><i class="fa fa-envelope"></i> Email</label>
-            <input type="text"  name="email" placeholder="lenhathao3112@gmail.com">
-            <label for="adr"><i class="fa fa-address-card-o"></i> Địa chỉ</label>
-            <input type="text"  name="address" placeholder="334 Chu Văn An, P12, Q.Bình Thạnh">
-            <label for="city"><i class="fa fa-institution"></i> Thành phố</label>
-            <input type="text"  name="city" placeholder="Hồ Chí Minh">
-
-            <div class="row">
-              <div class="col-50">
-                <label for="state">Quận, Huyện</label>
-                <input type="text"  name="state" placeholder="NY">
-              </div>
-              <div class="col-50">
-                <label for="zip">Tiêu Đề</label>
-                <input type="text"  name="topic" placeholder="Mua Hàng">
-              </div>
-            </div>
-          </div>
-
-          <div class="col-50">
-            <h3 style="color:white">Payment</h3>
-            <label for="fname">Accepted Cards</label>
-            <div class="icon-container">
-              <i class="fa fa-cc-visa" style="color:navy;"></i>
-              <i class="fa fa-cc-amex" style="color:blue;"></i>
-              <i class="fa fa-cc-mastercard" style="color:red;"></i>
-              <i class="fa fa-cc-discover" style="color:orange;"></i>
-            </div>
-            <label for="cname">Tên chủ thẻ</label>
-            <input type="text"  name="cardname" placeholder="LE NHAT HAO">
-            <label for="ccnum">Số thẻ tín dụng</label>
-            <input type="text"  name="cardnumber" placeholder="1111-2222-3333-4444">
-            <label for="expmonth">Tháng hết hạn</label>
-            <input type="text"  name="expmonth" placeholder="September">
-            <div class="row">
-              <div class="col-50">
-                <label for="expyear">Năm háng hạn</label>
-                <input type="text"  name="expyear" placeholder="2018">
-              </div>
-              <div class="col-50">
-                <label for="cvv">Code</label>
-                <input type="text"  name="cvv" placeholder="CV352">
-              </div>
-            </div>
-          </div>
-          
-        </div>
-        <label>
-          <input type="checkbox" checked="checked" name="sameadr"> Địa chỉ giao hàng giống như thanh toán
-        </label>
-        <input type="submit" name="btn_submit" value="THANH TOÁN" class="btn">
+        <label>Họ và tên: <input type="text" name="name" id=""></label>
+        <label for="">Email: <input type="email" name="email" id=""></label>
+        <label for="">Tiêu đề: <input type="text" name="topic" id="" placeholder="Mua hàng"></label>
+        <label for="">Địa chỉ: <input type="text" name="" id=""></label>
+        <label for="">Số điện thoại: <input type="text" name="" id=""></label>
+        <input type="submit" name="muahang" value="Mua hàng" class="checkout">
       </form>
+      <center>
       <?php
       if(isset($erro)){
         echo $erro;
       }
-      ?>
-    </div>
-  </div>
-  <div class="col-25">
-    <div class="container">
-      <h4 style="color:white">Images - Cart <span class="price" style="color:white"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
-      <p><a href="#">Image 1</a> - <a href="#">Product 1</a> <span class="price">$15</span></p>
-      <p><a href="#">Image 2</a> - <a href="#">Product 2</a> <span class="price">$5</span></p>
-      <p><a href="#">Image 3</a> - <a href="#">Product 3</a> <span class="price">$8</span></p>
-      <p><a href="#">Image 4</a> - <a href="#">Product 4</a> <span class="price">$2</span></p>
-      <hr>
-      <p style="color:white">Total <span class="price" style="color:white"><b>$30</b></span></p>
-    </div>
+      ?></center><br>
+
   </div>
 </div>
 <!-- cart end -->

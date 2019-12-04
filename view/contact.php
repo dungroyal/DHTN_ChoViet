@@ -24,7 +24,8 @@
                                 <div class="google-map-area">
                                     <!--  Map Section -->
                                     <div id="contacts" class="map-area">
-                                        <div id="googleMap" style="width:100%;height:330px;"></div>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.9973650244765!2d106.69867841480107!3d10.81151289229775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175289544cc846b%3A0xd620973063bc8543!2zMzM0IENodSBWxINuIEFuLCBQaMaw4budbmcgMTIsIELDrG5oIFRo4bqhbmgsIEjhu5MgQ2jDrSBNaW5o!5e0!3m2!1svi!2s!4v1560093215229!5m2!1svi!2s"
+                float:left width="100%" height="470" frameborder="0" style="border:0" allowfullscreen></iframe>
                                     </div>
                                 </div>    
                             </div>
@@ -46,7 +47,7 @@
                                 <div class="contact-form">
                                     <div class="leave-a-comment">
                                         <div class="leave_comment"> 
-                                            <form method="post" action="model/sendmailcontact.php">
+                                            <form method="post">
                                                 <div class="name_email_form clearfix">
                                                     <div class="left_comment">
                                                         <p>Họ và tên</p>
@@ -67,8 +68,13 @@
                                                     
                                                         <p>Message  </p>
                                                         <textarea name="message" rows="2" cols="114"></textarea>
-                                                        <input name="btn_submit" type="submit">
-                                                    
+                                                        <input name="lienhe" type="submit">
+                                                        <center>
+                                                            <?php
+                                                            if(isset($erro)){
+                                                                echo $erro;
+                                                            }
+                                                            ?></center>
                                                         </div>
                                             </form>
                                         </div>

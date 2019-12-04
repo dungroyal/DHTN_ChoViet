@@ -26,7 +26,7 @@
         }
     ?>    
     <input type="submit" name="dang_nhap_user" value="Đăng nhập">  
-
+        
 
     <a href="#">Quên mật khẩu!</a><br>
     <a href="?act=dangkitaikhoan">Đăng kí tài khoản!</a>

@@ -56,12 +56,8 @@
                 include"view/product_detail.php";
                 break;
 
-            case 'contact':
-                include"view/contact.php";
-                break;
-
-            case 'cart':
-                if(isset($_POST['btn_submit']) && $_POST['btn_submit'] ){
+			case 'contact':
+				if(isset($_POST['lienhe']) && $_POST['lienhe'] ){
                     $title = $_POST['topic'];
 	$content = '<!DOCTYPE html>
 	<html lang="en">
@@ -78,7 +74,58 @@
 			
 			body {
 				margin: 0px auto;
-				width: 80%;
+				width: 70%;
+			}
+			
+			header {
+				background-color: #f1f1f1;
+				padding: 20px;
+				text-align: center;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<header>
+			<img src="http://choviet.xyz/images/4.png" alt="Logo" style="width:300px;text-align: center; margin: 0px auto;">
+			<h1>Xin chào quý khách</h4>
+				<h3>Cảm ơn bạn đã liên hệ với chúng tôi, shop sẽ liên hệ với bạn trong thời gian ngắn nhất.</h3>
+		</header>
+		<h1></h1>
+	</body>
+	
+	</html>';
+	$nTo = $_POST['name'];
+	$mTo = $_POST['email'];
+	$diachi = 'lenhathao3112@gmail.com';
+	//test gui mail
+    $mail = sendMail($title, $content, $nTo, $mTo,$diachicc='');
+    if($mail==1)
+	$erro = 'Bạn đã liên hệ thành công mời bạn vào email xem kết quả.';
+	else $erro = 'Có lỗi!';
+                }
+                include"view/contact.php";
+                break;
+
+            case 'cart':
+                if(isset($_POST['muahang']) && $_POST['muahang'] ){
+                    $title = $_POST['topic'];
+	$content = '<!DOCTYPE html>
+	<html lang="en">
+	
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Document</title>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			
+			body {
+				margin: 0px auto;
+				width: 70%;
 			}
 			
 			header {
@@ -231,7 +278,84 @@
                 include"view/dangkithanhvien.php";
                 break;
 
-            case 'dangkitaikhoan':
+			case 'dangkitaikhoan':
+				if(isset($_POST['dangki']) && $_POST['dangki'] ){
+                    $title = $_POST['topic1'];
+	$content = '<!DOCTYPE html>
+	<html lang="en">
+	
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Document</title>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			
+			body {
+				margin: 0px auto;
+				width: 70%;
+			}
+			
+			header {
+				background-color: #f1f1f1;
+				padding: 20px;
+				text-align: center;
+			}
+			
+			.dangki1 {
+				width: 100%;
+				border: 1px solid grey;
+			}
+			
+			.thongtindangki {
+				width: 50%;
+				margin: 30px;
+			}
+			
+			@media screen and (max-width:1000px) {
+				header {
+					width: 100%;
+				}
+			}
+			
+			@media screen and (max-width:1000px) {
+				.dangki1 {
+					width: 100%;
+				}
+			}
+		</style>
+	</head>
+	
+	<body>
+		<header>
+			<img src="http://choviet.xyz/images/4.png" alt="Logo" style="width:300px;text-align: center; margin: 0px auto;">
+			<h1>Xin chào quý khách</h4>
+				<p>Bạn đã đăng kí tài khoản thành công vui lòng kiểm tra thông tin bên dưới mail.</p>
+		</header>
+		<div class="dangki1">
+			<div class="thongtindangki">
+				<h2>Thông tin tài khoản</h2>
+				<p>Tên đăng nhập:</p>
+				<p>Email:</p>
+				<p>Mặt khẩu:</p>
+			</div>
+			<h3 style="text-align: center;">Cảm ơn bạn đã đăng kí tài khoản chúng tôi sẽ cố gắng hỗ trợ quý khách hết mức có thể.</h3>
+		</div>
+	</body>
+	
+	</html>';
+	$nTo = $_POST['name'];
+	$mTo = $_POST['email'];
+	$diachi = 'lenhathao3112@gmail.com';
+	//test gui mail
+    $mail = sendMail($title, $content, $nTo, $mTo,$diachicc='');
+    if($mail==1)
+	$erro = 'Bạn đã đăng kí thành công mời bạn vào email xem thông tin tài khoản của bạn.';
+	else $erro = 'Có lỗi!';
+                }
                 include"view/dang-ki-user.php";
                 break;
     
@@ -240,7 +364,7 @@
                 include"view/login.php";
                 break;
 
-            case 'loginuser':
+			case 'loginuser':
                 include"view/loginuser.php";
                 break;
 
