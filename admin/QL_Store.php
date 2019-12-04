@@ -15,7 +15,7 @@
           <div class="card mb-3">
               <div class="card-header">
                 <i class="fas fa-folder-plus"></i>
-                Cập nhật Cửa hàng</div>
+                Cập nhật Cửa hàng <strong><?=$storeone['name']; ?></strong></div>
               <div class="card-body">
 
                 <!-- Default form register -->
@@ -24,13 +24,23 @@
                   <input type="hidden" name="id" value="<?=$storeone['id']; ?>">
                         <label for="category">Trạng thái hoạt động của cửa hàng</label>
                         <select name="trangthai" class="custom-select tm-select-accounts" id="category">
-                          <option selected value="0">Trạng thái hoạt động của cửa hàng</option>
+                          <option selected value="0">
+                          <?php
+                            if ($storeone['trangthai']==1) {
+                              echo'Chờ duy';
+                            }elseif ($storeone['trangthai']==2) {
+                              echo'Đã duyệt';
+                            }else{
+                              echo'Đã chặn';
+                            }
+                          ?>   
+                        </option>
                           <option value="1">Chờ duyệt</option>
                           <option value="2">Đã duyệt</option>
                           <option value="3">Đã chặn</option>
                         </select>
                       </div>
-                    <input class="btn btn-info my-1 btn-block" type="submit" name="admin_update_store" value="Cập nhật">
+                    <input class="btn btn-info my-1 btn-block" type="submit" name="capnhanstore" value="Cập nhật">
                   </form>
                   </div>
               </div>

@@ -98,12 +98,14 @@
 				break;
 
 		case 'QL_Store':
-            if (isset($_POST['admin_update_store']) && $_POST['admin_update_store']) {
+            if (isset($_POST['capnhanstore']) && $_POST['capnhanstore']) {
 				$id=$_POST['id'];
 				$trangthai=$_POST['trangthai'];
 
-				admin_update_store($trangthai,$id);
-				header('location: admin.php?act=QL_Store');
+				echo $trangthai;
+
+				//admin_update_store($trangthai,$id);
+				//header('location: index.php');
 				}				
 				$userlist=userlist();
 				include "admin/QL_Store.php";
