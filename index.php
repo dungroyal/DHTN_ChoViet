@@ -274,7 +274,19 @@
                 include"view/about.php";
                 break;
 
-            case 'dangkithanhvien':
+			case 'dangkithanhvien':
+				if (isset($_POST['submitbtn_add_store']) && $_POST['submitbtn_add_store']) {
+					
+					$namestore=$_POST['namestore'];
+					$username='asanzo';
+					$password='asanzo';
+					$phonenumber=$_POST['phonenumber'];
+					$email=$_POST['email'];
+					$idUser='9';
+
+					store_insert($namestore,$username,$password,$phonenumber,$email,$idUser);
+					header('location: view/thongbao.html'); 
+					}
                 include"view/dangkithanhvien.php";
                 break;
 

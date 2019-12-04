@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Xác nhận đăng kí cửa hàng</title>
+	<link rel="icon" type="view/image/png" href="view/img/favicon.png"/>
+
+  <!-- Custom fonts for this template-->
+  <link href="view/style-admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Page level plugin CSS-->
+  <link href="view/style-admin/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="view/style-admin/css/sb-admin.css" rel="stylesheet">
+
+	<script type="text/javascript">
+	function confirmation() {
+		var answer = confirm("Gửi thông tin đăng kí cho Chợ Việt?")
+		if (answer){
+			alert("Bạn hãy đăng nhập vào kênh bán hàng, hoàn thành thông tin, và đợi để Chợ Việt duyệt cửa hàng nhé!")
+			window.location = "http://localhost/DHTN_ChoViet/login.php";
+		}
+		else{
+			alert("Quay lại trang đăng kí")
+			window.location = "http://localhost/DHTN_ChoViet/index.php?act=loginuser";
+		}
+	}
+	</script>
+</head>
+<body onload="confirmation()">
+</body>
+</html>

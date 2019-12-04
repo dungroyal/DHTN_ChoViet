@@ -27,6 +27,12 @@
     function admin_update_store($trangthai,$id){
     $sql = "UPDATE store SET trangthai=? WHERE id=?";
     pdo_execute($sql, $trangthai,$id);
-}
+    }   
+
+    function store_insert($name,$username,$password,$phonenumber,$email,$idUser){
+        $sql = "INSERT INTO store(name,username,password,phonenumber,email,idUser) VALUES(?,?,?,?,?,?)";
+        pdo_execute($sql, $name,$username,$password,$phonenumber,$email,$idUser);
+    }
+
         
 ?>

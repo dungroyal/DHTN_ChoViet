@@ -14,6 +14,7 @@
     $cataloglist=cataloglist(); 
 	$info_store_admin=info_store_admin($_SESSION['iduserstore']);
 	$idStore=$info_store_admin['id'];
+	
 	$cataloglist_by_store=cataloglist_by_store($idStore);
 	$producttlist_by_store=productlist_by_store($idStore);
 

@@ -10,45 +10,24 @@
 
     <div class="signup-form-dangki">
     <div class="signup-form-header-dangki"><strong>Đăng ký trở thành nhà báng hàng cùng với <a href="index.php">Chợ Việt</a></strong></div>
-        <form action="" method="post">
+        <form action="?act=dangkithanhvien" method="post">
             <div class="checkin-dangki">
                 <div>Số điện thoại liên hệ (&#42;):</div>                   
-                <input type="text" name="SDT" value="">
+                <input type="text" name="phonenumber" value="" required>
             </div>
 
             <div class="checkin-dangki">
-                <div>Tên liên hệ (&#42;):</div>
-            
-                <input type="text" name="name" value="<?=$name_user;?>"/>
+                <div>Tên shop (&#42;):</div>            
+                <input type="text" name="namestore" required>
             </div>
+
             <div class="checkin-dangki">
-                <div>Tên shop (&#42;):</div>
-            
-                <input type="text"  />
+                <div>Email liên hệ (&#42;):</div>            
+                <input type="text" name="email" value="<?=$email_user;?>" required>
             </div>
-            <div class="checkin-dangki">
-                <div>Ngày đăng kí (&#42;):</div>
-            
-                <input type="date" name="bday"  />
-            </div>
-            <div class="checkin-dangki">
-                <div>Email liên hệ (&#42;):</div>
-            
-                <input type="text" name="email" value="<?=$email_user;?>"/>
-            </div>
-            <div class="checkin-dangki">
-                <div>Mật khẩu (&#42;):</div>
-            
-                <input type="pass"  />
-            </div>
-            <div class="checkin-dangki">
-                <div>Nhập lại mật khẩu (&#42;):</div>
-                
-                <input type="pass"  />
-            </div>
+
             <div class="signup-form-button">
-                <input type="submit" id="submitbtn" name="submitbtn"  value="Gửi thông tin">
-
+                <input type="submit" id="submitbtn" name="submitbtn_add_store"  value="Gửi thông tin">
                 <button type="reset" id="submitbtn">Nhập lại</button>
             </div>
     </form> 

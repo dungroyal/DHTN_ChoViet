@@ -25,7 +25,7 @@
 
   <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-    <a class="navbar-brand mr-1" href="index.php"><?=$info_store_admin['name'];?></a>
+    <a class="navbar-brand mr-1" href="./index.php?act=product&idStore=<?=$info_store_admin['id'];?>"><?=$info_store_admin['name'];?></a>
 
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
       <i class="fas fa-bars"></i>
@@ -84,6 +84,7 @@
               <span>Dashboard</span>
           </a>
       </li>
+
     <li class="nav-item active">
         <a class="nav-link" href="?act=QL_Store">
         <i class="fas fa-cogs"></i>&ensp;
