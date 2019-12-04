@@ -81,7 +81,6 @@
                         <th>Pass</th>
                         <th>Email</th>
                         <th>Hình ảnh</th>
-                        <th>Quyền hạng</th>
                         <th>Trạng thái</th>
                         <th>Action</th>
                       </tr>
@@ -90,6 +89,11 @@
                     <tbody>
                       <?php
                       foreach ($userlist as $us) {
+                        if ($us['lever']==0) {
+                          $trangthai="Chờ Duyệt";
+                        }elseif ($us['lever']==2) {                          
+                          $trangthai="Đã Duyệt";
+                        }
                         echo '
                     <tr>
                     <td>' . $us['id'] . '</td>
@@ -97,8 +101,7 @@
                     <td>' . $us['pass'] . '</td>
                     <td>' . $us['email'] . '</td>
                     <td>' . $us['image'] . '</td>
-                    <td>' . $us['lever'] . '</td>
-                    <td>Đã duyệt</td>
+                    <td>' . $trangthai . '</td>
                     <td>
                         <a href="?act=QL_User&edi=1&id=' . $us['id'] . '"><i class="fas fa-pen-square"></i></a> &emsp;
                         <a href="?act=QL_User&del=1&id=' . $us['id'] . '"><i class="fas fa-trash-alt" style="color: red;"></i></i></a>

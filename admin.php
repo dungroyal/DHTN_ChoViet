@@ -6,8 +6,10 @@
     include "model/catalog.php";
     include "model/product.php";
     include "model/user.php";
+    include "model/store.php";
     $cataloglist=cataloglist();
 	$producttlist=productlist();
+	$storelist=storelist();
 
     if (!isset($_SESSION['iduseradmin'])) {
         header('location:admin/login.php');
@@ -52,7 +54,7 @@
 			break;		
 
         case 'QL_Product':
-            if (isset($_POST['add_product']) && $_POST['add_product']) {
+           /*** if (isset($_POST['add_product']) && $_POST['add_product']) {
 				$name=$_POST['name'];
 				$price=$_POST['price'];
 				$soluong=$_POST['soluong'];
@@ -65,7 +67,7 @@
 				product_insert($name,$price,$soluong,$image1,$hot,$idcatalog);
 				header('location: admin.php?act=QL_Product'); 
 				}
-				
+			 	
             if (isset($_POST['update_product']) && $_POST['update_product']) {
 				$id1=$_POST['id'];
 				$name1=$_POST['name'];
@@ -86,13 +88,25 @@
                 $id=$_GET['id'];
                 product_delete($id);
                 header('location: admin.php?act=QL_Product');
-            }
+            }*/
 				include "admin/QL_Product.php";
 				break;
-
+			
 		case 'QL_User':		
 				$userlist=userlist();
 				include "admin/QL_User.php";
+				break;
+
+		case 'QL_Store':
+            if (isset($_POST['admin_update_store']) && $_POST['admin_update_store']) {
+				$id=$_POST['id'];
+				$trangthai=$_POST['trangthai'];
+
+				admin_update_store($trangthai,$id);
+				header('location: admin.php?act=QL_Store');
+				}				
+				$userlist=userlist();
+				include "admin/QL_Store.php";
 				break;
 
 		case 'QL_Comment':		

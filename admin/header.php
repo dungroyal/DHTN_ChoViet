@@ -108,9 +108,15 @@
       </li>
 
       <li class="nav-item active">
-        <a class="nav-link" href="?act=QL_User">
+        <a class="nav-link" href="?act=QL_Store">
         <i class="fas fa-users"></i>&ensp;
           <span>Quản lý Store</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="?act=QL_User">
+        <i class="fas fa-users"></i>&ensp;
+          <span>Quản lý User</span></a>
       </li>
     </ul>
     <div id="content-wrapper">

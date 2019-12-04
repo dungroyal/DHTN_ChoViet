@@ -25,7 +25,7 @@
                     <div class="col">
                       <input type="hidden" name="id" value="<?=$catalogone['id']?>">
                       <!-- First name -->
-                      <input type="text" id="defaultRegisterFormFirstName" name="name" class="form-control" placeholder="<?=$catalogone['name'];?>">
+                      <input type="text" id="defaultRegisterFormFirstName" name="name" class="form-control" placeholder="<?=$catalogone['name'];?>" value="<?=$catalogone['name'];?>">
                     </div>
                     
                     <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
