@@ -90,9 +90,9 @@
                       <?php
                       foreach ($userlist as $us) {
                         if ($us['lever']==0) {
-                          $trangthai="Chờ Duyệt";
+                          $trangthai="Offline";
                         }elseif ($us['lever']==2) {                          
-                          $trangthai="Đã Duyệt";
+                          $trangthai="Online";
                         }
                         echo '
                     <tr>

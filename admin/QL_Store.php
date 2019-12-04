@@ -78,10 +78,16 @@
                       <?php
                       foreach ($storelist as $st) {
                         if ($st['trangthai']==1) {
-                          $trangthai="Chờ Duyệt";
-                        }elseif ($st['trangthai']==2) {                          
-                          $trangthai="Đã Duyệt";
+                          $trangthai='"badge badge-warning">Chờ duyệt';
                         }
+                        if ($st['trangthai']==2) {                          
+                          $trangthai='"badge badge-primary">Đã duyệt';
+                        }    
+                        
+                        if ($st['trangthai']==0) {                          
+                          $trangthai='"badge"style="color: #ffffff;background-color: #c10707;">Đã chặn';
+                        }   
+
                         echo '
                     <tr>
                     <td>' . $st['id'] . '</td>
@@ -92,7 +98,7 @@
                     <td>' . $st['email'] . '</td>
                     <td>' . $st['image'] . '</td>
                     <td>' . $st['diachi'] . '</td>
-                    <td>' . $trangthai . '</td>
+                    <td><span class=' . $trangthai . '</span></td>
                     <td>
                         <a href="?act=QL_Store&edi=1&id=' . $st['id'] . '"><i class="fas fa-pen-square"></i></a> &emsp;
                         <a href="?act=QL_Store&del=1&id=' . $st['id'] . '"><i class="fas fa-trash-alt" style="color: red;"></i></i></a>
