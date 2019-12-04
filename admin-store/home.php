@@ -1,10 +1,10 @@
+
 <div class="container-fluid">
                 <!-- Breadcrumbs-->
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item">
-                        <a href="#">Chào mừng trở lại</a>
-                    </li>
-                    <li class="breadcrumb-item active"><?=$info_store_admin['name'];?></li>
+                    <p class="lead">
+                        <span class="font-weight-bold">Hi, <?=$info_store_admin['name'];?>.</span> <span class="d-block text-muted">Tổng quan hệ thống hôm nay.</span>
+                    </p>
                 </ol>
 
                 <!-- Icon Cards-->
@@ -84,5 +84,8 @@
                     </div>
                 </div>
 
+                
+
             </div>
             <!-- /.container-fluid -->
+            
