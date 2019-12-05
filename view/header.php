@@ -118,36 +118,7 @@
                                         <a href="?act=cart"><img src="view/img/icon/cart.png" alt="cart">
                                             <p>2</p>
                                         </a>
-                                        <ul class="submenu-mainmenu">
-                                            <li class="single-cart-item clearfix">
-                                                <span class="cart-img">
-                                                        <a href="?act=cart"><img src="view/img/menu/3.jpg" alt=""></a>
-                                                    </span>
-                                                <span class="cart-info">
-                                                        <a href="#">Lorem Ipsam...</a>
-                                                        <span>1 x $104.99</span>
-                                                <a class="trash" href="#"><i class="fa fa-trash"></i></a>
-                                                </span>
-                                            </li>
-                                            <li class="single-cart-item clearfix">
-                                                <span class="cart-img">
-                                                        <a href="#"><img src="view/img/menu/4.jpg" alt=""></a>
-                                                    </span>
-                                                <span class="cart-info">
-                                                        <a href="#">Lorem Ipsam...</a>
-                                                        <span>2 x $104.99</span>
-                                                <a class="trash" href="#"><i class="fa fa-trash"></i></a>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="sub-total-cart text-center">
-                                                        SubTotal <span>$620</span>
-                                                <a href="checkout.html" class="view-cart">Checkout</a>
-                                                </span>
-                                            </li>
-                                        </ul>
                                     </li>
-                                </ul>
                             </div>
                         </div>
                     </div>

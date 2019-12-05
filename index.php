@@ -10,6 +10,7 @@
     include('model/class.smtp.php');
 	include "model/class.phpmailer.php"; 
 	include "model/functions.php"; 
+	include "model/cart.php"; 
 
     $productlist=productlist();
     $cataloglist=cataloglist(); 
@@ -42,7 +43,7 @@
                 include"view/product.php";
                 break;
 
-            case 'product_detail':
+			case 'product_detail':
                 if (isset($_GET['idProduct']) && $_GET['idProduct']) {
                     $idProduct=$_GET['idProduct'];
                 }
@@ -52,7 +53,15 @@
                 $GET_idStore=GET_idStore($product_detail_by_id['idCatalog']);
 
                 $info_store= store_by_id( $GET_idStore['idStore']);
-
+				if(isset($_POST['addcart']) && $_POST['addcart']){
+					$img = $product_detail_by_id['image'];
+					$coin = $product_detail_by_id['price'];
+					$name = $product_detail_by_id['name'];
+					$soluong = $_POST['soluong'];
+					$idpro = $_GET['idProduct'];
+					$_SESSION['idproduct'] = $idpro;
+					add_cart($id,$soluong,$idus,$idorder);
+				}
                 include"view/product_detail.php";
                 break;
 

@@ -49,7 +49,8 @@
     </div>
     <div class="product-line-price">25.98</div>
   </div>
- 
+
+  <form method="post">
   <div class="product">
     <div class="product-image">
       <img src="images/adidas.jpg">
@@ -69,7 +70,6 @@
     </div>
     <div class="product-line-price">45.99</div>
   </div>
- 
   <div class="totals">
     <div class="totals-item">
       <label>Subtotal</label>
@@ -90,13 +90,14 @@
   </div>
        
   <div class="carhao">
-      <form method="post">
+      
         <label>Họ và tên: <input type="text" name="name" id=""></label>
         <label for="">Email: <input type="email" name="email" id=""></label>
         <label for="">Tiêu đề: <input type="text" name="topic" id="" placeholder="Mua hàng"></label>
         <label for="">Địa chỉ: <input type="text" name="" id=""></label>
         <label for="">Số điện thoại: <input type="text" name="" id=""></label>
         <input type="submit" name="muahang" value="Mua hàng" class="checkout">
+  </div>
       </form>
       <center>
       <?php

@@ -16,6 +16,8 @@
         <div class="product-details-area fullwidth">
             <div class="container">   
                 <div class="row">
+                <form method="post">
+
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                        <div class="zoomWrapper clearfix">
                             <div class="product-thumb">
@@ -32,11 +34,12 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div class="product-detail shop-product-text">
                             <h4><a href="#"><?=$product_detail_by_id['name'];?></a></h4>
                             <div class="price-rating-container">    
-                                <div class="price-box"><span><?=$product_detail_by_id['price'];?></span> <del>(15.500.000 VNĐ)</del></div>
+                                <div class="price-box"><span><?= number_format($product_detail_by_id['price'])?> vnđ</span> <del>(15.500.000 VNĐ)</del></div>
                                 <div class="rating-right">
                                     <div class="star-content">
                                         <i class="fa fa-star"></i>
@@ -52,35 +55,23 @@
                             <p class="product-desc"><?=$product_detail_by_id['descripsion'];?></p>
                             <div class="size-categories">
                                 <h5 class="size">Màu:</h5>
-                                <ul>
-                                    <li><a href="#">Đen</a></li>
-                                    <li><a href="#">Xanh đen</a></li>
-                                    <li><a href="#">Trắng xanh</a></li>
-                                    <li><a href="#">Đỏ đen</a></li>
-                                </ul> 
-                            </div>
-                            <div class="color">   
-                                <h5 class="color">Màu:</h5>
                                 <div class="color-cat">
-                                    <select class="category-items " name="category">
-                                        <option>Select a color</option>
-                                        <option>red</option>
-                                        <option>black</option>
-                                        <option>pink</option>
-                                        <option>blue</option>
-                                        <option>green</option>
-                                    </select>
-                                </div>
+                                <select class="category-items" name="color" >
+                                    <option value="1">Đen</option>
+                                    <option value="2">Xanh Đen</option>
+                                    <option value="3">Trắng Xanh</option>
+                                    <option value="4">Đỏ Đen</option>
+                                </select></div>
                             </div>
                             <div class="shop-buttons">
                                 <h5 class="quantity">quantity:</h5>
                                 <div id="quantity-wanted-p">
-                                    <input type="number" value="0" class="cart-plus-minus-box">
+                                    <input type="number" value="0" name ="soluong"  class="cart-plus-minus-box">
                                     <div class="dec qtybutton">-</div>
                                     <div class="inc qtybutton">+</div>
                                     <span class="clearfix"></span>
                                 </div>
-                                <a href="cart.html" class="cart-btn"><span>Thêm vào giỏ hàng</span></a>
+                                <input type="submit" class="btn btn-danger" name="addcart" value="Thêm vào giỏ hàng">
                                 <a href="wishlist.html"><i class="fa fa-heart-o"></i></a>
                                 <a href="#"><i class="fa fa-refresh"></i></a>
                             </div>
@@ -96,6 +87,9 @@
                             </div>
                         </div>
                     </div>
+
+                    </form>
+
                     <div class="row">
                         <div class="col-md-9 col-sm-12 col-xs-12">
                             <div class="product-description-tab">
