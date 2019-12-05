@@ -8,30 +8,48 @@
     }
     ?>
 
-    <div class="signup-form-dangki">
-    <div class="signup-form-header-dangki"><strong>Đăng ký trở thành nhà báng hàng cùng với <a href="index.php">Chợ Việt</a></strong></div>
-        <form action="?act=dangkithanhvien" method="post">
-            <div class="checkin-dangki">
-                <div>Số điện thoại liên hệ (&#42;):</div>                   
-                <input type="text" name="phonenumber" value="" required>
-            </div>
+<div class="padding-top-dangki-dk"> </div>
+<div class="login-popup-dk">
+  <div class="login-popup-conten-dk">
+    <div class="loginbox1"> 
+      <h1><strong>Đăng kí</strong> nhà bán hàng trên <strong>Chợ Việt</strong></h1>
+      <form action="?act=dangkitaikhoan" method="post">
+        <p>Họ và Tên: </p>
+        <input name="topic1" type="text" placeholder="VD: Nguễn Văn A" required>
 
-            <div class="checkin-dangki">
-                <div>Tên shop (&#42;):</div>            
-                <input type="text" name="namestore" required>
-            </div>
+        <p>Tên cửa hàng: </p>
+        <input name="topic1" type="text" placeholder="VD: Văn A Shop" required>
+        
+        <p>Số điện thoại:</p>
+        <input type="text" name="name"   placeholder="VD: 0123456789" required>
 
-            <div class="checkin-dangki">
-                <div>Email liên hệ (&#42;):</div>            
-                <input type="text" name="email" value="<?=$email_user;?>" required>
-            </div>
+        <p>Số CMND:</p>
+        <input type="text" name="cmdn"   placeholder="VD: 123123123" required>
 
-            <div class="signup-form-button">
-                <input type="submit" id="submitbtn" name="submitbtn_add_store"  value="Gửi thông tin">
-                <button type="reset" id="submitbtn">Nhập lại</button>
-            </div>
-    </form> 
+        <p>Email:</p>
+        <input type="text" name="email" placeholder="VD: email@gmail.com" required>
+
+        <p>Số nhà, tên đường:</p>
+        <input type="text" name="email" placeholder="01, Phạm Ngũ Lão" required>
+        
+        <p>Tỉnh, Thành phố:</p>
+        <select id="input_select_dc" name="diachi">
+            <option>TP. Hồ Chí Minh</option>
+            <option>TP. Hà Nội</option>
+            <option>TP. Đà Nẵng</option>
+        </select>
+
+        <p>Quận, huyện:</p>
+        <select id="input_select_dc" name="diachi">
+            <option>Gò vấp</option>
+            <option>Tân Bình</option>
+        </select>        
+
+        <input type="submit" name="dangkicuahang" value="Gửi thông tin">
+      </form>  
+    </div>
+    </div>
 </div>
-
+</div>
       
      

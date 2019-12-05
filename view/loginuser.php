@@ -1,8 +1,4 @@
-<div class="padding-top-dangki"> 
-</div>
-
-
-
+<div class="padding-top-dangki"> </div>
 <div class="login-popup">
   <div class="login-popup-conten">
   <div class="loginbox1"> 
