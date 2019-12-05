@@ -43,7 +43,7 @@
         <select id="input_select_dc" name="diachi">
             <option>Gò vấp</option>
             <option>Tân Bình</option>
-        </select>        
+        </select>
 
         <input type="submit" name="dangkicuahang" value="Gửi thông tin">
       </form>  
