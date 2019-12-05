@@ -5684,13 +5684,14 @@ tfoot td {
 }
 
 .loginbox1 {
-    min-height: 400px;
+    min-height: 420px;
     width: 100%;
-    background-color: #000c;
-    color: #fff;
+    background-color: #fffc;
+    color: #000;
     box-sizing: border-box;
-    padding: 0px 40px;
+    padding: 50px 40px;
     margin: 0px auto;
+    border-radius: 5px;
 }
 
 .avatar1 {
@@ -5724,11 +5725,13 @@ tfoot td {
 input[type="password"] {
     border: none;
     border-bottom: 1px solid #fff;
-    background: transparent;
+    background: #8b545433;
     outline: 40px;
     height: 40px;
-    color: #fff;
+    color: #000000e0;
     font-size: 16px;
+    padding-left: 10px;
+    border-radius: 4px;
 }
 
 .loginbox1 input[type="submit"] {
@@ -5753,7 +5756,9 @@ input[type="password"] {
     text-decoration: none;
     font-size: 14px;
     line-height: 25px;
-    color: darkgray;
+    color: black;
+    font-weight: bold;
+}
 }
 
 .loginbox1 a:hover {
@@ -6048,3 +6053,33 @@ label {
 
 
 /* gio hàng*/
+
+
+/* Login Popup*/
+
+.login-popup{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #000000b3;
+    position: absolute;
+    top: 0;
+    margin-top: 40px;
+    z-index: 1;
+}
+
+.login-popup-conten{
+    width: 40%;
+    margin: 0px auto;
+    background-color: #ffffff;
+    margin-top: 16px;
+    border-radius: 5px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all ease .5s;
+}
+
+.padding-top-dangki{
+    min-height: 87.9vh;
+}

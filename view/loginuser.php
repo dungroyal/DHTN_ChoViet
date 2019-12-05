@@ -1,11 +1,17 @@
-<div class="loginbox1"> 
+<div class="padding-top-dangki"> 
+</div>
+
+
+
+<div class="login-popup">
+  <div class="login-popup-conten">
+  <div class="loginbox1"> 
   <h1>Đăng nhập Chợ Việt</h1>
   <form action="index.php?act=loginuser" method="post">
     <p>Tên đăng nhập:</p>
     <input type="text" name="user" placeholder="Enter Username" autocomplete="no" required>
     <p>Mật khẩu:</p>
     <input type="password" name="pasword" placeholder="Enter Password" required>   
-
 
     <?php
         if (isset($_POST['dang_nhap_user']) && $_POST['dang_nhap_user']) {
@@ -24,12 +30,17 @@
             echo'<span class="thongbao-dangnhap">Sai Tên đăng nhập hoặc mật khẩu</span> <br>';
           }
         }
-    ?>    
+    ?>  
+    
     <input type="submit" name="dang_nhap_user" value="Đăng nhập">  
         
 
     <a href="#">Quên mật khẩu!</a><br>
     <a href="?act=dangkitaikhoan">Đăng kí tài khoản!</a>
   </form>
+</div>
+
+
+  </div>
 </div>
 </div>
