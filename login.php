@@ -32,7 +32,9 @@
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
+					<a href="index.php">
 					<img src="view/img/logo/logo.png" alt="IMG">
+					</a>
 				</div>
 
 

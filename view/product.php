@@ -149,13 +149,6 @@
                                                         <h3>'.$pro['name'].'</h3>
                                                         <h4><a href="?act=product_detail&idProduct='.$pro['id'].'">view details</a></h4>
                                                     </div>
-                                                    <div class="product-action">
-                                                        <ul>
-                                                            <li><a href="#" data-toggle="tooltip" title="Compage"><i class="fa fa-refresh"></i></a></li>
-                                                            <li class="add-bag"><a href="#" data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
-                                                            <li><a href="#" data-toggle="tooltip" title="Like it!"><i class="fa fa-heart"></i></a></li>
-                                                        </ul>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -189,13 +182,6 @@
                                                     <div class="product-content text-center">
                                                         <h3>'.$pro['name'].'</h3>
                                                         <h4><a href="?act=product_detail&idProduct='.$pro['id'].'">view details</a></h4>
-                                                    </div>
-                                                    <div class="product-action">
-                                                        <ul>
-                                                            <li><a href="#" data-toggle="tooltip" title="Compage"><i class="fa fa-refresh"></i></a></li>
-                                                            <li class="add-bag"><a href="#" data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
-                                                            <li><a href="#" data-toggle="tooltip" title="Like it!"><i class="fa fa-heart"></i></a></li>
-                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
@@ -236,13 +222,6 @@
                                                         <h3>'.$pro['name'].'</h3>
                                                         <h4><a href="?act=product_detail&idProduct='.$pro['id'].'">view details</a></h4>
                                                     </div>
-                                                    <div class="product-action">
-                                                        <ul>
-                                                            <li><a href="#" data-toggle="tooltip" title="Compage"><i class="fa fa-refresh"></i></a></li>
-                                                            <li class="add-bag"><a href="#" data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
-                                                            <li><a href="#" data-toggle="tooltip" title="Like it!"><i class="fa fa-heart"></i></a></li>
-                                                        </ul>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -275,13 +254,6 @@
                                                 <div class="product-content text-center">
                                                     <h3>'.$pro['name'].'</h3>
                                                     <h4><a href="?act=product_detail&idProduct='.$pro['id'].'">view details</a></h4>
-                                                </div>
-                                                <div class="product-action">
-                                                    <ul>
-                                                        <li><a href="#" data-toggle="tooltip" title="Compage"><i class="fa fa-refresh"></i></a></li>
-                                                        <li class="add-bag"><a href="#" data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
-                                                        <li><a href="#" data-toggle="tooltip" title="Like it!"><i class="fa fa-heart"></i></a></li>
-                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>

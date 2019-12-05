@@ -32,7 +32,8 @@
         
 
     <a href="#">Quên mật khẩu!</a><br>
-    <a href="?act=dangkitaikhoan">Đăng kí tài khoản!</a>
+    <a href="?act=dangkitaikhoan">Đăng kí tài khoản!</a><br>
+    <a href="index.php">Trang chủ</a>
   </form>
 </div>
 

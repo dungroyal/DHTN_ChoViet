@@ -44,32 +44,33 @@
     </div>
     <div class="product-price"> <?= number_format($sc['coin']) ?></div>
     <div class="product-quantity">
-      <input type="number" value="<?= $sc['so_luong'] ?>" min="1">
+      <input type="number" value="<?= $sc['so_luong'] ?>" min="1" max="1">
     </div>
     <div class="product-removal">
       <button class="remove-product">
         Remove
     </button>
     </div>
-    <div class="product-line-price">45.99</div>
+    <div class="product-line-price"><?= number_format($sc['coin']) ?></div>
   </div>
   <?php endforeach ?>
+
   <div class="totals">
     <div class="totals-item">
       <label>Subtotal</label>
-      <div class="totals-value" id="cart-subtotal">71.97</div>
+      <div class="totals-value" id="cart-subtotal"><?= number_format($sc['coin']) ?>VNĐ</div>
     </div>
     <div class="totals-item">
-      <label>Tax (5%)</label>
-      <div class="totals-value" id="cart-tax">3.60</div>
+      <label>Tax</label>
+      <div class="totals-value" id="cart-tax">0</div>
     </div>
     <div class="totals-item">
       <label>Shipping</label>
-      <div class="totals-value" id="cart-shipping">15.00</div>
+      <div class="totals-value" id="cart-shipping">15.000 VNĐ</div>
     </div>
     <div class="totals-item totals-item-total">
       <label>Grand Total</label>
-      <div class="totals-value" id="cart-total">90.57</div>
+      <div class="totals-value" id="cart-total"><?= number_format($sc['coin']) ?>VNĐ</div>
     </div>
   </div>
        
@@ -92,7 +93,8 @@
 
   </div>
 </div>
-<!-- cart end --><script src = "http://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
+<!-- cart end -->
+<script src = "http://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
 charset = "utf-8" > </script>
 
 <script type = "text/javascript" >

@@ -13,7 +13,7 @@
         <p>Email:</p>
         <input type="text" name="email" placeholder="Enter Email">
         
-        <p>Mậtkhẩu:</p>
+        <p>Mật khẩu:</p>
         <input type="password" name="" placeholder="Enter Password">
 
         <p>Mật lại khẩu:</p>
@@ -28,7 +28,8 @@
           ?></center><br>
           
         <a href="#">Quên mật khẩu!</a><br>
-        <a href="?act=loginuser">Đã có tài khoản Chợ Việt!</a>
+        <a href="?act=loginuser">Đã có tài khoản Chợ Việt!</a><br>
+        <a href="index.php">Trang chủ</a>
 
       </form>  
     </div>

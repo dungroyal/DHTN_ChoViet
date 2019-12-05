@@ -39,7 +39,7 @@
                         <div class="product-detail shop-product-text">
                             <h4><a href="#"><?=$product_detail_by_id['name'];?></a></h4>
                             <div class="price-rating-container">    
-                                <div class="price-box"><span><?= number_format($product_detail_by_id['price'])?> vnđ</span> <del>(15.500.000 VNĐ)</del></div>
+                                <div class="price-box"><span><?= number_format($product_detail_by_id['price'])?> vnđ</span> <del><?= number_format($product_detail_by_id['giamgia'])?> vnđ</del></div>
                                 <div class="rating-right">
                                     <div class="star-content">
                                         <i class="fa fa-star"></i>

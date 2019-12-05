@@ -64,11 +64,12 @@
 					$info = $product_detail_by_id['descripsion'];
 					$color = $_POST['color'];
 					$soluong = $_POST['soluong'];
+					$giam = $product_detail_by_id['giamgia'];
 					$idpro = $_GET['idProduct'];
 					$iduser = $product_detail_by_id['id_user'];
 					$idcata = $product_detail_by_id['idCatalog'];
 					$idcustom = $_SESSION['iduserguest'];
-					add_cart($name,$img,$coin,$info,$color,$soluong,$iduser,$idcata,$idpro,$idcustom);
+					add_cart($name,$img,$coin,$info,$color,$soluong,$iduser,$idcata,$idpro,$idcustom,$giam);
 					$erro = 'Bạn đã thêm '.$name.' số lượng '.$soluong.' cái';
 				}
 				}
@@ -213,6 +214,7 @@
 		</div>
 		<div class="bang">
 			<h2 style="color:blue;">Chi tiết đơn hàng</h2>
+			
 			<table style="width:80%;display: table;
 				border-collapse: separate;
 				border-spacing: 0px;
@@ -392,7 +394,9 @@
                 break;
     
                
-            case 'login':
+			case 'login':
+
+				header('location: index.php');
                 include"view/login.php";
                 break;
 
