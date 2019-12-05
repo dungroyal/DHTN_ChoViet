@@ -1,8 +1,8 @@
 < script src = "http://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
-charset = "utf-8" > < script >
+charset = "utf-8" > < /script>
 
-    <
-    script type = "text/javascript" >
+<
+script type = "text/javascript" >
     $(document).ready(function() {
 
         /* Set rates + misc */

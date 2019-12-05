@@ -16,7 +16,7 @@
         <div class="product-details-area fullwidth">
             <div class="container">   
                 <div class="row">
-                <form method="post">
+                <form method="post" action="">
 
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                        <div class="zoomWrapper clearfix">
@@ -66,7 +66,7 @@
                             <div class="shop-buttons">
                                 <h5 class="quantity">quantity:</h5>
                                 <div id="quantity-wanted-p">
-                                    <input type="number" value="0" name ="soluong"  class="cart-plus-minus-box">
+                                    <input type="number" value="1" name ="soluong"  class="cart-plus-minus-box">
                                     <div class="dec qtybutton">-</div>
                                     <div class="inc qtybutton">+</div>
                                     <span class="clearfix"></span>
@@ -74,7 +74,13 @@
                                 <input type="submit" class="btn btn-danger" name="addcart" value="Thêm vào giỏ hàng">
                                 <a href="wishlist.html"><i class="fa fa-heart-o"></i></a>
                                 <a href="#"><i class="fa fa-refresh"></i></a>
+                               
                             </div>
+                         <strong class="text-danger">   <?php
+                                    if(isset($erro)){
+                                        echo $erro;
+                                    }
+                                ?></strong>
                             <div class="share">
                                <h5 class="share">share this on:</h5>
                                <ul>

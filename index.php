@@ -52,15 +52,25 @@
                 
                 $GET_idStore=GET_idStore($product_detail_by_id['idCatalog']);
 
-                $info_store= store_by_id( $GET_idStore['idStore']);
-				if(isset($_POST['addcart']) && $_POST['addcart']){
+				$info_store= store_by_id( $GET_idStore['idStore']);
+				
+				if(isset($_POST['addcart']) && $_POST['addcart']){	
+					if(!isset($_SESSION['iduserguest'])){
+						header('location: index.php?act=loginuser');
+					}else{
 					$img = $product_detail_by_id['image'];
 					$coin = $product_detail_by_id['price'];
 					$name = $product_detail_by_id['name'];
+					$info = $product_detail_by_id['descripsion'];
+					$color = $_POST['color'];
 					$soluong = $_POST['soluong'];
 					$idpro = $_GET['idProduct'];
-					$_SESSION['idproduct'] = $idpro;
-					add_cart($id,$soluong,$idus,$idorder);
+					$iduser = $product_detail_by_id['id_user'];
+					$idcata = $product_detail_by_id['idCatalog'];
+					$idcustom = $_SESSION['iduserguest'];
+					add_cart($name,$img,$coin,$info,$color,$soluong,$iduser,$idcata,$idpro,$idcustom);
+					$erro = 'Bạn đã thêm '.$name.' số lượng '.$soluong.' cái';
+				}
 				}
                 include"view/product_detail.php";
                 break;
@@ -274,7 +284,8 @@
     if($mail==1)
 	$erro = 'Bạn đã thanh toán thành công mời vào email xem đơn hàng của bạn.';
 	else $erro = 'Có lỗi!';
-                }
+				}
+				
                 include"view/cart.php";
                 break;
 
