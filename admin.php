@@ -7,6 +7,7 @@
     include "model/product.php";
     include "model/user.php";
     include "model/store.php";
+    include "model/banner.php";
     $cataloglist=cataloglist();
 	$producttlist=productlist();
 	$storelist=storelist();
@@ -118,6 +119,20 @@
 
 		case 'QL_Cart':
 				include "admin/QL_Cart.php";
+				break;
+
+		case 'QL_Banner':
+				include "admin/QL_Banner.php";
+				break;
+
+		case 'QL_Banner_by_location':
+            if (isset($_GET['location']) && $_GET['location']) {
+				$location=$_GET['location'];
+				
+				$banner_by_loca=banner_by_loca($location);
+			}
+
+				include "admin/QL_Banner_by_location.php";
 				break;
 
 		case 'logout_admin':

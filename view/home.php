@@ -1,86 +1,44 @@
-
-
-
     <!-- banner start -->
     <div class="banner-area home-two clearfix">
         <div class="banner-left-img hidden-xs">
-            <a href="#" class="border-hover">
-                <img src="view/img/home/poster1.jpg" alt="">
-            </a>
+            <a href="#" class="border-hover"><img src="uploads/poster1.jpg" alt=""></a>
         </div>
         <div class="banner-rightside">
             <div class="single-banner-small small-one">
-                <a href="#" class="border-hover"><img alt="" src="view/img/home/thucung.jpg"></a>
-                <div class="timer-banner-text">
-                    <h2>latest<br> backpack</h2>
-                    <a class="view-more hidden-sm" href="#">view more</a>
-                </div>
-                <p>backpack</p>
+                <a href="#" class="border-hover"><img alt="" src="uploads/thucung.jpg"></a>
             </div>
             <div class="single-banner right">
-                <a href="#" class="border-hover"><img src="view/img/home/giaydep.jpg" alt=""></a>
-                <div class="single-banner-text">
-                    <h3><a href="#">50%<br>
-                            OFF Woman<br> 
-                            Collection</a></h3>
-                    <a href="#" class="shop-button hidden-xs hidden-sm">shop now</a>
-                </div>
+                <a href="#" class="border-hover"><img src="uploads/giaydep.jpg" alt=""></a>
             </div>
             <div class="single-banner left">
-                <a href="#" class="border-hover"><img src="view/img/home/quanao.jpg" alt=""></a>
-                <div class="single-banner-text">
-                    <h3 style="padding-left: 19px;padding-top: 23px;}"><a style="color: #C1B2FF" >60% OFF<br>
-                            Woman<br> 
-                            Collection</a></h3>
-                    <a href="#" class="shop-button hidden-xs hidden-sm">shop now</a>
-                </div>
+                <a href="#" class="border-hover"><img src="uploads/quanao.jpg" alt=""></a>
             </div>
             <div class="single-banner-small small-two">
-                <a href="#" class="border-hover"><img alt="" src="view/img/home/dienthoai.jpg"></a>
-                <div class="timer-banner-text">
-                    <h2>phone<br> sunglass</h2>
-                    <a class="view-more hidden-sm" href="#">view more</a>
-                </div>
-                <p>phone sunglass</p>
+                <a href="#" class="border-hover"><img alt="" src="uploads/dienthoai.jpg"></a>
             </div>
         </div>
     </div>
     <!-- banner end -->
 
-    <!-- popular start -->
+<br>
+<br><br>
+<br>
 
+<center>
+<h1>Danh Sách Danh Mục</h1>
+</center>
 
-
-
-
-
-
-
-
-
-
-
-    <!-- popular end -->
+<br>
+<br><br>
+<br>
 
     <!-- banner start -->
     <div class="banner-area clearfix">
         <div class="single-banner left">
-            <a href="#" class="border-hover"><img src="view/img/home/aonam.jpg" alt=""></a>
-            <div class="single-banner-text">
-                <h3><a href="#">60% OFF<br>
-                    Woman<br> 
-                    Collection</a></h3>
-                <a href="shop-full-grid.html" class="shop-button hidden-sm hidden-xs">shop now</a>
-            </div>
+            <a href="#" class="border-hover"><img src="uploads/aonam.jpg" alt=""></a>
         </div>
         <div class="single-banner right">
-            <a href="#" class="border-hover"><img src="view/img/home/aonu.jpg" alt=""></a>
-            <div class="single-banner-text" style="
-    padding-top: 120px;
-">
-               
-                <a href="shop-full-grid.html" class="shop-button hidden-sm hidden-xs">shop now</a>
-            </div>
+            <a href="#" class="border-hover"><img src="uploads/aonu.jpg" alt=""></a>
         </div>
     </div>
     <!-- banner end -->

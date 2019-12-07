@@ -84,7 +84,7 @@
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">         
     <li class="nav-item active">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="?act=QL_Banner">
         <i class="fas fa-ad"></i>&ensp;
           <span>Quản lý Banner</span></a>
       </li>
