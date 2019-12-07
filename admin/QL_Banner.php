@@ -24,47 +24,19 @@
                     </thead>
 
                     <tbody>
-                    <tr>
-                    <td><strong>Banner 1</strong></td>
-                    <td>10</td>
-                    <td><a href="?act=QL_Banner_by_location&location=1"><span class="badge badge-primary">Quản lý Banner 1</span></a></td>
-                    </tr>
-
-                      <tr>
-                        <td><strong>Banner 2</strong></td>
-                        <td>10</td>
-                        <td><a href="?act=QL_Banner_by_location&location=2"><span class="badge badge-primary">Quản lý Banner 2</span></a></td>
-                      </tr>
-
-                      <tr>
-                        <td><strong>Banner 3</strong></td>
-                        <td>10</td>
-                        <td><a href="?act=QL_Banner_by_location&location=3"><span class="badge badge-primary">Quản lý Banner 3</span></a></td>
-                      </tr>
-
-                      <tr>
-                        <td><strong>Banner 4</strong></td>
-                        <td>10</td>
-                        <td><a href="?act=QL_Banner_by_location&location=4"><span class="badge badge-primary">Quản lý Banner 4</span></a></td>
-                      </tr>
-
-                      <tr>
-                        <td><strong>Banner 5</strong></td>
-                        <td>10</td>
-                        <td><a href="?act=QL_Banner_by_location&location=5"><span class="badge badge-primary">Quản lý Banner 5</span></a></td>
-                      </tr>
-
-                      <tr>
-                        <td><strong>Banner 6</strong></td>
-                        <td>10</td>
-                        <td><a href="?act=QL_Banner_by_location&location=6"><span class="badge badge-primary">Quản lý Banner 6</span></a></td>
-                      </tr>
-
-                      <tr>
-                        <td><strong>Banner 7</strong></td>
-                        <td>10</td>
-                        <td><a href="?act=QL_Banner_by_location&location=7"><span class="badge badge-primary">Quản lý Banner 7</span></a></td>
-                      </tr>
+                      <?php
+                        for ($i=1; $i<=7 ; $i+1) {
+                          $cout_banner=count(banner_by_loca($i));
+                          echo'
+                          <tr>
+                            <td><strong>Banner '.$i.'</strong></td>
+                            <td>'.$cout_banner.'</td>
+                            <td><a href="?act=QL_Banner_by_location&location='.$i.'"><span class="badge badge-primary">Quản lý Banner '.$i.'</span></a></td>
+                          </tr>
+                          ';
+                          $i+=1;
+                        }
+                      ?>
                     </tbody>
                   </table>
                 </div>
