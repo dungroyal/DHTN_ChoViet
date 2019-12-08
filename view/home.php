@@ -1,20 +1,37 @@
     <!-- banner start -->
-    <div class="banner-area home-two clearfix">
-        <div class="banner-left-img hidden-xs">
-            <a href="#" class="border-hover"><img src="uploads/poster1.jpg" alt=""></a>
-        </div>
-        <div class="banner-rightside">
+        <div class="banner-area home-two clearfix">
+            <div class="banner-left-img hidden-xs">
+                <?php
+                    $show_banner_1=show_banner_one(1);
+                    echo '<a href="'.$show_banner_1['url'].'" class="border-hover"><img src="uploads/'.$show_banner_1['image'].'" alt="'.$show_banner_1['title'].'"></a>';
+                ?>
+            </div>
+            <div class="banner-rightside">
             <div class="single-banner-small small-one">
-                <a href="#" class="border-hover"><img alt="" src="uploads/thucung.jpg"></a>
+                <?php
+                    $show_banner_2=show_banner_one(2);
+                    echo '<a href="'.$show_banner_2['url'].'" class="border-hover"><img alt="'.$show_banner_2['title'].'" src="uploads/'.$show_banner_2['image'].'"></a>';
+                ?>                
             </div>
+
             <div class="single-banner right">
-                <a href="#" class="border-hover"><img src="uploads/giaydep.jpg" alt=""></a>
+                <?php
+                    $show_banner_3=show_banner_one(3);
+                    echo '<a href="'.$show_banner_3['url'].'" class="border-hover"><img alt="'.$show_banner_3['title'].'" src="uploads/'.$show_banner_3['image'].'"></a>';
+                ?>  
             </div>
+
             <div class="single-banner left">
-                <a href="#" class="border-hover"><img src="uploads/quanao.jpg" alt=""></a>
+                <?php
+                        $show_banner_4=show_banner_one(4);
+                        echo '<a href="'.$show_banner_4['url'].'" class="border-hover"><img alt="'.$show_banner_4['title'].'" src="uploads/'.$show_banner_4['image'].'"></a>';
+                    ?> 
             </div>
             <div class="single-banner-small small-two">
-                <a href="#" class="border-hover"><img alt="" src="uploads/dienthoai.jpg"></a>
+                <?php
+                    $show_banner_5=show_banner_one(5);
+                    echo '<a href="'.$show_banner_5['url'].'" class="border-hover"><img alt="'.$show_banner_5['title'].'" src="uploads/'.$show_banner_5['image'].'"></a>';
+                ?>  
             </div>
         </div>
     </div>
@@ -35,10 +52,16 @@
     <!-- banner start -->
     <div class="banner-area clearfix">
         <div class="single-banner left">
-            <a href="#" class="border-hover"><img src="uploads/aonam.jpg" alt=""></a>
+            <?php
+                $show_banner_6=show_banner_one(6);
+                echo '<a href="'.$show_banner_6['url'].'" class="border-hover"><img alt="'.$show_banner_6['title'].'" src="uploads/'.$show_banner_6['image'].'"></a>';
+            ?> 
         </div>
         <div class="single-banner right">
-            <a href="#" class="border-hover"><img src="uploads/aonu.jpg" alt=""></a>
+          <?php
+                $show_banner_7=show_banner_one(7);
+                echo '<a href="'.$show_banner_7['url'].'" class="border-hover"><img alt="'.$show_banner_7['title'].'" src="uploads/'.$show_banner_7['image'].'"></a>';
+            ?> 
         </div>
     </div>
     <!-- banner end -->

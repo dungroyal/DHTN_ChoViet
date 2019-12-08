@@ -6,8 +6,9 @@
     include "model/store.php";
     include "model/product.php";
     include "model/catalog.php";
+    include "model/banner.php";
     include "model/tool.php";
-    include('model/class.smtp.php');
+    include ('model/class.smtp.php');
 	include "model/class.phpmailer.php"; 
 	include "model/functions.php"; 
 	include "model/cart.php"; 

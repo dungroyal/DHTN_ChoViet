@@ -8,11 +8,82 @@
           </li>
           <li class="breadcrumb-item active">Quản lý Banner <?=$location;?></li>
         </ol>
+        <?php          
+        if(isset($_GET['edit']) && ($_GET['edit'] == 1)){
+          $id = $_GET['id'];          
+          $bannerone = banner_one($Get_id_Catalog['idCatalog']);
+          ?>
+          <div class="card mb-3">
+              <div class="card-header">
+                <i class="fas fa-folder-plus"></i>
+                Sửa sản phẩm : <strong><?=$catalogone['name'];?></strong>
+              </div>
+              <div class="card-body">
+
+                <!-- Default form register -->
+                <form class="text-center border border-light p-3" action="?act=QL_Catalog" method="post" enctype="multipart/form-data">
+                  <div class="form-row mb-4" >
+                    <div class="col">
+                      <input type="hidden" name="id" value="<?=$catalogone['id']?>">
+                      <!-- First name -->
+                      <input type="text" id="defaultRegisterFormFirstName" name="name" class="form-control" value="<?=$catalogone['name'];?>" placeholder="<?=$catalogone['name'];?>">
+                    </div>
+                    
+                    <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
+                        <input id="fileInput" type="file" name="image"/>
+                    </div>
+                    <!-- Sign up button -->
+                    <input class="btn btn-info my-1 btn-block" type="submit" name="update_catalog" value="Sửa danh mục">
+                  </div>
+                </form>
+                </div>
+              </div>
+
+          <?php
+          } else {
+            ?><div class="card mb-3">
+              <div class="card-header">
+                <i class="fas fa-folder-plus"></i>
+                Thêm danh mục</div>
+              <div class="card-body">
+
+                <!-- Default form register -->
+                <form class="text-center border border-light p-3" action="?act=QL_Catalog" method="post" enctype="multipart/form-data">
+                  <div class="form-row mb-4" >
+
+                  <div class="form-group mb-3">
+                          <select name="idcatalog" class="custom-select tm-select-accounts" id="category">
+                            <option selected>Chọn danh mục ...</option>
+                              <?php
+                                  foreach ($cataloglist as $cat) {
+                                    echo'<option value="'.$cat['id'].'">'.$cat['name'].'</option>';
+                                  }
+                              ?>
+                        </select>
+                      </div>
+
+                    <div class="col">
+                      <!-- First name -->
+                      <input type="text" id="defaultRegisterFormFirstName" name="name" class="form-control" placeholder="Viết lại tên danh mục" required>
+                    </div>
+
+                   
+
+                    <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
+                        <input id="fileInput" type="file" required name="image"/>
+                    </div>
+                    <!-- Sign up button -->
+                    <input class="btn btn-info my-1 btn-block" type="submit" name="add_catalog" value="Thêm danh mục">
+                  </div>
+                </form>
+              </div>
+              </div>
+            <?php } ?>
 
             <!-- DataTables Example -->
             <div class="card mb-3">
               <div class="card-header">
-                <i class="far fa-list-alt"></i> Loại Banner</div>
+                <i class="far fa-list-alt"></i> Danh sách Banner <?=$location;?></div>
               <div class="card-body">
                 <div class="table-responsive">
                   <table class="table table-bordered" width="100%" cellspacing="1">
@@ -33,12 +104,12 @@
                           echo'
                           <tr>
                             <td><strong>'.$ban['title'].'</strong></td>
-                            <td><img src="uploads/'.$ban['image'].'" alt="" height="100px";></td>
-                            <td>'.$ban['url'].'</td>
+                            <td><img src="uploads/'.$ban['image'].'" alt="" height="200px";></td>
+                            <td><a href="'.$ban['url'].'">'.$ban['url'].'</a></td>
                             <td><a href=""><span class="badge badge-primary">Kích hoạt</span></a></td>
                             <td>
-                              <a href="?act=QL_Product&edi=1&id=' . $ban['id'] . '"><i class="fas fa-pen-square"></i></a> &emsp;
-                              <a href="?act=QL_Product&del=1&id=' . $ban['id'] . '"><i class="fas fa-trash-alt" style="color: red;"></i></i></a>
+                              <a href="?act=QL_Banner_by_location&edi=1&id=' . $ban['id'] . '"><i class="fas fa-pen-square"></i></a> &emsp;
+                              <a href="?act=QL_Banner_by_location&&del=1&id=' . $ban['id'] . '"><i class="fas fa-trash-alt" style="color: red;"></i></i></a>
                           </td>
                           </tr>
                           ';
