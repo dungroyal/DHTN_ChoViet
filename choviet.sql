@@ -2,10 +2,10 @@
 -- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 07, 2019 lúc 07:13 PM
--- Phiên bản máy phục vụ: 10.4.8-MariaDB
--- Phiên bản PHP: 7.3.11
+-- Host: 127.0.0.1
+-- Generation Time: Dec 08, 2019 at 05:52 AM
+-- Server version: 10.4.8-MariaDB
+-- PHP Version: 7.3.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `choviet`
+-- Database: `choviet`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `banner`
+-- Table structure for table `banner`
 --
 
 CREATE TABLE `banner` (
@@ -38,17 +38,22 @@ CREATE TABLE `banner` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `banner`
+-- Dumping data for table `banner`
 --
 
 INSERT INTO `banner` (`id`, `title`, `url`, `image`, `location`, `active`) VALUES
-(1, 'Banner quảng cáo chó', 'Banner 1', 'poster1.jpg', 1, 1),
-(2, '', 'Banner 2', 'thucung.jpg', 2, 1);
+(1, 'Banner quảng cáo chó', 'http://localhost/DHTN_ChoViet/?act=product_detail&idProduct=146', 'poster1.jpg', 1, 1),
+(2, 'Banner ', 'Banner 2', 'thucung.jpg', 2, 1),
+(3, 'Banner quảng cáo chó', 'http://localhost/DHTN_ChoViet/?act=product_detail&idProduct=146', 'giaydep.jpg', 3, 1),
+(4, 'Banner quảng cáo chó', 'http://localhost/DHTN_ChoViet/?act=product_detail&idProduct=146', 'quanao.jpg', 4, 1),
+(5, 'Banner quảng cáo chó', 'http://localhost/DHTN_ChoViet/?act=product_detail&idProduct=146', 'dienthoai.jpg', 5, 1),
+(6, 'Banner quảng cáo chó', 'http://localhost/DHTN_ChoViet/?act=product_detail&idProduct=146', 'aonam.jpg', 6, 1),
+(7, 'Banner quảng cáo chó', 'http://localhost/DHTN_ChoViet/?act=product_detail&idProduct=146', 'aonu.jpg', 7, 1);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `cart`
+-- Table structure for table `cart`
 --
 
 CREATE TABLE `cart` (
@@ -69,7 +74,7 @@ CREATE TABLE `cart` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `cart`
+-- Dumping data for table `cart`
 --
 
 INSERT INTO `cart` (`id`, `pro_name`, `img`, `coin`, `tinh_trang`, `info`, `color`, `so_luong`, `giam`, `id_user`, `id_custom`, `id_pro`, `id_cata`, `type`) VALUES
@@ -80,7 +85,7 @@ INSERT INTO `cart` (`id`, `pro_name`, `img`, `coin`, `tinh_trang`, `info`, `colo
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `catalog`
+-- Table structure for table `catalog`
 --
 
 CREATE TABLE `catalog` (
@@ -90,7 +95,7 @@ CREATE TABLE `catalog` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `catalog`
+-- Dumping data for table `catalog`
 --
 
 INSERT INTO `catalog` (`id`, `name`, `image`) VALUES
@@ -125,7 +130,7 @@ INSERT INTO `catalog` (`id`, `name`, `image`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `catalog_store`
+-- Table structure for table `catalog_store`
 --
 
 CREATE TABLE `catalog_store` (
@@ -137,7 +142,7 @@ CREATE TABLE `catalog_store` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `catalog_store`
+-- Dumping data for table `catalog_store`
 --
 
 INSERT INTO `catalog_store` (`id`, `name`, `image`, `idStore`, `idCatalog`) VALUES
@@ -152,7 +157,7 @@ INSERT INTO `catalog_store` (`id`, `name`, `image`, `idStore`, `idCatalog`) VALU
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `comment`
+-- Table structure for table `comment`
 --
 
 CREATE TABLE `comment` (
@@ -170,7 +175,7 @@ CREATE TABLE `comment` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `product`
+-- Table structure for table `product`
 --
 
 CREATE TABLE `product` (
@@ -189,7 +194,7 @@ CREATE TABLE `product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `product`
+-- Dumping data for table `product`
 --
 
 INSERT INTO `product` (`id`, `name`, `price`, `soluong`, `image`, `view`, `descripsion`, `hot`, `giamgia`, `id_user`, `idCatalog`, `idStore`) VALUES
@@ -204,7 +209,7 @@ INSERT INTO `product` (`id`, `name`, `price`, `soluong`, `image`, `view`, `descr
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `store`
+-- Table structure for table `store`
 --
 
 CREATE TABLE `store` (
@@ -222,7 +227,7 @@ CREATE TABLE `store` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `store`
+-- Dumping data for table `store`
 --
 
 INSERT INTO `store` (`id`, `name`, `username`, `password`, `phonenumber`, `email`, `image`, `diachi`, `Date`, `trangthai`, `idUser`) VALUES
@@ -233,7 +238,7 @@ INSERT INTO `store` (`id`, `name`, `username`, `password`, `phonenumber`, `email
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -246,7 +251,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `pass`, `email`, `image`, `lever`) VALUES
@@ -257,30 +262,30 @@ INSERT INTO `users` (`id`, `name`, `pass`, `email`, `image`, `lever`) VALUES
 (13, 'user', 'user', 'admin2019@gmail.com', 'avatar_user.png', '0');
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `banner`
+-- Indexes for table `banner`
 --
 ALTER TABLE `banner`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `cart`
+-- Indexes for table `cart`
 --
 ALTER TABLE `cart`
   ADD PRIMARY KEY (`id`),
   ADD KEY `fk_cart_cata` (`id_cata`);
 
 --
--- Chỉ mục cho bảng `catalog`
+-- Indexes for table `catalog`
 --
 ALTER TABLE `catalog`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `catalog_store`
+-- Indexes for table `catalog_store`
 --
 ALTER TABLE `catalog_store`
   ADD PRIMARY KEY (`id`),
@@ -288,7 +293,7 @@ ALTER TABLE `catalog_store`
   ADD KEY `fk_catalogstore_catalog` (`idCatalog`);
 
 --
--- Chỉ mục cho bảng `comment`
+-- Indexes for table `comment`
 --
 ALTER TABLE `comment`
   ADD PRIMARY KEY (`id`),
@@ -296,7 +301,7 @@ ALTER TABLE `comment`
   ADD KEY `fk_comment_product` (`idProduct`);
 
 --
--- Chỉ mục cho bảng `product`
+-- Indexes for table `product`
 --
 ALTER TABLE `product`
   ADD PRIMARY KEY (`id`),
@@ -304,103 +309,103 @@ ALTER TABLE `product`
   ADD KEY `fk_product_store` (`idStore`);
 
 --
--- Chỉ mục cho bảng `store`
+-- Indexes for table `store`
 --
 ALTER TABLE `store`
   ADD PRIMARY KEY (`id`),
   ADD KEY `fk_store_user` (`idUser`);
 
 --
--- Chỉ mục cho bảng `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `banner`
+-- AUTO_INCREMENT for table `banner`
 --
 ALTER TABLE `banner`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT cho bảng `cart`
+-- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
--- AUTO_INCREMENT cho bảng `catalog`
+-- AUTO_INCREMENT for table `catalog`
 --
 ALTER TABLE `catalog`
   MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
 
 --
--- AUTO_INCREMENT cho bảng `catalog_store`
+-- AUTO_INCREMENT for table `catalog_store`
 --
 ALTER TABLE `catalog_store`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT cho bảng `comment`
+-- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
--- AUTO_INCREMENT cho bảng `product`
+-- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=147;
 
 --
--- AUTO_INCREMENT cho bảng `store`
+-- AUTO_INCREMENT for table `store`
 --
 ALTER TABLE `store`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT cho bảng `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- Các ràng buộc cho các bảng đã đổ
+-- Constraints for dumped tables
 --
 
 --
--- Các ràng buộc cho bảng `cart`
+-- Constraints for table `cart`
 --
 ALTER TABLE `cart`
   ADD CONSTRAINT `fk_cart_cata` FOREIGN KEY (`id_cata`) REFERENCES `catalog` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
--- Các ràng buộc cho bảng `catalog_store`
+-- Constraints for table `catalog_store`
 --
 ALTER TABLE `catalog_store`
   ADD CONSTRAINT `fk_catalogstore_catalog` FOREIGN KEY (`idCatalog`) REFERENCES `catalog` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_catalogstore_store` FOREIGN KEY (`idStore`) REFERENCES `store` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
--- Các ràng buộc cho bảng `comment`
+-- Constraints for table `comment`
 --
 ALTER TABLE `comment`
   ADD CONSTRAINT `fk_comment_product` FOREIGN KEY (`idProduct`) REFERENCES `product` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `fk_comment_users` FOREIGN KEY (`idUsers`) REFERENCES `users` (`id`) ON DELETE CASCADE;
 
 --
--- Các ràng buộc cho bảng `product`
+-- Constraints for table `product`
 --
 ALTER TABLE `product`
   ADD CONSTRAINT `fk_product_catalog` FOREIGN KEY (`idCatalog`) REFERENCES `catalog` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_product_store` FOREIGN KEY (`idStore`) REFERENCES `store` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
--- Các ràng buộc cho bảng `store`
+-- Constraints for table `store`
 --
 ALTER TABLE `store`
   ADD CONSTRAINT `fk_store_user` FOREIGN KEY (`idUser`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
