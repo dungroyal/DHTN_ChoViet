@@ -1,83 +1,171 @@
-      
-      
-      <div class="container-fluid">
+ 
+        <div class="container-fluid">
         <!-- Breadcrumbs-->
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
             <a href="#">Administrator</a>
-          </li>
+          </li>          
           <li class="breadcrumb-item active">Quản lý Banner <?=$location;?></li>
-        </ol>
-        <?php          
-        if(isset($_GET['edit']) && ($_GET['edit'] == 1)){
-          $id = $_GET['id'];          
-          $bannerone = banner_one($Get_id_Catalog['idCatalog']);
-          ?>
-          <div class="card mb-3">
-              <div class="card-header">
-                <i class="fas fa-folder-plus"></i>
-                Sửa sản phẩm : <strong><?=$catalogone['name'];?></strong>
-              </div>
-              <div class="card-body">
-
-                <!-- Default form register -->
-                <form class="text-center border border-light p-3" action="?act=QL_Catalog" method="post" enctype="multipart/form-data">
-                  <div class="form-row mb-4" >
-                    <div class="col">
-                      <input type="hidden" name="id" value="<?=$catalogone['id']?>">
-                      <!-- First name -->
-                      <input type="text" id="defaultRegisterFormFirstName" name="name" class="form-control" value="<?=$catalogone['name'];?>" placeholder="<?=$catalogone['name'];?>">
-                    </div>
-                    
-                    <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
-                        <input id="fileInput" type="file" name="image"/>
-                    </div>
-                    <!-- Sign up button -->
-                    <input class="btn btn-info my-1 btn-block" type="submit" name="update_catalog" value="Sửa danh mục">
-                  </div>
-                </form>
-                </div>
-              </div>
+        </ol>       
 
           <?php
-          } else {
-            ?><div class="card mb-3">
-              <div class="card-header">
-                <i class="fas fa-folder-plus"></i>
-                Thêm danh mục</div>
-              <div class="card-body">
+          if(isset($_GET['add']) && ($_GET['add'] == 1)){
+            echo'
+            <a href="?act=QL_Banner_by_location&location='.$location.'" class="btn btn-success btn-floated close-box"><i class="fa fa-plus"></i></a>
+            ';
+          }else {
+            echo'
+            <a href="?act=QL_Banner_by_location&location='.$location.'&add=1" class="btn btn-success btn-floated"><i class="fa fa-plus"></i></a>
+            ';
+          }
 
-                <!-- Default form register -->
-                <form class="text-center border border-light p-3" action="?act=QL_Catalog" method="post" enctype="multipart/form-data">
-                  <div class="form-row mb-4" >
+          ?>
 
-                  <div class="form-group mb-3">
-                          <select name="idcatalog" class="custom-select tm-select-accounts" id="category">
-                            <option selected>Chọn danh mục ...</option>
-                              <?php
-                                  foreach ($cataloglist as $cat) {
-                                    echo'<option value="'.$cat['id'].'">'.$cat['name'].'</option>';
-                                  }
-                              ?>
-                        </select>
+        <?php          
+        if(isset($_GET['edi']) && ($_GET['edi'] == 1)){
+          $id = $_GET['id'];
+          $bannerone = banner_one($id);
+          ?><div class="row">
+              <div class="col-md-8">
+                  <div class="card">
+                      <div class="card-body">
+                          <div class="form-horizontal">                      
+                            <form action="?act=QL_Banner_by_location&location=<?=$location;?>" method="post" enctype="multipart/form-data">
+                              <input type="hidden" name="id" value="<?=$bannerone['id'];?>">
+                            <fieldset>
+                                  <legend>Chỉnh sửa banner "<strong><?=$bannerone['title'];?>"</strong> </legend>
+                                  <div class="form-group row">
+                                      <label class="col-form-label col" for="Title">Tiêu đề</label>
+                                      <div class="col-md-12">
+                                          <input class="form-control text-box single-line" data-val="true" data-val-length="The field Tiêu đề must be a string with a maximum length of 250." data-val-length-max="250" id="Title" name="title" type="text" value="<?=$bannerone['title'];?>">
+                                          <span class="field-validation-valid text-danger" data-valmsg-for="Title" data-valmsg-replace="true"></span>
+                                      </div>
+                                  </div>
+      
+                                  <div class="form-group row">
+                                      <label class="col-form-label col" for="Title">Đường dẫn URL</label>
+                                      <div class="col-md-12">
+                                          <input class="form-control text-box single-line" data-val="true" data-val-length="The field Tiêu đề must be a string with a maximum length of 250." data-val-length-max="250" id="Title" name="url" type="text" value="<?=$bannerone['url'];?>">
+                                          <span class="field-validation-valid text-danger" data-valmsg-for="Title" data-valmsg-replace="true"></span>
+                                      </div>
+                                  </div>
+                              </fieldset>
+                          </div>
                       </div>
-
-                    <div class="col">
-                      <!-- First name -->
-                      <input type="text" id="defaultRegisterFormFirstName" name="name" class="form-control" placeholder="Viết lại tên danh mục" required>
-                    </div>
-
-                   
-
-                    <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
-                        <input id="fileInput" type="file" required name="image"/>
-                    </div>
-                    <!-- Sign up button -->
-                    <input class="btn btn-info my-1 btn-block" type="submit" name="add_catalog" value="Thêm danh mục">
                   </div>
-                </form>
               </div>
+              <div class="col-md-4">
+                  <div class="card">
+                      <div class="card-body">
+                          <fieldset>
+                              <legend>Tùy chọn</legend>
+                              <div class="form-group row">
+                                  <label class="col-form-label col" for="Image">Hình đại diện</label>
+                                  <div class="col-md-12">
+                                      <div id="preview">
+                                      </div>
+                                      <p>
+                                          <a href="#" upload-to="#Image" previewto="#preview" class="uploadfile btn btn-secondary">Chọn Ảnh</a>
+                                      </p>
+                                      <input data-val="true" data-val-length="The field Hình đại diện must be a string with a maximum length of 250." data-val-length-max="250" id="Image" name="Image" type="hidden" value="">
+                                      <span class="field-validation-valid text-danger" data-valmsg-for="Image" data-valmsg-replace="true"></span>
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label class="col-form-label col" for="Status">Trạng thái</label>
+                                  <div class="col-md-12">
+                                    <?php
+                                      if ($bannerone['status']==1) {
+                                        $status1='selected="selected"';
+                                        $status2='';
+                                      }else{                                        
+                                        $status2='selected="selected"';
+                                        $status1='';
+                                      }
+                                    ?>
+                                      <select class="form-control" data-val="true" data-val-required="The Trạng thái field is required." id="Status" name="status">
+                                        <option <?=$status2;?> value="0">Ẩn khỏi trang chủ</option>
+                                        <option <?=$status1;?> value="1">Kích hoạt</option>
+                                        </select>
+                                      <span class="field-validation-valid text-danger" data-valmsg-for="Status" data-valmsg-replace="true"></span>
+                                  </div>
+                              </div>
+                              <input type="submit" value="Lưu thây đổi" name="update_banner" class="btn btn-primary">
+                              <a class="btn btn-default" href="?act=QL_Banner_by_location&location=<?=$location;?>">Cancel</a>
+                          </fieldset>
+                        </form>
+                      </div>
+                  </div>
               </div>
+          </div>
+
+          <?php
+          } elseif (isset($_GET['add']) && ($_GET['add'] == 1)) {
+            ?>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="form-horizontal">                      
+                              <form action="?act=QL_Banner_by_location&location=<?=$location;?>" method="post" enctype="multipart/form-data">
+                              <fieldset>
+                                    <legend>Thêm Banner <?=$location;?></legend>
+                                    <div class="form-group row">
+                                        <label class="col-form-label col" for="Title">Tiêu đề</label>
+                                        <div class="col-md-12">
+                                            <input class="form-control text-box single-line" data-val="true" data-val-length="The field Tiêu đề must be a string with a maximum length of 250." data-val-length-max="250" id="Title" name="title" type="text" value="">
+                                            <span class="field-validation-valid text-danger" data-valmsg-for="Title" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-form-label col" for="Title">Đường dẫn URL</label>
+                                        <div class="col-md-12">
+                                            <input class="form-control text-box single-line" data-val="true" data-val-length="The field Tiêu đề must be a string with a maximum length of 250." data-val-length-max="250" id="Title" name="url" type="text" value="">
+                                            <span class="field-validation-valid text-danger" data-valmsg-for="Title" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <fieldset>
+                                <legend>Tùy chọn</legend>
+                                <div class="form-group row">
+                                    <label class="col-form-label col" for="Image">Hình đại diện</label>
+                                    <div class="col-md-12">
+                                        <p>
+                                            <a href="#" upload-to="#Image" previewto="#preview" class="uploadfile btn btn-secondary">Chọn Ảnh</a>
+                                        </p>
+                                        <input data-val="true" data-val-length="The field Hình đại diện must be a string with a maximum length of 250." data-val-length-max="250" id="Image" name="Image" type="hidden" value="">
+                                        <span class="field-validation-valid text-danger" data-valmsg-for="Image" data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-form-label col" for="Status">Trạng thái</label>
+                                    <div class="col-md-12">
+                                        <select class="form-control" data-val="true" data-val-required="The Trạng thái field is required." id="Status" name="status">
+                                          <option selected="selected" value="0">Lưu tạm</option>
+                                          <option value="1">Hiển thị trên trang chủ</option>
+                                          </select>
+                                        <span class="field-validation-valid text-danger" data-valmsg-for="Status" data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+                                <input type="submit" value="Thêm banner" name="add_banner" class="btn btn-primary">
+                                <a class="btn btn-default" href="?act=QL_Banner_by_location&location=<?=$location;?>">Cancel</a>
+                            </fieldset>
+                          </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <?php
+          }else {
+            ?>
             <?php } ?>
 
             <!-- DataTables Example -->
@@ -101,15 +189,22 @@
                     <tbody>
                       <?php
                         foreach ($banner_by_loca as $ban) {
+                          $trangthai='';
+                          if ($ban['status']==0) {                          
+                            $trangthai='"badge"style="color: #ffffff;background-color: #c10707;">Đã Ẩn';
+                          }
+                          if ($ban['status']==1) {
+                            $trangthai='"badge badge-warning">Đã kích hoạt';
+                          }                          
                           echo'
                           <tr>
                             <td><strong>'.$ban['title'].'</strong></td>
-                            <td><img src="uploads/'.$ban['image'].'" alt="" height="200px";></td>
+                            <td><img src="uploads/'.$ban['image'].'" alt="" height="150px";></td>
                             <td><a href="'.$ban['url'].'">'.$ban['url'].'</a></td>
-                            <td><a href=""><span class="badge badge-primary">Kích hoạt</span></a></td>
+                            <td><span class=' . $trangthai . '</span></td>
                             <td>
-                              <a href="?act=QL_Banner_by_location&edi=1&id=' . $ban['id'] . '"><i class="fas fa-pen-square"></i></a> &emsp;
-                              <a href="?act=QL_Banner_by_location&&del=1&id=' . $ban['id'] . '"><i class="fas fa-trash-alt" style="color: red;"></i></i></a>
+                              <a href="?act=QL_Banner_by_location&location='.$ban['location'].'&edi=1&id=' . $ban['id'] . '"><i class="fas fa-pen-square"></i></a> &emsp;
+                              <a href="?act=QL_Banner_by_location&location='.$ban['location'].'&del=1&id=' . $ban['id'] . '"><i class="fas fa-trash-alt" style="color: red;"></i></i></a>
                           </td>
                           </tr>
                           ';

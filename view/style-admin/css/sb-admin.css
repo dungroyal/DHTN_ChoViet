@@ -339,10 +339,11 @@ legend {
     max-width: 100%;
     padding: 0;
     margin-bottom: .5rem;
-    font-size: 1.5rem;
+    font-size: 18px;
     line-height: inherit;
     color: inherit;
     white-space: normal;
+    font-weight: bold;
 }
 
 progress {
@@ -5128,7 +5129,8 @@ input[type="button"].btn-block {
     -webkit-box-flex: 1;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
-    padding: 1.25rem;
+    padding: 1.25rem;    
+    min-height: 315px;
 }
 
 .card-title {
@@ -10889,9 +10891,9 @@ body {
 }
 
 .scroll-to-top {
-    position: fixed;
-    right: 15px;
-    bottom: 15px;
+    position: fixed;    
+    right: 24px;
+    bottom: 100px;
     display: none;
     width: 50px;
     height: 50px;
@@ -11284,4 +11286,43 @@ body.sidebar-toggled footer.sticky-footer {
 .page-title {
     margin: 0px 0px 15px 0px;
     font-size: 21px;
+}
+
+
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+.btn-floated {
+    line-height: 2.2;
+}
+
+.btn-success {
+    border-color: #007c69;
+}
+
+.btn-floated {
+    position: fixed;    
+    right: 1.25rem;
+    bottom: 1.25rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.25rem;
+    line-height: 2;
+    border-radius: 3rem;
+    border: 0;
+    z-index: 5;
+    box-shadow: 0 3px 5px -1px rgba(20,20,31,.2), 0 6px 10px 0 rgba(20,20,31,.14), 0 1px 18px 0 rgba(20,20,31,.12);
+}
+
+.close-box {
+    right: 1.25rem;
+    bottom: 1.25rem;
+    transform: rotate(45deg);
+    background-color: red;
+    transition: all .5s;
+}
+
+.fa-plus:before {
+    content: "\f067";
 }
