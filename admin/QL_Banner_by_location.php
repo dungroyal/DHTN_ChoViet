@@ -61,14 +61,9 @@
                               <legend>Tùy chọn</legend>
                               <div class="form-group row">
                                   <label class="col-form-label col" for="Image">Hình đại diện</label>
-                                  <div class="col-md-12">
-                                      <div id="preview">
-                                      </div>
-                                      <p>
-                                          <a href="#" upload-to="#Image" previewto="#preview" class="uploadfile btn btn-secondary">Chọn Ảnh</a>
-                                      </p>
-                                      <input data-val="true" data-val-length="The field Hình đại diện must be a string with a maximum length of 250." data-val-length-max="250" id="Image" name="Image" type="hidden" value="">
-                                      <span class="field-validation-valid text-danger" data-valmsg-for="Image" data-valmsg-replace="true"></span>
+                                  <div class="col-md-12">                                    
+                                      <input id="fileInput" type="file" name="image" style="display:none;" >
+                                      <input type="button" class="uploadfile btn btn-secondary" value="Upload hình ảnh" onclick="document.getElementById('fileInput').click();" />
                                   </div>
                               </div>
                               <div class="form-group row">
@@ -136,13 +131,12 @@
                             <fieldset>
                                 <legend>Tùy chọn</legend>
                                 <div class="form-group row">
-                                    <label class="col-form-label col" for="Image">Hình đại diện</label>
+                                    <label class="col-form-label col" for="Image">Hình ảnh</label>
                                     <div class="col-md-12">
-                                        <p>
-                                            <a href="#" upload-to="#Image" previewto="#preview" class="uploadfile btn btn-secondary">Chọn Ảnh</a>
-                                        </p>
-                                        <input data-val="true" data-val-length="The field Hình đại diện must be a string with a maximum length of 250." data-val-length-max="250" id="Image" name="Image" type="hidden" value="">
-                                        <span class="field-validation-valid text-danger" data-valmsg-for="Image" data-valmsg-replace="true"></span>
+                                      <div class="custom-file mt-2 mb-2">
+                                        <input id="fileInput" type="file" name="image" style="display:none;" >
+                                        <input type="button" class="uploadfile btn btn-secondary" value="Upload hình ảnh" onclick="document.getElementById('fileInput').click();" />
+                                      </div>
                                     </div>
                                 </div>
                                 <div class="form-group row">

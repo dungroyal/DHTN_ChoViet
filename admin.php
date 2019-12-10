@@ -138,13 +138,11 @@
 				$location=$_GET['location'];
 				$status=$_POST['status'];
 
-				//if ($_FILES['image']['name']!="") {                            
-				//	$image= basename($_FILES['image']['name']);
-				//	$target_file ="uploads/". $image1;
-				//	move_uploaded_file($_FILES['image']['tmp_name'], $target_file);
-				//}
-
-				$image='xx';
+				if ($_FILES['image']['name']!="") {                            
+					$image= basename($_FILES['image']['name']);
+					$target_file ="uploads/". $image1;
+					move_uploaded_file($_FILES['image']['tmp_name'], $target_file);
+				}
 				
 				banner_insert($title,$url,$image,$location,$status);
 				header("location: admin.php?act=QL_Banner_by_location&location=$location");
@@ -163,13 +161,11 @@
 				$location=$_GET['location'];
 				$status=$_POST['status'];
 
-				//if ($_FILES['image']['name']!="") {                            
-				//	$image= basename($_FILES['image']['name']);
-				//	$target_file ="uploads/". $image1;
-				//	move_uploaded_file($_FILES['image']['tmp_name'], $target_file);
-				//}
-
-				$image='xx';
+				if ($_FILES['image']['name']!="") {                            
+					$image= basename($_FILES['image']['name']);
+					$target_file ="uploads/". $image1;
+					move_uploaded_file($_FILES['image']['tmp_name'], $target_file);
+				}
 
                 update_banner($title,$url,$image,$location,$status,$id);
                 header("location: admin.php?act=QL_Banner_by_location&location=$location");
