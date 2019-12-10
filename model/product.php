@@ -1,9 +1,11 @@
 <?php
     function productlist(){
-        $sql="SELECT * from product order by id desc";
+        $sql="SELECT * from product where status=1 order by id desc";
         $kq=pdo_query($sql);
         return $kq;
     }
+
+    
 
     function showproduct($type,$gioihan){
         $sql = "SELECT * FROM product WHERE 3";
@@ -24,6 +26,7 @@
     function productlist_by_store($idStore=0){
         $sql="SELECT * FROM product WHERE 1";
         $sql.=" AND idStore=".$idStore;
+        $sql.=" AND status=1 ";
         $sql.=" ORDER BY id DESC  LIMIT 0,6";
         $kq=pdo_query($sql);
         return $kq;
@@ -36,7 +39,7 @@
         if ($idcat>0) {
             $sql.=" AND idCatalog=".$idcat;
         }
-
+        $sql.=" AND status=1 ";
         $sql.=" ORDER BY id DESC";
         $sql.=" limit 8";
 
@@ -46,9 +49,9 @@
 
     function productlist_by_id_and_idStore($idStore=0,$idcat=0){
         $sql="SELECT * FROM product WHERE 1";
-            $sql.=" AND idCatalog=".$idcat;
-            $sql.=" AND idStore=".$idStore;
-
+        $sql.=" AND idCatalog=".$idcat;
+        $sql.=" AND idStore=".$idStore;
+        $sql.=" AND status=1 ";
         $sql.=" ORDER BY id DESC";
         $sql.=" limit 8";
 

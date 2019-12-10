@@ -79,6 +79,7 @@
                       foreach ($storelist as $st) {
                         if ($st['trangthai']==1) {
                           $trangthai='"badge badge-warning">Chờ duyệt';
+                          active_store();
                         }
                         if ($st['trangthai']==2) {                          
                           $trangthai='"badge badge-primary">Đã duyệt';

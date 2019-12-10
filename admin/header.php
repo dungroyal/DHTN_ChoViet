@@ -82,8 +82,15 @@
   <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="sidebar navbar-nav">         
+    <ul class="sidebar navbar-nav">      
     <li class="nav-item active">
+          <a class="nav-link" href="?act=home">
+              <i class="fas fa-fw fa-tachometer-alt"></i>
+              <span>Dashboard</span>
+          </a>
+      </li>
+
+      <li class="nav-item active">
         <a class="nav-link" href="?act=QL_Banner">
         <i class="fas fa-ad"></i>&ensp;
           <span>Quản lý Banner</span></a>

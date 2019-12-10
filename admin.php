@@ -180,13 +180,17 @@
 				unset($_SESSION['iduserguest']);
 				header('location: index.php');
 				break;
+
+		case 'home':
+			include "admin/home.php";
+				break;
 				
         default:
-				include "admin/QL_Product.php";
+				include "admin/home.php";
 				break;
 					}
 				}else {
-					include "admin/QL_Product.php";
+					include "admin/home.php";
 				}
 				
       	include "admin/footer.php";

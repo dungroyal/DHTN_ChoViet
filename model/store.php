@@ -34,5 +34,15 @@
         pdo_execute($sql, $name,$username,$password,$phonenumber,$email,$idUser);
     }
 
+    function enable_store($id){
+        $sql = "UPDATE product SET status=1 WHERE idStore=?";
+        pdo_execute($sql, $id);
+    }
+
+    function disabled_store($id){
+        $sql = "UPDATE product SET status=0 WHERE idStore=?";
+        pdo_execute($sql, $id);
+    }
+
         
 ?>

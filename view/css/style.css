@@ -1127,7 +1127,7 @@ a.shop-button {
 .product-content.text-center>h3 {
     color: #606060;
     font-size: 21px;
-    font-weight: 500;
+    font-weight:bold;
     left: 0;
     right: 0;
     text-transform: capitalize;
@@ -5772,10 +5772,10 @@ input[type="password"] {
 }
 .thongbao-dangnhap {
     margin: 0px auto;
-    color: yellow;
+    color: red;
     font-size: 15px;
     font-weight: bold;
-    margin-left: 85px;
+    margin-left: 150px;
 }
 
 /* gio hàng*/
