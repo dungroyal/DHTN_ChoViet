@@ -19,7 +19,7 @@
               <div class="card-body">
 
                 <!-- Default form register -->
-                <form class="text-center border border-light p-12" action="?act=QL_Catalog" method="post" enctype="multipart/form-data">
+                <form class="text-center border border-light p-12" action="?act=QL_Store" method="post" enctype="multipart/form-data">
                   <div class="form-group mb-3">
                   <input type="hidden" name="id" value="<?=$storeone['id']; ?>">
                         <label for="category">Trạng thái hoạt động của cửa hàng</label>
@@ -77,16 +77,18 @@
                     <tbody>
                       <?php
                       foreach ($storelist as $st) {
-                        if ($st['trangthai']==1) {
+                        if ($st['trangthai']==0) {
                           $trangthai='"badge badge-warning">Chờ duyệt';
-                          active_store();
+                          disabled_store($st['id']);
                         }
-                        if ($st['trangthai']==2) {                          
+                        if ($st['trangthai']==1) {                          
                           $trangthai='"badge badge-primary">Đã duyệt';
+                          enable_store($st['id']);
                         }    
                         
-                        if ($st['trangthai']==0) {                          
+                        if ($st['trangthai']==2) {                          
                           $trangthai='"badge"style="color: #ffffff;background-color: #c10707;">Đã chặn';
+                          disabled_store($st['id']);
                         }   
 
                         echo '
