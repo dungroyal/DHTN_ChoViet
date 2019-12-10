@@ -73,7 +73,7 @@
       <div class="totals-value" id="cart-total"><?= number_format($sc['coin']) ?>VNĐ</div>
     </div>
   </div>
-       
+  
   <div class="carhao">
       
         <label>Họ và tên: <input type="text" name="name" id=""></label>
