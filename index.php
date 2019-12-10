@@ -65,12 +65,11 @@
 					$info = $product_detail_by_id['descripsion'];
 					$color = $_POST['color'];
 					$soluong = $_POST['soluong'];
-					$giam = $product_detail_by_id['giamgia'];
 					$idpro = $_GET['idProduct'];
 					$iduser = $product_detail_by_id['id_user'];
 					$idcata = $product_detail_by_id['idCatalog'];
 					$idcustom = $_SESSION['iduserguest'];
-					add_cart($name,$img,$coin,$info,$color,$soluong,$iduser,$idcata,$idpro,$idcustom,$giam);
+					add_cart($name,$img,$coin,$info,$color,$soluong,$iduser,$idcata,$idpro,$idcustom);
 					$erro = 'Bạn đã thêm '.$name.' số lượng '.$soluong.' cái';
 				}
 				}
@@ -130,7 +129,7 @@
 
             case 'cart':
                 if(isset($_POST['muahang']) && $_POST['muahang'] ){
-                    $title = $_POST['topic'];
+					$title = $_POST['topic'];
 	$content = '<!DOCTYPE html>
 	<html lang="en">
 	
