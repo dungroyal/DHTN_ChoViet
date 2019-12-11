@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 09, 2019 lúc 07:19 PM
+-- Thời gian đã tạo: Th12 11, 2019 lúc 06:22 AM
 -- Phiên bản máy phục vụ: 10.4.8-MariaDB
 -- Phiên bản PHP: 7.3.11
 
@@ -48,9 +48,7 @@ INSERT INTO `banner` (`id`, `title`, `url`, `image`, `location`, `status`) VALUE
 (4, 'Banner quảng cáo chó', 'http://localhost/DHTN_ChoViet/?act=product_detail&idProduct=146', 'quanao.jpg', 4, 1),
 (5, 'Banner quảng cáo chó', 'http://localhost/DHTN_ChoViet/?act=product_detail&idProduct=146', 'dienthoai.jpg', 5, 1),
 (6, 'Banner quảng cáo chó', 'http://localhost/DHTN_ChoViet/?act=product_detail&idProduct=146', 'aonam.jpg', 6, 1),
-(7, 'Banner quảng cáo chó', 'http://localhost/DHTN_ChoViet/?act=product_detail&idProduct=146', 'xx', 7, 0),
-(12, 'Đoàn Quốc Dũng', 'https://www.facebook.com/Quocdungroyal', 'xx', 1, 0),
-(13, 'ROYAL', 'AA.com', 'xx', 1, 0);
+(7, 'Banner quảng cáo chó', 'http://localhost/DHTN_ChoViet/?act=product_detail&idProduct=146', 'aonu.jpg', 7, 1);
 
 -- --------------------------------------------------------
 
@@ -192,6 +190,7 @@ CREATE TABLE `product` (
   `descripsion` varchar(100) COLLATE utf8_unicode_ci DEFAULT 'Sản phẩm thịnh hành năm 2019',
   `hot` tinyint(2) NOT NULL DEFAULT 0,
   `giamgia` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `status` tinyint(2) NOT NULL DEFAULT 1,
   `id_user` int(5) NOT NULL,
   `idCatalog` int(100) NOT NULL,
   `idStore` int(100) NOT NULL
@@ -201,14 +200,14 @@ CREATE TABLE `product` (
 -- Đang đổ dữ liệu cho bảng `product`
 --
 
-INSERT INTO `product` (`id`, `name`, `price`, `soluong`, `image`, `view`, `descripsion`, `hot`, `giamgia`, `id_user`, `idCatalog`, `idStore`) VALUES
-(136, 'Smart Tivi Samsung 4K 55 inch UA55NU7090', 100000, 100, '40S600T2.jpg', 1000, 'Sản phẩm thịnh hành năm 2019', 1, '', 9, 64, 7),
-(138, 'Quần thun Nam Adidas F2031', 100000, 100, '6ecf6ba2f2694c388b5ba83a00d14b09_9366.webp', 1000, 'Sản phẩm thịnh hành năm 2019', 0, '', 9, 42, 8),
-(142, 'Smart TV', 150, 100, 'img_3061_master.png', 1000, 'Sản phẩm thịnh hành năm 2019', 1, '', 9, 63, 7),
-(143, 'Áo khoát Adidas ACE ', 150000, 200, 'Mau.jpg', 1000, 'Sản phẩm thịnh hành năm 2019', 1, '', 9, 42, 8),
-(144, 'Áo khoát Adidas nữ cao cấp màu kem', 1500000, 100, '724211f7c0ef4082b97baa2b007d79ae_9366.webp', 1000, 'Sản phẩm thịnh hành năm 2019', 0, '', 9, 43, 8),
-(145, 'Giầy Adidas Ace cao cấp trắng đen Nam ACE12165', 3000000, 100, 'MG_5424.jpg', 1000, 'Sản phẩm thịnh hành năm 2019', 0, '2000000', 9, 50, 8),
-(146, 'Tivi & Thiết bị điện gia dụng', 12000000, 100, '1.jpg', 1000, 'Sản phẩm thịnh hành năm 2019', 1, '', 9, 50, 8);
+INSERT INTO `product` (`id`, `name`, `price`, `soluong`, `image`, `view`, `descripsion`, `hot`, `giamgia`, `status`, `id_user`, `idCatalog`, `idStore`) VALUES
+(136, 'Smart Tivi Samsung 4K 55 inch UA55NU7090', 100000, 100, '40S600T2.jpg', 1000, 'Sản phẩm thịnh hành năm 2019', 1, '', 0, 9, 64, 7),
+(138, 'Quần thun Nam Adidas F2031', 100000, 100, '6ecf6ba2f2694c388b5ba83a00d14b09_9366.webp', 1000, 'Sản phẩm thịnh hành năm 2019', 0, '', 0, 9, 42, 8),
+(142, 'Smart TV', 150, 100, 'img_3061_master.png', 1000, 'Sản phẩm thịnh hành năm 2019', 1, '', 0, 9, 63, 7),
+(143, 'Áo khoát Adidas ACE ', 150000, 200, 'Mau.jpg', 1000, 'Sản phẩm thịnh hành năm 2019', 1, '', 0, 9, 42, 8),
+(144, 'Áo khoát Adidas nữ cao cấp màu kem', 1500000, 100, '724211f7c0ef4082b97baa2b007d79ae_9366.webp', 1000, 'Sản phẩm thịnh hành năm 2019', 0, '', 0, 9, 43, 8),
+(145, 'Giầy Adidas Ace cao cấp trắng đen Nam ACE12165', 3000000, 100, 'MG_5424.jpg', 1000, 'Sản phẩm thịnh hành năm 2019', 0, '2000000', 0, 9, 50, 8),
+(146, 'Tivi & Thiết bị điện gia dụng', 12000000, 100, '1.jpg', 1000, 'Sản phẩm thịnh hành năm 2019', 1, '0', 0, 9, 50, 8);
 
 -- --------------------------------------------------------
 
@@ -226,7 +225,7 @@ CREATE TABLE `store` (
   `image` varchar(255) NOT NULL,
   `diachi` varchar(200) NOT NULL,
   `Date` date NOT NULL,
-  `trangthai` tinyint(3) NOT NULL DEFAULT 1,
+  `trangthai` tinyint(3) NOT NULL DEFAULT 0,
   `idUser` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -235,9 +234,9 @@ CREATE TABLE `store` (
 --
 
 INSERT INTO `store` (`id`, `name`, `username`, `password`, `phonenumber`, `email`, `image`, `diachi`, `Date`, `trangthai`, `idUser`) VALUES
-(6, 'Asanzo Officall', 'asanzo', 'asanzo', '0398022720', 'doanquocdung5520@gmail.com', 'asanzo.jpg', 'TP. Hồ Chí Minh', '2019-11-19', 2, 9),
-(7, 'Samsung Việt Nam', '', '', '', '', 'samsung.jpg', 'TP. Hà Nội', '2019-11-19', 1, 10),
-(8, 'Adidas Việt Nam', '', '', '', '', 'Adidas-logo.jpg', 'TP. Hà Nội', '2019-11-19', 1, 11);
+(6, 'Asanzo Officall', 'asanzo', 'asanzo', '0398022720', 'doanquocdung5520@gmail.com', 'asanzo.jpg', 'TP. Hồ Chí Minh', '2019-11-19', 0, 9),
+(7, 'Samsung Việt Nam', 'samsung', 'samsung', '', '', 'samsung.jpg', 'TP. Hà Nội', '2019-11-19', 0, 10),
+(8, 'Adidas Việt Nam', 'adidas', 'adidas', '', '', 'Adidas-logo.jpg', 'TP. Hà Nội', '2019-11-19', 2, 11);
 
 -- --------------------------------------------------------
 
@@ -333,13 +332,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT cho bảng `banner`
 --
 ALTER TABLE `banner`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT cho bảng `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT cho bảng `catalog`
@@ -363,7 +362,7 @@ ALTER TABLE `comment`
 -- AUTO_INCREMENT cho bảng `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=147;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=148;
 
 --
 -- AUTO_INCREMENT cho bảng `store`
