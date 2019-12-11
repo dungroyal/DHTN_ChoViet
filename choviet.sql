@@ -2,10 +2,10 @@
 -- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 11, 2019 lúc 06:22 AM
--- Phiên bản máy phục vụ: 10.4.8-MariaDB
--- Phiên bản PHP: 7.3.11
+-- Host: 127.0.0.1
+-- Generation Time: Dec 11, 2019 at 11:01 AM
+-- Server version: 10.4.8-MariaDB
+-- PHP Version: 7.3.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `choviet`
+-- Database: `choviet`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `banner`
+-- Table structure for table `banner`
 --
 
 CREATE TABLE `banner` (
@@ -38,7 +38,7 @@ CREATE TABLE `banner` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `banner`
+-- Dumping data for table `banner`
 --
 
 INSERT INTO `banner` (`id`, `title`, `url`, `image`, `location`, `status`) VALUES
@@ -53,7 +53,7 @@ INSERT INTO `banner` (`id`, `title`, `url`, `image`, `location`, `status`) VALUE
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `cart`
+-- Table structure for table `cart`
 --
 
 CREATE TABLE `cart` (
@@ -74,7 +74,7 @@ CREATE TABLE `cart` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `cart`
+-- Dumping data for table `cart`
 --
 
 INSERT INTO `cart` (`id`, `pro_name`, `img`, `coin`, `tinh_trang`, `info`, `color`, `so_luong`, `giam`, `id_user`, `id_custom`, `id_pro`, `id_cata`, `type`) VALUES
@@ -85,7 +85,7 @@ INSERT INTO `cart` (`id`, `pro_name`, `img`, `coin`, `tinh_trang`, `info`, `colo
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `catalog`
+-- Table structure for table `catalog`
 --
 
 CREATE TABLE `catalog` (
@@ -95,7 +95,7 @@ CREATE TABLE `catalog` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `catalog`
+-- Dumping data for table `catalog`
 --
 
 INSERT INTO `catalog` (`id`, `name`, `image`) VALUES
@@ -132,7 +132,7 @@ INSERT INTO `catalog` (`id`, `name`, `image`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `catalog_store`
+-- Table structure for table `catalog_store`
 --
 
 CREATE TABLE `catalog_store` (
@@ -144,7 +144,7 @@ CREATE TABLE `catalog_store` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `catalog_store`
+-- Dumping data for table `catalog_store`
 --
 
 INSERT INTO `catalog_store` (`id`, `name`, `image`, `idStore`, `idCatalog`) VALUES
@@ -159,7 +159,7 @@ INSERT INTO `catalog_store` (`id`, `name`, `image`, `idStore`, `idCatalog`) VALU
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `comment`
+-- Table structure for table `comment`
 --
 
 CREATE TABLE `comment` (
@@ -177,7 +177,7 @@ CREATE TABLE `comment` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `product`
+-- Table structure for table `product`
 --
 
 CREATE TABLE `product` (
@@ -197,22 +197,22 @@ CREATE TABLE `product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `product`
+-- Dumping data for table `product`
 --
 
 INSERT INTO `product` (`id`, `name`, `price`, `soluong`, `image`, `view`, `descripsion`, `hot`, `giamgia`, `status`, `id_user`, `idCatalog`, `idStore`) VALUES
-(136, 'Smart Tivi Samsung 4K 55 inch UA55NU7090', 100000, 100, '40S600T2.jpg', 1000, 'Sản phẩm thịnh hành năm 2019', 1, '', 0, 9, 64, 7),
-(138, 'Quần thun Nam Adidas F2031', 100000, 100, '6ecf6ba2f2694c388b5ba83a00d14b09_9366.webp', 1000, 'Sản phẩm thịnh hành năm 2019', 0, '', 0, 9, 42, 8),
-(142, 'Smart TV', 150, 100, 'img_3061_master.png', 1000, 'Sản phẩm thịnh hành năm 2019', 1, '', 0, 9, 63, 7),
-(143, 'Áo khoát Adidas ACE ', 150000, 200, 'Mau.jpg', 1000, 'Sản phẩm thịnh hành năm 2019', 1, '', 0, 9, 42, 8),
-(144, 'Áo khoát Adidas nữ cao cấp màu kem', 1500000, 100, '724211f7c0ef4082b97baa2b007d79ae_9366.webp', 1000, 'Sản phẩm thịnh hành năm 2019', 0, '', 0, 9, 43, 8),
-(145, 'Giầy Adidas Ace cao cấp trắng đen Nam ACE12165', 3000000, 100, 'MG_5424.jpg', 1000, 'Sản phẩm thịnh hành năm 2019', 0, '2000000', 0, 9, 50, 8),
-(146, 'Tivi & Thiết bị điện gia dụng', 12000000, 100, '1.jpg', 1000, 'Sản phẩm thịnh hành năm 2019', 1, '0', 0, 9, 50, 8);
+(136, 'Smart Tivi Samsung 4K 55 inch UA55NU7090', 100000, 100, '40S600T2.jpg', 1000, 'Sản phẩm thịnh hành năm 2019', 1, '', 1, 9, 64, 7),
+(138, 'Quần thun Nam Adidas F2031', 100000, 100, '6ecf6ba2f2694c388b5ba83a00d14b09_9366.webp', 1000, 'Sản phẩm thịnh hành năm 2019', 0, '', 1, 9, 42, 8),
+(142, 'Smart TV', 150, 100, 'img_3061_master.png', 1000, 'Sản phẩm thịnh hành năm 2019', 1, '', 1, 9, 63, 7),
+(143, 'Áo khoát Adidas ACE ', 150000, 200, 'Mau.jpg', 1000, 'Sản phẩm thịnh hành năm 2019', 1, '', 1, 9, 42, 8),
+(144, 'Áo khoát Adidas nữ cao cấp màu kem', 1500000, 100, '724211f7c0ef4082b97baa2b007d79ae_9366.webp', 1000, 'Sản phẩm thịnh hành năm 2019', 0, '', 1, 9, 43, 8),
+(145, 'Giầy Adidas Ace cao cấp trắng đen Nam ACE12165', 3000000, 100, 'MG_5424.jpg', 1000, 'Sản phẩm thịnh hành năm 2019', 0, '2000000', 1, 9, 50, 8),
+(146, 'Tivi & Thiết bị điện gia dụng', 12000000, 100, '1.jpg', 1000, 'Sản phẩm thịnh hành năm 2019', 1, '0', 1, 9, 50, 8);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `store`
+-- Table structure for table `store`
 --
 
 CREATE TABLE `store` (
@@ -230,18 +230,18 @@ CREATE TABLE `store` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `store`
+-- Dumping data for table `store`
 --
 
 INSERT INTO `store` (`id`, `name`, `username`, `password`, `phonenumber`, `email`, `image`, `diachi`, `Date`, `trangthai`, `idUser`) VALUES
-(6, 'Asanzo Officall', 'asanzo', 'asanzo', '0398022720', 'doanquocdung5520@gmail.com', 'asanzo.jpg', 'TP. Hồ Chí Minh', '2019-11-19', 0, 9),
-(7, 'Samsung Việt Nam', 'samsung', 'samsung', '', '', 'samsung.jpg', 'TP. Hà Nội', '2019-11-19', 0, 10),
-(8, 'Adidas Việt Nam', 'adidas', 'adidas', '', '', 'Adidas-logo.jpg', 'TP. Hà Nội', '2019-11-19', 2, 11);
+(6, 'Asanzo Officall', 'asanzo', 'asanzo', '0398022720', 'doanquocdung5520@gmail.com', 'asanzo.jpg', 'TP. Hồ Chí Minh', '2019-11-19', 1, 9),
+(7, 'Samsung Việt Nam', 'samsung', 'samsung', '', '', 'samsung.jpg', 'TP. Hà Nội', '2019-11-19', 1, 10),
+(8, 'Adidas Việt Nam', 'adidas', 'adidas', '', '', 'Adidas-logo.jpg', 'TP. Hà Nội', '2019-11-19', 1, 11);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -254,7 +254,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `pass`, `email`, `image`, `lever`) VALUES
@@ -265,30 +265,30 @@ INSERT INTO `users` (`id`, `name`, `pass`, `email`, `image`, `lever`) VALUES
 (13, 'user', 'user', 'admin2019@gmail.com', 'avatar_user.png', '0');
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `banner`
+-- Indexes for table `banner`
 --
 ALTER TABLE `banner`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `cart`
+-- Indexes for table `cart`
 --
 ALTER TABLE `cart`
   ADD PRIMARY KEY (`id`),
   ADD KEY `fk_cart_cata` (`id_cata`);
 
 --
--- Chỉ mục cho bảng `catalog`
+-- Indexes for table `catalog`
 --
 ALTER TABLE `catalog`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `catalog_store`
+-- Indexes for table `catalog_store`
 --
 ALTER TABLE `catalog_store`
   ADD PRIMARY KEY (`id`),
@@ -296,7 +296,7 @@ ALTER TABLE `catalog_store`
   ADD KEY `fk_catalogstore_catalog` (`idCatalog`);
 
 --
--- Chỉ mục cho bảng `comment`
+-- Indexes for table `comment`
 --
 ALTER TABLE `comment`
   ADD PRIMARY KEY (`id`),
@@ -304,7 +304,7 @@ ALTER TABLE `comment`
   ADD KEY `fk_comment_product` (`idProduct`);
 
 --
--- Chỉ mục cho bảng `product`
+-- Indexes for table `product`
 --
 ALTER TABLE `product`
   ADD PRIMARY KEY (`id`),
@@ -312,103 +312,103 @@ ALTER TABLE `product`
   ADD KEY `fk_product_store` (`idStore`);
 
 --
--- Chỉ mục cho bảng `store`
+-- Indexes for table `store`
 --
 ALTER TABLE `store`
   ADD PRIMARY KEY (`id`),
   ADD KEY `fk_store_user` (`idUser`);
 
 --
--- Chỉ mục cho bảng `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `banner`
+-- AUTO_INCREMENT for table `banner`
 --
 ALTER TABLE `banner`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT cho bảng `cart`
+-- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
--- AUTO_INCREMENT cho bảng `catalog`
+-- AUTO_INCREMENT for table `catalog`
 --
 ALTER TABLE `catalog`
   MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
 
 --
--- AUTO_INCREMENT cho bảng `catalog_store`
+-- AUTO_INCREMENT for table `catalog_store`
 --
 ALTER TABLE `catalog_store`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT cho bảng `comment`
+-- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
--- AUTO_INCREMENT cho bảng `product`
+-- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=148;
 
 --
--- AUTO_INCREMENT cho bảng `store`
+-- AUTO_INCREMENT for table `store`
 --
 ALTER TABLE `store`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT cho bảng `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- Các ràng buộc cho các bảng đã đổ
+-- Constraints for dumped tables
 --
 
 --
--- Các ràng buộc cho bảng `cart`
+-- Constraints for table `cart`
 --
 ALTER TABLE `cart`
   ADD CONSTRAINT `fk_cart_cata` FOREIGN KEY (`id_cata`) REFERENCES `catalog` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
--- Các ràng buộc cho bảng `catalog_store`
+-- Constraints for table `catalog_store`
 --
 ALTER TABLE `catalog_store`
   ADD CONSTRAINT `fk_catalogstore_catalog` FOREIGN KEY (`idCatalog`) REFERENCES `catalog` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_catalogstore_store` FOREIGN KEY (`idStore`) REFERENCES `store` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
--- Các ràng buộc cho bảng `comment`
+-- Constraints for table `comment`
 --
 ALTER TABLE `comment`
   ADD CONSTRAINT `fk_comment_product` FOREIGN KEY (`idProduct`) REFERENCES `product` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `fk_comment_users` FOREIGN KEY (`idUsers`) REFERENCES `users` (`id`) ON DELETE CASCADE;
 
 --
--- Các ràng buộc cho bảng `product`
+-- Constraints for table `product`
 --
 ALTER TABLE `product`
   ADD CONSTRAINT `fk_product_catalog` FOREIGN KEY (`idCatalog`) REFERENCES `catalog` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_product_store` FOREIGN KEY (`idStore`) REFERENCES `store` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
--- Các ràng buộc cho bảng `store`
+-- Constraints for table `store`
 --
 ALTER TABLE `store`
   ADD CONSTRAINT `fk_store_user` FOREIGN KEY (`idUser`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
