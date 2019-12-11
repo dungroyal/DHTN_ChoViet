@@ -5689,7 +5689,7 @@ tfoot td {
     background-color: #fffc;
     color: #000;
     box-sizing: border-box;
-    padding: 50px 40px;
+    padding: 25px 40px;
     margin: 0px auto;
     border-radius: 5px;
 }
@@ -6047,7 +6047,7 @@ label {
 }
 .login-popup-dk {
     width: 100%;
-    min-height: 100vh;
+    min-height: 143vh;
     background-color: #000000b3;
     position: absolute;
     top: 0;
@@ -6067,9 +6067,9 @@ label {
     transition: all ease 1s;
 }
 .padding-top-dangki-dk {
-    min-height: 87.9vh;
+    min-height: 130vh;
 }
-#input_select_dc {
+#thanhpho, #quanhuyen, #phuongxa {
     width: 100%;
     border: none;
     border-bottom: 1px solid #fff;

@@ -162,6 +162,21 @@ function loai_select_all(){
     return pdo_query($sql);
 }
 
+function list_thanhpho(){
+    $sql = "SELECT * FROM choviet_tinhthanhpho";
+    return pdo_query($sql);
+}
+
+
+function list_quanhuyen($matp){
+    $sql="SELECT * from choviet_quanhuyen where matp=".$matp;
+    return pdo_query($sql);
+}
+
+function list_phuongxa($maqh){
+    $sql="SELECT * from choviet_xaphuongthitran where maqh=".$maqh;
+    return pdo_query($sql);
+}
 
 /******************************************************************************************/
 

@@ -29,27 +29,54 @@
         <p>Email:</p>
         <input type="text" name="email" placeholder="VD: email@gmail.com" required>
 
-        <p>Số nhà, tên đường:</p>
-        <input type="text" name="email" placeholder="01, Phạm Ngũ Lão" required>
         
         <p>Tỉnh, Thành phố:</p>
-        <select id="input_select_dc" name="diachi">
-            <option>TP. Hồ Chí Minh</option>
-            <option>TP. Hà Nội</option>
-            <option>TP. Đà Nẵng</option>
+        <select id="thanhpho" name="thanhpho">
+            <option>Chọn Thành phố</option>
+          <?php
+            $DS_thanhpho=list_thanhpho();
+            foreach ($DS_thanhpho as $tp) {
+              echo'
+              <option value="'.$tp['matp'].'">'.$tp['name'].'</option>
+              ';
+            }
+          ?>
         </select>
-
         <p>Quận, huyện:</p>
-        <select id="input_select_dc" name="diachi">
-            <option>Gò vấp</option>
-            <option>Tân Bình</option>
-        </select>
+        <select id="quanhuyen" name="quanhuyen">
+            <option>Chọn Quận, Huyện</option>
+        </select>    
+        <p>Phường, xã:</p>
+        <select id="phuongxa" name="phuongxa">
+            <option>Chọn Xã, Phường, Thị trấn</option>
+        </select>    
+        
+        <p>Số nhà, tên đường:</p>
+        <input type="text" name="sonha" placeholder="992 Âu Cơ" required>
 
         <input type="submit" name="dangkicuahang" value="Gửi thông tin">
+        <a href="index.php">Trở lại Trang chủ</a>
       </form>  
     </div>
     </div>
 </div>
 </div>
+
+<script>
+          jQuery(document).ready(function($){
+            $("#thanhpho").change(function(event){
+              cityID=$("#thanhpho").val();              
+              $.post("view/quanhuyen.php",{"cityID":cityID},function(data) {
+                $("#quanhuyen").html(data);
+              })              
+            })
+            $("#quanhuyen").change(function(event){
+              wardID=$("#quanhuyen").val();              
+              $.post("view/phuongxa.php",{"wardid":wardID},function(data) {
+                $("#phuongxa").html(data);
+              })              
+            })
+          });
+        </script>
       
      
