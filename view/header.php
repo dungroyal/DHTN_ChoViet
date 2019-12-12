@@ -91,7 +91,7 @@
                                         if (isset($_SESSION['iduserguest'])) {
                                             $info_user=info_user($_SESSION['iduserguest']);
                                             echo'
-                                                <li class="account"><a href="#">'.$info_user['name'].'</a>
+                                                <li class="account"><a href="#">'.$info_user['fullname'].'</a>
                                                     <ul class="submenu-mainmenu">
                                                         <li><a href="?act=logout_user">Đăng xuất</a></li>
                                                     </ul>

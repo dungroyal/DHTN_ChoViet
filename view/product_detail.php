@@ -164,7 +164,7 @@
                                                         <ul>
                                                             <li><label>Đánh giá:</label><span>100</span></li>
                                                             <li><label>Ngày tham gia:</label><span>'.$store['Date'].'</span></li>
-                                                            <li><label>Tỉnh/TP:</label><span>'.$store['diachi'].'</span></li>
+                                                            <li><label>Tỉnh/TP:</label><span>'.$store['district'].', '.$store['city'].'</span></li>
                                                     </ul>
                                                     </div>
                                                 <div class="b-grid__row"><a class="btn btn-secondary btn-sm" href="?act=product&idStore='.$GET_idStore['idStore'].'">Xem shop</a></div>

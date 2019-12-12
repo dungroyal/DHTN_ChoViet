@@ -4,22 +4,22 @@
     <div class="loginbox1"> 
       <h1>Đăng kí Chợ Việt</h1>
       <form action="?act=dangkitaikhoan" method="post">
-        <p>Tiêu đề: </p>
-        <input name="topic1" type="text" placeholder="Đăng kí tài khoản">
+        <p>Họ và tên: </p>
+        <input name="fullname" type="text" placeholder="Họ và tên">
         
         <p>Tên đăng nhập:</p>
-        <input type="text" name="name"   placeholder="Enter Username">
+        <input type="text" name="username"   placeholder="Enter Username">
 
         <p>Email:</p>
-        <input type="text" name="email" placeholder="Enter Email">
+        <input type="text" name="email" placeholder="Địa chỉ email">
         
         <p>Mật khẩu:</p>
-        <input type="password" name="" placeholder="Enter Password">
+        <input type="password" name="password" placeholder="Mật khẩu">
 
         <p>Mật lại khẩu:</p>
-        <input type="password" name="" placeholder="Re Enter Password">
+        <input type="password" name="repassword" placeholder="Nhập lại mật khẩu">
 
-        <input type="submit" name="dangki" value="Đăng kí"  >
+        <input type="submit" name="dangki_user" value="Đăng kí"  >
         <center>  
         <?php
           if(isset($erro)){

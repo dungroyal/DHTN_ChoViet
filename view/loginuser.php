@@ -26,7 +26,7 @@
             echo'<span class="thongbao-dangnhap">Sai Tên đăng nhập hoặc mật khẩu</span> <br>';
           }
         }
-    ?>  
+    ?>
     
     <input type="submit" name="dang_nhap_user" value="Đăng nhập">  
         

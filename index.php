@@ -313,86 +313,18 @@
                 break;
 
 			case 'dangkitaikhoan':
-				if(isset($_POST['dangki']) && $_POST['dangki'] ){
-                    $title = $_POST['topic1'];
-	$content = '<!DOCTYPE html>
-	<html lang="en">
-	
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title>Document</title>
-		<style>
-			* {
-				box-sizing: border-box;
-			}
-			
-			body {
-				margin: 0px auto;
-				width: 70%;
-			}
-			
-			header {
-				background-color: #f1f1f1;
-				padding: 20px;
-				text-align: center;
-			}
-			
-			.dangki1 {
-				width: 100%;
-				border: 1px solid grey;
-			}
-			
-			.thongtindangki {
-				width: 50%;
-				margin: 30px;
-			}
-			
-			@media screen and (max-width:1000px) {
-				header {
-					width: 100%;
+				if(isset($_POST['dangki_user']) && $_POST['dangki_user'] ){
+                    $fullname = $_POST['fullname'];
+                    $username = $_POST['username'];
+                    $email = $_POST['email'];
+					$password = $_POST['password'];
+					
+					
+					new_user_insert($fullname,$username,$password,$email);
+					header('location: index.php?act=loginuser'); 
 				}
-			}
-			
-			@media screen and (max-width:1000px) {
-				.dangki1 {
-					width: 100%;
-				}
-			}
-		</style>
-	</head>
-	
-	<body>
-		<header>
-			<img src="http://choviet.xyz/images/4.png" alt="Logo" style="width:300px;text-align: center; margin: 0px auto;">
-			<h1>Xin chào quý khách</h4>
-				<p>Bạn đã đăng kí tài khoản thành công vui lòng kiểm tra thông tin bên dưới mail.</p>
-		</header>
-		<div class="dangki1">
-			<div class="thongtindangki">
-				<h2>Thông tin tài khoản</h2>
-				<p>Tên đăng nhập:</p>
-				<p>Email:</p>
-				<p>Mặt khẩu:</p>
-			</div>
-			<h3 style="text-align: center;">Cảm ơn bạn đã đăng kí tài khoản chúng tôi sẽ cố gắng hỗ trợ quý khách hết mức có thể.</h3>
-		</div>
-	</body>
-	
-	</html>';
-	$nTo = $_POST['name'];
-	$mTo = $_POST['email'];
-	$diachi = 'lenhathao3112@gmail.com';
-	//test gui mail
-    $mail = sendMail($title, $content, $nTo, $mTo,$diachicc='');
-    if($mail==1)
-	$erro = 'Bạn đã đăng kí thành công mời bạn vào email xem thông tin tài khoản của bạn.';
-	else $erro = 'Có lỗi!';
-                }
-                include"view/dang-ki-user.php";
+                include "view/dang-ki-user.php";
                 break;
-    
                
 			case 'login':
 

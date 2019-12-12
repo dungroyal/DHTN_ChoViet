@@ -102,12 +102,9 @@
             if (isset($_POST['capnhanstore']) && $_POST['capnhanstore']) {
 				$id=$_POST['id'];
 				$trangthai=$_POST['trangthai'];
-
-				echo $trangthai;
-
-				//admin_update_store($trangthai,$id);
-				//header('location: index.php');
-				}				
+				admin_update_store($trangthai,$id);
+				header('location: admin.php?act=QL_Store');
+				}
 				$userlist=userlist();
 				include "admin/QL_Store.php";
 				break;

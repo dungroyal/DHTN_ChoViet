@@ -26,18 +26,18 @@
                         <select name="trangthai" class="custom-select tm-select-accounts" id="category">
                           <option selected value="0">
                           <?php
-                            if ($storeone['trangthai']==1) {
+                            if ($storeone['trangthai']==0) {
                               echo'Chờ duy';
-                            }elseif ($storeone['trangthai']==2) {
+                            }elseif ($storeone['trangthai']==1) {
                               echo'Đã duyệt';
-                            }else{
-                              echo'Đã chặn';
+                            }elseif ($storeone['trangthai']==2) {
+                              echo'Đã Chặn';
                             }
                           ?>   
                         </option>
-                          <option value="1">Chờ duyệt</option>
-                          <option value="2">Đã duyệt</option>
-                          <option value="3">Đã chặn</option>
+                          <option value="0">Chờ duyệt</option>
+                          <option value="1">Đã duyệt</option>
+                          <option value="2">Đã chặn</option>
                         </select>
                       </div>
                     <input class="btn btn-info my-1 btn-block" type="submit" name="capnhanstore" value="Cập nhật">

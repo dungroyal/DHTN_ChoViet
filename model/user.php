@@ -22,4 +22,9 @@
         $kq=pdo_query_one($sql);
         return $kq;
     }
+
+    function new_user_insert($fullname,$username,$password,$email){
+        $sql = "INSERT INTO users(fullname,name,email,pass) VALUES(?,?,?,?)";
+        pdo_execute($sql, $fullname,$username,$password,$email);
+    }
 ?>
