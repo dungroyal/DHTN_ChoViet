@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 11, 2019 lúc 06:11 PM
+-- Thời gian đã tạo: Th12 12, 2019 lúc 03:23 AM
 -- Phiên bản máy phục vụ: 10.4.8-MariaDB
 -- Phiên bản PHP: 7.3.11
 
@@ -80,7 +80,8 @@ CREATE TABLE `cart` (
 INSERT INTO `cart` (`id`, `pro_name`, `img`, `coin`, `tinh_trang`, `info`, `color`, `so_luong`, `giam`, `id_user`, `id_custom`, `id_pro`, `id_cata`, `type`) VALUES
 (27, 'Áo khoát Adidas ACE ', 'Mau.jpg', 150000, 0, 'Sản phẩm thịnh hành năm 2019', 1, 1, NULL, 9, 13, 143, 42, 0),
 (28, 'Giầy Adidas Ace cao cấp trắng đen Nam ACE12165', 'MG_5424.jpg', 3000000, 0, 'Sản phẩm thịnh hành năm 2019', 1, 1, NULL, 9, 13, 145, 50, 0),
-(29, 'Tivi & Thiết bị điện gia dụng', '1.jpg', 12000000, 0, 'Sản phẩm thịnh hành năm 2019', 1, 1, NULL, 9, 13, 146, 50, 0);
+(29, 'Tivi & Thiết bị điện gia dụng', '1.jpg', 12000000, 0, 'Sản phẩm thịnh hành năm 2019', 1, 1, NULL, 9, 13, 146, 50, 0),
+(31, 'Giầy Adidas Ace cao cấp trắng đen Nam ACE12165', 'MG_5424.jpg', 3000000, 0, 'Sản phẩm thịnh hành năm 2019', 1, 1, NULL, 9, 17, 145, 50, 0);
 
 -- --------------------------------------------------------
 
@@ -12225,7 +12226,10 @@ CREATE TABLE `store` (
   `phonenumber` varchar(10) NOT NULL,
   `email` varchar(255) NOT NULL,
   `image` varchar(255) NOT NULL,
-  `diachi` varchar(200) NOT NULL,
+  `city` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `district` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `ward` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `diachi` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `Date` date NOT NULL,
   `trangthai` tinyint(3) NOT NULL DEFAULT 0,
   `idUser` int(100) NOT NULL
@@ -12235,10 +12239,10 @@ CREATE TABLE `store` (
 -- Đang đổ dữ liệu cho bảng `store`
 --
 
-INSERT INTO `store` (`id`, `name`, `username`, `password`, `phonenumber`, `email`, `image`, `diachi`, `Date`, `trangthai`, `idUser`) VALUES
-(6, 'Asanzo Officall', 'asanzo', 'asanzo', '0398022720', 'doanquocdung5520@gmail.com', 'asanzo.jpg', 'TP. Hồ Chí Minh', '2019-11-19', 1, 9),
-(7, 'Samsung Việt Nam', 'samsung', 'samsung', '', '', 'samsung.jpg', 'TP. Hà Nội', '2019-11-19', 1, 10),
-(8, 'Adidas Việt Nam', 'adidas', 'adidas', '', '', 'Adidas-logo.jpg', 'TP. Hà Nội', '2019-11-19', 1, 11);
+INSERT INTO `store` (`id`, `name`, `username`, `password`, `phonenumber`, `email`, `image`, `city`, `district`, `ward`, `diachi`, `Date`, `trangthai`, `idUser`) VALUES
+(6, 'Asanzo Officall', 'asanzo', 'asanzo', '0398022720', 'doanquocdung5520@gmail.com', 'asanzo.jpg', 'TP. Hồ Chí Minh', 'Gò Vấp', '', '', '2019-11-19', 1, 9),
+(7, 'Samsung Việt Nam', 'samsung', 'samsung', '', '', 'samsung.jpg', 'TP. Hà Nội', 'Hà Đông', '', '', '2019-11-19', 1, 10),
+(8, 'Adidas Việt Nam', 'adidas', 'adidas', '', '', 'Adidas-logo.jpg', 'TP. Hà Nội', 'Hà Đông', '', '', '2019-11-19', 1, 11);
 
 -- --------------------------------------------------------
 
@@ -12248,23 +12252,28 @@ INSERT INTO `store` (`id`, `name`, `username`, `password`, `phonenumber`, `email
 
 CREATE TABLE `users` (
   `id` int(5) NOT NULL,
+  `fullname` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `pass` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `email` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `image` varchar(100) COLLATE utf8_unicode_ci DEFAULT 'avatar_user.png',
-  `lever` varchar(10) COLLATE utf8_unicode_ci NOT NULL DEFAULT '1'
+  `lever` varchar(10) COLLATE utf8_unicode_ci NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `pass`, `email`, `image`, `lever`) VALUES
-(9, 'asanzo', 'asanzo', 'asanzo2019@gmail.com', 'avatar_user.png', '2'),
-(10, 'samsung', 'samsung', 'samsung2019@gmail.com', 'avatar_user.png', '2'),
-(11, 'adidas', 'adidas', 'adidas2019@gmail.com', 'avatar_user.png', '2'),
-(12, 'admin', 'admin', 'admin2019@gmail.com', 'avatar_user.png', '1'),
-(13, 'user', 'user', 'admin2019@gmail.com', 'avatar_user.png', '0');
+INSERT INTO `users` (`id`, `fullname`, `name`, `pass`, `email`, `image`, `lever`) VALUES
+(9, 'Lê Văn Tèo', 'asanzo', 'asanzo', 'asanzo2019@gmail.com', 'avatar_user.png', '2'),
+(10, 'Nguyễn Văn Tuấn', 'samsung', 'samsung', 'samsung2019@gmail.com', 'avatar_user.png', '2'),
+(11, 'Nguyễn Văn A', 'adidas', 'adidas', 'adidas2019@gmail.com', 'avatar_user.png', '2'),
+(12, 'Lê Thị B', 'admin', 'admin', 'admin2019@gmail.com', 'avatar_user.png', '1'),
+(13, 'Trần Công Diện', 'user', 'user', 'admin2019@gmail.com', 'avatar_user.png', '0'),
+(14, 'Đoàn Quốc Dũng', 'dungdqps08542', 'doanquocdung55@gmail.com', 'doanquocdung5520', 'avatar_user.png', '1'),
+(15, 'Lê Trọng Nhân', 'Đoàn Quốc Dũng', 'doanquocdung5520', 'Dungdqps08542@fpt.edu.vn', 'avatar_user.png', '1'),
+(16, 'Lê trọng nhân', 'dungdqps08542', 'doanquocdung5520', 'Dungdqps08542@fpt.edu.vn', 'avatar_user.png', '0'),
+(17, 'Lê Văn Tèo', 'abc', 'abc', 'abc', 'avatar_user.png', '0');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -12354,13 +12363,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT cho bảng `banner`
 --
 ALTER TABLE `banner`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT cho bảng `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT cho bảng `catalog`
@@ -12396,7 +12405,7 @@ ALTER TABLE `store`
 -- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
