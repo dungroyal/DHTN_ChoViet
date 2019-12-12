@@ -58,7 +58,13 @@
 		============================================ -->
     <script src="view/js/vendor/modernizr-2.8.3.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Custom  JS
+		============================================ -->
+	<script src="view/custom_js/lib/jquery.js"></script>
+	<script src="view/custom_js/lib/jquery.mockjax.js"></script>
+    <script src="view/custom_js/dist/jquery.validate.js"></script>
 </head>
+
 
 <body>
     <!-- header start -->

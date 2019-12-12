@@ -313,16 +313,16 @@
                 break;
 
 			case 'dangkitaikhoan':
-				if(isset($_POST['dangki_user']) && $_POST['dangki_user'] ){
-                    $fullname = $_POST['fullname'];
-                    $username = $_POST['username'];
-                    $email = $_POST['email'];
-					$password = $_POST['password'];
-					
-					
-					new_user_insert($fullname,$username,$password,$email);
-					header('location: index.php?act=loginuser'); 
-				}
+				//if(isset($_POST['dangki_user']) && $_POST['dangki_user'] ){
+                //    $fullname = $_POST['fullname'];
+                //    $username = $_POST['username'];
+                ///    $email = $_POST['email'];
+				//	$password = $_POST['password'];
+				//	
+				//	
+					//new_user_insert($fullname,$username,$password,$email);
+					//header('location: index.php?act=loginuser'); 
+				//}
                 include "view/dang-ki-user.php";
                 break;
                
