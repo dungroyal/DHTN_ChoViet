@@ -9,164 +9,261 @@
   </ol>
 
   <?php
+          if(isset($_GET['add']) && ($_GET['add'] == 1)){
+            echo'
+            <a href="admin-store.php?act=QL_Product" class="btn btn-success btn-floated close-box"><i class="fa fa-plus"></i></a>
+            ';
+          }else {
+            echo'
+            <a href="admin-store.php?act=QL_Product&add=1" class="btn btn-success btn-floated"><i class="fa fa-plus"></i></a>
+            ';
+          }
+
+          ?>
+
+  <?php
 if (isset($_GET['edi']) && ($_GET['edi'] == 1)) {
     $id = $_GET['id'];
     $productgone = product_one($id);
-?>
-  <div class="card mb-3">
-    <div class="card-header">
-      <i class="fas fa-folder-plus"></i>
-      Cập nhật sản phẩm: <strong><?=$productgone['name'];?></strong></div>
-    <div class="card-body">
-      <div class="container tm-mt-big tm-mb-big">
-        <div class="row">
-          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mx-auto">
-            <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
-              <div class="row tm-edit-product-row">
-                <div class="col-xl-6 col-lg-6 col-md-12">
-
-
-                  <form action="?act=QL_Product" method="post" class="tm-edit-product-form" enctype="multipart/form-data">
-
-                  <input type="hidden" name="id" value="<?=$productgone['id']; ?>">
-
-                    <div class="form-group mb-3">
-                      <label for="name">Tên sản phẩm
-                      </label>
-                      <input id="name" name="name" type="text" placeholder="<?=$productgone['name'];?>" value="<?=$productgone['name'];?>" class="form-control validate" required />
-                    </div>
-
-                    <div class="row">
-                      <div class="form-group mb-3 col-xs-12 col-sm-6">
-                        <label for="expire_date">Giá
-                        </label>
-                        <input id="number" name="price" type="number" placeholder="<?=$productgone['price'];?>" value="<?=$productgone['price'];?>" class="form-control validate" data-large-mode="true" />
-                      </div>
-                      <div class="form-group mb-3 col-xs-12 col-sm-6">
-                        <label for="stock">Số lượng
-                        </label>
-                        <input id="stock" name="soluong" type="number" placeholder="<?=$productgone['soluong'];?>" value="<?=$productgone['soluong'];?>" class="form-control validate" required />
-                      </div>
-                    </div>
-                    <div class="form-group mb-3">
-                      <label for="category">Đánh dấu là sản phẩm HOT?</label>
-                      <select name="hot" class="custom-select tm-select-accounts" id="category">
-                        <option selected value="0">Đánh dấu là sản phẩm hot ...</option>
-                        <option value="1">Có</option>
-                        <option value="0">Không</option>
-                      </select>
-                    </div>
-                      
-                      </div>
-                      <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
-                        <div class="custom-file mt-2 mb-2">
-                          <input id="fileInput" type="file" name="image" style="display:none;" />
-                          <input type="button" class="btn btn-primary btn-block mx-auto" value="Upload hình ảnh" onclick="document.getElementById('fileInput').click();" />
+    ?><div class="row">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-body">
+                <div class="form-horizontal">                      
+                  <form action="?act=QL_Banner_by_location&location=<?=$location;?>" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="id" value="<?=$bannerone['id'];?>">
+                  <fieldset>
+                        <legend>Chỉnh sửa Sản phẩm "<strong><?=$bannerone['title'];?>"</strong> </legend>
+                        <div class="form-group row">
+                            <label class="col-form-label col" for="Title">Tiêu đề</label>
+                            <div class="col-md-12">
+                                <input class="form-control text-box single-line" data-val="true" data-val-length="The field Tiêu đề must be a string with a maximum length of 250." data-val-length-max="250" id="Title" name="title" type="text" value="<?=$bannerone['title'];?>">
+                                <span class="field-validation-valid text-danger" data-valmsg-for="Title" data-valmsg-replace="true"></span>
+                            </div>
                         </div>
 
-                        <div class="form-group mb-3">
-                          <label for="category">Danh mục</label>
-                          <select name="idcatalog" class="custom-select tm-select-accounts" id="category">
-                            <option selected>Chọn danh mục ...</option>
-                              <?php
-                                  foreach ($cataloglist_by_store as $cat) {
-                                    echo'<option value="'.$cat['idCatalog'].'">'.$cat['name'].'</option>';
-                                  }
-                              ?>
-                        </select>
-                      </div>
-                      <div class="col-12">
-                      <input type="submit" name="update_product" value="Cập nhật sản phẩm" class="btn btn-primary btn-block text-uppercase" id="backgroud_color">
-                    </div>
-                    </div>
-                    
-                </form>
-              </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <?php }else{
-      ?>
-
-<div class="card mb-3">
-    <div class="card-header">
-      <i class="fas fa-folder-plus"></i>
-      Thêm sản phẩm</div>
-    <div class="card-body">
-      <div class="container tm-mt-big tm-mb-big">
-        <div class="row">
-          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mx-auto">
-            <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
-              <div class="row tm-edit-product-row">
-                <div class="col-xl-6 col-lg-6 col-md-12">
-
-
-                  <form action="?act=QL_Product" method="post" class="tm-edit-product-form" enctype="multipart/form-data">
-                    <div class="form-group mb-3">
-                      <label for="name">Tên sản phẩm
-                      </label>
-                      <input id="name" name="name" type="text" class="form-control validate" required />
-                    </div>
-
-                    <div class="row">
-                      <div class="form-group mb-3 col-xs-12 col-sm-6">
-                        <label for="expire_date">Giá
-                        </label>
-                        <input id="number" name="price" type="number" class="form-control validate" data-large-mode="true" />
-                      </div>
-                      <div class="form-group mb-3 col-xs-12 col-sm-6">
-                        <label for="stock">Số lượng
-                        </label>
-                        <input id="stock" name="soluong" type="number" class="form-control validate" required />
-                      </div>
-                    </div>
-
-
-                    <div class="form-group mb-3">
-                      <label for="category">Đánh dấu là sản phẩm HOT?</label>
-                      <select name="hot" class="custom-select tm-select-accounts" id="category">
-                        <option selected value="0">Đánh dấu là sản phẩm hot ...</option>
-                        <option value="1">Có</option>
-                        <option value="0">Không</option>
-                      </select>
-                    </div>
-                      
-                      </div>
-                      <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
-                        <div class="custom-file mt-2 mb-2">
-                          <input id="fileInput" type="file" name="image" style="display:none;" />
-                          <input type="button" class="btn btn-primary btn-block mx-auto" value="Upload hình ảnh" onclick="document.getElementById('fileInput').click();" />
+                        <div class="form-group row">
+                            <label class="col-form-label col" for="Title">Đường dẫn URL</label>
+                            <div class="col-md-12">
+                                <input class="form-control text-box single-line" data-val="true" data-val-length="The field Tiêu đề must be a string with a maximum length of 250." data-val-length-max="250" id="Title" name="url" type="text" value="<?=$bannerone['url'];?>">
+                                <span class="field-validation-valid text-danger" data-valmsg-for="Title" data-valmsg-replace="true"></span>
+                            </div>
                         </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <fieldset>
+                    <legend>Tùy chọn</legend>
+                    <div class="form-group row">
+                        <label class="col-form-label col" for="Image">Hình đại diện</label>
+                        <div class="col-md-12">                                    
+                            <input id="fileInput" type="file" name="image" style="display:none;" >
+                            <input type="button" class="uploadfile btn btn-secondary" value="Upload hình ảnh" onclick="document.getElementById('fileInput').click();" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col" for="Status">Trạng thái</label>
+                        <div class="col-md-12">
+                          <?php
+                            if ($bannerone['status']==1) {
+                              $status1='selected="selected"';
+                              $status2='';
+                            }else{                                        
+                              $status2='selected="selected"';
+                              $status1='';
+                            }
+                          ?>
+                            <select class="form-control" data-val="true" data-val-required="The Trạng thái field is required." id="Status" name="status">
+                              <option <?=$status2;?> value="0">Ẩn khỏi trang chủ</option>
+                              <option <?=$status1;?> value="1">Kích hoạt</option>
+                              </select>
+                            <span class="field-validation-valid text-danger" data-valmsg-for="Status" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+                    <input type="submit" value="Lưu thây đổi" name="update_banner" class="btn btn-primary">
+                    <a class="btn btn-default" href="?act=QL_Banner_by_location&location=<?=$location;?>">Cancel</a>
+                </fieldset>
+              </form>
+            </div>
+        </div>
+    </div>
+</div>
 
-                        <div class="form-group mb-3">
-                          <label for="category">Danh mục</label>
-                          <select name="idcatalog" class="custom-select tm-select-accounts" id="category">
-                            <option selected>Chọn danh mục ...</option>
-                              <?php
-                                  foreach ($cataloglist_by_store as $cat) {
-                                    echo'<option value="'.$cat['idCatalog'].'">'.$cat['name'].'</option>';
-                                  }
-                              ?>
-                        </select>
+<?php
+} elseif (isset($_GET['add']) && ($_GET['add'] == 1)) {
+  ?>
+  <div class="row">
+      <div class="col-md-8">
+          <div class="card">
+              <div class="card-body">
+                  <div class="form-horizontal">                      
+                    <form action="?act=QL_Banner_by_location&location=<?=$location;?>" method="post" enctype="multipart/form-data">
+                    <fieldset>
+                          <legend>Thêm sản phẩm</legend>
+                          <div class="form-group row">
+                              <label class="col-form-label col" for="Title">Tên sản phẩm</label>
+                              <div class="col-md-12">
+                                  <input class="form-control text-box single-line" data-val="true" data-val-length="The field Tiêu đề must be a string with a maximum length of 250." data-val-length-max="250" id="Title" name="title" type="text" value="">
+                                  <span class="field-validation-valid text-danger" data-valmsg-for="Title" data-valmsg-replace="true"></span>
+                              </div>
+                          </div>
+
+                          <div class="form-group row">
+                              <label class="col-form-label col" for="Title">Mô tả chi tiết</label>
+                              <div class="col-md-12">
+                                <textarea id="editor1" name="editor1" cols="80" rows="10">
+                                </textarea>                                
+                                <script>                          
+                                    CKEDITOR.replace( 'editor1', {
+                                          uiColor: '#99ffff'} );                          
+                                </script>   
+                              </div>
+                          </div>
+
+                          <div class="form-group row">
+                              <label class="col-form-label col" for="Title">Thông số kĩ thuật</label>
+                              <div class="col-md-12">
+                                <textarea id="editor2" name="editor2" cols="80" rows="10">
+                                </textarea>                              
+                                  <script>
+                                      CKEDITOR.replace( 'editor2', {
+                                          uiColor: '#99ffff',
+                                          toolbar: [
+                                              [ 'Bold', 'Italic', '-', 'NumberedList', 'BulletedList', '-', 'Link', 'Unlink' ],
+                                              [ 'FontSize', 'TextColor', 'BGColor' ]
+                                          ]
+                                      });                            
+                                  </script>
+                              </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <div class="col-md-12">
+                                        <label for="Package">Quy cách đóng gói</label>
+                                        <textarea class="form-control" cols="20" id="Package" name="Package" rows="3"></textarea>
+                                        <span class="field-validation-valid text-danger" data-valmsg-for="Package" data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <div class="col-md-12">
+                                        <label for="Warranty">Thông tin bảo hành</label>
+                                        <textarea class="form-control" cols="20" id="Warranty" name="Warranty" rows="3"></textarea>
+                                        <span class="field-validation-valid text-danger" data-valmsg-for="Warranty" data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </fieldset>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4">
+          <div class="card">
+              <div class="card-body">
+                  <fieldset>
+                      <legend>Tùy chọn</legend>
+                      <div class="form-group row">
+                          <label class="col-form-label col" for="Image">Hình ảnh</label>
+                          <div class="col-md-12">
+                            <div class="custom-file mt-2 mb-2">
+                              <input id="fileInput" type="file" name="image" style="display:none;" >
+                              <input type="button" class="uploadfile btn btn-secondary" value="Upload hình ảnh" onclick="document.getElementById('fileInput').click();" />
+                            </div>
+                          </div>
                       </div>
-                      <div class="col-12">
-                      <input type="submit" name="add_product" value="Thêm sản phẩm" class="btn btn-primary btn-block text-uppercase">
+                      <div class="form-group row">
+                          <label class="col-form-label col" for="Status">Thương hiệu</label>
+                          <div class="col-md-12">
+                              <select class="form-control" data-val="true" data-val-required="The Trạng thái field is required." id="brand" name="brand">
+                              <option selected="selected" disabled>Lựa chọn thương hiệu</option>
+                                <option value="1">:)</option>
+                                </select>
+                              <span class="field-validation-valid text-danger" data-valmsg-for="Status" data-valmsg-replace="true"></span>
+                          </div>
+                      </div>
+
+                      <div class="form-group row">
+                          <label class="col-form-label col" for="Status">Danh mục</label>
+                          <div class="col-md-12">
+                              <select class="form-control" data-val="true" size="5" data-val-required="The Trạng thái field is required." id="idcatalog" name="idcatalog">
+                                <option selected="selected" disabled>Lựa chọn danh mục</option>
+                                <?php
+                                  foreach ($cataloglist_by_store as $cat) {
+                                    echo'
+                                    <option value="'.$cat['id'].'">'.$cat['name'].'</option>
+                                    ';
+                                  }
+                                ?>
+                                </select>
+                              <span class="field-validation-valid text-danger" data-valmsg-for="Status" data-valmsg-replace="true"></span>
+                          </div>
+                      </div>
+                      <div class="form-group row">
+                          <label class="col-form-label col" for="Status">Trạng thái</label>
+                          <div class="col-md-12">
+                              <select class="form-control" data-val="true" data-val-required="The Trạng thái field is required." id="Status" name="status">
+                                <option selected="selected" value="0">Lưu tạm</option>
+                                <option value="1">Đang bán</option>
+                                </select>
+                              <span class="field-validation-valid text-danger" data-valmsg-for="Status" data-valmsg-replace="true"></span>
+                          </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <div class="col-md-12">
+                            <label for="Price">Giá bán</label>
+                            <div class="input-group">
+                                <input class="form-control text-box single-line" data-val="true" data-val-number="The field Price must be a number." data-val-required="Vui lòng nhập giá bán." id="Price" name="Price" type="text" value="">
+                                <label class="input-group-append">
+                                    <span class="badge">vnđ</span>
+                                </label>
+                            </div>
+                            <span class="field-validation-valid text-danger" data-valmsg-for="Price" data-valmsg-replace="true"></span>
+                        </div>
                     </div>
-                    </div>
-                    
+
+                      <div class="form-group row">
+                        <div class="col-md-12">
+                            <label for="SpecialPrice">Giá ưu đãi</label>
+                            <div class="input-group">
+                                <input class="form-control text-box single-line" data-val="true" data-val-number="The field SpecialPrice must be a number." id="SpecialPrice" name="SpecialPrice" type="text" value="">
+                                <label class="input-group-append">
+                                    <span class="badge">vnđ</span>
+                                </label>
+                            </div>
+                            <span class="field-validation-valid text-danger" data-valmsg-for="SpecialPrice" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>    
+                    <div class="form-group row">
+                                <div class="col-md-12">
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" id="IsFeatured" name="IsFeatured" placeholder="Product tags..." type="checkbox" value="true"><input name="IsFeatured" type="hidden" value="false">
+                                        <label class="custom-control-label" for="IsFeatured">Đánh dấu sản phẩm nổi bật (Hot)</label>
+                                    </div>
+                                </div>
+                            </div>
+                      <input type="submit" value="Thêm banner" name="add_banner" class="btn btn-primary">
+                      <a class="btn btn-default" href="admin-store.php?act=QL_Product">Cancel</a>
+                  </fieldset>
                 </form>
               </div>
-              </div>
-            </div>
           </div>
-        </div>
       </div>
-    </div>
-    <?php }?>
+  </div>
+  <?php
+}else {
+  ?>
+  <?php } ?>
+
     <!-- DataTables Example -->
     <div class="card mb-3">
       <div class="card-header">

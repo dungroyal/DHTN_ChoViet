@@ -19,6 +19,10 @@
   <!-- Custom styles for this template-->
   <link href="view/style-admin/css/sb-admin.css" rel="stylesheet">
 
+  <!-- CKEdit-->
+  
+	<script src="view\js\plugins\ckeditor\ckeditor.js"></script>
+
 </head>
 
 <body id="page-top">

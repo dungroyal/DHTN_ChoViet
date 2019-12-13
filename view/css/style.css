@@ -5722,7 +5722,7 @@ tfoot td {
 }
 
 .loginbox1 input[type="text"],
-input[type="password"] {
+input[type="password"],input[type="email"],input[type="number"] {
     border: none;
     border-bottom: 1px solid #fff;
     background: #8b545433;
@@ -5734,6 +5734,25 @@ input[type="password"] {
     border-radius: 4px;
     font-weight: bold;
 }
+
+  
+  /* This is the style of our error messages */
+  .error {
+    width  : 100%;
+    padding: 0;
+   
+    font-size: 80%;
+    color: white;
+    background-color: #900;
+    border-radius: 0 0 5px 5px;
+   
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  .error.active {
+    padding: 0.3em;
+  }
 
 .loginbox1 input[type="submit"] {
     border: none;
@@ -5762,7 +5781,7 @@ input[type="password"] {
 }
 
 
-}
+
 .loginbox1 a:hover {
     color: #ffc107;
 }

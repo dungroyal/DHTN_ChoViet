@@ -93,7 +93,7 @@
                 $id=$_GET['id'];
                 product_delete($id);
                 header('location: admin-store.php?act=QL_Product');
-            }
+			}
 				include "admin-store/QL_Product.php";
 				break;
 

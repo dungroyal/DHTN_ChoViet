@@ -5,9 +5,9 @@
   <h1>Đăng nhập Chợ Việt</h1>
   <form action="index.php?act=loginuser" method="post">
     <p>Tên đăng nhập:</p>
-    <input type="text" name="user" placeholder="Enter Username" autocomplete="no" required>
+    <input type="text" name="user" placeholder="Enter Username" required pattern="\w+" title="Tên đăng nhập tối thiểu 6 kí tự"  required minlength="6">
     <p>Mật khẩu:</p>
-    <input type="password" name="pasword" placeholder="Enter Password" required>   
+    <input type="password" name="pasword" placeholder="Enter Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Mật khẩu phải chứa ít nhất 6 ký tự, bao gồm chữ hoa / chữ thường và số">   
 
     <?php
         if (isset($_POST['dang_nhap_user']) && $_POST['dang_nhap_user']) {
