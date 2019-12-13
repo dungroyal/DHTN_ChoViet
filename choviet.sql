@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 12, 2019 lúc 03:23 AM
+-- Thời gian đã tạo: Th12 13, 2019 lúc 06:26 PM
 -- Phiên bản máy phục vụ: 10.4.8-MariaDB
 -- Phiên bản PHP: 7.3.11
 
@@ -12186,7 +12186,12 @@ CREATE TABLE `comment` (
 CREATE TABLE `product` (
   `id` int(5) NOT NULL,
   `name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `title` text COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Đang cập nhât',
+  `specifications` text COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Đang cập nhât',
+  `package` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'FullBox',
+  `warranty` varchar(200) COLLATE utf8_unicode_ci NOT NULL DEFAULT '12 Tháng',
   `price` double(10,0) NOT NULL DEFAULT 0,
+  `specialprice` double(10,0) NOT NULL DEFAULT 0,
   `soluong` int(100) NOT NULL DEFAULT 100,
   `image` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `view` int(11) NOT NULL DEFAULT 1000,
@@ -12203,14 +12208,14 @@ CREATE TABLE `product` (
 -- Đang đổ dữ liệu cho bảng `product`
 --
 
-INSERT INTO `product` (`id`, `name`, `price`, `soluong`, `image`, `view`, `descripsion`, `hot`, `giamgia`, `status`, `id_user`, `idCatalog`, `idStore`) VALUES
-(136, 'Smart Tivi Samsung 4K 55 inch UA55NU7090', 100000, 100, '40S600T2.jpg', 1000, 'Sản phẩm thịnh hành năm 2019', 1, '', 1, 9, 64, 7),
-(138, 'Quần thun Nam Adidas F2031', 100000, 100, '6ecf6ba2f2694c388b5ba83a00d14b09_9366.webp', 1000, 'Sản phẩm thịnh hành năm 2019', 0, '', 1, 9, 42, 8),
-(142, 'Smart TV', 150, 100, 'img_3061_master.png', 1000, 'Sản phẩm thịnh hành năm 2019', 1, '', 1, 9, 63, 7),
-(143, 'Áo khoát Adidas ACE ', 150000, 200, 'Mau.jpg', 1000, 'Sản phẩm thịnh hành năm 2019', 1, '', 1, 9, 42, 8),
-(144, 'Áo khoát Adidas nữ cao cấp màu kem', 1500000, 100, '724211f7c0ef4082b97baa2b007d79ae_9366.webp', 1000, 'Sản phẩm thịnh hành năm 2019', 0, '', 1, 9, 43, 8),
-(145, 'Giầy Adidas Ace cao cấp trắng đen Nam ACE12165', 3000000, 100, 'MG_5424.jpg', 1000, 'Sản phẩm thịnh hành năm 2019', 0, '2000000', 1, 9, 50, 8),
-(146, 'Tivi & Thiết bị điện gia dụng', 12000000, 100, '1.jpg', 1000, 'Sản phẩm thịnh hành năm 2019', 1, '0', 1, 9, 50, 8);
+INSERT INTO `product` (`id`, `name`, `title`, `specifications`, `package`, `warranty`, `price`, `specialprice`, `soluong`, `image`, `view`, `descripsion`, `hot`, `giamgia`, `status`, `id_user`, `idCatalog`, `idStore`) VALUES
+(136, 'Smart Tivi Samsung 4K 55 inch UA55NU7090', 'Đang cập nhât', 'Đang cập nhât', 'FullBox', '12 Tháng', 100000, 0, 100, '40S600T2.jpg', 1000, 'Sản phẩm thịnh hành năm 2019', 1, '', 1, 9, 64, 7),
+(138, 'Quần thun Nam Adidas F2031', 'Đang cập nhât', 'Đang cập nhât', 'FullBox', '12 Tháng', 100000, 0, 100, '6ecf6ba2f2694c388b5ba83a00d14b09_9366.webp', 1000, 'Sản phẩm thịnh hành năm 2019', 0, '', 1, 9, 42, 8),
+(142, 'Smart TV', 'Đang cập nhât', 'Đang cập nhât', 'FullBox', '12 Tháng', 150, 0, 100, 'img_3061_master.png', 1000, 'Sản phẩm thịnh hành năm 2019', 1, '', 1, 9, 63, 7),
+(143, 'Áo khoát Adidas ACE ', 'Đang cập nhât', 'Đang cập nhât', 'FullBox', '12 Tháng', 150000, 0, 200, 'Mau.jpg', 1000, 'Sản phẩm thịnh hành năm 2019', 1, '', 1, 9, 42, 8),
+(144, 'Áo khoát Adidas nữ cao cấp màu kem', 'Đang cập nhât', 'Đang cập nhât', 'FullBox', '12 Tháng', 1500000, 0, 100, '724211f7c0ef4082b97baa2b007d79ae_9366.webp', 1000, 'Sản phẩm thịnh hành năm 2019', 0, '', 1, 9, 43, 8),
+(145, 'Giầy Adidas Ace cao cấp trắng đen Nam ACE12165', 'Đang cập nhât', 'Đang cập nhât', 'FullBox', '12 Tháng', 3000000, 0, 100, 'MG_5424.jpg', 1000, 'Sản phẩm thịnh hành năm 2019', 0, '2000000', 1, 9, 50, 8),
+(146, 'Tivi & Thiết bị điện gia dụng', 'Đang cập nhât', 'Đang cập nhât', 'FullBox', '12 Tháng', 12000000, 0, 100, '1.jpg', 1000, 'Sản phẩm thịnh hành năm 2019', 1, '0', 1, 9, 50, 8);
 
 -- --------------------------------------------------------
 
@@ -12269,7 +12274,7 @@ INSERT INTO `users` (`id`, `fullname`, `name`, `pass`, `email`, `image`, `lever`
 (10, 'Nguyễn Văn Tuấn', 'samsung', 'samsung', 'samsung2019@gmail.com', 'avatar_user.png', '2'),
 (11, 'Nguyễn Văn A', 'adidas', 'adidas', 'adidas2019@gmail.com', 'avatar_user.png', '2'),
 (12, 'Lê Thị B', 'admin', 'admin', 'admin2019@gmail.com', 'avatar_user.png', '1'),
-(13, 'Trần Công Diện', 'user', 'user', 'admin2019@gmail.com', 'avatar_user.png', '0'),
+(13, 'Trần Công Diện', 'user2019', 'User2019', 'admin2019@gmail.com', 'avatar_user.png', '0'),
 (14, 'Đoàn Quốc Dũng', 'dungdqps08542', 'doanquocdung55@gmail.com', 'doanquocdung5520', 'avatar_user.png', '1'),
 (15, 'Lê Trọng Nhân', 'Đoàn Quốc Dũng', 'doanquocdung5520', 'Dungdqps08542@fpt.edu.vn', 'avatar_user.png', '1'),
 (16, 'Lê trọng nhân', 'dungdqps08542', 'doanquocdung5520', 'Dungdqps08542@fpt.edu.vn', 'avatar_user.png', '0'),
