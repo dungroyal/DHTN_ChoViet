@@ -85,7 +85,7 @@
     <li class="nav-item active">
           <a class="nav-link" href="?act=home">
               <i class="fas fa-fw fa-tachometer-alt"></i>
-              <span>Dashboard</span>
+              <span>Tổng quang</span>
           </a>
       </li>
 

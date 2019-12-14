@@ -195,7 +195,6 @@ if (isset($_GET['edi']) && ($_GET['edi'] == 1)) {
                           <label class="col-form-label col" for="Status">Danh mục</label>
                           <div class="col-md-12">
                               <select class="form-control" data-val="true" size="5" data-val-required="The Trạng thái field is required." id="idcatalog" name="idcatalog">
-                                <option selected="selected" disabled>Lựa chọn danh mục</option>
                                 <?php
                                   foreach ($cataloglist_by_store as $cat) {
                                     echo'

@@ -101,35 +101,29 @@
                             <div class="product-description-tab">
                                 <div class="description-tab-menu">
                                     <ul class="clearfix" role="tablist">
-                                        <li role="presentation" class="active"><a href="#description" aria-controls="description" role="tab" data-toggle="tab">Miêu tả</a></li>
-                       
+                                        <li role="presentation" class="active"><a href="#description" aria-controls="description" role="tab" data-toggle="tab">Mô tả chính</a></li>
+                                        <li role="tskt"><a href="#tskt" aria-controls="tskt" role="tab" data-toggle="tab">Thông số kĩ thuật</a></li>
                                         <li role="presentation"><a href="#review" aria-controls="review" role="tab" data-toggle="tab">Đánh giá</a></li>
                                     </ul>
                                 </div>
                                 <div class="tab-content">
                                     <div role="tabpanel" class="tab-pane active" id="description">                                    
-                                    <li><?=$product_detail_by_id['descripsion'];?></li>
-                                      <!--
-                                       <ul>
-                                           <li><i class="fa fa-circle"></i>Intel Core i9 7980XE Hyperthreaded Eighteen,
-                                            Bộ xử lý cực ba mươi sáu luồng với khả năng ép xung ổn định tối đa có thể (Tối thiểu 4,6 GHz) với Waterblock CPU EK.</li>
-                                           
-                                           <li><i class="fa fa-circle"></i>Bộ nhớ bốn kênh DDR4 3200 MHz 128 GB</li>
-                                           <li><i class="fa fa-circle"></i>2 x Thẻ đồ họa Nvidia RTX 2080Ti 11GB GDDR6 được cấu 
-                                           hình trong SLI 3 chiều được trang bị khóa nước EK Full Cover và được ép xung để ép xung ổn định tối đa</li>
-                                           <li><i class="fa fa-circle"></i>1x Samsung 970 PRO Polaris 1TB M.2 2280 PCI-e 3.0 x4 NVMe Solid State Drive 1 x 512GB Samsung 
-                                           860 Pro Solid State Drive dưới dạng trò chơi phụ / ổ đĩa ứng dụng 1 x 1TB Samsung 860 Pro Solid State </li>
-                                           <li><i class="fa fa-circle"></i>Lian Li D888WX Khung nhôm đầy đủ - Đen</li>
-                                           <li><i class="fa fa-circle"></i>Cấu hình Watercooling Dual Loop tùy chỉnh</li>
-                                           <li><i class="fa fa-circle"></i>Bảo hành thu thập và trả hàng 3 năm - Vương quốc Anh</li>
-                                           <li><i class="fa fa-circle"></i>838mm x 675mm x 286mm</li>
-                                          
-                                       </ul>
-                                       -->
+                                        <li><?=$product_detail_by_id['descripsion'];?></li>
                                     </div>
-                                    <div role="tabpanel" class="tab-pane" id="specification">
-                                        <p>Veniam quasi voluptatem facere nesciunt laborum, quibusdam amet totam fugit, blanditiis doloribus alias eveniet dolore pariatur dolores aliquid!</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex consectetur minima quod officiis magni, aspernatur. Ea consectetur ab in, consequatur alias, quo sit. Optio vitae cupiditate, consectetur veritatis cumque odio magnam voluptates voluptas eligendi, minima tenetur voluptatum dolor autem, doloribus expedita obcaecati.</p>
+                                    <div role="tabpanel" class="tab-pane" id="tskt">
+                                        <ul>
+                                            <li><i class="fa fa-circle"></i>Intel Core i9 7980XE Hyperthreaded Eighteen,
+                                                Bộ xử lý cực ba mươi sáu luồng với khả năng ép xung ổn định tối đa có thể (Tối thiểu 4,6 GHz) với Waterblock CPU EK.</li>
+                                            <li><i class="fa fa-circle"></i>Bộ nhớ bốn kênh DDR4 3200 MHz 128 GB</li>
+                                            <li><i class="fa fa-circle"></i>2 x Thẻ đồ họa Nvidia RTX 2080Ti 11GB GDDR6 được cấu 
+                                            hình trong SLI 3 chiều được trang bị khóa nước EK Full Cover và được ép xung để ép xung ổn định tối đa</li>
+                                            <li><i class="fa fa-circle"></i>1x Samsung 970 PRO Polaris 1TB M.2 2280 PCI-e 3.0 x4 NVMe Solid State Drive 1 x 512GB Samsung 
+                                            860 Pro Solid State Drive dưới dạng trò chơi phụ / ổ đĩa ứng dụng 1 x 1TB Samsung 860 Pro Solid State </li>
+                                            <li><i class="fa fa-circle"></i>Lian Li D888WX Khung nhôm đầy đủ - Đen</li>
+                                            <li><i class="fa fa-circle"></i>Cấu hình Watercooling Dual Loop tùy chỉnh</li>
+                                            <li><i class="fa fa-circle"></i>Bảo hành thu thập và trả hàng 3 năm - Vương quốc Anh</li>
+                                            <li><i class="fa fa-circle"></i>838mm x 675mm x 286mm</li>                                          
+                                        </ul>
                                     </div>
                                     <div role="tabpanel" class="tab-pane" id="review">
                                         <p>- Được xây dựng bằng tay Công cụ xây dựng chính được xếp hạng hàng đầu của OcUK và được điều chỉnh bởi Bộ ép xung số 1 thế giới.
