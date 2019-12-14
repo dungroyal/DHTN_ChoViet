@@ -59,17 +59,25 @@
 			break;		
 
         case 'QL_Product':
-            if (isset($_POST['add_product']) && $_POST['add_product']) {
+            if (isset($_POST['store_add_product']) && $_POST['store_add_product']) {
 				$name=$_POST['name'];
+				$title=$_POST['title'];
+				$specifications=$_POST['specifications'];
+				$package=$_POST['package'];
+				$warranty=$_POST['warranty'];
 				$price=$_POST['price'];
+				$specialprice=$_POST['specialprice'];
 				$soluong=$_POST['soluong'];
-				$hot=$_POST['hot'];
-				$idcatalog=$_POST['idcatalog'];
+				$productstatus=$_POST['product_status'];
+				$status=$_POST['status'];
+				$idCatalog=$_POST['idcatalog'];
 				if ($_FILES['image']['name']!="") {                            
-					$image1= basename($_FILES['image']['name']);
-					$target_file ="uploads/". $image1;
-					move_uploaded_file($_FILES['image']['tmp_name'], $target_file);}
-				product_insert($name,$price,$soluong,$image1,$hot,$idcatalog,$idStore);
+					$image= basename($_FILES['image']['name']);
+					$target_file ="uploads/". $image;
+					move_uploaded_file($_FILES['image']['tmp_name'], $target_file);
+				}
+
+				product_insert($name,$title,$specifications,$package,$warranty,$price,$specialprice,$soluong,$productstatus,$image,$status,$idCatalog,$idStore);
 				header('location: admin-store.php?act=QL_Product'); 
 				}
 				

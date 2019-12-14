@@ -1104,7 +1104,8 @@ a.shop-button {
 .pro-price {
     color: #303030;
     font-size: 14px;
-    float: left;
+    float: left;    
+    font-weight: bold;
 }
 
 .new-sale {
@@ -1174,7 +1175,8 @@ a.shop-button {
 }
 
 .single-product-img.clearfix.hover-effect>a {
-    display: block;
+    font-weight: bold;
+    z-index: 0;
 }
 
 
@@ -2828,7 +2830,7 @@ ul.color-widget li:last-child {
 .shop-product-text h4 a {
     font-size: 18px;
     color: #303030;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 16px;
     display: block;
     -webkit-transition: all 0.5s ease 0s;
@@ -2970,8 +2972,9 @@ ul.color-widget li:last-child {
     position: relative;
     border: 1px solid #ddd;
     width: 85px;
-    height: 36px;
+    height: 41px;
     margin-right: 10px;
+    border-radius: 4px;
 }
 
 .dec.qtybutton,
@@ -3168,7 +3171,7 @@ ul.color-widget li:last-child {
 
 .product-detail.shop-product-text {
     margin-top: 0px;
-    padding: 0px 0px 0px 40px;
+    padding: 0px 0px 0px 0px;
     border: none;
 }
 
@@ -6105,4 +6108,133 @@ label {
     border-radius: 4px;
     font-weight: bold;
     margin-bottom: 15px;
+}
+
+
+.rowlprodetail {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    display: inline-block;
+
+    
+}
+
+.policy {
+    display: block;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+}
+
+.policy li:first-child {
+    padding-top: 0;
+}
+
+.policy .inpr:before {
+    content: '';
+    background: url(../icon/box%402x.png) 0 0 no-repeat;
+    width: 19px;
+    height: 16px;
+    background-size: 19px 16px;
+    position: absolute;
+    display: block;
+    top: 4px;
+    left: 0;
+    
+}
+
+.policy .inprr:before {
+    content: '';
+    background: url(../icon/tinhtrang.png) 0 0 no-repeat;
+    width: 19px;
+    height: 16px;
+    background-size: 19px 16px;
+    position: absolute;
+    display: block;
+    top: 4px;
+    left: 0;
+    
+}
+
+.policybg{
+    background-color: #42e75333;
+}
+.policy .wrpr:before {
+    content: '';
+    background: url(../icon/bao-hanh%402x.png) 2px 0 no-repeat;
+    width: 19px;
+    height: 23px;
+    background-size: 16px 23px;
+    position: absolute;
+    display: block;
+    top: 2px;
+    left: 0;
+}
+
+.policy li .icon-poltick {
+    content: '';
+    background: url(../icon/doi-tra%402x.png) 0 0 no-repeat;
+    width: 16px;
+    height: 18px;
+    background-size: 16px 18px;
+    position: absolute;
+    display: block;
+    top: 8px;
+    left: 3px;
+}
+.policy li {
+    display: block;
+    overflow: hidden;
+    padding: 5px 0 5px 28px;
+    font-size: 14px;
+    color: #555;
+    line-height: 26px;
+    margin: 0 10px;
+    position: relative;
+}
+
+.price_and_no {
+    float: left;
+    width: 100%;
+    padding-left: 0px;
+    clear: both;
+    margin-bottom: 10px;
+}
+
+.product_details .price_and_no .price {
+    color: #333;
+    font-size: 14px;
+}
+
+.product_details .price_and_no p {
+    line-height: 24px;
+}
+
+.price_and_no .price strong {
+    color: #f53;
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.price_and_no .price del {
+    margin-left: 15px;
+}
+
+.price_and_no .price {
+    color: #333;
+    font-size: 14px;
+}
+
+.price_and_no .price > span {
+    width: 80px;
+    display: inline-block;
+}
+
+.price_and_no .price em {
+    color: #f53;
+    margin-left: 15px;
 }

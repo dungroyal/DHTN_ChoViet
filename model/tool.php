@@ -10,9 +10,9 @@ require_once 'pdo.php';
  * @throws PDOException lỗi thêm mới
  */
 
-function product_insert($name,$price,$soluong,$image,$hot,$idCatalog,$idStore){
-    $sql = "INSERT INTO product(name,price,soluong,image,hot,idCatalog,idStore) VALUES(?,?,?,?,?,?,?)";
-    pdo_execute($sql, $name,$price,$soluong,$image,$hot,$idCatalog,$idStore);
+function product_insert($name,$title,$specifications,$package,$warranty,$price,$specialprice,$soluong,$product_status,$image,$status,$idCatalog,$idStore){
+    $sql = "INSERT INTO product(name,title,specifications,package,warranty,price,specialprice,soluong,product_status,image,status,idCatalog,idStore) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)";
+    pdo_execute($sql, $name,$title,$specifications,$package,$warranty,$price,$specialprice,$soluong,$product_status,$image,$status,$idCatalog,$idStore);
 }
 
 function catalog_insert($name,$image){

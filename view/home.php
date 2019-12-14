@@ -99,8 +99,23 @@
                                                 </div>
                                                 <div class="single-product-info clearfix">
                                                     <div class="pro-price">
-                                                        <span class="new-price">$25.99</span>
-                                                    </div>
+                                                        <span class="new-price"><strong><?= number_format($pro['price']) ;?> ₫</strong></span>
+                                                    </div>                                                    
+                                                    <div class="new-sale">
+                                                            <span><strong>
+                                                            <?php                                                            
+                                                                if($pro['product_status']==0){
+                                                                    echo"Mới";
+                                                                }
+                                                                if($pro['product_status']==1){
+                                                                    echo"Like New";
+                                                                }
+                                                                if($pro['product_status']==2){
+                                                                    echo"Cũ";
+                                                                }
+                                                            ?>
+                                                            </strong></span>
+                                                        </div>
                                                 </div>
                                                 <div class="product-content text-center">
                                                     <h3><?= $pro['name'] ?> </h3>

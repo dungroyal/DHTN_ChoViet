@@ -128,6 +128,16 @@
                                 //Có cả ID Store không có Id Catalog
                                  if ((isset($_GET['idStore']) && $_GET['idStore'])&&(!isset($_GET['idCatalog']))) {
                                         foreach ($productlist_by_store as $pro) {
+                                            $Pro_Status="";
+                                            if($pro['product_status']==0){
+                                                $Pro_Status="Mới";
+                                            }
+                                            if($pro['product_status']==1){
+                                                $Pro_Status="Like New";
+                                            }
+                                            if($pro['product_status']==2){
+                                                $Pro_Status="Cũ";
+                                            }
                                             echo'
                                             <div class="col-md-4 col-sm-4 col-xs-12">
                                             <div class="single-product">
@@ -139,15 +149,14 @@
                                                     </div>
                                                     <div class="single-product-info clearfix">
                                                         <div class="pro-price">
-                                                            <span class="new-price">$'.$pro['price'].'</span>
+                                                            <span class="new-price">'.number_format($pro['price']) .' ₫</span>
                                                         </div>
                                                         <div class="new-sale">
-                                                            <span>new</span>
+                                                            <span><strong>'.$Pro_Status.'</strong></span>
                                                         </div>
                                                     </div>
                                                     <div class="product-content text-center">
                                                         <h3>'.$pro['name'].'</h3>
-                                                        <h4><a href="?act=product_detail&idProduct='.$pro['id'].'">view details</a></h4>
                                                     </div>
                                                     <div class="product-action">      
                                                         <ul>
@@ -169,6 +178,16 @@
                                     $SL_Product=count($productlist_by_id_and_idStore);
                                     if ($SL_Product>0) {
                                         foreach ($productlist_by_id_and_idStore as $pro) {
+                                            $Pro_Status="";
+                                            if($pro['product_status']==0){
+                                                $Pro_Status="Mới";
+                                            }
+                                            if($pro['product_status']==1){
+                                                $Pro_Status="Like New";
+                                            }
+                                            if($pro['product_status']==2){
+                                                $Pro_Status="Cũ";
+                                            }
                                             echo'
                                             <div class="col-md-4 col-sm-4 col-xs-12">
                                             <div class="single-product">
@@ -180,10 +199,10 @@
                                                     </div>
                                                     <div class="single-product-info clearfix">
                                                         <div class="pro-price">
-                                                            <span class="new-price">$'.$pro['price'].'</span>
+                                                            <span class="new-price">'.number_format($pro['price']) .' ₫</span>
                                                         </div>
                                                         <div class="new-sale">
-                                                            <span>new</span>
+                                                            <span><strong>'.$Pro_Status.'</strong></span>
                                                         </div>
                                                     </div>
                                                     <div class="product-content text-center">
@@ -215,6 +234,16 @@
                                     $SL_Product=count($Product_by_idCat_in_Product);
                                     if ($SL_Product>0) {
                                         foreach ($Product_by_idCat_in_Product as $pro) {
+                                            $Pro_Status="";
+                                            if($pro['product_status']==0){
+                                                $Pro_Status="Mới";
+                                            }
+                                            if($pro['product_status']==1){
+                                                $Pro_Status="Like New";
+                                            }
+                                            if($pro['product_status']==2){
+                                                $Pro_Status="Cũ";
+                                            }
                                             echo'
                                             <div class="col-md-4 col-sm-4 col-xs-12">
                                             <div class="single-product">
@@ -226,10 +255,10 @@
                                                     </div>
                                                     <div class="single-product-info clearfix">
                                                         <div class="pro-price">
-                                                            <span class="new-price">$'.$pro['price'].'</span>
+                                                            <span class="new-price">'.number_format($pro['price']) .' ₫</span>
                                                         </div>
                                                         <div class="new-sale">
-                                                            <span>new</span>
+                                                            <span><strong>'.$Pro_Status.'</strong></span>
                                                         </div>
                                                     </div>
                                                     <div class="product-content text-center">
@@ -256,6 +285,16 @@
                                 }
                                 else {
                                     foreach ($productlist as $pro) {
+                                        $Pro_Status="";
+                                        if($pro['product_status']==0){
+                                            $Pro_Status="Mới";
+                                        }
+                                        if($pro['product_status']==1){
+                                            $Pro_Status="Like New";
+                                        }
+                                        if($pro['product_status']==2){
+                                            $Pro_Status="Cũ";
+                                        }
                                         echo'
                                         <div class="col-md-4 col-sm-4 col-xs-12">
                                         <div class="single-product">
@@ -267,15 +306,14 @@
                                                 </div>
                                                 <div class="single-product-info clearfix">
                                                     <div class="pro-price">
-                                                        <span class="new-price">$'.$pro['price'].'</span>
+                                                        <span class="new-price">'.number_format($pro['price']) .' ₫</span>
                                                     </div>
                                                     <div class="new-sale">
-                                                        <span>new</span>
+                                                        <span><strong>'.$Pro_Status.'</strong></span>
                                                     </div>
                                                 </div>
                                                 <div class="product-content text-center">
                                                     <h3>'.$pro['name'].'</h3>
-                                                    <h4><a href="?act=product_detail&idProduct='.$pro['id'].'">view details</a></h4>
                                                 </div>
                                                 
                                                 <div class="product-action">      

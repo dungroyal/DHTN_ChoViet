@@ -38,42 +38,61 @@
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div class="product-detail shop-product-text">
                             <h4><a href="#"><?=$product_detail_by_id['name'];?></a></h4>
-                            <div class="price-rating-container">    
-                                <div class="price-box"><span><?= number_format($product_detail_by_id['price'])?> vnđ</span> <del></del></div>
-                                <div class="rating-right">
-                                    <div class="star-content">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </div>
+                            </div>
+
+                            <div class="wrap_row clearfix">
+                            <div class="rowlprodetail">
+                                <div class="price_and_no">
+                                    <p class="price promo_price">
+                                        <strong><?= number_format($product_detail_by_id['specialprice'])?> ₫</strong> <del><?= number_format($product_detail_by_id['price'])?> ₫</del>
+                                    </p>
+                                    <p class="price">
+
+                                    <?php
+                                        $tietkiem=$product_detail_by_id['price']-$product_detail_by_id['specialprice']
+                                    ?>
+                                        <span>Tiết kiệm:</span><?=number_format($tietkiem)?> ₫ <em>-<?=round($phantram= (($tietkiem)/($product_detail_by_id['price']))*100,1);?>%</em>
+                                    </p>
                                 </div>
                             </div>
-                            <div class="availability">Tình trang: <span>Còn hàng</span></div>
-                            <h5 class="overview">Tổng quan:</h5>
-                            <p class="product-desc"><?=$product_detail_by_id['descripsion'];?></p>
-                            <div class="size-categories">
-                                <h5 class="size">Màu:</h5>
-                                <div class="color-cat">
-                                <select class="category-items" name="color" >
-                                    <option value="1">Đen</option>
-                                    <option value="2">Xanh Đen</option>
-                                    <option value="3">Trắng Xanh</option>
-                                    <option value="4">Đỏ Đen</option>
-                                </select></div>
-                            </div>
+                            <ul class="policy policybg">
+                                <li class="inprr">
+                                    <span><strong>Tình Trạng sản phẩm: </strong> 
+                                        <?php
+                                            if($product_detail_by_id['product_status']==0){
+                                                echo"Mới 100%";
+                                            }
+                                            if($product_detail_by_id['product_status']==1){
+                                                echo"Like New";
+                                            }
+                                            if($product_detail_by_id['product_status']==2){
+                                                echo"Đã qua sử dụng";
+                                            }
+                                        ?>
+                                    </span>
+                                </li></ul>
+                        </div>
+
+                        <div class="rowlprodetail">
+                            <ul class="policy">
+                                <li class="inpr">
+                                    <span><strong>Đóng gói: </strong> <?=$product_detail_by_id['package'];?></span>
+                                </li>
+                                <li class="wrpr">
+                                    <span><strong>Bảo hành: </strong> <?=$product_detail_by_id['warranty'];?></span>
+                                </li>
+                                <li><i class="icon-poltick"></i><strong>Đổi trả: </strong>1 đổi 1 trong 7 ngày nếu có lỗi do nhà sản xuất. </li>
+                            </ul>
+                        </div>
+                            
+
                             <div class="shop-buttons">
-                                <h5 class="quantity">quantity:</h5>
                                 <div id="quantity-wanted-p">
                                     <input type="number" value="1" name ="soluong"  class="cart-plus-minus-box">
                                     <div class="dec qtybutton">-</div>
                                     <div class="inc qtybutton">+</div>
-                                    <span class="clearfix"></span>
                                 </div>
                                 <input type="submit" class="btn btn-danger" name="addcart" value="Thêm vào giỏ hàng">
-                                <a href="wishlist.html"><i class="fa fa-heart-o"></i></a>
-                                <a href="#"><i class="fa fa-refresh"></i></a>
                                
                             </div>
                          <strong class="text-danger">   <?php
@@ -108,31 +127,19 @@
                                 </div>
                                 <div class="tab-content">
                                     <div role="tabpanel" class="tab-pane active" id="description">                                    
-                                        <li><?=$product_detail_by_id['descripsion'];?></li>
+                                        <?=$product_detail_by_id['title'];?>
                                     </div>
+
+
                                     <div role="tabpanel" class="tab-pane" id="tskt">
-                                        <ul>
-                                            <li><i class="fa fa-circle"></i>Intel Core i9 7980XE Hyperthreaded Eighteen,
-                                                Bộ xử lý cực ba mươi sáu luồng với khả năng ép xung ổn định tối đa có thể (Tối thiểu 4,6 GHz) với Waterblock CPU EK.</li>
-                                            <li><i class="fa fa-circle"></i>Bộ nhớ bốn kênh DDR4 3200 MHz 128 GB</li>
-                                            <li><i class="fa fa-circle"></i>2 x Thẻ đồ họa Nvidia RTX 2080Ti 11GB GDDR6 được cấu 
-                                            hình trong SLI 3 chiều được trang bị khóa nước EK Full Cover và được ép xung để ép xung ổn định tối đa</li>
-                                            <li><i class="fa fa-circle"></i>1x Samsung 970 PRO Polaris 1TB M.2 2280 PCI-e 3.0 x4 NVMe Solid State Drive 1 x 512GB Samsung 
-                                            860 Pro Solid State Drive dưới dạng trò chơi phụ / ổ đĩa ứng dụng 1 x 1TB Samsung 860 Pro Solid State </li>
-                                            <li><i class="fa fa-circle"></i>Lian Li D888WX Khung nhôm đầy đủ - Đen</li>
-                                            <li><i class="fa fa-circle"></i>Cấu hình Watercooling Dual Loop tùy chỉnh</li>
-                                            <li><i class="fa fa-circle"></i>Bảo hành thu thập và trả hàng 3 năm - Vương quốc Anh</li>
-                                            <li><i class="fa fa-circle"></i>838mm x 675mm x 286mm</li>                                          
-                                        </ul>
+                                        <?=$product_detail_by_id['specifications'];?>
                                     </div>
                                     <div role="tabpanel" class="tab-pane" id="review">
-                                        <p>- Được xây dựng bằng tay Công cụ xây dựng chính được xếp hạng hàng đầu của OcUK và được điều chỉnh bởi Bộ ép xung số 1 thế giới.
-                                            - Mỗi hệ thống 8Pack được đánh số và ký tên riêng.
-                                            - Màu sắc tùy chỉnh và thông số kỹ thuật linh hoạt mà bạn có thể thảo luận với 8Pack trước khi đặt hàng.
-                                            - Hỗ trợ hậu mãi chuyên dụng từ 8Pack mình.
-                                            - Hai người chuyên giao hàng và lắp đặt.
-                                            - Một PC hiệu năng cực kỳ đáng tin cậy cho những người yêu cầu tốt nhất tuyệt đối!</p>
-                                       
+                                       <!-- Review  ------------------------------------------->
+
+										<iframe src="comment.php?idProduct=<?=$product_detail_by_id['id'];?>" frameborder="0" width="100%" height="550px" scrolling="no"></iframe>
+
+                                    <!-- END Review -->
                                     </div>
                                 </div>
                             </div>

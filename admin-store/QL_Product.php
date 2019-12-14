@@ -30,7 +30,7 @@ if (isset($_GET['edi']) && ($_GET['edi'] == 1)) {
         <div class="card">
             <div class="card-body">
                 <div class="form-horizontal">                      
-                  <form action="?act=QL_Banner_by_location&location=<?=$location;?>" method="post" enctype="multipart/form-data">
+                  <form action="admin-store.php?act=QL_Product" method="post" enctype="multipart/form-data">
                     <input type="hidden" name="id" value="<?=$bannerone['id'];?>">
                   <fieldset>
                         <legend>Chỉnh sửa Sản phẩm "<strong><?=$bannerone['title'];?>"</strong> </legend>
@@ -97,18 +97,43 @@ if (isset($_GET['edi']) && ($_GET['edi'] == 1)) {
 <?php
 } elseif (isset($_GET['add']) && ($_GET['add'] == 1)) {
   ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <div class="row">
       <div class="col-md-8">
           <div class="card">
               <div class="card-body">
                   <div class="form-horizontal">                      
-                    <form action="?act=QL_Banner_by_location&location=<?=$location;?>" method="post" enctype="multipart/form-data">
+                    <form action="admin-store.php?act=QL_Product" method="post" enctype="multipart/form-data">
                     <fieldset>
                           <legend>Thêm sản phẩm</legend>
                           <div class="form-group row">
                               <label class="col-form-label col" for="Title">Tên sản phẩm</label>
                               <div class="col-md-12">
-                                  <input class="form-control text-box single-line" data-val="true" data-val-length="The field Tiêu đề must be a string with a maximum length of 250." data-val-length-max="250" id="Title" name="title" type="text" value="">
+                                  <input class="form-control text-box single-line" data-val="true" required data-val-length="The field Tiêu đề must be a string with a maximum length of 250." data-val-length-max="250" id="Title" name="name" type="text" value="">
                                   <span class="field-validation-valid text-danger" data-valmsg-for="Title" data-valmsg-replace="true"></span>
                               </div>
                           </div>
@@ -116,7 +141,7 @@ if (isset($_GET['edi']) && ($_GET['edi'] == 1)) {
                           <div class="form-group row">
                               <label class="col-form-label col" for="Title">Mô tả chi tiết</label>
                               <div class="col-md-12">
-                                <textarea id="editor1" name="editor1" cols="80" rows="10">
+                                <textarea id="editor1" name="title" cols="80" rows="10">
                                 </textarea>                                
                                 <script>                          
                                     CKEDITOR.replace( 'editor1', {
@@ -124,11 +149,33 @@ if (isset($_GET['edi']) && ($_GET['edi'] == 1)) {
                                 </script>   
                               </div>
                           </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <div class="col-md-12">
+                                        <label for="Package">Số lượng</label>
+                                        <input type="number" class="form-control" id="" name="soluong"></input>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <div class="col-md-12">
+                                        <label for="Package">Tình trạng sản phẩm</label>
+                                        <select class="form-control" data-val="true" data-val-required="The Trạng thái field is required." id="Status" name="product_status">
+                                              <option selected="selected" value="0">Mới 100%</option>
+                                              <option value="1">Like New</option>
+                                              <option value="2">Đã qua sử dụng</option>
+                                        </select>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
 
                           <div class="form-group row">
                               <label class="col-form-label col" for="Title">Thông số kĩ thuật</label>
                               <div class="col-md-12">
-                                <textarea id="editor2" name="editor2" cols="80" rows="10">
+                                <textarea id="editor2" name="specifications" cols="80" rows="10">
                                 </textarea>                              
                                   <script>
                                       CKEDITOR.replace( 'editor2', {
@@ -146,7 +193,7 @@ if (isset($_GET['edi']) && ($_GET['edi'] == 1)) {
                                 <div class="form-group row">
                                     <div class="col-md-12">
                                         <label for="Package">Quy cách đóng gói</label>
-                                        <textarea class="form-control" cols="20" id="Package" name="Package" rows="3"></textarea>
+                                        <textarea class="form-control" cols="20" id="Package" name="package" rows="3"></textarea>
                                         <span class="field-validation-valid text-danger" data-valmsg-for="Package" data-valmsg-replace="true"></span>
                                     </div>
                                 </div>
@@ -155,7 +202,7 @@ if (isset($_GET['edi']) && ($_GET['edi'] == 1)) {
                                 <div class="form-group row">
                                     <div class="col-md-12">
                                         <label for="Warranty">Thông tin bảo hành</label>
-                                        <textarea class="form-control" cols="20" id="Warranty" name="Warranty" rows="3"></textarea>
+                                        <textarea class="form-control" cols="20" id="Warranty" name="warranty" rows="3"></textarea>
                                         <span class="field-validation-valid text-danger" data-valmsg-for="Warranty" data-valmsg-replace="true"></span>
                                     </div>
                                 </div>
@@ -194,11 +241,11 @@ if (isset($_GET['edi']) && ($_GET['edi'] == 1)) {
                       <div class="form-group row">
                           <label class="col-form-label col" for="Status">Danh mục</label>
                           <div class="col-md-12">
-                              <select class="form-control" data-val="true" size="5" data-val-required="The Trạng thái field is required." id="idcatalog" name="idcatalog">
+                              <select class="form-control" data-val="true" data-val-required="The Trạng thái field is required." id="idcatalog" name="idcatalog">
                                 <?php
                                   foreach ($cataloglist_by_store as $cat) {
                                     echo'
-                                    <option value="'.$cat['id'].'">'.$cat['name'].'</option>
+                                    <option value="'.$cat['idCatalog'].'">'.$cat['name'].'</option>
                                     ';
                                   }
                                 ?>
@@ -221,7 +268,7 @@ if (isset($_GET['edi']) && ($_GET['edi'] == 1)) {
                         <div class="col-md-12">
                             <label for="Price">Giá bán</label>
                             <div class="input-group">
-                                <input class="form-control text-box single-line" data-val="true" data-val-number="The field Price must be a number." data-val-required="Vui lòng nhập giá bán." id="Price" name="Price" type="text" value="">
+                                <input class="form-control text-box single-line" data-val="true" data-val-number="The field Price must be a number." data-val-required="Vui lòng nhập giá bán." id="Price" name="price" type="text" value="">
                                 <label class="input-group-append">
                                     <span class="badge">vnđ</span>
                                 </label>
@@ -234,7 +281,7 @@ if (isset($_GET['edi']) && ($_GET['edi'] == 1)) {
                         <div class="col-md-12">
                             <label for="SpecialPrice">Giá ưu đãi</label>
                             <div class="input-group">
-                                <input class="form-control text-box single-line" data-val="true" data-val-number="The field SpecialPrice must be a number." id="SpecialPrice" name="SpecialPrice" type="text" value="">
+                                <input class="form-control text-box single-line" data-val="true" data-val-number="The field SpecialPrice must be a number." id="SpecialPrice" name="specialprice" type="text" value="">
                                 <label class="input-group-append">
                                     <span class="badge">vnđ</span>
                                 </label>
@@ -250,15 +297,45 @@ if (isset($_GET['edi']) && ($_GET['edi'] == 1)) {
                                     </div>
                                 </div>
                             </div>
-                      <input type="submit" value="Thêm banner" name="add_banner" class="btn btn-primary">
+                      <input type="submit" value="Thêm sản phẩm" name="store_add_product" class="btn btn-primary">
                       <a class="btn btn-default" href="admin-store.php?act=QL_Product">Cancel</a>
                   </fieldset>
-                </form>
+                  </form>
               </div>
           </div>
       </div>
   </div>
   <?php
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }else {
   ?>
   <?php } ?>
