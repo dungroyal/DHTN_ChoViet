@@ -25,9 +25,9 @@ function catalog_store_insert($name,$image,$idStore,$idCatalog){
     pdo_execute($sql, $name,$image,$idStore,$idCatalog);
 }
 
-function user_insert($name,$email,$noidung,$danhgia_bl,$idproduct){
-    $sql = "INSERT INTO comment(name,email,noidung,danhgia,idProduct) VALUES(?,?,?,?,?)";
-    pdo_execute($sql, $name,$email,$noidung,$danhgia_bl,$idproduct);
+function user_insert($name,$email,$noidung,$danhgia_bl,$idproduct,$idUsers,$datetime){
+    $sql = "INSERT INTO comment(name,email,noidung,danhgia,idProduct,idUsers,datetime) VALUES(?,?,?,?,?,?,?)";
+    pdo_execute($sql, $name,$email,$noidung,$danhgia_bl,$idproduct,$idUsers,$datetime);
 }
 
 function commentlist(){

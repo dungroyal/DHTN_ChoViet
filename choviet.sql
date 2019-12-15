@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 14, 2019 lúc 07:07 PM
+-- Thời gian đã tạo: Th12 15, 2019 lúc 08:30 PM
 -- Phiên bản máy phục vụ: 10.4.8-MariaDB
 -- Phiên bản PHP: 7.3.11
 
@@ -12175,8 +12175,16 @@ CREATE TABLE `comment` (
   `idProduct` int(100) DEFAULT NULL,
   `danhgia` tinyint(4) NOT NULL DEFAULT 5,
   `idUsers` int(100) DEFAULT NULL,
-  `date` date DEFAULT NULL
+  `datetime` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `comment`
+--
+
+INSERT INTO `comment` (`id`, `name`, `image`, `email`, `noidung`, `idProduct`, `danhgia`, `idUsers`, `datetime`) VALUES
+(78, 'Trần Công Diện', 'avatar_user.png', 'admin2019@gmail.com', 'Sản phẩm như loằn vậy á', 149, 5, 13, '2019-12-16 02:24:00'),
+(79, 'Đoàn Quốc Dũng', 'avatar_user.png', 'Dungdqps08542@fpt.edu.vn', 'Sản phẩm tạm được!', 149, 4, NULL, '2019-12-16 02:25:00');
 
 -- --------------------------------------------------------
 
@@ -12392,7 +12400,7 @@ ALTER TABLE `catalog_store`
 -- AUTO_INCREMENT cho bảng `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
 -- AUTO_INCREMENT cho bảng `product`
