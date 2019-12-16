@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>ADMIN - ROYAL SPORT</title>
+  <title>Kênh nhà bán hàng</title>
 	<link rel="icon" type="view/image/png" href="view/images/icons/favicon-2.png"/>
 
   <!-- Custom fonts for this template-->
