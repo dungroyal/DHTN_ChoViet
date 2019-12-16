@@ -219,15 +219,17 @@ if (isset($_GET['edi']) && ($_GET['edi'] == 1)) {
                   <fieldset>
                       <legend>Tùy chọn</legend>
                       <div class="form-group row">
-                          <label class="col-form-label col" for="Image">Hình ảnh</label>
+                          <label class="col-form-label col" for="Image">Ảnh đại diện</label>
                           <div class="col-md-12">
                             <div class="custom-file mt-2 mb-2">
-                              <input id="fileInput" type="file" name="image" style="display:none;" >
-                              <input type="button" class="uploadfile btn btn-secondary" value="Upload hình ảnh" onclick="document.getElementById('fileInput').click();" />
-                              <button id="ckfinder-modal" class="uploadfile btn btn-secondary" style="float: left">Open Modal</button>
-			                    		<div id="output" style="float: left;font-size: 0.8em;line-height: 1.4em;margin: 3px 7px;"></div>
-                              
+                              <div class="popup-example">
+                                <button id="ckfinder-popup" class="uploadfile btn btn-secondary" style="float: left">Chọn ảnh</button>
+                                                            
                             </div>
+                          </div>
+                            <div id="preview">
+                                  <span id='output'></span>
+                                </div> 
                           </div>
                       </div>
                       <div class="form-group row">
@@ -404,67 +406,40 @@ if (isset($_GET['edi']) && ($_GET['edi'] == 1)) {
   <div class="modal-example">
 					<button id="ckfinder-modal" class="button-a button-a-background" style="float: left">Open Modal</button>
 					<div id="output" style="float: left;font-size: 0.8em;line-height: 1.4em;margin: 3px 7px;"></div>
-				</div>
+        </div>
+        <img src="" alt="Preview">
 
-      <script>
-        function escapeHtml(unsafe) {
-            return unsafe
-                .replace(/&/g, "&amp;")
-                .replace(/</g, "&lt;")
-                .replace(/>/g, "&gt;")
-                .replace(/"/g, "&quot;")
-                .replace(/'/g, "&#039;");
-        }
+        <script>                                                         
+            function escapeHtml(unsafe) {
+                return unsafe
+                    .replace(/&/g, "&amp;")
+                    .replace(/</g, "&lt;")
+                    .replace(/>/g, "&gt;")
+                    .replace(/"/g, "&quot;")
+                    .replace(/'/g, "&#039;");
+            }        
 
-        var button = document.getElementById('ckfinder-modal');
+            var button = document.getElementById('ckfinder-popup');
 
-        button.onclick = function() {
-            CKFinder.modal({
-                chooseFiles: true,
-                width: 800,
-                height: 600,
-                onInit: function(finder) {
-                    finder.on('files:choose', function(evt) {
-                        var file = evt.data.files.first();
-                        var output = document.getElementById('output');
-                        output.innerHTML = 'Selected: ' + escapeHtml(file.get('name')) + '<br>URL: ' + escapeHtml(file.getUrl());
-                    });
+            button.onclick = function() {
+                CKFinder.popup({
+                    chooseFiles: true,
+                    width: 800,
+                    height: 600,
+                    onInit: function(finder) {
+                        finder.on('files:choose', function(evt) {
+                            var file = evt.data.files.first();
+                            var output = document.getElementById('output');
+                            output.innerHTML = '<img src="'+escapeHtml(file.getUrl())+'" alt="Hình ảnh" class="preview-img">';
+                        });
 
-                    finder.on('file:choose:resizedImage', function(evt) {
-                        var output = document.getElementById('output');
-                        output.innerHTML = 'Selected resized image: ' + escapeHtml(evt.data.file.get('name')) + '<br>url: ' + escapeHtml(evt.data.resizedUrl);
-                    });
-                }
-            });
-        };
+                        finder.on('file:choose:resizedImage', function(evt) {
+                            var output = document.getElementById('output');
+                            output.innerHTML = 'Selected resized image: ' + escapeHtml(evt.data.file.get('name')) + '<br>url: ' + escapeHtml(evt.data.resizedUrl);
+                        });
+                    }
+                });
+            };
+        </script>
 
-        var button1 = document.getElementById('ckfinder-modal-1');
-        var button2 = document.getElementById('ckfinder-modal-2');
-
-        button1.onclick = function() {
-            selectFileWithCKFinder('ckfinder-input-1');
-        };
-        button2.onclick = function() {
-            selectFileWithCKFinder('ckfinder-input-2');
-        };
-
-        function selectFileWithCKFinder(elementId) {
-            CKFinder.modal({
-                chooseFiles: true,
-                width: 800,
-                height: 600,
-                onInit: function(finder) {
-                    finder.on('files:choose', function(evt) {
-                        var file = evt.data.files.first();
-                        var output = document.getElementById(elementId);
-                        output.value = file.getUrl();
-                    });
-
-                    finder.on('file:choose:resizedImage', function(evt) {
-                        var output = document.getElementById(elementId);
-                        output.value = evt.data.resizedUrl;
-                    });
-                }
-            });
-        }
-    </script>
+        <img class="preview" src="" alt="" width="100px">

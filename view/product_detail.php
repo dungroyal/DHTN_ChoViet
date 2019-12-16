@@ -4,9 +4,9 @@
                 <div class="row">
                     <div class="col-md-12 text-left">
                         <ul class="breadcrumb">
-                            <li><a href="index.html">Home</a><span> - </span></li>
-                            <li><a href="shop.html">Shop</a><span> - </span></li>
-                            <li class="active">Product Details Full Width</li>
+                            <li><a href="index.php">Trang chủ</a><span> - </span></li>
+                            <li><a href="#">Cửa hàng</a><span> - </span></li>
+                            <li class="active"><?=$product_detail_by_id['name'];?></li>
                         </ul>
                     </div>
                 </div>

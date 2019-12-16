@@ -5131,7 +5131,7 @@ input[type="button"].btn-block {
     -webkit-box-flex: 1;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
-    padding: 1.25rem;    
+    padding: 1.25rem;
     min-height: 315px;
 }
 
@@ -10893,7 +10893,7 @@ body {
 }
 
 .scroll-to-top {
-    position: fixed;    
+    position: fixed;
     right: 24px;
     bottom: 100px;
     display: none;
@@ -11289,7 +11289,6 @@ body.sidebar-toggled footer.sticky-footer {
     font-size: 21px;
 }
 
-
 .btn:not(:disabled):not(.disabled) {
     cursor: pointer;
 }
@@ -11303,7 +11302,7 @@ body.sidebar-toggled footer.sticky-footer {
 }
 
 .btn-floated {
-    position: fixed;    
+    position: fixed;
     right: 1.25rem;
     bottom: 1.25rem;
     width: 3.5rem;
@@ -11313,7 +11312,7 @@ body.sidebar-toggled footer.sticky-footer {
     border-radius: 3rem;
     border: 0;
     z-index: 5;
-    box-shadow: 0 3px 5px -1px rgba(20,20,31,.2), 0 6px 10px 0 rgba(20,20,31,.14), 0 1px 18px 0 rgba(20,20,31,.12);
+    box-shadow: 0 3px 5px -1px rgba(20, 20, 31, .2), 0 6px 10px 0 rgba(20, 20, 31, .14), 0 1px 18px 0 rgba(20, 20, 31, .12);
 }
 
 .close-box {
@@ -11326,4 +11325,14 @@ body.sidebar-toggled footer.sticky-footer {
 
 .fa-plus:before {
     content: "\f067";
+}
+
+#preview {
+    width: 100%;
+    min-height: 2px;
+}
+
+#preview span img {
+    width: 100%;
+    height: auto;
 }

@@ -22,7 +22,7 @@
   <!-- CKEdit-->
   
   <script src="view\js\plugins\ckeditor\ckeditor.js"></script>  
-  <script src="view/ckfinder/ckfinder.js"></script>
+  <script src="ckfinder/ckfinder.js"></script>
 
 </head>
 
