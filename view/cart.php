@@ -39,7 +39,7 @@
     </div>
     <div class="product-price"><?= number_format($sc['coin']) ?></div>
     <div class="product-quantity">
-      <input type="number" value="<?= $sc['so_luong'] ?>" min="1" max="1">
+      <input type="number" value="<?= $sc['so_luong'] ?>" min="1">
     </div>
     <div class="product-removal">
       <button class="remove-product">
@@ -85,6 +85,8 @@
         echo $erro;
       }
       ?></center><br>
+
+      
 
   </div>
 </div>

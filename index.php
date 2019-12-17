@@ -152,15 +152,27 @@
 									<th>Số lượng</th>
 									<th>Giảm giá</th>
 									<th>Tổng tạm tính</th>
-								</tr>
-								<tr style="height:70px;width: 80%;">
-									<td>IP 11 Pro Max 256 GB</td>
-									<td>30.000.000 VNĐ</td>
-									<td>1</td>
-									<td>0 VNĐ</td>
-									<td>30.000.000 VNĐ</td>
-								</tr>
-								<tr style="height: 30px;">
+								</tr>';
+
+					?>
+					
+					<?php 
+					foreach (show_cart($_SESSION['iduserguest']) as $item) {
+						$content.='
+							<tr style="height: 30px;text-align: center;">
+								<td><strong>'.$item['pro_name'].'</strong></td>
+								<td><strong>'.number_format($item['coin']).'</strong></td>
+								<td><strong>'.$item['so_luong'].'</strong></td>
+								<td>Không có MGG</td>
+								<td><strong>'.number_format(($item['coin'])*($item['so_luong'])).'</strong></td>
+							</tr>
+						';
+					}
+				?>
+					
+					<?php
+
+					$content.='<tr style="height: 30px;">
 									<td></td>
 									<td></td>
 									<td></td>
@@ -208,9 +220,15 @@
 					$mTo = $_POST['email'];
 					$diachi = 'lenhathao3112@gmail.com';
 					$mail = sendMail($title, $content, $nTo, $mTo,$diachicc='');
-					if($mail==1)
-					$erro = 'Bạn đã thanh toán thành công mời vào email xem đơn hàng của bạn.';
-					else $erro = 'Có lỗi!';
+					if($mail==1){
+					$erro = '<div class="thongbaoTC">
+					<div class="thongbaoTC-content">
+					  <p>Thành công</p>
+					  <img src="uploads/0_LDuhViPQfVryctHL.gif" alt="">
+					  <p><a href="index.php">Quay về trang chủ</a></p>
+					</div>
+				  </div>';
+				}else{ $erro = 'Có lỗi!';}
 				}
 				
                 include "view/cart.php";
@@ -218,7 +236,7 @@
 
 
             case 'about':
-                include"view/about.php";
+                include "view/about.php";
                 break;
 
 			case 'dangkithanhvien':
