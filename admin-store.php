@@ -7,12 +7,12 @@
     include "model/product.php";
 	include "model/user.php";
 
-    if (!isset($_SESSION['iduserstore'])) {
+    if (!isset($_SESSION['idstore'])) {
         header('location:login.php');
 	}
 
     $cataloglist=cataloglist(); 
-	$info_store_admin=info_store_admin($_SESSION['iduserstore']);
+	$info_store_admin=info_store_admin($_SESSION['idstore']);
 	$idStore=$info_store_admin['id'];
 	
 	$cataloglist_by_store=cataloglist_by_store($idStore);
@@ -25,7 +25,8 @@
 			switch ($act) {
 				case 'QL_Catalog':
 					if (isset($_POST['add_catalog']) && $_POST['add_catalog']) {
-						$name=$_POST['name'];
+						$namecatalog=get_catalog_name($_POST['idcatalog']);
+						$name=$namecatalog['name'];
 						$idcatalog=$_POST['idcatalog'];
 
 						if ($_FILES['image']['name']!="") {         
@@ -51,7 +52,7 @@
 					}
 
 			if (isset($_GET['del']) && ($_GET['del']==1) ) {
-                $id=$_GET['id'];
+				$id=$_GET['id'];
                 catalog_delete($id);
                 header('location: admin-store.php?act=QL_Catalog');
             }

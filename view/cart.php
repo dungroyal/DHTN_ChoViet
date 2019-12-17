@@ -84,9 +84,7 @@
       if(isset($erro)){
         echo $erro;
       }
-      ?></center><br>
-
-      
+      ?></center><br>   
 
   </div>
 </div>

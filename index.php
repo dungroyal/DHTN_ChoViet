@@ -14,10 +14,19 @@
 	include "model/cart.php"; 
 
     $productlist=productlist();
-    $cataloglist=cataloglist(); 
+	$cataloglist=cataloglist(); 
+
+/**---------Setup Ngày-------------------------- */
+		date_default_timezone_set("Asia/Ho_Chi_Minh");	
+		$ngay=date("d");
+		$thang=date("m");
+		$nam=date("Y");
+		$gio=date("H");
+		$phut=date("i");
+/**------------------------------------------- */
 
     
-    include"view/header.php";
+    include "view/header.php";
 
     if (isset($_GET['act'])) {
         $act = $_GET['act'];
@@ -57,23 +66,22 @@
 				
 				if(isset($_POST['addcart']) && $_POST['addcart']){	
 					if(!isset($_SESSION['iduserguest'])){
+						header('location: index.php');
 						header('location: index.php?act=loginuser');
 					}else{
 					$img = $product_detail_by_id['image'];
 					$coin = $product_detail_by_id['price'];
 					$name = $product_detail_by_id['name'];
-					$info = $product_detail_by_id['descripsion'];
-					$color = $_POST['color'];
 					$soluong = $_POST['soluong'];
 					$idpro = $_GET['idProduct'];
 					$iduser = $product_detail_by_id['id_user'];
 					$idcata = $product_detail_by_id['idCatalog'];
 					$idcustom = $_SESSION['iduserguest'];
-					add_cart($name,$img,$coin,$info,$color,$soluong,$iduser,$idcata,$idpro,$idcustom);
-					$erro = 'Bạn đã thêm '.$name.' số lượng '.$soluong.' cái';
+					add_cart($name,$img,$coin,$soluong,$iduser,$idcata,$idpro,$idcustom);
+					$erro = '<img src="uploads/checkbox-dribbble-looped-landing.gif">Bạn đã thêm '.$name.' số lượng '.$soluong.' cái';
 				}
 				}
-                include"view/product_detail.php";
+                include "view/product_detail.php";
                 break;
 
 			case 'contact':
@@ -154,8 +162,7 @@
 									<th>Tổng tạm tính</th>
 								</tr>';
 
-					?>
-					
+					?>					
 					<?php 
 					foreach (show_cart($_SESSION['iduserguest']) as $item) {
 						$content.='
@@ -168,10 +175,8 @@
 							</tr>
 						';
 					}
-				?>
-					
+				?>					
 					<?php
-
 					$content.='<tr style="height: 30px;">
 									<td></td>
 									<td></td>
@@ -240,32 +245,77 @@
                 break;
 
 			case 'dangkithanhvien':
-				if (isset($_POST['submitbtn_add_store']) && $_POST['submitbtn_add_store']) {
-					
+				if (isset($_POST['dangkicuahang']) && $_POST['dangkicuahang']) {					
+					$name=$_POST['fullname'];
 					$namestore=$_POST['namestore'];
-					$username='asanzo';
-					$password='asanzo';
-					$phonenumber=$_POST['phonenumber'];
+					$phonenumber=$_POST['sdt'];
+					$cmdn=$_POST['cmdn'];
 					$email=$_POST['email'];
-					$idUser='9';
+					$username=$_POST['username'];
+					$password=$_POST['password'];
 
-					store_insert($namestore,$username,$password,$phonenumber,$email,$idUser);
-					header('location: view/thongbao.html'); 
+					$Get_city=Get_city($_POST['thanhpho']);
+					$Get_district=Get_district($_POST['quanhuyen']);
+					$Get_ward=Get_ward($_POST['phuongxa']);
+
+					$city=$Get_city['name'];
+					$district=$Get_district['name'];
+					$ward=$Get_ward['name'];
+					$diachi=$_POST['diachi'];
+					$date=$_POST['date'];
+					$idUser=$_POST['idUser'];
+
+					store_insert($namestore,$username,$password,$phonenumber,$cmdn,$email,$city,$district,$ward,$diachi,$date,$idUser);
+					
+					$_SESSION['thongbao'] = '<div class="thongbaoTC_cv">
+												<div class="thongbaoTC-content_cv">
+												<h1>Đăng Kí Thành công</h1>												
+												<img src="uploads/checkbox-dribbble-looped-landing.gif" alt="">
+												<h2><span>Thông báo: </span>Bạn đã đăng kí trở thành nhà bán hàng cùng với <strong>Chợ Viêt</strong> thành công! Hãy đăng nhập ngay <a href="login.php">Kênh dành cho người bán hàng</a>, hoàn tất những thông tin còn thiếu, và đợi Chợ Việt duyệt cửa hàng của bạn nhé!</h2>
+												<form action="?act=dangkitaikhoan" method="post">
+													<input type="submit" name="delete_SESS" value="Đăng Nhập Ngay!" class="delete_SESS_btn_cv">
+												</form></p>
+												</div>
+											</div>';
+					
+					header('location: ?act=dangkithanhvien'); 
 					}
-                include"view/dangkithanhvien.php";
+					if(isset($_POST['delete_SESS']) && $_POST['delete_SESS'] ){
+						unset($_SESSION['thongbao']);
+						header('location: login.php');
+					}
+                include "view/dangkithanhvien.php";
                 break;
 
 			case 'dangkitaikhoan':
-				//if(isset($_POST['dangki_user']) && $_POST['dangki_user'] ){
-                //    $fullname = $_POST['fullname'];
-                //    $username = $_POST['username'];
-                ///    $email = $_POST['email'];
-				//	$password = $_POST['password'];
-				//	
-				//	
-					//new_user_insert($fullname,$username,$password,$email);
-					//header('location: index.php?act=loginuser'); 
-				//}
+				if(isset($_POST['dk_user']) && $_POST['dk_user'] ){
+                	$fullname = $_POST['hovsten'];
+                	$sdt = $_POST['sdt'];
+                	$email = $_POST['mail'];
+					$username = $_POST['username'];
+					$password = $_POST['pwd1'];					
+					
+					new_user_insert($fullname,$sdt,$username,$password,$email);
+
+					$_SESSION['thongbao'] = '<div class="thongbaoTC">
+												<div class="thongbaoTC-content">
+												<p>Đăng kí thành công</p>
+												<img src="uploads/checkbox-dribbble-looped-landing.gif" alt="">
+												<p>
+												<form action="?act=dangkitaikhoan" method="post">
+													<input type="submit" name="delete_SESS" value="Đăng Nhập Ngay!" class="delete_SESS_btn">
+												</form></p>
+												</div>
+											</div>';
+
+					header('location: index.php?act=dangkitaikhoan');
+				}
+
+				if(isset($_POST['delete_SESS']) && $_POST['delete_SESS'] ){
+					unset($_SESSION['thongbao']);
+					header('location: index.php?act=loginuser');
+				}
+				
                 include "view/dang-ki-user.php";
                 break;
                

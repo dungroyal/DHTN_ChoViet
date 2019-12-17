@@ -12,8 +12,8 @@
 	$producttlist=productlist();
 	$storelist=storelist();
 
-    if (!isset($_SESSION['iduseradmin'])) {
-        header('location:admin/login.php');
+    if (!isset($_SESSION['idadmin'])) {
+        header('location:login.php');
 	}
 	
     include"admin/header.php";

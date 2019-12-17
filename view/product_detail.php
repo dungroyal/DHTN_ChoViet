@@ -87,15 +87,10 @@
                             
 
                             <div class="shop-buttons">
-                                <div id="quantity-wanted-p">
-                                    <input type="number" value="1" name ="soluong"  class="cart-plus-minus-box">
-                                    <div class="dec qtybutton">-</div>
-                                    <div class="inc qtybutton">+</div>
-                                </div>
+                                <input type="hidden" value="1" name ="soluong">
                                 <input type="submit" class="btn btn-danger" name="addcart" value="Thêm vào giỏ hàng">
-                               
                             </div>
-                         <strong class="text-danger">   <?php
+                         <strong class="text-danger"><?php
                                     if(isset($erro)){
                                         echo $erro;
                                     }
