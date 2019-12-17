@@ -224,6 +224,9 @@ if (isset($_GET['edi']) && ($_GET['edi'] == 1)) {
                             <div class="custom-file mt-2 mb-2">
                               <div class="popup-example">
                                 <button id="ckfinder-popup" class="uploadfile btn btn-secondary" style="float: left">Chọn ảnh</button>
+                                
+                                <span id='url_image'></span>
+
                                                             
                             </div>
                           </div>
@@ -273,7 +276,7 @@ if (isset($_GET['edi']) && ($_GET['edi'] == 1)) {
                         <div class="col-md-12">
                             <label for="Price">Giá bán</label>
                             <div class="input-group">
-                                <input class="form-control text-box single-line" data-val="true" data-val-number="The field Price must be a number." data-val-required="Vui lòng nhập giá bán." id="Price" name="price" type="text" value="">
+                                <input class="form-control text-box single-line" data-val="true" data-val-number="The field Price must be a number." data-val-required="Vui lòng nhập giá bán." id="Price" name="price" type="text" value="" required>
                                 <label class="input-group-append">
                                     <span class="badge">vnđ</span>
                                 </label>
@@ -286,7 +289,7 @@ if (isset($_GET['edi']) && ($_GET['edi'] == 1)) {
                         <div class="col-md-12">
                             <label for="SpecialPrice">Giá ưu đãi</label>
                             <div class="input-group">
-                                <input class="form-control text-box single-line" data-val="true" data-val-number="The field SpecialPrice must be a number." id="SpecialPrice" name="specialprice" type="text" value="">
+                                <input class="form-control text-box single-line" data-val="true" data-val-number="The field SpecialPrice must be a number." id="SpecialPrice" name="specialprice" type="text" value="" required>
                                 <label class="input-group-append">
                                     <span class="badge">vnđ</span>
                                 </label>
@@ -402,13 +405,6 @@ if (isset($_GET['edi']) && ($_GET['edi'] == 1)) {
 
   </div>
 
-
-  <div class="modal-example">
-					<button id="ckfinder-modal" class="button-a button-a-background" style="float: left">Open Modal</button>
-					<div id="output" style="float: left;font-size: 0.8em;line-height: 1.4em;margin: 3px 7px;"></div>
-        </div>
-        <img src="" alt="Preview">
-
         <script>                                                         
             function escapeHtml(unsafe) {
                 return unsafe
@@ -431,8 +427,9 @@ if (isset($_GET['edi']) && ($_GET['edi'] == 1)) {
                             var file = evt.data.files.first();
                             var output = document.getElementById('output');
                             output.innerHTML = '<img src="'+escapeHtml(file.getUrl())+'" alt="Hình ảnh" class="preview-img">';
+                            var url_image = document.getElementById('url_image');
+                            url_image.innerHTML = '<input type="hidden" name="image" value="'+escapeHtml(file.getUrl())+'">';
                         });
-
                         finder.on('file:choose:resizedImage', function(evt) {
                             var output = document.getElementById('output');
                             output.innerHTML = 'Selected resized image: ' + escapeHtml(evt.data.file.get('name')) + '<br>url: ' + escapeHtml(evt.data.resizedUrl);

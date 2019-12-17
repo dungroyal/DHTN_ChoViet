@@ -106,7 +106,7 @@ $config['roleSessionVar'] = 'CKFinder_UserRole';
 $config['accessControl'][] = array(
     'role'                => '*',
     'resourceType' => 'Images',
-        'folder' => '/Logos',
+        'folder' => '',
 
     'FOLDER_VIEW'         => true,
     'FOLDER_CREATE'       => true,
