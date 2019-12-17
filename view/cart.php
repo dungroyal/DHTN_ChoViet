@@ -42,9 +42,7 @@
       <input type="number" value="<?= $sc['so_luong'] ?>" min="1">
     </div>
     <div class="product-removal">
-      <button class="remove-product">
-        Remove
-    </button>
+    <a class="remove-product href="">Xóa bỏ</a>
     </div>
     <div class="product-line-price"><?= number_format($sc['coin']) ?></div>
   </div>
