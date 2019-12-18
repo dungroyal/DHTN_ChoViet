@@ -219,15 +219,20 @@ if (isset($_GET['edi']) && ($_GET['edi'] == 1)) {
                   <fieldset>
                       <legend>Tùy chọn</legend>
                       <div class="form-group row">
-                          <label class="col-form-label col" for="Image">Hình ảnh</label>
+                          <label class="col-form-label col" for="Image">Ảnh đại diện</label>
                           <div class="col-md-12">
                             <div class="custom-file mt-2 mb-2">
-                              <input id="fileInput" type="file" name="image" style="display:none;" >
-                              <input type="button" class="uploadfile btn btn-secondary" value="Upload hình ảnh" onclick="document.getElementById('fileInput').click();" />
-                              <button id="ckfinder-modal" class="uploadfile btn btn-secondary" style="float: left">Open Modal</button>
-			                    		<div id="output" style="float: left;font-size: 0.8em;line-height: 1.4em;margin: 3px 7px;"></div>
-                              
+                              <div class="popup-example">
+                                <button id="ckfinder-popup" class="uploadfile btn btn-secondary" style="float: left">Chọn ảnh</button>
+                                
+                                <span id='url_image'></span>
+
+                                                            
                             </div>
+                          </div>
+                            <div id="preview">
+                                  <span id='output'></span>
+                                </div> 
                           </div>
                       </div>
                       <div class="form-group row">
@@ -244,7 +249,7 @@ if (isset($_GET['edi']) && ($_GET['edi'] == 1)) {
                       <div class="form-group row">
                           <label class="col-form-label col" for="Status">Danh mục</label>
                           <div class="col-md-12">
-                              <select class="form-control" data-val="true" data-val-required="The Trạng thái field is required." id="idcatalog" name="idcatalog">
+                              <select class="form-control" data-val="true" size="5" data-val-required="The Trạng thái field is required." id="idcatalog" name="idcatalog">
                                 <?php
                                   foreach ($cataloglist_by_store as $cat) {
                                     echo'
@@ -271,7 +276,7 @@ if (isset($_GET['edi']) && ($_GET['edi'] == 1)) {
                         <div class="col-md-12">
                             <label for="Price">Giá bán</label>
                             <div class="input-group">
-                                <input class="form-control text-box single-line" data-val="true" data-val-number="The field Price must be a number." data-val-required="Vui lòng nhập giá bán." id="Price" name="price" type="text" value="">
+                                <input class="form-control text-box single-line" data-val="true" data-val-number="The field Price must be a number." data-val-required="Vui lòng nhập giá bán." id="Price" name="price" type="text" value="" required>
                                 <label class="input-group-append">
                                     <span class="badge">vnđ</span>
                                 </label>
@@ -284,7 +289,7 @@ if (isset($_GET['edi']) && ($_GET['edi'] == 1)) {
                         <div class="col-md-12">
                             <label for="SpecialPrice">Giá ưu đãi</label>
                             <div class="input-group">
-                                <input class="form-control text-box single-line" data-val="true" data-val-number="The field SpecialPrice must be a number." id="SpecialPrice" name="specialprice" type="text" value="">
+                                <input class="form-control text-box single-line" data-val="true" data-val-number="The field SpecialPrice must be a number." id="SpecialPrice" name="specialprice" type="text" value="" required>
                                 <label class="input-group-append">
                                     <span class="badge">vnđ</span>
                                 </label>
@@ -400,71 +405,38 @@ if (isset($_GET['edi']) && ($_GET['edi'] == 1)) {
 
   </div>
 
+        <script>                                                         
+            function escapeHtml(unsafe) {
+                return unsafe
+                    .replace(/&/g, "&amp;")
+                    .replace(/</g, "&lt;")
+                    .replace(/>/g, "&gt;")
+                    .replace(/"/g, "&quot;")
+                    .replace(/'/g, "&#039;");
+            }        
 
-  <div class="modal-example">
-					<button id="ckfinder-modal" class="button-a button-a-background" style="float: left">Open Modal</button>
-					<div id="output" style="float: left;font-size: 0.8em;line-height: 1.4em;margin: 3px 7px;"></div>
-				</div>
+            var button = document.getElementById('ckfinder-popup');
 
-      <script>
-        function escapeHtml(unsafe) {
-            return unsafe
-                .replace(/&/g, "&amp;")
-                .replace(/</g, "&lt;")
-                .replace(/>/g, "&gt;")
-                .replace(/"/g, "&quot;")
-                .replace(/'/g, "&#039;");
-        }
+            button.onclick = function() {
+                CKFinder.popup({
+                    chooseFiles: true,
+                    width: 800,
+                    height: 600,
+                    onInit: function(finder) {
+                        finder.on('files:choose', function(evt) {
+                            var file = evt.data.files.first();
+                            var output = document.getElementById('output');
+                            output.innerHTML = '<img src="'+escapeHtml(file.getUrl())+'" alt="Hình ảnh" class="preview-img">';
+                            var url_image = document.getElementById('url_image');
+                            url_image.innerHTML = '<input type="hidden" name="image" value="'+escapeHtml(file.getUrl())+'">';
+                        });
+                        finder.on('file:choose:resizedImage', function(evt) {
+                            var output = document.getElementById('output');
+                            output.innerHTML = 'Selected resized image: ' + escapeHtml(evt.data.file.get('name')) + '<br>url: ' + escapeHtml(evt.data.resizedUrl);
+                        });
+                    }
+                });
+            };
+        </script>
 
-        var button = document.getElementById('ckfinder-modal');
-
-        button.onclick = function() {
-            CKFinder.modal({
-                chooseFiles: true,
-                width: 800,
-                height: 600,
-                onInit: function(finder) {
-                    finder.on('files:choose', function(evt) {
-                        var file = evt.data.files.first();
-                        var output = document.getElementById('output');
-                        output.innerHTML = 'Selected: ' + escapeHtml(file.get('name')) + '<br>URL: ' + escapeHtml(file.getUrl());
-                    });
-
-                    finder.on('file:choose:resizedImage', function(evt) {
-                        var output = document.getElementById('output');
-                        output.innerHTML = 'Selected resized image: ' + escapeHtml(evt.data.file.get('name')) + '<br>url: ' + escapeHtml(evt.data.resizedUrl);
-                    });
-                }
-            });
-        };
-
-        var button1 = document.getElementById('ckfinder-modal-1');
-        var button2 = document.getElementById('ckfinder-modal-2');
-
-        button1.onclick = function() {
-            selectFileWithCKFinder('ckfinder-input-1');
-        };
-        button2.onclick = function() {
-            selectFileWithCKFinder('ckfinder-input-2');
-        };
-
-        function selectFileWithCKFinder(elementId) {
-            CKFinder.modal({
-                chooseFiles: true,
-                width: 800,
-                height: 600,
-                onInit: function(finder) {
-                    finder.on('files:choose', function(evt) {
-                        var file = evt.data.files.first();
-                        var output = document.getElementById(elementId);
-                        output.value = file.getUrl();
-                    });
-
-                    finder.on('file:choose:resizedImage', function(evt) {
-                        var output = document.getElementById(elementId);
-                        output.value = evt.data.resizedUrl;
-                    });
-                }
-            });
-        }
-    </script>
+        <img class="preview" src="" alt="" width="100px">

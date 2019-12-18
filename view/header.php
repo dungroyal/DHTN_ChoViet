@@ -99,6 +99,7 @@
                                             echo'
                                                 <li class="account"><a href="#">'.$info_user['fullname'].'</a>
                                                     <ul class="submenu-mainmenu">
+                                                        <li><a href="#">Hồ sơ cá nhân</a></li>
                                                         <li><a href="?act=logout_user">Đăng xuất</a></li>
                                                     </ul>
                                                 </li>

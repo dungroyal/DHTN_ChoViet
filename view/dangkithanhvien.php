@@ -3,8 +3,6 @@
         header('location:index.php?act=loginuser');
     }else {
         $info_user=info_user($_SESSION['iduserguest']);
-        $name_user=$info_user['name'];
-        $email_user=$info_user['email'];
     }
     ?>
 
@@ -13,22 +11,26 @@
   <div class="login-popup-conten-dk">
     <div class="loginbox1"> 
       <h1><strong>Đăng kí</strong> nhà bán hàng trên <strong>Chợ Việt</strong></h1>
-      <form action="?act=dangkitaikhoan" method="post">
+      <form action="?act=dangkithanhvien" method="post">
         <p>Họ và Tên: </p>
-        <input name="topic1" type="text" placeholder="VD: Nguễn Văn A" required  minlength="6">
+        <input name="fullname" type="text" value="<?=$info_user['fullname']?>" required  minlength="6">
 
         <p>Tên cửa hàng: </p>
-        <input name="topic1" type="text" placeholder="VD: Văn A Shop" required minlength="6">
+        <input name="namestore" type="text"  required minlength="6">
         
         <p>Số điện thoại:</p>
-        <input type="text" name="name"   placeholder="VD: 0123456789" minlength="10" maxlength="10" required pattern="[0-9]{10}" title="Số điện thoại phải là số có 10 chữ số">
+        <input type="text" name="sdt" value="<?=$info_user['phonenumber']?>" placeholder="VD: 0123456789" minlength="10" maxlength="10" required pattern="[0-9]{10}" title="Số điện thoại phải là số có 10 chữ số">
 
         <p>Số CMND:</p>
-        <input type="text" name="cmdn"   placeholder="VD: 123123123" minlength="9" maxlength="12" required pattern="[0-9]{9}" title="Số CMND là số có 9 hoặc 12 chữ số">
+        <input type="text" name="cmdn"  minlength="9" maxlength="12" required pattern="[0-9]{9}" title="Số CMND là số có 9 hoặc 12 chữ số">
 
         <p>Thư điện tử</p>
-        <input type="email" id="mail" name="email" required placeholder="VD: email@gmail.com">
+        <input type="email" id="mail" name="email"value="<?=$info_user['email']?>" required>
 
+        <input type="hidden" name="username" value="<?=$info_user['name']?>">
+        <input type="hidden" name="password" value="<?=$info_user['pass']?>">
+        <input type="hidden" name="idUser" value="<?=$info_user['id']?>">        
+        <input type="hidden" name="date" value="<?=$nam;?>-<?=$thang;?>-<?=$ngay;?>T<?=$gio;?>:<?=$phut;?>" >
         
         <p>Tỉnh, Thành phố:</p>
         <select id="thanhpho" name="thanhpho" required>
@@ -52,7 +54,7 @@
         </select>    
         
         <p>Số nhà, tên đường:</p>
-        <input type="text" name="sonha" placeholder="992 Âu Cơ" required minlength="6">
+        <input type="text" name="diachi" placeholder="992 Âu Cơ" required minlength="6">
 
         <input type="submit" name="dangkicuahang" value="Gửi thông tin">
         <a href="index.php">Trở lại Trang chủ</a>
@@ -60,8 +62,12 @@
     </div>
     </div>
 </div>
+      <?php
+        if (isset($_SESSION['thongbao'])) {
+          echo $_SESSION['thongbao'];
+        }
+      ?>
 </div>
-
 <script>
           jQuery(document).ready(function($){
             $("#thanhpho").change(function(event){

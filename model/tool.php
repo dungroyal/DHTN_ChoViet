@@ -131,7 +131,7 @@ function product_delete($id){
 }
 
 function catalog_delete($id){
-    $sql = "DELETE FROM catalog WHERE id=?";
+    $sql = "DELETE FROM catalog_store WHERE id=?";
     if(is_array($id)){
         foreach ($id as $ma) {
             pdo_execute($sql, $ma);
@@ -177,6 +177,22 @@ function list_phuongxa($maqh){
     $sql="SELECT * from choviet_xaphuongthitran where maqh=".$maqh;
     return pdo_query($sql);
 }
+
+function Get_city($matp){
+    $sql="SELECT name from choviet_tinhthanhpho where matp=".$matp;
+    return pdo_query_one($sql);
+}
+
+function Get_district($maqh){
+    $sql="SELECT name from choviet_quanhuyen where maqh=".$maqh;
+    return pdo_query_one($sql);
+}
+
+function Get_ward($xaid){
+    $sql="SELECT name from choviet_xaphuongthitran where xaid=".$xaid;
+    return pdo_query_one($sql);
+}
+
 
 /******************************************************************************************/
 

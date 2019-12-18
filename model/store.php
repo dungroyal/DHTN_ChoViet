@@ -29,9 +29,9 @@
     pdo_execute($sql, $trangthai,$id);
     }   
 
-    function store_insert($name,$username,$password,$phonenumber,$email,$idUser){
-        $sql = "INSERT INTO store(name,username,password,phonenumber,email,idUser) VALUES(?,?,?,?,?,?)";
-        pdo_execute($sql, $name,$username,$password,$phonenumber,$email,$idUser);
+    function store_insert($namestore,$username,$password,$phonenumber,$cmnd,$email,$city,$district,$ward,$diachi,$date,$idUser){
+        $sql = "INSERT INTO store(name,username,password,phonenumber,cmnd,email,city,district,ward,diachi,date,idUser) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
+        pdo_execute($sql, $namestore,$username,$password,$phonenumber,$cmnd,$email,$city,$district,$ward,$diachi,$date,$idUser);
     }
 
     function enable_store($id){
@@ -44,5 +44,9 @@
         pdo_execute($sql, $id);
     }
 
+    function check_user_store($username,$password){
+        $sql="SELECT * FROM store WHERE username=? AND password=?";
+        return pdo_query_one($sql, $username,$password);
+    }
         
 ?>

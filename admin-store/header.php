@@ -22,7 +22,7 @@
   <!-- CKEdit-->
   
   <script src="view\js\plugins\ckeditor\ckeditor.js"></script>  
-  <script src="view/ckfinder/ckfinder.js"></script>
+  <script src="ckfinder/ckfinder.js"></script>
 
 </head>
 
@@ -66,7 +66,7 @@
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
         <?php
-                if (isset($_SESSION['iduserstore'])) {
+                if (isset($_SESSION['idstore'])) {
                     echo'<a class="dropdown-item" href="#"><strong>'.$info_store_admin['name'].'</strong></a>
                     <a class="dropdown-item" href="?act=QL_Store">Cài đặt</a>
                     <div class="dropdown-divider"></div>

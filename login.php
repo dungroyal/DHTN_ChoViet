@@ -2,6 +2,7 @@
 	session_start();
 	include "model/user.php";
 	include "model/pdo.php";
+	include "model/store.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -68,30 +69,24 @@
 						if (isset($_POST['login']) && $_POST['login']) {
 							$user = $_POST['user'];
 							$pass = $_POST['password'];
-							$kt_user = check_user($user, $pass);
+							$check_store = check_user_store($user, $pass);
+							
+							$id_store=$check_store['id'];
+							$status=$check_store['trangthai'];
 
-							$name_user=$kt_user['name'];
-							$id_user=$kt_user['id'];
-							$lever=$kt_user['lever'];
-
-
-
-							if (($id_user > 0) && ($lever==1)) {
-								$_SESSION['nameuser'] = $name_user;
-								$_SESSION['iduseradmin'] = $id_user;
+							if (($id_store > 0) && ($status==2)) {
+								$_SESSION['idadmin'] = $id_store;
 								header('Location: admin.php');
 							}
 
-							if (($id_user > 0) && ($lever==2)) {
-								$_SESSION['nameuser'] = $name_user;
-								$_SESSION['iduserstore'] = $id_user;
+							if (($id_store > 0) && ($status==1)) {
+								$_SESSION['idstore'] = $id_store;
 								header('Location: admin-store.php');
 							}
 
-							if (($id_user > 0) && ($lever==0)) {
-								$_SESSION['nameuser'] = $name_user;
-								$_SESSION['iduserguest'] = $id_user;
-								header('Location: index.php');
+							if (($id_store > 0) && ($status==0)) {
+								$_SESSION['idstore'] = $id_store;
+								header('Location: admin-store.php');
 							}else{
 								echo '<div class="text-center p-t-12">
 										<span class="txt1" style=" color=red;color: red;font-weight: bold;">

@@ -4,9 +4,9 @@
                 <div class="row">
                     <div class="col-md-12 text-left">
                         <ul class="breadcrumb">
-                            <li><a href="index.html">Home</a><span> - </span></li>
-                            <li><a href="shop.html">Shop</a><span> - </span></li>
-                            <li class="active">Product Details Full Width</li>
+                            <li><a href="index.php">Trang chủ</a><span> - </span></li>
+                            <li><a href="#">Cửa hàng</a><span> - </span></li>
+                            <li class="active"><?=$product_detail_by_id['name'];?></li>
                         </ul>
                     </div>
                 </div>
@@ -87,15 +87,10 @@
                             
 
                             <div class="shop-buttons">
-                                <div id="quantity-wanted-p">
-                                    <input type="number" value="1" name ="soluong"  class="cart-plus-minus-box">
-                                    <div class="dec qtybutton">-</div>
-                                    <div class="inc qtybutton">+</div>
-                                </div>
+                                <input type="hidden" value="1" name ="soluong">
                                 <input type="submit" class="btn btn-danger" name="addcart" value="Thêm vào giỏ hàng">
-                               
                             </div>
-                         <strong class="text-danger">   <?php
+                         <strong class="text-danger"><?php
                                     if(isset($erro)){
                                         echo $erro;
                                     }

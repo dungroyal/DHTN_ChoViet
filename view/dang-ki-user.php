@@ -23,14 +23,19 @@
         <p>Nhập lại mật khẩu <input title="Mật khẩu phải chứa ít nhất 6 ký tự, bao gồm chữ hoa / chữ thường và số" type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="pwd2" onchange="
           this.setCustomValidity(this.validity.patternMismatch ? this.title : '');
         "></p>
-        <input type="submit" id="submit" value="Đăng kí">
+        <input type="submit" id="submit" name="dk_user"value="Đăng kí">
         
         <a href="?act=loginuser">Đã có tài khoản!</a><br>
         <a href="index.php">Trang chủ</a>
       </fieldset>
-    </form>
+    </form>    
     </div>
     </div>
+                <?php
+                  if (isset($_SESSION['thongbao'])) {
+                    echo $_SESSION['thongbao'];
+                  }
+                ?>
 </div>
 </div>
 
