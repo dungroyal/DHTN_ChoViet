@@ -120,9 +120,7 @@
 				break;
 
 		case 'logout_admin':
-				unset($_SESSION['nameuser']);
-				unset($_SESSION['iduserstore']);
-				unset($_SESSION['iduserguest']);
+				unset($_SESSION['idstore']);
 				header('location: admin-store.php');
 				break;
 				
