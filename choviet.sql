@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 17, 2019 at 09:22 PM
+-- Generation Time: Dec 18, 2019 at 06:26 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -61,6 +61,7 @@ CREATE TABLE `cart` (
   `pro_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `img` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
   `coin` int(11) NOT NULL,
+  `thanhtien` double(10,0) NOT NULL,
   `tinh_trang` tinyint(1) NOT NULL DEFAULT 0,
   `info` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `color` int(5) NOT NULL,
@@ -77,45 +78,13 @@ CREATE TABLE `cart` (
 -- Dumping data for table `cart`
 --
 
-INSERT INTO `cart` (`id`, `pro_name`, `img`, `coin`, `tinh_trang`, `info`, `color`, `so_luong`, `giam`, `id_user`, `id_custom`, `id_pro`, `id_cata`, `type`) VALUES
-(27, 'Áo khoát Adidas ACE ', 'Mau.jpg', 150000, 0, 'Sản phẩm thịnh hành năm 2019', 1, 2, NULL, 9, 13, 143, 42, 0),
-(28, 'Giầy Adidas Ace cao cấp trắng đen Nam ACE12165', 'MG_5424.jpg', 3000000, 0, 'Sản phẩm thịnh hành năm 2019', 1, 1, NULL, 9, 13, 145, 50, 0),
-(29, 'Tivi & Thiết bị điện gia dụng', '1.jpg', 12000000, 0, 'Sản phẩm thịnh hành năm 2019', 1, 2, NULL, 9, 13, 146, 50, 0),
-(31, 'Giầy Adidas Ace cao cấp trắng đen Nam ACE12165', 'MG_5424.jpg', 3000000, 0, 'Sản phẩm thịnh hành năm 2019', 1, 1, NULL, 9, 17, 145, 50, 0),
-(32, 'Điện thoại Samsung Galaxy A70', '636907475981220637_samsung-galaxy-a70-den-1.png', 7000000, 0, '', 0, 1, NULL, 0, 12, 149, 44, 0),
-(33, 'Áo khoát Adidas nữ cao cấp màu kem', '724211f7c0ef4082b97baa2b007d79ae_9366.webp', 1500000, 0, '', 0, 1, NULL, 9, 12, 144, 43, 0),
-(34, 'Smart TV', 'smart-tivi-samsung-55-inch-55nu7400-4k-uhd-hdr-9GNTUV.jpg', 150, 0, '', 0, 1, NULL, 9, 12, 142, 63, 0),
-(35, 'Smart TV', 'smart-tivi-samsung-55-inch-55nu7400-4k-uhd-hdr-9GNTUV.jpg', 150, 0, '', 0, 1, NULL, 9, 12, 142, 63, 0),
-(36, 'Smart TV', 'smart-tivi-samsung-55-inch-55nu7400-4k-uhd-hdr-9GNTUV.jpg', 150, 0, '', 0, 1, NULL, 9, 12, 142, 63, 0),
-(37, 'Smart TV', 'smart-tivi-samsung-55-inch-55nu7400-4k-uhd-hdr-9GNTUV.jpg', 150, 0, '', 0, 1, NULL, 9, 12, 142, 63, 0),
-(38, 'Smart TV', 'smart-tivi-samsung-55-inch-55nu7400-4k-uhd-hdr-9GNTUV.jpg', 150, 0, '', 0, 1, NULL, 9, 12, 142, 63, 0),
-(39, 'Smart TV', 'smart-tivi-samsung-55-inch-55nu7400-4k-uhd-hdr-9GNTUV.jpg', 150, 0, '', 0, 1, NULL, 9, 12, 142, 63, 0),
-(40, 'Smart TV', 'smart-tivi-samsung-55-inch-55nu7400-4k-uhd-hdr-9GNTUV.jpg', 150, 0, '', 0, 1, NULL, 9, 12, 142, 63, 0),
-(41, 'Áo khoát Adidas ACE ', 'Mau.jpg', 150000, 0, '', 0, 1, NULL, 9, 12, 143, 42, 0),
-(42, 'Áo khoát Adidas ACE ', 'Mau.jpg', 150000, 0, '', 0, 1, NULL, 9, 12, 143, 42, 0),
-(43, 'Áo khoát Adidas ACE ', 'Mau.jpg', 150000, 0, '', 0, 1, NULL, 9, 12, 143, 42, 0),
-(44, 'Áo khoát Adidas ACE ', 'Mau.jpg', 150000, 0, '', 0, 1, NULL, 9, 12, 143, 42, 0),
-(45, 'Áo khoát Adidas ACE ', 'Mau.jpg', 150000, 0, '', 0, 1, NULL, 9, 12, 143, 42, 0),
-(46, 'Áo khoát Adidas ACE ', 'Mau.jpg', 150000, 0, '', 0, 1, NULL, 9, 12, 143, 42, 0),
-(47, 'Áo khoát Adidas ACE ', 'Mau.jpg', 150000, 0, '', 0, 1, NULL, 9, 12, 143, 42, 0),
-(48, 'Áo khoát Adidas ACE ', 'Mau.jpg', 150000, 0, '', 0, 1, NULL, 9, 12, 143, 42, 0),
-(49, 'Áo khoát Adidas ACE ', 'Mau.jpg', 150000, 0, '', 0, 1, NULL, 9, 12, 143, 42, 0),
-(50, 'Áo khoát Adidas ACE ', 'Mau.jpg', 150000, 0, '', 0, 1, NULL, 9, 12, 143, 42, 0),
-(51, 'Áo khoát Adidas ACE ', 'Mau.jpg', 150000, 0, '', 0, 1, NULL, 9, 12, 143, 42, 0),
-(52, 'Áo khoát Adidas ACE ', 'Mau.jpg', 150000, 0, '', 0, 1, NULL, 9, 12, 143, 42, 0),
-(53, 'Áo khoát Adidas ACE ', 'Mau.jpg', 150000, 0, '', 0, 1, NULL, 9, 12, 143, 42, 0),
-(54, 'Áo khoát Adidas ACE ', 'Mau.jpg', 150000, 0, '', 0, 1, NULL, 9, 12, 143, 42, 0),
-(55, 'Áo khoát Adidas ACE ', 'Mau.jpg', 150000, 0, '', 0, 1, NULL, 9, 12, 143, 42, 0),
-(56, 'Áo khoát Adidas ACE ', 'Mau.jpg', 150000, 0, '', 0, 1, NULL, 9, 12, 143, 42, 0),
-(57, 'Áo khoát Adidas ACE ', 'Mau.jpg', 150000, 0, '', 0, 1, NULL, 9, 12, 143, 42, 0),
-(58, 'Áo khoát Adidas ACE ', 'Mau.jpg', 150000, 0, '', 0, 1, NULL, 9, 12, 143, 42, 0),
-(59, 'Áo khoát Adidas ACE ', 'Mau.jpg', 150000, 0, '', 0, 1, NULL, 9, 12, 143, 42, 0),
-(60, 'Áo khoát Adidas ACE ', 'Mau.jpg', 150000, 0, '', 0, 1, NULL, 9, 12, 143, 42, 0),
-(61, 'Áo khoát Adidas ACE ', 'Mau.jpg', 150000, 0, '', 0, 1, NULL, 9, 12, 143, 42, 0),
-(62, 'Áo khoát Adidas ACE ', 'Mau.jpg', 150000, 0, '', 0, 1, NULL, 9, 12, 143, 42, 0),
-(63, 'Áo khoát Adidas ACE ', 'Mau.jpg', 150000, 0, '', 0, 1, NULL, 9, 12, 143, 42, 0),
-(64, 'Áo khoát Adidas ACE ', 'Mau.jpg', 150000, 0, '', 0, 1, NULL, 9, 12, 143, 42, 0),
-(65, 'Áo khoát Adidas ACE ', 'Mau.jpg', 150000, 0, '', 0, 1, NULL, 9, 12, 143, 42, 0);
+INSERT INTO `cart` (`id`, `pro_name`, `img`, `coin`, `thanhtien`, `tinh_trang`, `info`, `color`, `so_luong`, `giam`, `id_user`, `id_custom`, `id_pro`, `id_cata`, `type`) VALUES
+(27, 'Áo khoát Adidas ACE ', 'Mau.jpg', 150000, 0, 0, 'Sản phẩm thịnh hành năm 2019', 1, 2, NULL, 9, 13, 143, 42, 0),
+(28, 'Giầy Adidas Ace cao cấp trắng đen Nam ACE12165', 'MG_5424.jpg', 3000000, 3000000, 0, 'Sản phẩm thịnh hành năm 2019', 1, 1, NULL, 9, 13, 145, 50, 0),
+(29, 'Tivi & Thiết bị điện gia dụng', '1.jpg', 12000000, 0, 0, 'Sản phẩm thịnh hành năm 2019', 1, 2, NULL, 9, 13, 146, 50, 0),
+(31, 'Giầy Adidas Ace cao cấp trắng đen Nam ACE12165', 'MG_5424.jpg', 3000000, 0, 0, 'Sản phẩm thịnh hành năm 2019', 1, 1, NULL, 9, 17, 145, 50, 0),
+(76, 'Điện thoại Samsung Galaxy A70', '636907475981220637_samsung-galaxy-a70-den-1.png', 5000000, 5000000, 0, '', 0, 1, NULL, 0, 12, 149, 44, 0),
+(77, 'Giầy Adidas Ace cao cấp trắng đen Nam ACE12165', 'MG_5424.jpg', 5000000, 5000000, 0, '', 0, 1, NULL, 9, 12, 145, 50, 0);
 
 -- --------------------------------------------------------
 
@@ -12207,6 +12176,7 @@ CREATE TABLE `comment` (
   `email` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `noidung` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
   `idProduct` int(100) DEFAULT NULL,
+  `IdStore` int(100) NOT NULL,
   `danhgia` tinyint(4) NOT NULL DEFAULT 5,
   `idUsers` int(100) DEFAULT NULL,
   `datetime` datetime DEFAULT NULL
@@ -12216,10 +12186,12 @@ CREATE TABLE `comment` (
 -- Dumping data for table `comment`
 --
 
-INSERT INTO `comment` (`id`, `name`, `image`, `email`, `noidung`, `idProduct`, `danhgia`, `idUsers`, `datetime`) VALUES
-(78, 'Trần Công Diện', 'avatar_user.png', 'admin2019@gmail.com', 'Sản phẩm như loằn vậy á', 149, 5, 13, '2019-12-16 02:24:00'),
-(79, 'Đoàn Quốc Dũng', 'avatar_user.png', 'Dungdqps08542@fpt.edu.vn', 'Sản phẩm tạm được!', 149, 4, NULL, '2019-12-16 02:25:00'),
-(80, 'Lê Tèo', 'avatar_user.png', 'Teodaica@120.com', 'Như cức :(((', 145, 5, NULL, '2019-12-16 02:44:00');
+INSERT INTO `comment` (`id`, `name`, `image`, `email`, `noidung`, `idProduct`, `IdStore`, `danhgia`, `idUsers`, `datetime`) VALUES
+(78, 'Trần Công Diện', 'avatar_user.png', 'admin2019@gmail.com', 'Sản phẩm như loằn vậy á', 149, 7, 5, 13, '2019-12-16 02:24:00'),
+(79, 'Đoàn Quốc Dũng', 'avatar_user.png', 'Dungdqps08542@fpt.edu.vn', 'Sản phẩm tạm được!', 149, 0, 4, NULL, '2019-12-16 02:25:00'),
+(80, 'Lê Tèo', 'avatar_user.png', 'Teodaica@120.com', 'Như cức :(((', 145, 7, 5, NULL, '2019-12-16 02:44:00'),
+(81, 'Đoàn Quốc Dũng', 'avatar_user.png', 'doanquocdung55@gmail.com', 'Đẹp quá <3', 157, 7, 5, 12, '2019-12-19 00:06:00'),
+(82, 'Đoàn Quốc Dũng', 'avatar_user.png', 'doanquocdung55@gmail.com', 'Điện thoại như loằn :)', 149, 7, 5, 12, '2019-12-19 00:15:00');
 
 -- --------------------------------------------------------
 
@@ -12252,13 +12224,14 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id`, `name`, `title`, `specifications`, `package`, `warranty`, `price`, `specialprice`, `soluong`, `product_status`, `image`, `view`, `hot`, `status`, `id_user`, `idCatalog`, `idStore`) VALUES
-(136, 'Smart Tivi Samsung 4K 55 inch UA55NU7090', 'Đang cập nhât', 'Đang cập nhât', 'FullBox', '12 Tháng', 100000, 0, 100, 0, '40S600T2.jpg', 1000, 1, 1, 9, 64, 7),
-(138, 'Quần thun Nam Adidas F2031', 'Đang cập nhât', 'Đang cập nhât', 'FullBox', '12 Tháng', 100000, 0, 100, 0, '6ecf6ba2f2694c388b5ba83a00d14b09_9366.webp', 1000, 0, 1, 9, 42, 8),
-(142, 'Smart TV', 'Đang cập nhât', 'Đang cập nhât', 'FullBox', '12 Tháng', 150, 0, 100, 0, 'smart-tivi-samsung-55-inch-55nu7400-4k-uhd-hdr-9GNTUV.jpg', 1000, 1, 1, 9, 63, 7),
-(143, 'Áo khoát Adidas ACE ', 'Đang cập nhât', 'Đang cập nhât', 'FullBox', '12 Tháng', 150000, 0, 200, 0, 'Mau.jpg', 1000, 1, 1, 9, 42, 8),
-(144, 'Áo khoát Adidas nữ cao cấp màu kem', 'Đang cập nhât', 'Đang cập nhât', 'FullBox', '12 Tháng', 1500000, 0, 100, 0, '724211f7c0ef4082b97baa2b007d79ae_9366.webp', 1000, 0, 1, 9, 43, 8),
-(145, 'Giầy Adidas Ace cao cấp trắng đen Nam ACE12165', 'Đang cập nhât', 'Đang cập nhât', 'FullBox', '12 Tháng', 3000000, 0, 100, 1, 'MG_5424.jpg', 1000, 0, 1, 9, 50, 8),
-(149, 'Điện thoại Samsung Galaxy A70', '<h2>Samsung Galaxy A70&nbsp;l&agrave; một phi&ecirc;n bản ph&oacute;ng to của chiếc&nbsp;Samsung Galaxy A50&nbsp;đ&atilde; ra mắt trước đ&oacute; với nhiều cải tiến tới từ b&ecirc;n trong.</h2>\r\n\r\n<h3>M&agrave;n h&igrave;nh k&iacute;ch thước lớn, trải nghiệm &quot;đ&atilde; hơn&quot;</h3>\r\n\r\n<p>Màn hình của chiếc Galaxy A70 có k&iacute;ch thước kh&aacute; lớn l&ecirc;n đ&ecirc;́n 6.7 inch đ&ocirc;̣ ph&acirc;n giải&nbsp;<a href=\"https://www.thegioididong.com/tin-tuc/do-phan-giai-man-hinh-qhd-hd-fullhd-2k-4k-la-gi--592178#fullhd\" target=\"_blank\">Full HD+</a>&nbsp;tr&ecirc;n t&acirc;́m n&ecirc;̀n&nbsp;<a href=\"https://www.thegioididong.com/hoi-dap/man-hinh-super-amoled-la-gi-905770\" target=\"_blank\">Super AMOLED</a>.</p>\r\n\r\n<p><a href=\"https://www.thegioididong.com/images/42/195012/samsung-galaxy-a70-tgdd-6.jpg\" onclick=\"return false;\"><img alt=\"Samsung Galaxy A70 | Thiết kế màn hình\" src=\"https://cdn.tgdd.vn/Products/Images/42/195012/samsung-galaxy-a70-tgdd-6.jpg\" /></a></p>\r\n\r\n<p>Các cạnh vi&ecirc;̀n bezel được tinh chỉnh mỏng hơn, đi&ecirc;̀u này giúp máy tr&ocirc;ng gọn gàng và c&acirc;n xứng hơn r&acirc;́t nhi&ecirc;̀u.</p>\r\n\r\n<p><a href=\"https://www.thegioididong.com/images/42/195012/samsung-galaxy-a70-tgdd-10.jpg\" onclick=\"return false;\"><img alt=\"Samsung Galaxy A70 | Viền màn hình\" src=\"https://cdn.tgdd.vn/Products/Images/42/195012/samsung-galaxy-a70-tgdd-10.jpg\" /></a></p>\r\n\r\n<p>Samsung vẫn trang bị cho Galaxy A70 một mặt lưng vẫn bằng nhựa, nhưng sử dụng chất liệu cao cấp hơn m&agrave;&nbsp;<a href=\"https://www.thegioididong.com/dtdd-samsung\" target=\"_blank\">Samsung</a>&nbsp;gọi l&agrave; &ldquo;3D Graffitistic&rdquo;.</p>\r\n\r\n<p><a href=\"https://www.thegioididong.com/images/42/195012/samsung-galaxy-a70-tgdd-7.jpg\" onclick=\"return false;\"><img alt=\"Samsung Galaxy A70 | Thiết kế mặt lưng\" src=\"https://cdn.tgdd.vn/Products/Images/42/195012/samsung-galaxy-a70-tgdd-7.jpg\" /></a></p>\r\n\r\n<p>Ng&ocirc;n ngữ nhựa giả thủy tinh n&agrave;y cho trải nghiệm tốt hơn, cứng c&aacute;p v&agrave; chắc chắn, khi nhấn v&agrave;o kh&ocirc;ng bị ọp ẹp như chất liệu nhựa.</p>\r\n\r\n<p><a href=\"https://www.thegioididong.com/images/42/195012/samsung-galaxy-a70-mau-xanh.jpg\" onclick=\"return false;\"><img alt=\"Samsung Galaxy A70 | Màu xanh\" src=\"https://cdn.tgdd.vn/Products/Images/42/195012/samsung-galaxy-a70-mau-xanh.jpg\" /></a></p>\r\n\r\n<p>Galaxy A70 c&oacute; 3 m&agrave;u sắc b&aacute;n ra tương tự c&aacute;c d&ograve;ng sản phẩm thấp hơn trước đ&oacute; l&agrave; &quot;Đen, Trắng v&agrave; Xanh&quot;. Cả 3 phi&ecirc;n bản n&agrave;y đều được trang bị th&ecirc;m hiệu ứng lấp l&aacute;nh nhiều m&agrave;u khi nghi&ecirc;ng theo g&oacute;c nh&igrave;n rất đẹp mắt.</p>\r\n\r\n<p><a href=\"https://www.thegioididong.com/images/42/195012/samsung-galaxy-a70-mau-den.jpg\" onclick=\"return false;\"><img alt=\"Samsung Galaxy A70 | Màu đen\" src=\"https://cdn.tgdd.vn/Products/Images/42/195012/samsung-galaxy-a70-mau-den.jpg\" /></a></p>\r\n\r\n<h3>Cảm biến v&acirc;n tay dưới m&agrave;n h&igrave;nh ti&ecirc;n tiến</h3>\r\n\r\n<p>Tương tự như người anh em Galaxy A50 th&igrave;&nbsp;Galaxy A70 vẫn sở hữu cho m&igrave;nh c&ocirc;ng nghệ&nbsp;cảm biến v&acirc;n tay dưới m&agrave;n h&igrave;nh&nbsp;đang rất hot hiện nay.</p>\r\n\r\n<p>Tốc độ nhận diện v&agrave; mở kh&oacute;a m&aacute;y kh&aacute; nhanh gi&uacute;p bạn tiết kiệm được thời gian so với việc nhập mật khẩu th&ocirc;ng thường.</p>\r\n\r\n<p><a href=\"https://www.thegioididong.com/images/42/195012/samsung-galaxy-a70-vantay.jpg\" onclick=\"return false;\"><img alt=\"Samsung Galaxy A70 | Vân tay dưới màn hình\" src=\"https://cdn.tgdd.vn/Products/Images/42/195012/samsung-galaxy-a70-vantay.jpg\" /></a></p>\r\n\r\n<p>Việc được trang bị cảm biến v&acirc;n tay b&ecirc;n trong m&agrave;n h&igrave;nh gi&uacute;p m&aacute;y tr&ocirc;ng liền mạch v&agrave; thanh tho&aacute;t hơn v&igrave; kh&ocirc;ng phải hi sinh bất cứ bộ phận n&agrave;o để đặt cảm biến n&agrave;y.</p>\r\n\r\n<p><a href=\"https://www.thegioididong.com/images/42/195012/samsung-galaxy-a70-tgdd-11.jpg\" onclick=\"return false;\"><img alt=\"Samsung Galaxy A70 | Vân tay dưới màn hình\" src=\"https://cdn.tgdd.vn/Products/Images/42/195012/samsung-galaxy-a70-tgdd-11.jpg\" /></a></p>\r\n\r\n<p>Song song với cảm biến v&acirc;n tay th&igrave; chiếc&nbsp;smartphone&nbsp;n&agrave;y cũng hỗ trợ mở kh&oacute;a bằng khu&ocirc;n mặt với độ ch&iacute;nh x&aacute;c kh&aacute; cao.</p>\r\n', '<ul>\r\n	<li>M&agrave;n h&igrave;nh :&nbsp;Super AMOLED, 6.7&quot;,&nbsp;Full HD+</li>\r\n	<li>Hệ điều h&agrave;nh :&nbsp;Android 9.0 (Pie)</li>\r\n	<li>Camera sau : Ch&iacute;nh 32 MP &amp; Phụ 8 MP, 5 MP</li>\r\n	<li>Camera trước : 32 MP</li>\r\n	<li>CPU : Snapdragon 675 8 nh&acirc;n</li>\r\n	<li>RAM : 6 GB</li>\r\n	<li>Bộ nhớ trong : 128 GB</li>\r\n	<li>Thẻ nhớ :&nbsp;MicroSD, hỗ trợ tối đa 512 GB</li>\r\n	<li>Thẻ SIM :&nbsp;2 Nano SIM,&nbsp;Hỗ trợ 4G</li>\r\n</ul>\r\n', 'Sạc,Tai nghe,Sách hướng dẫn,Hộp,Cây lấy sim,Ốp lưng,Cáp', 'Bảo hành chính hãng 12 tháng.', 7000000, 5000000, 100, 2, '636907475981220637_samsung-galaxy-a70-den-1.png', 1000, 0, 1, 0, 44, 7);
+(136, 'Smart Tivi Samsung 4K 55 inch UA55NU7090', 'Đang cập nhât', 'Đang cập nhât', 'FullBox', '12 Tháng', 100000, 2000000, 100, 0, '40S600T2.jpg', 1000, 1, 1, 9, 64, 7),
+(138, 'Quần thun Nam Adidas F2031', 'Đang cập nhât', 'Đang cập nhât', 'FullBox', '12 Tháng', 100000, 3000000, 100, 0, '6ecf6ba2f2694c388b5ba83a00d14b09_9366.webp', 1000, 0, 1, 9, 42, 8),
+(142, 'Smart TV', 'Đang cập nhât', 'Đang cập nhât', 'FullBox', '12 Tháng', 150, 1000000, 100, 0, 'smart-tivi-samsung-55-inch-55nu7400-4k-uhd-hdr-9GNTUV.jpg', 1000, 1, 1, 9, 63, 7),
+(143, 'Áo khoát Adidas ACE ', 'Đang cập nhât', 'Đang cập nhât', 'FullBox', '12 Tháng', 150000, 200000, 200, 0, 'Mau.jpg', 1000, 1, 1, 9, 42, 8),
+(144, 'Áo khoát Adidas nữ cao cấp màu kem', 'Đang cập nhât', 'Đang cập nhât', 'FullBox', '12 Tháng', 1500000, 2500000, 100, 0, '724211f7c0ef4082b97baa2b007d79ae_9366.webp', 1000, 0, 1, 9, 43, 8),
+(145, 'Giầy Adidas Ace cao cấp trắng đen Nam ACE12165', 'Đang cập nhât', 'Đang cập nhât', 'FullBox', '12 Tháng', 3000000, 5000000, 100, 1, 'MG_5424.jpg', 1000, 0, 1, 9, 50, 8),
+(149, 'Điện thoại Samsung Galaxy A70', '<h2>Samsung Galaxy A70&nbsp;l&agrave; một phi&ecirc;n bản ph&oacute;ng to của chiếc&nbsp;Samsung Galaxy A50&nbsp;đ&atilde; ra mắt trước đ&oacute; với nhiều cải tiến tới từ b&ecirc;n trong.</h2>\r\n\r\n<h3>M&agrave;n h&igrave;nh k&iacute;ch thước lớn, trải nghiệm &quot;đ&atilde; hơn&quot;</h3>\r\n\r\n<p>Màn hình của chiếc Galaxy A70 có k&iacute;ch thước kh&aacute; lớn l&ecirc;n đ&ecirc;́n 6.7 inch đ&ocirc;̣ ph&acirc;n giải&nbsp;<a href=\"https://www.thegioididong.com/tin-tuc/do-phan-giai-man-hinh-qhd-hd-fullhd-2k-4k-la-gi--592178#fullhd\" target=\"_blank\">Full HD+</a>&nbsp;tr&ecirc;n t&acirc;́m n&ecirc;̀n&nbsp;<a href=\"https://www.thegioididong.com/hoi-dap/man-hinh-super-amoled-la-gi-905770\" target=\"_blank\">Super AMOLED</a>.</p>\r\n\r\n<p><a href=\"https://www.thegioididong.com/images/42/195012/samsung-galaxy-a70-tgdd-6.jpg\" onclick=\"return false;\"><img alt=\"Samsung Galaxy A70 | Thiết kế màn hình\" src=\"https://cdn.tgdd.vn/Products/Images/42/195012/samsung-galaxy-a70-tgdd-6.jpg\" /></a></p>\r\n\r\n<p>Các cạnh vi&ecirc;̀n bezel được tinh chỉnh mỏng hơn, đi&ecirc;̀u này giúp máy tr&ocirc;ng gọn gàng và c&acirc;n xứng hơn r&acirc;́t nhi&ecirc;̀u.</p>\r\n\r\n<p><a href=\"https://www.thegioididong.com/images/42/195012/samsung-galaxy-a70-tgdd-10.jpg\" onclick=\"return false;\"><img alt=\"Samsung Galaxy A70 | Viền màn hình\" src=\"https://cdn.tgdd.vn/Products/Images/42/195012/samsung-galaxy-a70-tgdd-10.jpg\" /></a></p>\r\n\r\n<p>Samsung vẫn trang bị cho Galaxy A70 một mặt lưng vẫn bằng nhựa, nhưng sử dụng chất liệu cao cấp hơn m&agrave;&nbsp;<a href=\"https://www.thegioididong.com/dtdd-samsung\" target=\"_blank\">Samsung</a>&nbsp;gọi l&agrave; &ldquo;3D Graffitistic&rdquo;.</p>\r\n\r\n<p><a href=\"https://www.thegioididong.com/images/42/195012/samsung-galaxy-a70-tgdd-7.jpg\" onclick=\"return false;\"><img alt=\"Samsung Galaxy A70 | Thiết kế mặt lưng\" src=\"https://cdn.tgdd.vn/Products/Images/42/195012/samsung-galaxy-a70-tgdd-7.jpg\" /></a></p>\r\n\r\n<p>Ng&ocirc;n ngữ nhựa giả thủy tinh n&agrave;y cho trải nghiệm tốt hơn, cứng c&aacute;p v&agrave; chắc chắn, khi nhấn v&agrave;o kh&ocirc;ng bị ọp ẹp như chất liệu nhựa.</p>\r\n\r\n<p><a href=\"https://www.thegioididong.com/images/42/195012/samsung-galaxy-a70-mau-xanh.jpg\" onclick=\"return false;\"><img alt=\"Samsung Galaxy A70 | Màu xanh\" src=\"https://cdn.tgdd.vn/Products/Images/42/195012/samsung-galaxy-a70-mau-xanh.jpg\" /></a></p>\r\n\r\n<p>Galaxy A70 c&oacute; 3 m&agrave;u sắc b&aacute;n ra tương tự c&aacute;c d&ograve;ng sản phẩm thấp hơn trước đ&oacute; l&agrave; &quot;Đen, Trắng v&agrave; Xanh&quot;. Cả 3 phi&ecirc;n bản n&agrave;y đều được trang bị th&ecirc;m hiệu ứng lấp l&aacute;nh nhiều m&agrave;u khi nghi&ecirc;ng theo g&oacute;c nh&igrave;n rất đẹp mắt.</p>\r\n\r\n<p><a href=\"https://www.thegioididong.com/images/42/195012/samsung-galaxy-a70-mau-den.jpg\" onclick=\"return false;\"><img alt=\"Samsung Galaxy A70 | Màu đen\" src=\"https://cdn.tgdd.vn/Products/Images/42/195012/samsung-galaxy-a70-mau-den.jpg\" /></a></p>\r\n\r\n<h3>Cảm biến v&acirc;n tay dưới m&agrave;n h&igrave;nh ti&ecirc;n tiến</h3>\r\n\r\n<p>Tương tự như người anh em Galaxy A50 th&igrave;&nbsp;Galaxy A70 vẫn sở hữu cho m&igrave;nh c&ocirc;ng nghệ&nbsp;cảm biến v&acirc;n tay dưới m&agrave;n h&igrave;nh&nbsp;đang rất hot hiện nay.</p>\r\n\r\n<p>Tốc độ nhận diện v&agrave; mở kh&oacute;a m&aacute;y kh&aacute; nhanh gi&uacute;p bạn tiết kiệm được thời gian so với việc nhập mật khẩu th&ocirc;ng thường.</p>\r\n\r\n<p><a href=\"https://www.thegioididong.com/images/42/195012/samsung-galaxy-a70-vantay.jpg\" onclick=\"return false;\"><img alt=\"Samsung Galaxy A70 | Vân tay dưới màn hình\" src=\"https://cdn.tgdd.vn/Products/Images/42/195012/samsung-galaxy-a70-vantay.jpg\" /></a></p>\r\n\r\n<p>Việc được trang bị cảm biến v&acirc;n tay b&ecirc;n trong m&agrave;n h&igrave;nh gi&uacute;p m&aacute;y tr&ocirc;ng liền mạch v&agrave; thanh tho&aacute;t hơn v&igrave; kh&ocirc;ng phải hi sinh bất cứ bộ phận n&agrave;o để đặt cảm biến n&agrave;y.</p>\r\n\r\n<p><a href=\"https://www.thegioididong.com/images/42/195012/samsung-galaxy-a70-tgdd-11.jpg\" onclick=\"return false;\"><img alt=\"Samsung Galaxy A70 | Vân tay dưới màn hình\" src=\"https://cdn.tgdd.vn/Products/Images/42/195012/samsung-galaxy-a70-tgdd-11.jpg\" /></a></p>\r\n\r\n<p>Song song với cảm biến v&acirc;n tay th&igrave; chiếc&nbsp;smartphone&nbsp;n&agrave;y cũng hỗ trợ mở kh&oacute;a bằng khu&ocirc;n mặt với độ ch&iacute;nh x&aacute;c kh&aacute; cao.</p>\r\n', '<ul>\r\n	<li>M&agrave;n h&igrave;nh :&nbsp;Super AMOLED, 6.7&quot;,&nbsp;Full HD+</li>\r\n	<li>Hệ điều h&agrave;nh :&nbsp;Android 9.0 (Pie)</li>\r\n	<li>Camera sau : Ch&iacute;nh 32 MP &amp; Phụ 8 MP, 5 MP</li>\r\n	<li>Camera trước : 32 MP</li>\r\n	<li>CPU : Snapdragon 675 8 nh&acirc;n</li>\r\n	<li>RAM : 6 GB</li>\r\n	<li>Bộ nhớ trong : 128 GB</li>\r\n	<li>Thẻ nhớ :&nbsp;MicroSD, hỗ trợ tối đa 512 GB</li>\r\n	<li>Thẻ SIM :&nbsp;2 Nano SIM,&nbsp;Hỗ trợ 4G</li>\r\n</ul>\r\n', 'Sạc,Tai nghe,Sách hướng dẫn,Hộp,Cây lấy sim,Ốp lưng,Cáp', 'Bảo hành chính hãng 12 tháng.', 7000000, 5000000, 100, 2, '636907475981220637_samsung-galaxy-a70-den-1.png', 1000, 0, 1, 0, 44, 7),
+(157, 'Apple Watch Cũ Like New 99% và Mới Chưa Active (Se', '<p><img alt=\"\" src=\"http://choviet.xyz/uploads/thucung.jpg\" style=\"height:652px; width:800px\" /></p>\r\n', '<ul>\r\n	<li>Hệ điều h&agrave;nh: watchOS 4.0</li>\r\n	<li>Chipset: Apple W2</li>\r\n	<li>Độ ph&acirc;n giải: 340 x 272 pixels</li>\r\n	<li>M&agrave;n h&igrave;nh rộng: 2.1 inch</li>\r\n	<li>Bộ nhớ trong ( Rom): 16 GB</li>\r\n</ul>\r\n', 'FullBox', '12 Tháng', 5600000, 5000000, 100, 1, 'apple-watch-1.jpg', 1000, 0, 1, 0, 44, 7);
 
 -- --------------------------------------------------------
 
@@ -12321,15 +12294,15 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `fullname`, `phonenumber`, `address`, `ward`, `district`, `city`, `name`, `pass`, `email`, `image`, `lever`) VALUES
-(9, 'Lê Văn Tèo', '', '', NULL, NULL, NULL, 'asanzo', 'asanzo', 'asanzo2019@gmail.com', 'avatar_user.png', '2'),
-(10, 'Nguyễn Văn Tuấn', '', '', NULL, NULL, NULL, 'samsung', 'samsung', 'samsung2019@gmail.com', 'avatar_user.png', '2'),
-(11, 'Nguyễn Văn A', '', '', NULL, NULL, NULL, 'adidas', 'adidas', 'adidas2019@gmail.com', 'avatar_user.png', '2'),
-(12, 'Đoàn Quốc Dũng', '', '', NULL, NULL, NULL, 'admincv', 'Admincv2019', 'doanquocdung55@gmail.com', 'avatar_user.png', '0'),
-(13, 'Trần Công Diện', '', '', NULL, NULL, NULL, 'user2019', 'User2019', 'admin2019@gmail.com', 'avatar_user.png', '0'),
-(14, 'Đoàn Quốc Dũng', '', '', NULL, NULL, NULL, 'dungdqps08542', 'doanquocdung55@gmail.com', 'doanquocdung5520', 'avatar_user.png', '1'),
-(15, 'Lê Trọng Nhân', '', '', NULL, NULL, NULL, 'Đoàn Quốc Dũng', 'doanquocdung5520', 'Dungdqps08542@fpt.edu.vn', 'avatar_user.png', '1'),
+(9, 'Lê Văn Tèo', '0398022720', '', NULL, NULL, NULL, 'asanzo', 'asanzo', 'asanzo2019@gmail.com', 'avatar_user.png', '2'),
+(10, 'Nguyễn Văn Tuấn', '0398022720', '', NULL, NULL, NULL, 'samsung', 'samsung', 'samsung2019@gmail.com', 'avatar_user.png', '2'),
+(11, 'Nguyễn Văn A', '0398022720', '', NULL, NULL, NULL, 'adidas', 'adidas', 'adidas2019@gmail.com', 'avatar_user.png', '2'),
+(12, 'Đoàn Quốc Dũng', '0398022720', '', NULL, NULL, NULL, 'admincv', 'Admincv2019', 'doanquocdung55@gmail.com', 'avatar_user.png', '0'),
+(13, 'Trần Công Diện', '0398022720', '', NULL, NULL, NULL, 'user2019', 'User2019', 'admin2019@gmail.com', 'avatar_user.png', '0'),
+(14, 'Đoàn Quốc Dũng', '0398022720', '', NULL, NULL, NULL, 'dungdqps08542', 'doanquocdung55@gmail.com', 'doanquocdung5520', 'avatar_user.png', '1'),
+(15, 'Lê Trọng Nhân', '0398022720', '', NULL, NULL, NULL, 'Đoàn Quốc Dũng', 'doanquocdung5520', 'Dungdqps08542@fpt.edu.vn', 'avatar_user.png', '1'),
 (16, 'Lê trọng nhân', '0398022720', '', NULL, NULL, NULL, 'dungdqps08542', 'Doanquocdung5520', 'Dungdqps08542@fpt.edu.vn', 'avatar_user.png', '0'),
-(17, 'Lê Văn Tèo', '', '', NULL, NULL, NULL, 'abc', 'abc', 'abc', 'avatar_user.png', '0'),
+(17, 'Lê Văn Tèo', '0398022720', '', NULL, NULL, NULL, 'abc', 'abc', 'abc', 'avatar_user.png', '0'),
 (23, 'Lê Văn Cáp', '0368542175', NULL, NULL, NULL, NULL, 'test123', 'Test123', 'capdeptrai@gmail.com', 'avatar_user.png', '0'),
 (24, 'Đũng ĐQ', '0398022720', NULL, NULL, NULL, NULL, 'Dungdqps08542', 'Dungdqps08542', 'kjhkjh@gmail.com', 'avatar_user.png', '0'),
 (25, 'Đasasd', '0398022720', NULL, NULL, NULL, NULL, 'dungdkjlkjlkj', 'Adadad123', 'jkljlaklk@klkl.com', 'avatar_user.png', '0'),
@@ -12429,7 +12402,7 @@ ALTER TABLE `banner`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
 
 --
 -- AUTO_INCREMENT for table `catalog`
@@ -12447,13 +12420,13 @@ ALTER TABLE `catalog_store`
 -- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
 
 --
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=157;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=158;
 
 --
 -- AUTO_INCREMENT for table `store`
