@@ -61,8 +61,8 @@
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
         <?php
-                if (isset($_SESSION['nameuser'])) {
-                    echo'<a class="dropdown-item" href="#"><strong>'.$_SESSION['nameuser'].'</strong></a>
+                if (isset($_SESSION['idadmin'])) {
+                    echo'<a class="dropdown-item" href="#"><strong>Admin Chợ Việt</strong></a>
                     <a class="dropdown-item" href="#">Cài đặt</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="?act=logout_admin"  data-target="#logoutModal">Đăng xuất</a>

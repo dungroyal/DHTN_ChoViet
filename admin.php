@@ -172,9 +172,7 @@
 				break;
 
 		case 'logout_admin':
-				unset($_SESSION['nameuser']);
-				unset($_SESSION['iduseradmin']);
-				unset($_SESSION['iduserguest']);
+				unset($_SESSION['idadmin']);
 				header('location: index.php');
 				break;
 
