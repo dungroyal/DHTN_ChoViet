@@ -18,9 +18,9 @@
                   <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                       <tr>
-                        <th>ID User</th>
+                        <th>Sản Phẩm</th>
                         <th>Tên tài khoản</th>
-                        <th>Email</th>
+                        <th>Đánh giá</th>
                         <th>Nội dung</th>
                         <th>Action</th>
                       </tr>
@@ -28,12 +28,13 @@
 
                     <tbody>
                       <?php
-                      foreach ($list_comment as $com) {
+                      foreach ($commentlist_store as $com) {
+                        $Get_product= info_product($com['idProduct']);
                         echo '
                     <tr>
-                    <td>' . $com['id'] . '</td>
+                    <td><center><img src="uploads/' . $Get_product['image'] . '" width="100px" alt=""></center></td>
                     <td>' . $com['name'] . '</td>
-                    <td>' . $com['email'] . '</td>
+                    <td>' . $com['danhgia'] . ' sao</td>
                     <td>' . $com['noidung'] . '</td>
                     <td>
                         <a href="?act=QL_Comment&edi=1&id=' . $com['id'] . '"><i class="fas fa-pen-square"></i></a> &emsp;

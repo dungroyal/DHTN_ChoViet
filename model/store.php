@@ -18,6 +18,14 @@
         return $kq;
     }
 
+    function info_store_admin($idstore){
+        $sql="SELECT * from store WHERE id=".$idstore;
+        $kq=pdo_query_one($sql);
+        return $kq;
+    }
+
+    
+
     function store_one($id){
         $sql = "SELECT * FROM store WHERE id=".$id;
         $kq=pdo_query_one($sql);

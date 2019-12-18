@@ -1704,7 +1704,7 @@ span.counting {
 
 label {
     color: #ffffff;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
     margin-bottom: 100px;
 }
@@ -5893,9 +5893,9 @@ label {
 }
 
 .shopping-cart {
-    margin-top: 0px;
     width: 65%;
     margin: 0px auto;
+    margin-top: 25px;
 }
 
 
@@ -5906,10 +5906,6 @@ label {
     margin-bottom: 15px;
     border-bottom: 1px solid #eee;
 }
-
-.column-labels .product-image,
-.column-labels .product-details,
-.column-labels .product-removal {}
 
 
 /* Product entries */
@@ -5950,6 +5946,7 @@ label {
     font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
     font-size: 12px;
     border-radius: 3px;
+    cursor: pointer;
 }
 
 .product .remove-product:hover {
@@ -6399,4 +6396,41 @@ label {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 15px;
+}
+
+.stickcart {
+    position: fixed;
+    right: 70px;
+    bottom: 42px;
+    background: #fff;
+    border-radius: 40px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .15);
+    font-size: 14px;
+    color: #288ad6;
+    padding: 0 10px 0 0;
+    width: 130px;
+    z-index: 99;
+}
+
+a:link {
+    -webkit-tap-highlight-color: #fcd700;
+}
+
+.label-cart {
+    width: 80%;
+    font-size: 13px;
+}
+
+.label-cart input {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: #8b545417;
+    outline: 40px;
+    height: 40px;
+    color: #000000e0;
+    font-size: 16px;
+    padding-left: 10px;
+    border-radius: 3px;
+    font-weight: bold;
+    width: 65%;
 }

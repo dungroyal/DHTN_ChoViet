@@ -113,4 +113,10 @@
         return $phantrang_comment;
     }
 
+    function info_product($id){
+        $sql="SELECT * from product WHERE id=".$id;
+        $kq=pdo_query_one($sql);
+        return $kq;
+    }
+
 ?>

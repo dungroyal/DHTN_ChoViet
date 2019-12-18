@@ -1,6 +1,8 @@
-<style>
-    
-</style>
+<?php
+  if ((count(show_cart($_SESSION['iduserguest']))) <1) {
+    header('location: ?act=home'); 
+  }
+?>
 <!-- breadcrumb start -->
 <div class="breadcrumb-area">
     <div class="container">
@@ -39,39 +41,40 @@
     </div>
     <div class="product-price"><?= number_format($sc['coin']) ?></div>
     <div class="product-quantity">
-      <input type="number" value="<?= $sc['so_luong'] ?>" min="1">
+      <input type="number" value="<?= $sc['so_luong'] ?>" >
     </div>
     <div class="product-removal">
-    <a class="remove-product href="">Xóa bỏ</a>
+    <a class="remove-product" href="?act=cart&del=1&id=<?= $sc['id'] ?>">Xóa bỏ</a>
     </div>
-    <div class="product-line-price"><?= number_format($sc['coin']) ?></div>
+    <div class="product-line-price"><?= number_format($sc['thanhtien']) ?></div>
   </div>
   <?php endforeach ?>
 
   <div class="totals">
     <div class="totals-item">
       <label>Thành tiền</label>
-      <div class="totals-value" id="cart-subtotal"><?= number_format($sc['coin']) ?>VNĐ</div>
+      <div class="totals-value" id="cart-subtotal"><?= number_format($sc['thanhtien']) ?> VNĐ</div>
     </div>
     <div class="totals-item">
       <label>Thuế VAT</label>
-      <div class="totals-value" id="cart-tax">0</div>
+      <div class="totals-value" id="cart-tax">0 VNĐ</div>
     </div>
     <div class="totals-item">
       <label>Phí giao hàng</label>
-      <div class="totals-value" id="cart-shipping">15.000 VNĐ</div>
+      <div class="totals-value" id="cart-shipping">0 VNĐ</div>
     </div>
-    <div class="totals-item totals-item-total">
+    <div class="totals-item">
       <label>Tổng cộng</label>
-      <div class="totals-value" id="cart-total"><?= number_format($sc['coin']) ?>VNĐ</div>
+      <div class="totals-value" id="cart-shipping"><strong><?= number_format($sc['thanhtien']) ?></strong> VNĐ</div>
     </div>
   </div>
   
-  <div class="carhao">      
-        <label>Họ và tên: <input type="text" name="name" id=""></label>
-        <label for="">Email: <input type="email" name="email" id=""></label>
-        <label for="">Địa chỉ: <input type="text" name="diachi" id=""></label>
-        <label for="">Số điện thoại: <input type="text" name="sdt" id=""></label>
+  <div class="carhao">
+          <?$info_user=info_user($_SESSION['iduserguest']);?>
+        <input type="hidden" name="name" value="<?=$info_user['fullname']?>">
+        <input type="hidden" name="email" value="<?=$info_user['email']?>">
+        <label class="label-cart" for="diachi">Địa chỉ: <input type="text" name="diachi" id="" placeholder="Hãy nhập địa chỉ nhận hàng của bạn!"></label>
+        <input type="hidden" name="sdt" value="<?=$info_user['phonenumber']?>"></label>
         <input type="submit" name="muahang" value="Mua hàng" class="checkout">
     </div>
       </form>
@@ -86,88 +89,3 @@
 
   </div>
 </div>
-<!-- cart end -->
-<script src = "http://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
-charset = "utf-8" > </script>
-
-<script type = "text/javascript" >
-    $(document).ready(function() {
-
-        /* Set rates + misc */
-        var taxRate = 0.05;
-        var shippingRate = 15.00;
-        var fadeTime = 300;
-
-
-        /* Assign actions */
-        $('.product-quantity input').change(function() {
-            updateQuantity(this);
-        });
-
-        $('.product-removal button').click(function() {
-            removeItem(this);
-        });
-
-
-        /* Recalculate cart */
-        function recalculateCart() {
-            var subtotal = 0;
-
-            /* Sum up row totals */
-            $('.product').each(function() {
-                subtotal += parseFloat($(this).children('.product-line-price').text());
-            });
-
-            /* Calculate totals */
-            var tax = subtotal * taxRate;
-            var shipping = (subtotal > 0 ? shippingRate : 0);
-            var total = subtotal + tax + shipping;
-
-            /* Update totals display */
-            $('.totals-value').fadeOut(fadeTime, function() {
-                $('#cart-subtotal').html(subtotal.toFixed(2));
-                $('#cart-tax').html(tax.toFixed(2));
-                $('#cart-shipping').html(shipping.toFixed(2));
-                $('#cart-total').html(total.toFixed(2));
-                if (total == 0) {
-                    $('.checkout').fadeOut(fadeTime);
-                } else {
-                    $('.checkout').fadeIn(fadeTime);
-                }
-                $('.totals-value').fadeIn(fadeTime);
-            });
-        }
-
-
-        /* Update quantity */
-        function updateQuantity(quantityInput) {
-            /* Calculate line price */
-            var productRow = $(quantityInput).parent().parent();
-            var price = parseFloat(productRow.children('.product-price').text());
-            var quantity = $(quantityInput).val();
-            var linePrice = price * quantity;
-
-            /* Update line price display and recalc cart totals */
-            productRow.children('.product-line-price').each(function() {
-                $(this).fadeOut(fadeTime, function() {
-                    $(this).text(linePrice.toFixed(2));
-                    recalculateCart();
-                    $(this).fadeIn(fadeTime);
-                });
-            });
-        }
-
-
-        /* Remove item from cart */
-        function removeItem(removeButton) {
-            /* Remove row from DOM and recalc cart total */
-            var productRow = $(removeButton).parent().parent();
-            productRow.slideUp(fadeTime, function() {
-                productRow.remove();
-                recalculateCart();
-            });
-        }
-
-    });
-
-</script>

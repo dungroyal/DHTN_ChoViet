@@ -25,30 +25,95 @@
 if (isset($_GET['edi']) && ($_GET['edi'] == 1)) {
     $id = $_GET['id'];
     $productgone = product_one($id);
-    ?><div class="row">
+    ?>  
+    <div class="row">
     <div class="col-md-8">
         <div class="card">
             <div class="card-body">
                 <div class="form-horizontal">                      
                   <form action="admin-store.php?act=QL_Product" method="post" enctype="multipart/form-data">
-                    <input type="hidden" name="id" value="<?=$bannerone['id'];?>">
                   <fieldset>
-                        <legend>Chỉnh sửa Sản phẩm "<strong><?=$bannerone['title'];?>"</strong> </legend>
+                        <legend>Sửa sản phẩm <strong><?=$productgone['name'];?></strong></legend>
                         <div class="form-group row">
-                            <label class="col-form-label col" for="Title">Tiêu đề</label>
+                            <label class="col-form-label col" for="Title">Tên sản phẩm</label>
                             <div class="col-md-12">
-                                <input class="form-control text-box single-line" data-val="true" data-val-length="The field Tiêu đề must be a string with a maximum length of 250." data-val-length-max="250" id="Title" name="title" type="text" value="<?=$bannerone['title'];?>">
+                                <input class="form-control text-box single-line" data-val="true" required data-val-length="The field Tiêu đề must be a string with a maximum length of 250." data-val-length-max="250" id="Title" name="name" type="text" value="<?=$productgone['name'];?>">
                                 <span class="field-validation-valid text-danger" data-valmsg-for="Title" data-valmsg-replace="true"></span>
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label class="col-form-label col" for="Title">Đường dẫn URL</label>
+                            <label class="col-form-label col" for="Title">Mô tả chi tiết</label>
                             <div class="col-md-12">
-                                <input class="form-control text-box single-line" data-val="true" data-val-length="The field Tiêu đề must be a string with a maximum length of 250." data-val-length-max="250" id="Title" name="url" type="text" value="<?=$bannerone['url'];?>">
-                                <span class="field-validation-valid text-danger" data-valmsg-for="Title" data-valmsg-replace="true"></span>
+                              <textarea id="editor1" name="title" cols="80" rows="10">
+                                 <?=$productgone['title'];?>
+                              </textarea>                                
+                              <script>                          
+                                  CKEDITOR.replace( 'editor1', {
+                                        uiColor: '#99ffff'} );                          
+                              </script>   
                             </div>
                         </div>
+                        <div class="row">
+                          <div class="col-md-6">
+                              <div class="form-group row">
+                                  <div class="col-md-12">
+                                      <label for="Package">Số lượng</label>
+                                      <input type="number" class="form-control" id="" value="<?=$productgone['soluong'];?>" name="soluong"></input>
+                                      </div>
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="form-group row">
+                                  <div class="col-md-12">
+                                      <label for="Package">Tình trạng sản phẩm</label>
+                                      <select class="form-control" data-val="true" data-val-required="The Trạng thái field is required." id="Status" name="product_status">
+                                            <option selected="selected" value="0">Mới 100%</option>
+                                            <option value="1">Like New</option>
+                                            <option value="2">Đã qua sử dụng</option>
+                                      </select>
+                                   </div>
+                              </div>
+                          </div>
+                      </div>
+
+                        <div class="form-group row">
+                            <label class="col-form-label col" for="Title">Thông số kĩ thuật</label>
+                            <div class="col-md-12">
+                              <textarea id="editor2" name="specifications" cols="80" rows="10">
+                                 <?=$productgone['specifications'];?>
+                              </textarea>                              
+                                <script>
+                                    CKEDITOR.replace( 'editor2', {
+                                        uiColor: '#99ffff',
+                                        toolbar: [
+                                            [ 'Bold', 'Italic', '-', 'NumberedList', 'BulletedList', '-', 'Link', 'Unlink' ],
+                                            [ 'FontSize', 'TextColor', 'BGColor' ]
+                                        ]
+                                    });                            
+                                </script>
+                            </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6">
+                              <div class="form-group row">
+                                  <div class="col-md-12">
+                                      <label for="Package">Quy cách đóng gói</label>
+                                      <textarea class="form-control" cols="20" id="Package" name="package" rows="3"><?=$productgone['package'];?></textarea>
+                                      <span class="field-validation-valid text-danger" data-valmsg-for="Package" data-valmsg-replace="true"></span>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="form-group row">
+                                  <div class="col-md-12">
+                                      <label for="Warranty">Thông tin bảo hành</label>
+                                      <textarea class="form-control" cols="20" id="Warranty" name="warranty" rows="3"><?=$productgone['warranty'];?></textarea>
+                                      <span class="field-validation-valid text-danger" data-valmsg-for="Warranty" data-valmsg-replace="true"></span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
                     </fieldset>
                 </div>
             </div>
@@ -60,35 +125,88 @@ if (isset($_GET['edi']) && ($_GET['edi'] == 1)) {
                 <fieldset>
                     <legend>Tùy chọn</legend>
                     <div class="form-group row">
-                        <label class="col-form-label col" for="Image">Hình đại diện</label>
-                        <div class="col-md-12">                                    
-                            <input id="fileInput" type="file" name="image" style="display:none;" >
-                            <input type="button" class="uploadfile btn btn-secondary" value="Upload hình ảnh" onclick="document.getElementById('fileInput').click();" />
+                        <label class="col-form-label col" for="Image">Ảnh đại diện</label>
+                        <div class="col-md-12">
+                          <div class="custom-file mt-2 mb-2">                              
+                            <input id="fileInput" type="file" required name="image"/>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col" for="Status">Thương hiệu</label>
+                        <div class="col-md-12">
+                            <select class="form-control" data-val="true" data-val-required="The Trạng thái field is required." id="brand" name="brand">
+                            <option selected="selected" disabled>Lựa chọn thương hiệu</option>
+                              <option value="1">:)</option>
+                              </select>
+                            <span class="field-validation-valid text-danger" data-valmsg-for="Status" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-form-label col" for="Status">Danh mục</label>
+                        <div class="col-md-12">
+                            <select class="form-control" data-val="true" size="5" data-val-required="The Trạng thái field is required." id="idcatalog" name="idcatalog">
+                              <option  selected="selected" value="<?=$productgone['idCatalog'];?>"></option>
+                              <?php
+                                foreach ($cataloglist_by_store as $cat) {
+                                  echo'
+                                  <option value="'.$cat['idCatalog'].'">'.$cat['name'].'</option>
+                                  ';
+                                }
+                              ?>
+                              </select>
+                            <span class="field-validation-valid text-danger" data-valmsg-for="Status" data-valmsg-replace="true"></span>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-form-label col" for="Status">Trạng thái</label>
                         <div class="col-md-12">
-                          <?php
-                            if ($bannerone['status']==1) {
-                              $status1='selected="selected"';
-                              $status2='';
-                            }else{                                        
-                              $status2='selected="selected"';
-                              $status1='';
-                            }
-                          ?>
                             <select class="form-control" data-val="true" data-val-required="The Trạng thái field is required." id="Status" name="status">
-                              <option <?=$status2;?> value="0">Ẩn khỏi trang chủ</option>
-                              <option <?=$status1;?> value="1">Kích hoạt</option>
+                              <option  value="0">Lưu tạm</option>
+                              <option selected="selected" value="1">Đang bán</option>
                               </select>
                             <span class="field-validation-valid text-danger" data-valmsg-for="Status" data-valmsg-replace="true"></span>
                         </div>
                     </div>
-                    <input type="submit" value="Lưu thây đổi" name="update_banner" class="btn btn-primary">
-                    <a class="btn btn-default" href="?act=QL_Banner_by_location&location=<?=$location;?>">Cancel</a>
+
+                    <div class="form-group row">
+                      <div class="col-md-12">
+                          <label for="Price">Giá bán</label>
+                          <div class="input-group">
+                              <input class="form-control text-box single-line" data-val="true" data-val-number="The field Price must be a number." data-val-required="Vui lòng nhập giá bán." id="Price" name="price" type="text" value="<?=$productgone['price'];?>" required>
+                              <label class="input-group-append">
+                                  <span class="badge">vnđ</span>
+                              </label>
+                          </div>
+                          <span class="field-validation-valid text-danger" data-valmsg-for="Price" data-valmsg-replace="true"></span>
+                      </div>
+                  </div>
+
+                    <div class="form-group row">
+                      <div class="col-md-12">
+                          <label for="SpecialPrice">Giá ưu đãi</label>
+                          <div class="input-group">
+                              <input class="form-control text-box single-line" data-val="true" data-val-number="The field SpecialPrice must be a number." id="SpecialPrice" name="specialprice" type="text" value="<?=$productgone['specialprice'];?>" required>
+                              <label class="input-group-append">
+                                  <span class="badge">vnđ</span>
+                              </label>
+                          </div>
+                          <span class="field-validation-valid text-danger" data-valmsg-for="SpecialPrice" data-valmsg-replace="true"></span>
+                      </div>
+                  </div>    
+                  <div class="form-group row">
+                              <div class="col-md-12">
+                                  <div class="custom-control custom-checkbox">
+                                      <input class="custom-control-input" id="IsFeatured" name="IsFeatured" placeholder="Product tags..." type="checkbox" value="true"><input name="IsFeatured" type="hidden" value="false">
+                                      <label class="custom-control-label" for="IsFeatured">Đánh dấu sản phẩm nổi bật (Hot)</label>
+                                  </div>
+                              </div>
+                          </div>
+                    <input type="submit" value="Lưu thây đổi" name="store_update_product" class="btn btn-primary">
+                    <a class="btn btn-default" href="admin-store.php?act=QL_Product">Cancel</a>
                 </fieldset>
-              </form>
+                </form>
             </div>
         </div>
     </div>
@@ -97,31 +215,6 @@ if (isset($_GET['edi']) && ($_GET['edi'] == 1)) {
 <?php
 } elseif (isset($_GET['add']) && ($_GET['add'] == 1)) {
   ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <div class="row">
       <div class="col-md-8">
           <div class="card">
@@ -221,18 +314,9 @@ if (isset($_GET['edi']) && ($_GET['edi'] == 1)) {
                       <div class="form-group row">
                           <label class="col-form-label col" for="Image">Ảnh đại diện</label>
                           <div class="col-md-12">
-                            <div class="custom-file mt-2 mb-2">
-                              <div class="popup-example">
-                                <button id="ckfinder-popup" class="uploadfile btn btn-secondary" style="float: left">Chọn ảnh</button>
-                                
-                                <span id='url_image'></span>
-
-                                                            
+                            <div class="custom-file mt-2 mb-2">                              
+                              <input id="fileInput" type="file" required name="image"/>
                             </div>
-                          </div>
-                            <div id="preview">
-                                  <span id='output'></span>
-                                </div> 
                           </div>
                       </div>
                       <div class="form-group row">
@@ -314,35 +398,6 @@ if (isset($_GET['edi']) && ($_GET['edi'] == 1)) {
       </div>
   </div>
   <?php
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }else {
   ?>
@@ -427,8 +482,6 @@ if (isset($_GET['edi']) && ($_GET['edi'] == 1)) {
                             var file = evt.data.files.first();
                             var output = document.getElementById('output');
                             output.innerHTML = '<img src="'+escapeHtml(file.getUrl())+'" alt="Hình ảnh" class="preview-img">';
-                            var url_image = document.getElementById('url_image');
-                            url_image.innerHTML = '<input type="hidden" name="image" value="'+escapeHtml(file.getUrl())+'">';
                         });
                         finder.on('file:choose:resizedImage', function(evt) {
                             var output = document.getElementById('output');

@@ -6,12 +6,13 @@
     include "model/catalog.php";
     include "model/product.php";
 	include "model/user.php";
+	include "model/store.php";
 
     if (!isset($_SESSION['idstore'])) {
         header('location:login.php');
 	}
 
-    $cataloglist=cataloglist(); 
+	$cataloglist=cataloglist(); 
 	$info_store_admin=info_store_admin($_SESSION['idstore']);
 	$idStore=$info_store_admin['id'];
 	
@@ -107,7 +108,7 @@
 				break;
 
 		case 'QL_Comment':		
-				$list_comment=commentlist();
+				$commentlist_store=commentlist_store($idStore);
 				include "admin-store/QL_Comment.php";
 				break;
 

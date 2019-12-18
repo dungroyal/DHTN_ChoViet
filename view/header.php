@@ -120,7 +120,7 @@
                                     </li>
                                     <li class="cart" id="cart-padding">
                                     <?php if(!isset($_SESSION['iduserguest'])){ ?>
-                                            <a href="?act=login"><img src="view/img/icon/cart.png" alt="cart"><p>0</p></a>
+                                            <a href="?act=loginuser"><img src="view/img/icon/cart.png" alt="cart"><p>0</p></a>
                                           <?php   }else{ ?>
                                             <a href="?act=cart"><img src="view/img/icon/cart.png" alt="cart"><p><?= count(show_cart($_SESSION['iduserguest'])); ?></p></a>
                                             <?php } ?>

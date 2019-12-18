@@ -99,7 +99,7 @@
                                                 </div>
                                                 <div class="single-product-info clearfix">
                                                     <div class="pro-price">
-                                                        <span class="new-price"><strong><?= number_format($pro['price']) ;?> ₫</strong></span>
+                                                        <span class="new-price"><strong><?= number_format($pro['specialprice']) ;?> ₫</strong></span>
                                                     </div>                                                    
                                                     <div class="new-sale">
                                                             <span><strong>

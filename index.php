@@ -50,7 +50,7 @@
 
 
                 $showproduct=productlist_by_id();         
-                include"view/product.php";
+                include "view/product.php";
                 break;
 
 			case 'product_detail':
@@ -70,15 +70,20 @@
 						header('location: index.php?act=loginuser');
 					}else{
 					$img = $product_detail_by_id['image'];
-					$coin = $product_detail_by_id['price'];
+					$coin = $product_detail_by_id['specialprice'];
 					$name = $product_detail_by_id['name'];
 					$soluong = $_POST['soluong'];
 					$idpro = $_GET['idProduct'];
 					$iduser = $product_detail_by_id['id_user'];
 					$idcata = $product_detail_by_id['idCatalog'];
 					$idcustom = $_SESSION['iduserguest'];
-					add_cart($name,$img,$coin,$soluong,$iduser,$idcata,$idpro,$idcustom);
+					$thanhtien=($coin)*($soluong);
+
+					
+					add_cart($name,$img,$coin,$thanhtien,$soluong,$iduser,$idcata,$idpro,$idcustom);
 					$erro = '<img src="uploads/checkbox-dribbble-looped-landing.gif">Bạn đã thêm '.$name.' số lượng '.$soluong.' cái';
+					
+					header('location: index.php?act=cart');
 				}
 				}
                 include "view/product_detail.php";
@@ -108,118 +113,189 @@
 					$diachi=$_POST['diachi'];
 					$sdt=$_POST['sdt'];
 					$content = '<!DOCTYPE html>
-					<html lang="en">					
+					<html lang="vi">
+					
 					<head>
-						<meta charset="UTF-8">
-						<meta name="viewport" content="width=device-width, initial-scale=1.0">
-						<meta http-equiv="X-UA-Compatible" content="ie=edge">
-						<style>
-							* {box-sizing: border-box;}							
-							body {margin: 0px auto;width: 70%;}							
-							header {background-color: #f1f1f1;padding: 20px;text-align: center;}							
-							.column {float: left;width: 50%;padding: 15px;}							
-							.bang {width: 100%;text-align: center;}							
-							.bang table {margin: 0 auto;}							
-							.row:after {content: "";display: table;clear: both;}							
-							@media screen and (max-width:600px) {
-								.column {width: 100%;}}							
-							@media screen and (max-width:1000px) {
-								.bang {width: 100%;}}
-						</style>
-					</head>					
+						<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+						<meta http-equiv="X-UA-Compatible" content="IE=edge">
+					</head>
+					
 					<body>
-						<header>
-							<img src="http://choviet.xyz/view/img/logo/logo.png" alt="Logo" style="width:300px;text-align: center; margin: 0px auto;">
-							<h1>Chào quý khách</h4>
-								<p>Chợ Việt gửi đến khách hàng thông tin đơn hàng mà quý khách hàng vừa đặt, Quý khách vui lòng kiểm tra hóa đơn điện tử bên dưới phần chi tiết đơn hàng.</p>
-						</header>
-						<div class=row>
-							<div class="column">
-								<h3>Thông tin thanh toán</h3>
-								<p name="name">'.$ten.'</p>
-								<a href="" name="email">'.$email.'</a>
-								<p>'.$sdt.'</p>
-							</div>
-							<div class="column">
-								<h3>Địa chỉ giao hàng</h3>
-								<p name="name">Lê Nhật Hào</p>
-								<p name="address">'.$diachi.'</p>
-							</div>
-							<h3>Chi tiết đơn hàng từ Chợ Việt </h3>
-						</div>
-						<div class="bang">
-							<h2 style="color:blue;">Chi tiết đơn hàng</h2>							
-							<table style="width:80%;display: table;
-								border-collapse: separate;
-								border-spacing: 0px;
-								border-color: gray;
-								background-color: burlywood;">
-								<tr style="background-color: cornflowerblue;height: 50px;width: 800px;">
-									<th>Sản phẩm</th>
-									<th>Đơn giá</th>
-									<th>Số lượng</th>
-									<th>Giảm giá</th>
-									<th>Tổng tạm tính</th>
-								</tr>';
+						<div style="font-family:Verdana;margin-top:0;margin-bottom:0;margin-left:0;margin-right:0;padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;width:100%!important;background-color:#c9c9c9!important" bgcolor="#fbfafb">
+							<table align="center" cellpadding="0" border="0" cellspacing="0" bgcolor="#c9c9c9" style="background-color:#c9c9c9!important">
+								<tbody>
+									<tr>
+										<td style="padding-top:30px">
+											<div style="display:none;max-height:0px;overflow:hidden">
+											</div>
+											<table width="660" border="0" cellpadding="0" cellspacing="0" style="width:660px;background-color:#ffffff" bgcolor="#ffffff">
+												<tbody>
+													<tr>
+														<td bgcolor="#ffffff" style="background-color:#ffffff;padding-bottom:15px">
+															<table width="660" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background-color:#ffffff;width:660px">
+					<tbody>
+						<tr>
+							<td background="http://choviet.xyz/uploads/santa-claus.png" bgcolor="#ffffff" width="660" valign="top" style="background:#ffffff url(http://choviet.xyz/uploads/santa-claus-png.png) no-repeat top center;background-size:660px auto;background-repeat:no-repeat;background-position:top center">
+								<table align="left" width="400" border="0" cellpadding="0" cellspacing="0" style="width:400px;padding-bottom:38px">
+									<tbody>
+										<tr>
+											<td style="padding-bottom:5px;padding-top:37px;padding-left:60px">
+												<img src="http://choviet.xyz/view/img/logo/logo.png" alt="Chợ Việt logo" style="width: 65%;">
+											</td>
+										</tr>
+										<tr>
+											<td valign="top" style="padding-left:60px;padding-bottom:0px">
+												<img src="http://choviet.xyz/uploads/ChoViet_DELEVER.gif" alt="Success payment" style="width: 50%;margin: 0px;padding: 0px;"><br><br>
+												<p style="color:#1e1f4e;font-family:Verdana;font-size:28px;font-weight:bold;line-height:normal;padding-top:0;padding-left:0;padding-bottom:0;padding-right:0;margin-left:0;margin-top:0;margin-bottom:0;margin-right:10px">Bạn đã đặt hàng thành công!</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td align="left" style="padding-bottom:20px;padding-left:60px;padding-right:60px">
+								<div>
+									<p style="width:540px;text-align:left;font-family:Verdana;font-size:14px;line-height:1.5;padding-top:0;padding-left:0;padding-bottom:10px;padding-right:0;margin-left:0;margin-top:0;margin-bottom:0;margin-right:0;color:#1e1f4e">Chào <strong>Quốc Dũng!</strong></p>
+									<p style="width:540px;text-align:left;font-family:Verdana;font-size:14px;line-height:1.5;padding-top:0;padding-left:0;padding-bottom:0;padding-right:0;margin-left:0;margin-top:0;margin-bottom:0;margin-right:0;color:#1e1f4e">Đơn hàng của bạn đã được gửi đến nhà bán hàng. </p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td align="left" style="padding-bottom:10px;padding-left:60px;padding-right:60px;padding-top:0px">
+								<div>
+									<p style="width:540px;text-align:left;font-family:Verdana;font-size:14px;line-height:1.5;padding-top:0;padding-left:0;padding-bottom:10px;padding-right:0;margin-left:0;margin-top:0;margin-bottom:0;margin-right:0;color:#1e1f4e">Thông tin chi tiết như sau:
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td align="center" style="padding-bottom:50px;padding-left:60px;padding-right:60px">
+								<table align="center" border="0" cellpadding="10" cellspacing="0" style="width:790px; border:solid 2px #f4f8ff;width: 100%;font-size: 12px;">
+									<thead>
+										<tr>
+											<th scope=" row " style="background-color: rgb(179, 255, 255); border-color: rgb(221, 221, 221); height: 40px; width: 80px; ">STT</th>
+											<th scope="col " style="background-color: rgb(179, 255, 255); border-color: rgb(221, 221, 221); "><strong>Sản phẩm</strong></th>
+											<th scope="col " style="background-color: rgb(179, 255, 255); border-color: rgb(221, 221, 221); ">Đơn gi&aacute;<br /> (VNĐ)
+											</th>
+											<th scope="col " style="background-color: rgb(179, 255, 255); border-color: rgb(221, 221, 221); ">Số lượng</th>
+											<th scope="col " style="background-color: rgb(179, 255, 255); border-color: rgb(221, 221, 221); ">Th&agrave;nh tiền<br /> (VNĐ)
+											</th>
+										</tr>
+									</thead>
+									<tbody>';
 
 					?>					
 					<?php 
 					foreach (show_cart($_SESSION['iduserguest']) as $item) {
 						$content.='
-							<tr style="height: 30px;text-align: center;">
-								<td><strong>'.$item['pro_name'].'</strong></td>
-								<td><strong>'.number_format($item['coin']).'</strong></td>
-								<td><strong>'.$item['so_luong'].'</strong></td>
-								<td>Không có MGG</td>
-								<td><strong>'.number_format(($item['coin'])*($item['so_luong'])).'</strong></td>
+							<tr>
+								<th scope="row " style="background-color:rgb(255, 255, 255); border-color:rgb(221, 221, 221); width:100px ">'.$i.'</th>
+								<td style="background-color:rgb(255, 255, 255); border-color:rgb(221, 221, 221); width:580px ">'.$item['pro_name'].'</td>
+								<td style="background-color:rgb(255, 255, 255); border-color:rgb(221, 221, 221); text-align:center; width:100px "><strong>'.number_format($item['coin']).'</strong></td>
+								<td style="background-color:rgb(255, 255, 255); border-color:rgb(221, 221, 221); text-align:center; width:100px ">'.$item['so_luong'].'</td>
+								<td style="background-color: rgba(68, 231, 84, 0.267); border-color: rgb(221, 221, 221); text-align: center; width: 100px; "><strong>'.number_format(($item['coin'])*($item['so_luong'])).'</strong></td>
 							</tr>
 						';
 					}
 				?>					
 					<?php
-					$content.='<tr style="height: 30px;">
-									<td></td>
-									<td></td>
-									<td></td>
-									<td>Tổng giá trị sản phẩm chưa giảm</td>
-									<td>30.000.000 VNĐ</td>
-								</tr>
-								<tr style="height: 30px;">
-									<td></td>
-									<td></td>
-									<td></td>
-									<td>Giảm giá phiếu quà tặng</td>
-									<td>0 VNĐ</td>
-								</tr>
-								<tr style="height: 30px;">
-									<td></td>
-									<td></td>
-									<td></td>
-									<td>Chi phí vận chuyển</td>
-									<td>15.000 VNĐ</td>
-								</tr>
-								<tr style="height: 30px;">
-									<td></td>
-									<td></td>
-									<td></td>
-									<td>Phí xử lý đơn hàng</td>
-									<td>0 VNĐ</td>
-								</tr>
-								<tr style="height: 30px;">
-									<td></td>
-									<td></td>
-									<td></td>
-									<td>Tổng giá trị đơn hàng</td>
-									<td>30.015.000 VNĐ</td>
-								</tr>
-							</table>
-						</div>
-						<h3>Thông tin chi tiết: </h2>
-							<a href="?act=product_detail"></a>
-							<h3>Mua tiếp: </h2>
-								<a href="?act=product"></a>
-					</body>					
-					</html>';
+					$content.='
+							<tr>
+								<th colspan="4 " scope="row " style="border-color: rgb(221, 221, 221); width: 100px; text-align: right; vertical-align: middle; ">Th&agrave;nh tiền</th>
+								<td style="background-color: rgba(68, 231, 84, 0.267); border-color: rgb(221, 221, 221); text-align: center; width: 100px; "><strong>12.200.000</strong></td>
+							</tr>
+							<tr>
+								<th colspan="4 " scope="row " style="border-color: rgb(221, 221, 221); width: 100px; text-align: right; vertical-align: middle; ">Thuế</th>
+								<td style="background-color: rgba(68, 231, 84, 0.267); border-color: rgb(221, 221, 221); text-align: center; width: 100px; ">- 0</td>
+							</tr>
+							<tr>
+								<th colspan="4 " scope="row " style="border-color: rgb(221, 221, 221); width: 100px; text-align: right; vertical-align: middle; ">Giảm gi&aacute;</th>
+								<td style="background-color: rgba(68, 231, 84, 0.267); border-color: rgb(221, 221, 221); text-align: center; width: 100px; ">- 0</td>
+							</tr>
+							<tr>
+								<th colspan="4 " scope="row " style="border-color: rgb(221, 221, 221); width: 100px; text-align: right; vertical-align: middle; "><strong>Ph&iacute; vận chuyển</strong></th>
+								<td style="background-color: rgba(68, 231, 84, 0.267); border-color: rgb(221, 221, 221); text-align: center; width: 100px; ">15.000&nbsp;</td>
+							</tr>
+							<tr>
+								<th colspan="4 " scope="row " style="border-color: rgb(221, 221, 221); width: 100px; text-align: right; vertical-align: middle; "><strong>Tổng cộng</strong></th>
+								<td style="background-color: rgba(68, 231, 84, 0.267); border-color: rgb(221, 221, 221); text-align: center; width: 100px; "><strong>12.200.000</strong></td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+
+			<tr>
+				<td align="left" style="padding-bottom:10px;padding-left:60px;padding-right:60px;padding-top:0px">
+					<table align="center" border="0" cellpadding="1" cellspacing="0" style="width:790px;width: 100%;font-size: 14px;">
+						<tbody>
+							<tr>
+								<td colspan="2" style="border-color: rgb(221, 221, 221); height: 40px; width: 600px;">
+									<h3><strong>Thông tin thanh toán</strong></h3>
+								</td>
+								<td colspan="2" style=" border-color: rgb(221, 221, 221);">
+									<h3><strong>Địa chỉ giao hàng</strong></h3>
+								</td>
+							</tr>
+							<tr>
+								<td scope="row" style="background-color: rgb(255, 255, 255); border-color: rgb(221, 221, 221); width: 150px;">Họ v&agrave; t&ecirc;n:</td>
+								<th scope="row" style="background-color: rgb(255, 255, 255); border-color: rgb(221, 221, 221); width: 450px; text-align: left; white-space: nowrap;">'.$ten.'</th>
+								<td style="background-color: rgb(255, 255, 255); border-color: rgb(221, 221, 221); width: 150px;">Người nhận:</td>
+								<td style="background-color: rgb(255, 255, 255); border-color: rgb(221, 221, 221); width: 415px; text-align: left;">'.$ten.'</td>
+							</tr>
+							<tr>
+								<td scope="row" style="background-color: rgb(255, 255, 255); border-color: rgb(221, 221, 221); width: 150px;">Số điện thoại:</td>
+								<th scope="row" style="background-color: rgb(255, 255, 255); border-color: rgb(221, 221, 221); width: 450px; text-align: left;">'.$sdt.'</th>
+								<td style="background-color: rgb(255, 255, 255); border-color: rgb(221, 221, 221); width: 150px;">Số điện thoại</td>
+								<td style="background-color: rgb(255, 255, 255); border-color: rgb(221, 221, 221); width: 415px; text-align: left;">'.$sdt.'</td>
+							</tr>
+							<tr>
+								<td scope="row" style="background-color: rgb(255, 255, 255); border-color: rgb(221, 221, 221); width: 150px;">Địa chỉ:</td>
+								<th scope="row" style="background-color: rgb(255, 255, 255); border-color: rgb(221, 221, 221); width: 450px; text-align: left;">'.$diachi.'</th>
+								<td style="background-color: rgb(255, 255, 255); border-color: rgb(221, 221, 221); width: 150px;">Địa chỉ</td>
+								<td style="background-color: rgb(255, 255, 255); border-color: rgb(221, 221, 221); width: 415px; text-align: left;">'.$diachi.'</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td align="center " style="color:#ffffff;font-size:14px;line-height:20px;padding-bottom:10px ">
+					<div>
+						<a href="# " style="font-family:Verdana;background-color:rgb(29, 155, 12);border-radius:3px;color:#ffffff;display:inline-block;font-size:14px;line-height:50px;text-align:center;text-decoration:none;width:220px;margin-top: 25px; "><strong>THEO DỎI ĐƠN HÀNG</strong></a>
+					</div>
+				</td>
+			</tr>
+			</tbody>
+			</table>
+			</td>
+			</tr>
+			<tr>
+			<td align="left " style="padding-bottom:30px;padding-left:60px;padding-right:60px;padding-top:10px ">
+			<div>
+
+			<p style="width:540px;text-align:left;font-family:Verdana;font-size:14px;line-height:1.5;margin-left:0;margin-top:0;margin-bottom:0;margin-right:0;padding-top:0;padding-left:0;padding-bottom:20px!important;padding-right:0;color:#817c8f;max-width:540px ">Bạn có bất kỳ câu hỏi nào? Đội ngũ hỗ trợ thân thiện của chúng tôi sẵn sàng trả lời tất cả câu hỏi bạn có. Chỉ cần nhấn nút trả lời email này hoặc liên hệ chúng tôi qua live chat trong trang quản trị.</p>
+			<p style="width:540px;text-align:left;font-family:Verdana;font-size:14px;line-height:1.5;margin-left:0;margin-top:0;margin-bottom:0;margin-right:0;padding-top:0;padding-left:0;padding-bottom:5px!important;padding-right:0;color:#817c8f;max-width:540px ">Cảm ơn bạn!</p>
+
+			</div>
+			</td>
+			</tr>
+			</tbody>
+			</table>
+			</td>
+			</tr>
+			<tr>
+			<td align="center " style="text-align:center;padding-top:50px;padding-bottom:50px;font-family:Verdana;color:#666666;font-size:12px;line-height:18px ">
+			© 2019 - 2020 CHOVIET Inc.
+			</td>
+			</tr>
+			</tbody>
+			</table>
+			</div>
+			</body>
+
+			</html>
+					';
 
 					$nTo = $_POST['name'];
 					$mTo = $_POST['email'];
@@ -234,6 +310,12 @@
 					</div>
 				  </div>';
 				}else{ $erro = 'Có lỗi!';}
+				}
+
+				if (isset($_GET['del']) && ($_GET['del']==1) ) {
+					$id=$_GET['id'];
+					pro_cart_delete($id);
+					header('location: index.php?act=cart');
 				}
 				
                 include "view/cart.php";
@@ -343,7 +425,7 @@
             
         }
     }else{
-            include"view/home.php";
+            include "view/home.php";
     }
-    include"view/footer.php";
+    include "view/footer.php";
 ?>

@@ -50,7 +50,11 @@
 		$danhgia_bl=$_POST['danhgia'];
 		$datetime=$_POST['datetime'];
 
-		user_insert($name_bl,$email_bl,$noidung_bl,$danhgia_bl,$idproduct_bl,$id_userr,$datetime);
+		$info_product=info_product($idproduct_bl);
+
+		$id_store=$info_product['idStore'];
+
+		user_insert($name_bl,$email_bl,$noidung_bl,$danhgia_bl,$idproduct_bl,$id_store,$id_userr,$datetime);
 		header("location: comment.php?idProduct=".$idproduct_bl);
 	}
 
@@ -190,7 +194,8 @@
 											<li><a href="#"><i class="fa fa-star" style=" margin-top: 14px;"></i></a></li>
 											<li><a href="#"><i class="fa fa-star" style=" margin-top: 14px;"></i></a></li>
 										</ul>											
-									</div>								
+									</div>			
+				
 									<input type="hidden" name="idproduct" value="<?=$idProduct;?>">
 									<input type="hidden" name="datetime" value="<?=$nam;?>-<?=$thang;?>-<?=$ngay;?>T<?=$gio;?>:<?=$phut;?>" >									
 									<div class="form-group">

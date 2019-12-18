@@ -25,13 +25,20 @@ function catalog_store_insert($name,$image,$idStore,$idCatalog){
     pdo_execute($sql, $name,$image,$idStore,$idCatalog);
 }
 
-function user_insert($name,$email,$noidung,$danhgia_bl,$idproduct,$idUsers,$datetime){
-    $sql = "INSERT INTO comment(name,email,noidung,danhgia,idProduct,idUsers,datetime) VALUES(?,?,?,?,?,?,?)";
-    pdo_execute($sql, $name,$email,$noidung,$danhgia_bl,$idproduct,$idUsers,$datetime);
+function user_insert($name,$email,$noidung,$danhgia_bl,$idproduct,$id_store,$idUsers,$datetime){
+    $sql = "INSERT INTO comment(name,email,noidung,danhgia,idProduct,idStore,idUsers,datetime) VALUES(?,?,?,?,?,?,?,?)";
+    pdo_execute($sql, $name,$email,$noidung,$danhgia_bl,$idproduct,$id_store,$idUsers,$datetime);
 }
 
 function commentlist(){
     $sql="SELECT * FROM comment order by id desc";
+    $kq=pdo_query($sql);
+    return $kq;
+}
+
+function commentlist_store($id){
+    $sql="SELECT * FROM comment where idStore=".$id;
+    $sql.=" order by id desc";
     $kq=pdo_query($sql);
     return $kq;
 }
@@ -146,6 +153,18 @@ function info_user($iduser){
     $sql="SELECT * from users WHERE id=".$iduser;
     $kq=pdo_query_one($sql);
     return $kq;
+}
+
+function pro_cart_delete($id){
+    $sql = "DELETE FROM cart WHERE id=?";
+    if(is_array($id)){
+        foreach ($id as $ma) {
+            pdo_execute($sql, $ma);
+        }
+    }
+    else{
+        pdo_execute($sql, $id);
+    }
 }
 
 /************************************************* Truy vấn *****************************************/
