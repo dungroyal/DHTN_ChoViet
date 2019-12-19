@@ -146,7 +146,7 @@
 										<tr>
 											<td valign="top" style="padding-left:60px;padding-bottom:0px">
 												<img src="http://choviet.xyz/uploads/ChoViet_DELEVER.gif" alt="Success payment" style="width: 50%;margin: 0px;padding: 0px;"><br><br>
-												<p style="color:#1e1f4e;font-family:Verdana;font-size:28px;font-weight:bold;line-height:normal;padding-top:0;padding-left:0;padding-bottom:0;padding-right:0;margin-left:0;margin-top:0;margin-bottom:0;margin-right:10px">Bạn đã đặt hàng thành công!</p>
+												<p style="width=150%;color:#1e1f4e;font-family:Verdana;font-size:28px;font-weight:bold;line-height:normal;padding-top:0;padding-left:0;padding-bottom:0;padding-right:0;margin-left:0;margin-top:0;margin-bottom:0;margin-right:10px">Bạn đã đặt hàng thành công!</p>
 											</td>
 										</tr>
 									</tbody>
@@ -156,8 +156,8 @@
 						<tr>
 							<td align="left" style="padding-bottom:20px;padding-left:60px;padding-right:60px">
 								<div>
-									<p style="width:540px;text-align:left;font-family:Verdana;font-size:14px;line-height:1.5;padding-top:0;padding-left:0;padding-bottom:10px;padding-right:0;margin-left:0;margin-top:0;margin-bottom:0;margin-right:0;color:#1e1f4e">Chào <strong>Quốc Dũng!</strong></p>
-									<p style="width:540px;text-align:left;font-family:Verdana;font-size:14px;line-height:1.5;padding-top:0;padding-left:0;padding-bottom:0;padding-right:0;margin-left:0;margin-top:0;margin-bottom:0;margin-right:0;color:#1e1f4e">Đơn hàng của bạn đã được gửi đến nhà bán hàng. </p>
+									<p style="width:540px;text-align:left;font-family:Verdana;font-size:14px;line-height:1.5;padding-top:0;padding-left:0;padding-bottom:10px;padding-right:0;margin-left:0;margin-top:0;margin-bottom:0;margin-right:0;color:#1e1f4e">Chào <strong>'.$ten.'!</strong></p>
+									<p style="width:150%;text-align:left;font-family:Verdana;font-size:14px;line-height:1.5;padding-top:0;padding-left:0;padding-bottom:0;padding-right:0;margin-left:0;margin-top:0;margin-bottom:0;margin-right:0;color:#1e1f4e">Đơn hàng của bạn đã được gửi đến nhà bán hàng. </p>
 								</div>
 							</td>
 						</tr>
@@ -189,7 +189,7 @@
 					foreach (show_cart($_SESSION['iduserguest']) as $item) {
 						$content.='
 							<tr>
-								<th scope="row " style="background-color:rgb(255, 255, 255); border-color:rgb(221, 221, 221); width:100px ">'.$i.'</th>
+								<th scope="row " style="background-color:rgb(255, 255, 255); border-color:rgb(221, 221, 221); width:100px ">1</th>
 								<td style="background-color:rgb(255, 255, 255); border-color:rgb(221, 221, 221); width:580px ">'.$item['pro_name'].'</td>
 								<td style="background-color:rgb(255, 255, 255); border-color:rgb(221, 221, 221); text-align:center; width:100px "><strong>'.number_format($item['coin']).'</strong></td>
 								<td style="background-color:rgb(255, 255, 255); border-color:rgb(221, 221, 221); text-align:center; width:100px ">'.$item['so_luong'].'</td>
@@ -202,7 +202,7 @@
 					$content.='
 							<tr>
 								<th colspan="4 " scope="row " style="border-color: rgb(221, 221, 221); width: 100px; text-align: right; vertical-align: middle; ">Th&agrave;nh tiền</th>
-								<td style="background-color: rgba(68, 231, 84, 0.267); border-color: rgb(221, 221, 221); text-align: center; width: 100px; "><strong>12.200.000</strong></td>
+								<td style="background-color: rgba(68, 231, 84, 0.267); border-color: rgb(221, 221, 221); text-align: center; width: 100px; "><strong>'.number_format(($item['coin'])*($item['so_luong'])).'</strong></td>
 							</tr>
 							<tr>
 								<th colspan="4 " scope="row " style="border-color: rgb(221, 221, 221); width: 100px; text-align: right; vertical-align: middle; ">Thuế</th>
@@ -218,7 +218,7 @@
 							</tr>
 							<tr>
 								<th colspan="4 " scope="row " style="border-color: rgb(221, 221, 221); width: 100px; text-align: right; vertical-align: middle; "><strong>Tổng cộng</strong></th>
-								<td style="background-color: rgba(68, 231, 84, 0.267); border-color: rgb(221, 221, 221); text-align: center; width: 100px; "><strong>12.200.000</strong></td>
+								<td style="background-color: rgba(68, 231, 84, 0.267); border-color: rgb(221, 221, 221); text-align: center; width: 100px; "><strong>'.number_format(($item['coin'])*($item['so_luong'])).'</strong></td>
 							</tr>
 						</tbody>
 					</table>
@@ -259,13 +259,6 @@
 					</table>
 				</td>
 			</tr>
-			<tr>
-				<td align="center " style="color:#ffffff;font-size:14px;line-height:20px;padding-bottom:10px ">
-					<div>
-						<a href="# " style="font-family:Verdana;background-color:rgb(29, 155, 12);border-radius:3px;color:#ffffff;display:inline-block;font-size:14px;line-height:50px;text-align:center;text-decoration:none;width:220px;margin-top: 25px; "><strong>THEO DỎI ĐƠN HÀNG</strong></a>
-					</div>
-				</td>
-			</tr>
 			</tbody>
 			</table>
 			</td>
@@ -275,7 +268,7 @@
 			<div>
 
 			<p style="width:540px;text-align:left;font-family:Verdana;font-size:14px;line-height:1.5;margin-left:0;margin-top:0;margin-bottom:0;margin-right:0;padding-top:0;padding-left:0;padding-bottom:20px!important;padding-right:0;color:#817c8f;max-width:540px ">Bạn có bất kỳ câu hỏi nào? Đội ngũ hỗ trợ thân thiện của chúng tôi sẵn sàng trả lời tất cả câu hỏi bạn có. Chỉ cần nhấn nút trả lời email này hoặc liên hệ chúng tôi qua live chat trong trang quản trị.</p>
-			<p style="width:540px;text-align:left;font-family:Verdana;font-size:14px;line-height:1.5;margin-left:0;margin-top:0;margin-bottom:0;margin-right:0;padding-top:0;padding-left:0;padding-bottom:5px!important;padding-right:0;color:#817c8f;max-width:540px ">Cảm ơn bạn!</p>
+			<p style="width:540px;text-align:left;font-family:Verdana;font-size:14px;line-height:1.5;margin-left:0;margin-top:0;margin-bottom:0;margin-right:0;padding-top:0;padding-left:0;padding-bottom:5px!important;padding-right:0;color:#817c8f;max-width:540px ">Cảm ơn '.$ten.'!</p>
 
 			</div>
 			</td>
