@@ -968,6 +968,8 @@ span.cart-info a:hover {
 .banner-area {
     position: relative;
     padding: 2px 0px;
+    max-width: 1900px;
+    margin: 0px auto;
 }
 
 .banner-area>a {

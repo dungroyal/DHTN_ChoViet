@@ -76,7 +76,7 @@
                         <div class="header-top-left">
                             <div class="language-usd">
                                 <ul>
-                                    <li><a href="#">Freeship cho đơn hàng trên 99k</a>
+                                    <li id="tab-freeship"><a href="#">Freeship cho đơn hàng trên 99k</a>
                                     </li>
                                     <li><a href="#">Kênh nhà bán</a>
                                         <ul class="submenu-mainmenu">
@@ -136,7 +136,7 @@
                 <div class="row">
                     <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
                         <div class="logo">
-                            <a href="?act=home"><img src="view/img/logo/logo.png" alt="Logo Chợ Việt"></a>
+                            <a href="?act=home"><img src="view/img/logo/logo.png" alt="Logo Chợ Việt" id="logo"></a>
                         </div>
                     </div>
                     <div class="col-lg-7 col-md-8 col-sm-6">
@@ -188,9 +188,9 @@
                                     </li>
                                     <li><a href="?act=product">Cửa hàng</a>
                                     </li>
-                                    <li><a href="?act=about">Thông tin</a>
+                                    <li id="list_thongtin"><a href="?act=about">Thông tin</a>
                                     </li>
-                                    <li><a href="?act=contact">Liên hệ</a></li>
+                                    <li id="list_lienhe"><a href="?act=contact">Liên hệ</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -214,44 +214,20 @@
                         <div class="mobile-menu">
                             <nav id="dropdown">
                                 <ul>
-                                    <li><a href="index.html">HOME</a>
+                                    <li><a href="index.php">Trang Chủ</a></li>
+                                    <li><a href="blog-full-view.html">Danh mục</a>
                                         <ul>
-                                            <li><a href="index.html">Home Version 1</a></li>
-                                            <li><a href="index-2.html">Home Version 2</a></li>
+                                             <?php
+                                                $cataloglist=cataloglist();
+                                                foreach ($cataloglist as $cat) {                                                        
+                                                        echo'<li><a href="?act=product&idCatalog='.$cat['id'].'">'.$cat['name'].'</a></li>';
+                                                }
+                                            ?>
                                         </ul>
                                     </li>
-                                    <li><a href="shop-full-grid.html">Women</a></li>
-                                    <li><a href="shop-full-grid.html">Accessories</a></li>
-                                    <li><a href="blog-full-view.html">Blog</a>
-                                        <ul>
-                                            <li><a href="blog-full-view.html">Blog Full View</a></li>
-                                            <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-                                            <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
-                                            <li><a href="blog-details.html">Blog Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="shop-full-grid.html">Cửa hàng</a>
-                                        <ul>
-                                            <li><a href="shop-grid-left-sidebar.html">Shop Grid Left Sidebar</a></li>
-                                            <li><a href="shop-grid-right-sidebar.html">Shop Grid Right Sidebar</a></li>
-                                            <li><a href="shop-list-left-sidebar.html">Shop List Left Sidebar</a></li>
-                                            <li><a href="shop-list-right-sidebar.html">Shop List Right Sidebar</a></li>
-                                            <li><a href="shop-full-grid.html">Shop None Sidebar</a></li>
-                                            <li><a href="product-details-fullwidth.html">Product Details Fullwidth</a></li>
-                                            <li><a href="product-details-left-sidebar.html">Product Details Left Sidebar</a></li>
-                                            <li><a href="product-details-right-sidebar.html">Product Details Right Sidebar</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="about-us.html">Pages</a>
-                                        <ul>
-                                            <li><a href="about-us.html">About Us</a></li>
-                                            <li><a href="cart.html">Cart</a></li>
-                                            <li><a href="checkout.html">Checkout</a></li>
-                                            <li><a href="wishlist.html">Wishlist</a></li>
-                                            <li><a href="404.html">404 Page</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="contact.html">Liên hệ</a></li>
+                                    <li><a href="?act=product">Cửa hàng</a></li>
+                                    <li><a href="?act=about">Thông tin</a></li>
+                                    <li><a href="contact">Liên hệ</a></li>
                                 </ul>
                             </nav>
                         </div>
